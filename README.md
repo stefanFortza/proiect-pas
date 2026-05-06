@@ -28,14 +28,29 @@ Acest proiect este o simulare 3D în Godot unde o rachetă este controlată prin
 - **Godot Engine (v4.x - .NET Edition)**: Asigură-te că descarci versiunea care suportă C# (.NET).
 - **.NET SDK**: Necesar pentru compilarea scripturilor C# din Godot.
 
+#### Utilitare (Workflow)
+- **just**: Command runner modern pentru automatizarea task-urilor.
+  - *Instalare (Ubuntu):* `sudo apt install just`
+  - *Instalare (macOS):* `brew install just`
+  - *Instalare (Windows):* `winget install casey.just`
+
 ---
 
 ### 2. Instalare și Rulare
 
-#### Backend
+#### Varianta Rapidă (Recomandat) 🚀
+Dacă ai instalat `just`, poți folosi următoarele comenzi din rădăcina proiectului:
+- `just install` - Instalează toate dependențele (Python + .NET).
+- `just up` - Pornește API-ul și deschide editorul Godot simultan.
+- `just api` - Rulează doar backend-ul.
+- `just editor` - Deschide doar editorul Godot.
+- `just clean` - Șterge cache-urile și fișierele temporare.
+
+#### Varianta Manuală
+##### Backend
 1. Navighează în folderul backend: `cd backend-ai`
 2. Instalează dependențele: `uv sync`
-3. Pornește serverul: `uv run main.py`
+3. Pornește serverul: `uv run uvicorn main:app --reload`
    - API-ul va fi disponibil la `http://localhost:8000`
 
 #### Frontend
