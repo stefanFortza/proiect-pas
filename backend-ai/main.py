@@ -1,18 +1,42 @@
-from fastapi import FastAPI
-from models import SimulationStepRequest, SimulationStepResponse
+from fastapi import FastAPI, HTTPException
+from models import HealthResponse, SimulationResponse, CustomTextRequest, PhysicsModifiers
 import llm_controller
+import uuid
 
-app = FastAPI(title="Language Simulation API")
+app = FastAPI(title="Language Simulation API - Hackathon Edition")
 
-@app.get("/")
-async def root():
-    return {"message": "Language Simulation API is running"}
+@app.get("/health", response_model=HealthResponse)
+async def health_check():
+    try:
+        ollama_status = await llm_controller.check_ollama_ready()
+        models = await llm_controller.get_loaded_models()
+        return HealthResponse(
+            status="online",
+            ollama_ready=ollama_status,
+            models_loaded=models
+        )
+    except Exception as e:
+        return HealthResponse(
+            status="degraded",
+            ollama_ready=False,
+            models_loaded=[]
+        )
 
-@app.post("/simulate_step", response_model=SimulationStepResponse)
-async def simulate_step(request: SimulationStepRequest):
-    # This is a placeholder for the logic that will be implemented in Day 1
-    result = await llm_controller.process_language_step(request.text)
-    return result
+@app.get("/api/v1/simulation/step", response_model=SimulationResponse)
+async def simulation_step():
+    try:
+        result = await llm_controller.run_full_simulation_step()
+        return result
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/api/v1/simulation/custom", response_model=SimulationResponse)
+async def simulation_custom(request: CustomTextRequest):
+    try:
+        result = await llm_controller.run_custom_simulation(request.custom_source_text, request.target_language)
+        return result
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
 
 if __name__ == "__main__":
     import uvicorn
