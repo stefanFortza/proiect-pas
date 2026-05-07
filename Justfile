@@ -1,5 +1,6 @@
+# Porneste API-ul si deschide editorul Godot (daca este posibil)
 up:
-    just api 
+    just api & just editor
 
 # Instaleaza dependintele pentru backend si frontend
 install:
@@ -9,6 +10,10 @@ install:
 # Ruleaza doar backend-ul FastAPI cu hot-reload
 api:
     cd backend-ai && uv run uvicorn main:app --reload
+
+# Deschide editorul Godot
+editor:
+    godot --editor --path frontend-3d/
 
 # Curata cache-urile de build si fisierele temporare
 clean:

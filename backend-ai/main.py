@@ -1,7 +1,6 @@
 from fastapi import FastAPI, HTTPException
-from models import HealthResponse, SimulationResponse, CustomTextRequest, PhysicsModifiers
+from models import HealthResponse, SimulationResponse
 import llm_controller
-import uuid
 
 app = FastAPI(title="Language Simulation API - Hackathon Edition")
 
@@ -26,14 +25,6 @@ async def health_check():
 async def simulation_step():
     try:
         result = await llm_controller.run_full_simulation_step()
-        return result
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
-
-@app.post("/api/v1/simulation/custom", response_model=SimulationResponse)
-async def simulation_custom(request: CustomTextRequest):
-    try:
-        result = await llm_controller.run_custom_simulation(request.custom_source_text, request.target_language)
         return result
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))

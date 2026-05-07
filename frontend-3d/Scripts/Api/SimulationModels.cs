@@ -1,39 +1,56 @@
-using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
 namespace ProiectSimulareLimbaj.Api;
 
-public class PhysicsModifiers
+public class GroundTruth
 {
-    [JsonPropertyName("stability")]
-    public float Stability { get; set; }
+    [JsonPropertyName("obiect_corect")]
+    public string ObiectCorect { get; set; }
 
-    [JsonPropertyName("thrust_multiplier")]
-    public float ThrustMultiplier { get; set; }
+    [JsonPropertyName("locatie_corecta")]
+    public string LocatieCorecta { get; set; }
+}
 
-    [JsonPropertyName("lateral_noise")]
-    public float LateralNoise { get; set; }
+public class TeacherData
+{
+    [JsonPropertyName("text")]
+    public string Text { get; set; }
+}
+
+public class StudentData
+{
+    [JsonPropertyName("traducere_interna")]
+    public string TraducereInterna { get; set; }
+
+    [JsonPropertyName("intentie_obiect")]
+    public string IntentieObiect { get; set; }
+
+    [JsonPropertyName("intentie_locatie")]
+    public string IntentieLocatie { get; set; }
+}
+
+public class InspectorData
+{
+    [JsonPropertyName("scor")]
+    public int Scor { get; set; }
+
+    [JsonPropertyName("verdict")]
+    public string Verdict { get; set; }
 }
 
 public class SimulationResponse
 {
-    [JsonPropertyName("iteration_id")]
-    public string IterationId { get; set; }
+    [JsonPropertyName("adevar_absolut")]
+    public GroundTruth AdevarAbsolut { get; set; }
 
-    [JsonPropertyName("source_text")]
-    public string SourceText { get; set; }
+    [JsonPropertyName("profesor")]
+    public TeacherData Profesor { get; set; }
 
-    [JsonPropertyName("translated_text")]
-    public string TranslatedText { get; set; }
+    [JsonPropertyName("elev")]
+    public StudentData Elev { get; set; }
 
-    [JsonPropertyName("evaluation_score")]
-    public float EvaluationScore { get; set; }
-
-    [JsonPropertyName("error_category")]
-    public string ErrorCategory { get; set; }
-
-    [JsonPropertyName("physics_modifiers")]
-    public PhysicsModifiers PhysicsModifiers { get; set; }
+    [JsonPropertyName("inspector")]
+    public InspectorData Inspector { get; set; }
 }
 
 public class HealthResponse
@@ -45,14 +62,5 @@ public class HealthResponse
     public bool OllamaReady { get; set; }
 
     [JsonPropertyName("models_loaded")]
-    public List<string> ModelsLoaded { get; set; }
-}
-
-public class CustomTextRequest
-{
-    [JsonPropertyName("custom_source_text")]
-    public string CustomSourceText { get; set; }
-
-    [JsonPropertyName("target_language")]
-    public string TargetLanguage { get; set; } = "en";
+    public System.Collections.Generic.List<string> ModelsLoaded { get; set; }
 }

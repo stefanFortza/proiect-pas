@@ -1,24 +1,29 @@
 from pydantic import BaseModel
-from typing import List, Optional
+from typing import List
 
-class PhysicsModifiers(BaseModel):
-    stability: float
-    thrust_multiplier: float
-    lateral_noise: float
+class GroundTruth(BaseModel):
+    obiect_corect: str
+    locatie_corecta: str
+
+class TeacherData(BaseModel):
+    text: str
+
+class StudentData(BaseModel):
+    traducere_interna: str
+    intentie_obiect: str
+    intentie_locatie: str
+
+class InspectorData(BaseModel):
+    scor: int
+    verdict: str
 
 class SimulationResponse(BaseModel):
-    iteration_id: str
-    source_text: str
-    translated_text: str
-    evaluation_score: float
-    error_category: str
-    physics_modifiers: PhysicsModifiers
+    adevar_absolut: GroundTruth
+    profesor: TeacherData
+    elev: StudentData
+    inspector: InspectorData
 
 class HealthResponse(BaseModel):
     status: str
     ollama_ready: bool
     models_loaded: List[str]
-
-class CustomTextRequest(BaseModel):
-    custom_source_text: str
-    target_language: str = "en"
