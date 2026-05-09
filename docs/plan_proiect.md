@@ -1,69 +1,104 @@
-# Plan de Dezvoltare: Simulare Multi-Agent "Profesor - Elev - Inspector"
+
+# Plan de Dezvoltare: Simulare Multi-Agent "Barca Supraviețuirii" (Conversație și Flotabilitate)
 
 **Durată:** 72 de ore (Sprint)
 **Echipă:** 3 persoane
-**Arhitectură:** Open-Loop (Backend-ul Python procesează logica AI secvențial; Frontend-ul Godot redă cinematic rezultatele, navigarea spațială și stările de eroare).
+**Arhitectură:** Closed-Loop Pipeline. Backend-ul evaluează calitatea semantică a conversației, iar Frontend-ul traduce scorul într-o mecanică de *Buoyancy* (flotabilitate) bazată pe masă.
 
+---
 
+## 1. Contractul de Date și Evaluarea NLP
 
-## 1. Contractul de Date (Sursa de Adevăr)
+Modelul M3 (Inspectorul)  evaluează răspunsul Elevului (M2) pe baza a trei metrici: *Coerență*, *Relevanță la subiect* și *Corectitudine gramaticală*. Scorul dictând greutatea balastului.
 
-Acest JSON reprezintă fundamentul comunicării. Backend-ul calculează totul în avans și trimite rezultatul complet către Godot. Structura expune clar diferența dintre realitatea obiectivă și interpretarea subiectivă a modelului AI.
+**JSON generat de API pentru fiecare din cele 15 iterații:**
 
 ```json
 {
-  "adevar_absolut": {
-    "obiect_corect": "mar",
-    "locatie_corecta": "masa"
-  },
+  "iteratie": 4,
   "profesor": {
-    "text": "Elevule, adu-mi te rog mărul de pe masa rotundă."
+    "text": "Explică-mi cum funcționează un Garbage Collector în programare."
   },
   "elev": {
-    "traducere_interna": "Bring the apple from the desk.",
-    "intentie_obiect": "mar",
-    "intentie_locatie": "birou"
+    "text": "Garbage collector este o mașină de gunoi care curăță memoria când calculatorul se umple de praf."
   },
   "inspector": {
-    "scor": 5,
-    "verdict": "Nota 5. Elevul a identificat corect obiectul (mar), dar a greșit locația (Birou în loc de Masă)."
+    "scor_calitate": 0.2,
+    "verdict": "Răspuns ilogic, halucinație semantică.",
+    "actiune_fizica": {
+      "tip": "adauga_cutie",
+      "masa_kg": 50.0
+    }
   }
 }
+
 ```
 
 ---
 
-## 2. Distribuția Sarcinilor
+## 2. Metodologia de Prezentare (Evoluția pe Epoci)
 
-### Membrul 1: Backend & AI Engineer (Python)
-Responsabil de orchestrarea modelelor LLM și expunerea datelor structurate.
-*   **Tehnologii:** Python, FastAPI, Ollama (Llama 3, Gemma 2b), Pydantic, `uv`.
-*   **Ziua 1:** Definirea rutei `GET /api/v1/simulation/step`. Scrierea unui dataset de test intern (*Ground Truth*) care conține perechi predefinite de texte și intenții corecte.
-*   **Ziua 2:** Crearea prompt-ului cu *Function Calling* pentru a forța modelul Elevului să returneze strict `intentie_obiect` și `intentie_locatie` în format JSON, fără text adițional care ar invalida parsarea.
-*   **Ziua 3:** Configurarea prompt-ului pentru Inspector. Acesta trebuie să primească input-ul de la `adevar_absolut` și `elev`, să le compare și să genereze `scor` și `verdict`. Implementarea tratării excepțiilor (fallback în caz de halucinații severe ale LLM-ului).
+Pentru prezentarea academică, demonstrația evoluției limbajului se va face încărcând 3 seturi de date (snapshot-uri) care reprezintă stadii diferite de antrenament/prompting ale M2:
 
-### Membrul 2: Systems Programmer (Godot C#)
-Responsabil de logica de navigație, parsarea datelor și mașina de stări (State Machine).
-*   **Tehnologii:** Godot 4.x, C# (.NET 8), Refit.
-*   **Ziua 1:** Instalarea Refit. Generarea claselor C# (DTO) care mapează strict structura JSON. Implementarea unui apel HTTP simplu către backend pentru verificare.
-*   **Ziua 2:** Dezvoltarea sistemului de navigație folosind `NavigationAgent3D`. Rezolvarea țintei spațiale direct prin concatenarea datelor: `GetNode($"../NavRegion/{intentie_locatie}/{intentie_obiect}")`.
-*   **Ziua 3:** Implementarea mașinii de stări asincrone (`async Task`) pentru redarea temporală secvențială: 
-    1. Afișare text Profesor. 
-    2. Declanșare deplasare Elev. 
-    3. Monitorizare distanță parcursă (`DistanceToTarget()`). 
-    4. Afișare text Inspector la finalizarea acțiunii fizice.
-
-### Membrul 3: Technical Artist & Level Designer (Godot)
-Responsabil de mediul 3D, interfața utilizator și îndeplinirea cerințelor academice de grafică și fizică.
-*   **Tehnologii:** Godot 4.x, Asset-uri Kenney (format `.glb`), Godot Shading Language.
-*   **Ziua 1:** Construirea scenei respectând o ierarhie de noduri exactă pentru codul C# (ex: părinte `Masa` -> copil `mar`). Generarea topologiei de navigație (`NavigationRegion3D` - Bake NavMesh) pe suprafața podelei.
-*   **Ziua 2:** Crearea elementelor de UI 3D (`Label3D` deasupra capului actorilor) pentru afișarea textelor în timp real. Configurarea camerelor (ex: Phantom Camera) pentru urmărirea Elevului pe traseu.
-*   **Ziua 3:** Implementarea elementelor de grafică avansată (Shader custom pe obiecte, post-procesare via `WorldEnvironment` cu Bloom/Color Grading). Crearea unui sistem `GPUParticles3D` care se declanșează dacă codul C# detectează o nepotrivire între `intentie_locatie` și `locatie_corecta`.
+* **Epoca 1 (Model Incoerent):** Elevul dă răspunsuri aberante sau pe lângă subiect. *Rezultat vizual:* Inspectorul aruncă constant cutii grele în barcă. La iterația 7 sau 8, masa totală depășește forța arhimedică, iar barca se scufundă complet.
+* **Epoca 20 (Model Mediu):** Elevul are noțiuni de bază, dar formulează greoi. *Rezultat vizual:* Inspectorul adaugă cutii medii, dar mai și aruncă afară când elevul nimerește un răspuns bun. Barca ajunge la iterația 15, dar plutește periculos de jos.
+* **Epoca 50 (Model Optimizat):** Elevul susține o conversație tehnică impecabilă. *Rezultat vizual:* Inspectorul extrage balastul inițial. Barca termină cele 15 dialoguri goală, plutind sus pe valuri.
 
 ---
 
-## 3. Workflow și Reguli Tehnice
-*   **Structura Proiectului:** Organizarea sub formă de monorepo cu două directoare izolate: `/backend-ai` și `/frontend-3d`.
-*   **Controlul Versiunilor (Git):** Evitarea commit-urilor concurente pe fișierul principal `.tscn` între Membrul 2 și Membrul 3 pentru a preveni conflictele de merge masive. Membrul 2 lucrează exclusiv în fișiere `.cs`, Membrul 3 se ocupă de ierarhia `.tscn`.
-*   **Convenții de Denumire:** Numele nodurilor 3D din editorul Godot trebuie să corespundă cu exactitate absolută valorilor extrase de M2 în JSON (ex: `mar`, `minge`, `birou`), fără majuscule inutile, pentru ca funcția de căutare a rutei nodului să nu eșueze.
-*   **Automatizare și Debugging:** Se recomandă utilizarea unui *Justfile* pentru pornirea simultană a instanței Uvicorn și a editorului Godot (`just up`). Membrul 2 va folosi instrumente REST (Bruno/Postman) pentru a injecta JSON-uri de test în Godot în timpul dezvoltării, asigurând independența de ritmul de implementare al Membrului 1.
+## 3. Distribuția Sarcinilor Tehnice
+
+### Membrul 1: AI & Backend Engineer (Python)
+
+* **Sarcini:**
+1. Configurarea pipeline-ului FastAPI și integrarea modelelor locale.
+2. Proiectarea prompt-ului pentru M3 (Inspector). Acesta trebuie instruit să acționeze ca un evaluator academic sever, care penalizează devierile de la subiect.
+3. Transformarea scorului NLP (0.0 - 1.0) într-o valoare fizică (`masa_kg`). Exemplu de logică: Dacă `scor > 0.7` -> `actiune: elimina_cutie`. Dacă `scor < 0.5` -> `actiune: adauga_cutie`, unde greutatea crește invers proporțional cu scorul.
+4. Generarea fișierelor JSON statice pentru Epoca 1, 20 și 50.
+
+
+
+### Membrul 2: Systems Programmer (Godot C#)
+
+* **Sarcini:**
+1. Implementarea fizicii hidrodinamice. Barca este un `RigidBody3D`. Crearea unui script `Buoyancy.cs` care aplică o forță `Vector3.Up` proporțională cu adâncimea sub nivelul mărcii de plutire.
+2. Implementarea logicii de instanțiere via HTTP Refit.
+3. **Controlul Masei:** La comanda `adauga_cutie`, scriptul instanțiază un Prefab (`Cutie.tscn`), îl plasează în barcă și crește `RigidBody3D.Mass`. La `elimina_cutie`, distruge cel mai vechi copil-cutie și scade masa.
+
+
+
+```csharp
+public void AplicaDecizieInspector(ActiuneFizica actiune)
+{
+    if (actiune.Tip == "adauga_cutie")
+    {
+        Node3D cutie = _prefabCutie.Instantiate<Node3D>();
+        _barca.AddChild(cutie);
+        _barca.Mass += actiune.MasaKg;
+    }
+    else if (actiune.Tip == "elimina_cutie" && _barca.GetChildCount() > 0)
+    {
+        Node3D cutieVeche = _barca.GetChild(0);
+        cutieVeche.QueueFree();
+        _barca.Mass -= actiune.MasaKg; // Scădem masa corespunzătoare
+    }
+}
+
+```
+
+### Membrul 3: Technical Artist & UI (Godot)
+
+* **Sarcini:**
+1. Designul scenei: Barca detaliată (modele `.glb`), un ponton pentru Inspector, setările globale de mediu.
+2. Implementarea sistemului de text UI: Bule de dialog 3D care se actualizează secvențial pentru a afișa textul Profesorului și răspunsul Elevului. O interfață 2D simplă pentru a schimba între Epoci.
+3. Crearea Shader-ului de apă. Acesta trebuie să ofere feedback vizual convingător când barca coboară pe axa Y. Adăugarea unui sistem de particule (`GPUParticles3D`) la momentul în care o cutie lovește barca.
+
+
+
+---
+
+## 4. Fluxul de Execuție (Sprint)
+
+* **Ziua 1 (Infrastructură):** Python expune JSON-urile. Godot randează barca pe apă și apelează API-ul.
+* **Ziua 2 (Mecanică):** Se integrează adăugarea/eliminarea cutiilor și se calibrează masele pentru ca barca să se scufunde realist, fără a fi proiectată în afara scenei din cauza coliziunilor eronate.
+* **Ziua 3 (Polish & UI):** Se afișează dialogurile din JSON în Godot și se testează trecerea prin cele 3 "Epoci" pentru validarea vizuală a evoluției M2.
