@@ -1,31 +1,39 @@
 [gd_scene format=3 uid="uid://q62t73o2dh16"]
 
 [ext_resource type="Shader" uid="uid://2pva8q1vdxn4" path="res://Shaders/water.gdshader" id="1_mvnus"]
-[ext_resource type="Script" uid="uid://dyj8emrxrqmvg" path="res://Scenes/Water/water.gd" id="2_0gwo3"]
+[ext_resource type="Script" uid="uid://dyj8emrxrqmvg" path="res://Scenes/Water/water.gd" id="1_script"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_uo7di"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mvnus"]
 render_priority = 0
 shader = ExtResource("1_mvnus")
-shader_parameter/wave_0 = Vector4(0.3, 2, 1, 0)
-shader_parameter/wave_1 = Vector4(0.2, 1.5, 0.8, 2.5)
-shader_parameter/wave_2 = Vector4(0.15, 1, 1.2, 5)
-shader_parameter/wave_3 = Vector4(0.1, 0.8, 0.6, 8)
-shader_parameter/noise_scale = 1.0
-shader_parameter/noise_strength = 0.3
-shader_parameter/albedo = Color(0.76, 0.94, 0.93, 0.8)
-shader_parameter/metallic = 0.1
-shader_parameter/roughness = 0.3
-shader_parameter/specular = 0.5
-shader_parameter/water_level = 0.0
-shader_parameter/scale = 1.0
-shader_parameter/edge_threshold = 0.1
-shader_parameter/edge_softness = 0.5
+shader_parameter/albedo = Color(0.1, 0.3, 0.5, 1)
+shader_parameter/albedo2 = Color(0, 0.1, 0.2, 1)
+shader_parameter/metallic = 0.0
+shader_parameter/roughness = 0.02
+shader_parameter/wave_time = 0.0
+shader_parameter/wave_a = Vector4(1, 1, 0.15, 10)
+shader_parameter/wave_b = Vector4(1, 0.6, 0.1, 5)
+shader_parameter/wave_c = Vector4(1, 1.3, 0.1, 3)
+shader_parameter/beer_law_factor = 2.0
+shader_parameter/foam_distance = 0.1
 shader_parameter/foam_color = Color(1, 1, 1, 1)
-shader_parameter/ssr_max_travel = 24
-shader_parameter/depth_tolerance = 0.2
-shader_parameter/ssr_fresnel_power = 3.0
 
-[node name="Water" type="CSGBox3D" unique_id=136093065]
-size = Vector3(10, 0.5, 10)
-material = SubResource("ShaderMaterial_uo7di")
-script = ExtResource("2_0gwo3")
+[sub_resource type="PlaneMesh" id="PlaneMesh_water"]
+size = Vector2(1000, 1000)
+subdivide_width = 100
+subdivide_depth = 100
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0gwo3"]
+size = Vector3(10, 2, 20)
+
+[node name="Water" type="MeshInstance3D" unique_id=179628238]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+material_override = SubResource("ShaderMaterial_mvnus")
+mesh = SubResource("PlaneMesh_water")
+script = ExtResource("1_script")
+
+[node name="ZonaApa" type="Area3D" parent="." unique_id=1890008816]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ZonaApa" unique_id=1298411337]
+shape = SubResource("BoxShape3D_0gwo3")
