@@ -1,0 +1,991 @@
+[gd_scene format=3 uid="uid://ckjerxygh81js"]
+
+[ext_resource type="PackedScene" uid="uid://lt66nvsekgx0" path="res://Assets/kenney_nature-kit/Models/GLTF format/bed.glb" id="1_7yy4v"]
+[ext_resource type="PackedScene" uid="uid://drm7ejhc3glwb" path="res://Assets/kenney_nature-kit/Models/GLTF format/bed_floor.glb" id="2_okypp"]
+[ext_resource type="PackedScene" uid="uid://brflpw2nvndir" path="res://Assets/kenney_nature-kit/Models/GLTF format/bridge_center_stone.glb" id="3_phlo4"]
+[ext_resource type="PackedScene" uid="uid://ctnvlr2j7umqn" path="res://Assets/kenney_nature-kit/Models/GLTF format/bridge_center_stoneRound.glb" id="4_2u4wc"]
+[ext_resource type="PackedScene" uid="uid://cuqi8dudx0r7r" path="res://Assets/kenney_nature-kit/Models/GLTF format/bridge_center_wood.glb" id="5_tex6c"]
+[ext_resource type="PackedScene" uid="uid://bt6nhgobgu2ar" path="res://Assets/kenney_nature-kit/Models/GLTF format/bridge_center_woodRound.glb" id="6_5ulix"]
+[ext_resource type="PackedScene" uid="uid://xga0xt5komx4" path="res://Assets/kenney_nature-kit/Models/GLTF format/bridge_side_stone.glb" id="7_wlgpb"]
+[ext_resource type="PackedScene" uid="uid://b4xlar15y1lpw" path="res://Assets/kenney_nature-kit/Models/GLTF format/bridge_side_stoneRound.glb" id="8_g7ugk"]
+[ext_resource type="PackedScene" uid="uid://dkomcfnmxe37u" path="res://Assets/kenney_nature-kit/Models/GLTF format/bridge_side_wood.glb" id="9_f7ndm"]
+[ext_resource type="PackedScene" uid="uid://chpgtrn5scjp3" path="res://Assets/kenney_nature-kit/Models/GLTF format/bridge_side_woodRound.glb" id="10_dvd60"]
+[ext_resource type="PackedScene" uid="uid://b0p2edefy8adx" path="res://Assets/kenney_nature-kit/Models/GLTF format/bridge_stone.glb" id="11_jf6to"]
+[ext_resource type="PackedScene" uid="uid://ce3m1xxk4ws88" path="res://Assets/kenney_nature-kit/Models/GLTF format/bridge_stoneNarrow.glb" id="12_jvcib"]
+[ext_resource type="PackedScene" uid="uid://b64apq2skmndp" path="res://Assets/kenney_nature-kit/Models/GLTF format/bridge_stoneRound.glb" id="13_bq2in"]
+[ext_resource type="PackedScene" uid="uid://cyx2eg35udy0t" path="res://Assets/kenney_nature-kit/Models/GLTF format/bridge_stoneRoundNarrow.glb" id="14_xw57q"]
+[ext_resource type="PackedScene" uid="uid://baanoljc67rht" path="res://Assets/kenney_nature-kit/Models/GLTF format/bridge_wood.glb" id="15_c3usw"]
+[ext_resource type="PackedScene" uid="uid://de70vjcq4xaun" path="res://Assets/kenney_nature-kit/Models/GLTF format/bridge_woodNarrow.glb" id="16_r37ik"]
+[ext_resource type="PackedScene" uid="uid://xo633fe1cbou" path="res://Assets/kenney_nature-kit/Models/GLTF format/bridge_woodRound.glb" id="17_fw56b"]
+[ext_resource type="PackedScene" uid="uid://bkjoajp2hrqps" path="res://Assets/kenney_nature-kit/Models/GLTF format/bridge_woodRoundNarrow.glb" id="18_oyiqx"]
+[ext_resource type="PackedScene" uid="uid://dkaivv6sphtsw" path="res://Assets/kenney_nature-kit/Models/GLTF format/cactus_short.glb" id="19_xh6lo"]
+[ext_resource type="PackedScene" uid="uid://duxq2ox5yx1bt" path="res://Assets/kenney_nature-kit/Models/GLTF format/cactus_tall.glb" id="20_jbd2l"]
+[ext_resource type="PackedScene" uid="uid://db40wlfirkivv" path="res://Assets/kenney_nature-kit/Models/GLTF format/campfire_bricks.glb" id="21_lr1uy"]
+[ext_resource type="PackedScene" uid="uid://djy4nfrum6jg4" path="res://Assets/kenney_nature-kit/Models/GLTF format/campfire_logs.glb" id="22_75jom"]
+[ext_resource type="PackedScene" uid="uid://cwrxb0emd05m0" path="res://Assets/kenney_nature-kit/Models/GLTF format/campfire_planks.glb" id="23_vpyb1"]
+[ext_resource type="PackedScene" uid="uid://xfcxq7gpy03v" path="res://Assets/kenney_nature-kit/Models/GLTF format/campfire_stones.glb" id="24_pncsi"]
+[ext_resource type="PackedScene" uid="uid://c8bb1u3705k8t" path="res://Assets/kenney_nature-kit/Models/GLTF format/canoe.glb" id="25_kq3om"]
+[ext_resource type="PackedScene" uid="uid://ckmcuieydivk6" path="res://Assets/kenney_nature-kit/Models/GLTF format/canoe_paddle.glb" id="26_fts1b"]
+[ext_resource type="PackedScene" uid="uid://cdpqlpxi6yhyj" path="res://Assets/kenney_nature-kit/Models/GLTF format/cliff_blockCave_rock.glb" id="27_qfh0r"]
+[ext_resource type="PackedScene" uid="uid://d0s442kdmvr0e" path="res://Assets/kenney_nature-kit/Models/GLTF format/cliff_blockCave_stone.glb" id="28_g2wv4"]
+[ext_resource type="PackedScene" uid="uid://bhcbsexivpe1s" path="res://Assets/kenney_nature-kit/Models/GLTF format/cliff_blockDiagonal_rock.glb" id="29_mprws"]
+[ext_resource type="PackedScene" uid="uid://dhcq5vx46vq5g" path="res://Assets/kenney_nature-kit/Models/GLTF format/cliff_blockDiagonal_stone.glb" id="30_b5sku"]
+[ext_resource type="PackedScene" uid="uid://citpkeofx7gtx" path="res://Assets/kenney_nature-kit/Models/GLTF format/cliff_blockHalf_rock.glb" id="31_rhtm6"]
+[ext_resource type="PackedScene" uid="uid://dy37gr47p6i2t" path="res://Assets/kenney_nature-kit/Models/GLTF format/cliff_blockHalf_stone.glb" id="32_gs4qy"]
+[ext_resource type="PackedScene" uid="uid://mqdxw8fu22mo" path="res://Assets/kenney_nature-kit/Models/GLTF format/cliff_blockQuarter_rock.glb" id="33_fdemp"]
+[ext_resource type="PackedScene" uid="uid://dcks6d26yx4rf" path="res://Assets/kenney_nature-kit/Models/GLTF format/cliff_blockQuarter_stone.glb" id="34_u127b"]
+[ext_resource type="PackedScene" uid="uid://d3e1dwovk4mk8" path="res://Assets/kenney_nature-kit/Models/GLTF format/cliff_blockSlopeHalfWalls_rock.glb" id="35_fl8lm"]
+[ext_resource type="PackedScene" uid="uid://b4ytp206dldxe" path="res://Assets/kenney_nature-kit/Models/GLTF format/cliff_blockSlopeHalfWalls_stone.glb" id="36_urx8u"]
+[ext_resource type="PackedScene" uid="uid://dt4yjqpe3m3ju" path="res://Assets/kenney_nature-kit/Models/GLTF format/cliff_blockSlopeWalls_rock.glb" id="37_hwoes"]
+[ext_resource type="PackedScene" uid="uid://beonxj6divdt4" path="res://Assets/kenney_nature-kit/Models/GLTF format/cliff_blockSlopeWalls_stone.glb" id="38_cvtge"]
+[ext_resource type="PackedScene" uid="uid://py0sxggna0rv" path="res://Assets/kenney_nature-kit/Models/GLTF format/cliff_blockSlope_rock.glb" id="39_m0xp8"]
+[ext_resource type="PackedScene" uid="uid://ds6xr8c332ohd" path="res://Assets/kenney_nature-kit/Models/GLTF format/cliff_blockSlope_stone.glb" id="40_sb6jb"]
+[ext_resource type="PackedScene" uid="uid://dpdfvi3ppobcq" path="res://Assets/kenney_nature-kit/Models/GLTF format/cliff_block_rock.glb" id="41_kb2oj"]
+[ext_resource type="PackedScene" uid="uid://cexc0g52unnf5" path="res://Assets/kenney_nature-kit/Models/GLTF format/cliff_block_stone.glb" id="42_1brno"]
+[ext_resource type="PackedScene" uid="uid://c4y8firgvtt2m" path="res://Assets/kenney_nature-kit/Models/GLTF format/cliff_cave_rock.glb" id="43_4i86e"]
+[ext_resource type="PackedScene" uid="uid://ddjjubtkjc5q" path="res://Assets/kenney_nature-kit/Models/GLTF format/cliff_cave_stone.glb" id="44_k5tgn"]
+[ext_resource type="PackedScene" uid="uid://dsx8p3wo730a" path="res://Assets/kenney_nature-kit/Models/GLTF format/cliff_cornerInnerLarge_rock.glb" id="45_g60ad"]
+[ext_resource type="PackedScene" uid="uid://ckm8co4ayotbv" path="res://Assets/kenney_nature-kit/Models/GLTF format/cliff_cornerInnerLarge_stone.glb" id="46_aln86"]
+[ext_resource type="PackedScene" uid="uid://c58nhhuyjwul7" path="res://Assets/kenney_nature-kit/Models/GLTF format/cliff_cornerInnerTop_rock.glb" id="47_v73ls"]
+[ext_resource type="PackedScene" uid="uid://b83iuj5j6fh6o" path="res://Assets/kenney_nature-kit/Models/GLTF format/cliff_cornerInnerTop_stone.glb" id="48_2evkg"]
+[ext_resource type="PackedScene" uid="uid://c2u46u1htvwcy" path="res://Assets/kenney_nature-kit/Models/GLTF format/cliff_cornerInner_rock.glb" id="49_clotj"]
+[ext_resource type="PackedScene" uid="uid://dnccjtfcylk56" path="res://Assets/kenney_nature-kit/Models/GLTF format/cliff_cornerInner_stone.glb" id="50_0oabk"]
+[ext_resource type="PackedScene" uid="uid://s3tnjgbjgrjn" path="res://Assets/kenney_nature-kit/Models/GLTF format/cliff_cornerLarge_rock.glb" id="51_u5qwm"]
+[ext_resource type="PackedScene" uid="uid://btyrtshrhj8eb" path="res://Assets/kenney_nature-kit/Models/GLTF format/cliff_cornerLarge_stone.glb" id="52_sfliy"]
+[ext_resource type="PackedScene" uid="uid://cfakuqsgsnt02" path="res://Assets/kenney_nature-kit/Models/GLTF format/cliff_cornerTop_rock.glb" id="53_np412"]
+[ext_resource type="PackedScene" uid="uid://defut887lvbnb" path="res://Assets/kenney_nature-kit/Models/GLTF format/cliff_cornerTop_stone.glb" id="54_dxlao"]
+[ext_resource type="PackedScene" uid="uid://dy1rbalv7plt6" path="res://Assets/kenney_nature-kit/Models/GLTF format/cliff_corner_rock.glb" id="55_3idbh"]
+[ext_resource type="PackedScene" uid="uid://chtoj3qbnkqug" path="res://Assets/kenney_nature-kit/Models/GLTF format/cliff_corner_stone.glb" id="56_cmb02"]
+[ext_resource type="PackedScene" uid="uid://t33e3jjgmqib" path="res://Assets/kenney_nature-kit/Models/GLTF format/cliff_diagonal_rock.glb" id="57_k81mc"]
+[ext_resource type="PackedScene" uid="uid://cb3c8th8ph1hq" path="res://Assets/kenney_nature-kit/Models/GLTF format/cliff_diagonal_stone.glb" id="58_ykxkr"]
+[ext_resource type="PackedScene" uid="uid://bkp18uuxu5wd2" path="res://Assets/kenney_nature-kit/Models/GLTF format/cliff_halfCornerInner_rock.glb" id="59_3y80m"]
+[ext_resource type="PackedScene" uid="uid://vdcvo652yu73" path="res://Assets/kenney_nature-kit/Models/GLTF format/cliff_halfCornerInner_stone.glb" id="60_mb1y7"]
+[ext_resource type="PackedScene" uid="uid://d08i1l7caui25" path="res://Assets/kenney_nature-kit/Models/GLTF format/cliff_halfCorner_rock.glb" id="61_6wvbi"]
+[ext_resource type="PackedScene" uid="uid://ojclgjy3pyxf" path="res://Assets/kenney_nature-kit/Models/GLTF format/cliff_halfCorner_stone.glb" id="62_ckqmn"]
+[ext_resource type="PackedScene" uid="uid://cr220nall5m2o" path="res://Assets/kenney_nature-kit/Models/GLTF format/cliff_half_rock.glb" id="63_uawdv"]
+[ext_resource type="PackedScene" uid="uid://cdphwkchn65o3" path="res://Assets/kenney_nature-kit/Models/GLTF format/cliff_half_stone.glb" id="64_jn1ph"]
+[ext_resource type="PackedScene" uid="uid://dtyuwymljmy42" path="res://Assets/kenney_nature-kit/Models/GLTF format/cliff_large_rock.glb" id="65_54d8g"]
+[ext_resource type="PackedScene" uid="uid://xdn7sqof46uo" path="res://Assets/kenney_nature-kit/Models/GLTF format/cliff_large_stone.glb" id="66_4p0yk"]
+[ext_resource type="PackedScene" uid="uid://kema2u0qke22" path="res://Assets/kenney_nature-kit/Models/GLTF format/cliff_rock.glb" id="67_dp4cv"]
+[ext_resource type="PackedScene" uid="uid://cdyc3fr4rkv6" path="res://Assets/kenney_nature-kit/Models/GLTF format/cliff_stepsCornerInner_rock.glb" id="68_8ujox"]
+[ext_resource type="PackedScene" uid="uid://bkhhiqt8jd2lp" path="res://Assets/kenney_nature-kit/Models/GLTF format/cliff_stepsCornerInner_stone.glb" id="69_t6wv1"]
+[ext_resource type="PackedScene" uid="uid://cm3i7ha5rlin3" path="res://Assets/kenney_nature-kit/Models/GLTF format/cliff_stepsCorner_rock.glb" id="70_iwxen"]
+[ext_resource type="PackedScene" uid="uid://bctam0hqmqjou" path="res://Assets/kenney_nature-kit/Models/GLTF format/cliff_stepsCorner_stone.glb" id="71_8q51x"]
+[ext_resource type="PackedScene" uid="uid://c62ksca28vcu7" path="res://Assets/kenney_nature-kit/Models/GLTF format/cliff_steps_rock.glb" id="72_7y5yp"]
+[ext_resource type="PackedScene" uid="uid://d005rtc7b2pv8" path="res://Assets/kenney_nature-kit/Models/GLTF format/cliff_steps_stone.glb" id="73_p1pyk"]
+[ext_resource type="PackedScene" uid="uid://bxonkgrj42nhr" path="res://Assets/kenney_nature-kit/Models/GLTF format/cliff_stone.glb" id="74_egor7"]
+[ext_resource type="PackedScene" uid="uid://cfd3r2b3rwyob" path="res://Assets/kenney_nature-kit/Models/GLTF format/cliff_topDiagonal_rock.glb" id="75_7hj0x"]
+[ext_resource type="PackedScene" uid="uid://5mljlv1lmhvv" path="res://Assets/kenney_nature-kit/Models/GLTF format/cliff_topDiagonal_stone.glb" id="76_thivj"]
+[ext_resource type="PackedScene" uid="uid://dm2x2h5wrxtwt" path="res://Assets/kenney_nature-kit/Models/GLTF format/cliff_top_rock.glb" id="77_pgxyi"]
+[ext_resource type="PackedScene" uid="uid://buot0o2tkjckl" path="res://Assets/kenney_nature-kit/Models/GLTF format/cliff_top_stone.glb" id="78_pjiov"]
+[ext_resource type="PackedScene" uid="uid://edclfny7hkhc" path="res://Assets/kenney_nature-kit/Models/GLTF format/cliff_waterfallTop_rock.glb" id="79_n13jl"]
+[ext_resource type="PackedScene" uid="uid://hpmdnnf3tfs" path="res://Assets/kenney_nature-kit/Models/GLTF format/cliff_waterfallTop_stone.glb" id="80_d48nd"]
+[ext_resource type="PackedScene" uid="uid://bxmec1u3yda40" path="res://Assets/kenney_nature-kit/Models/GLTF format/cliff_waterfall_rock.glb" id="81_xnbbg"]
+[ext_resource type="PackedScene" uid="uid://biv224uteb7oj" path="res://Assets/kenney_nature-kit/Models/GLTF format/cliff_waterfall_stone.glb" id="82_d16nt"]
+[ext_resource type="PackedScene" uid="uid://dknnppsrhidu7" path="res://Assets/kenney_nature-kit/Models/GLTF format/crops_bambooStageA.glb" id="83_11bnx"]
+[ext_resource type="PackedScene" uid="uid://x0vb1vx38nok" path="res://Assets/kenney_nature-kit/Models/GLTF format/crops_bambooStageB.glb" id="84_vqjfu"]
+[ext_resource type="PackedScene" uid="uid://yaxnqqppwy2k" path="res://Assets/kenney_nature-kit/Models/GLTF format/crops_cornStageA.glb" id="85_o5jg5"]
+[ext_resource type="PackedScene" uid="uid://07f25h2clg58" path="res://Assets/kenney_nature-kit/Models/GLTF format/crops_cornStageB.glb" id="86_50cyf"]
+[ext_resource type="PackedScene" uid="uid://bhnwf6yhhgn6b" path="res://Assets/kenney_nature-kit/Models/GLTF format/crops_cornStageC.glb" id="87_d86pg"]
+[ext_resource type="PackedScene" uid="uid://d1qbtbvluik30" path="res://Assets/kenney_nature-kit/Models/GLTF format/crops_cornStageD.glb" id="88_2dwgc"]
+[ext_resource type="PackedScene" uid="uid://qoffacfehm6a" path="res://Assets/kenney_nature-kit/Models/GLTF format/crops_dirtDoubleRow.glb" id="89_mp7vv"]
+[ext_resource type="PackedScene" uid="uid://crrs07jh8kia7" path="res://Assets/kenney_nature-kit/Models/GLTF format/crops_dirtDoubleRowCorner.glb" id="90_e1p0q"]
+[ext_resource type="PackedScene" uid="uid://domw3pwsyjafe" path="res://Assets/kenney_nature-kit/Models/GLTF format/crops_dirtDoubleRowEnd.glb" id="91_bcofo"]
+[ext_resource type="PackedScene" uid="uid://tqjxny5i2hkt" path="res://Assets/kenney_nature-kit/Models/GLTF format/crops_dirtRow.glb" id="92_t8ybe"]
+[ext_resource type="PackedScene" uid="uid://dprn6deqk6mmq" path="res://Assets/kenney_nature-kit/Models/GLTF format/crops_dirtRowCorner.glb" id="93_425c6"]
+[ext_resource type="PackedScene" uid="uid://dq1k0wmu1mlda" path="res://Assets/kenney_nature-kit/Models/GLTF format/crops_dirtRowEnd.glb" id="94_rs858"]
+[ext_resource type="PackedScene" uid="uid://c351p0ks12vnd" path="res://Assets/kenney_nature-kit/Models/GLTF format/crops_dirtSingle.glb" id="95_hg4nh"]
+[ext_resource type="PackedScene" uid="uid://3fp3qxwouge2" path="res://Assets/kenney_nature-kit/Models/GLTF format/crops_leafsStageA.glb" id="96_5dsyn"]
+[ext_resource type="PackedScene" uid="uid://cnq6m65md6431" path="res://Assets/kenney_nature-kit/Models/GLTF format/crops_leafsStageB.glb" id="97_0m21v"]
+[ext_resource type="PackedScene" uid="uid://og7agn1xqt5" path="res://Assets/kenney_nature-kit/Models/GLTF format/crops_wheatStageA.glb" id="98_u1hj2"]
+[ext_resource type="PackedScene" uid="uid://b6yvcp2wloi5t" path="res://Assets/kenney_nature-kit/Models/GLTF format/crops_wheatStageB.glb" id="99_how18"]
+[ext_resource type="PackedScene" uid="uid://du37ndaopi5ap" path="res://Assets/kenney_nature-kit/Models/GLTF format/crop_carrot.glb" id="100_mlh3t"]
+[ext_resource type="PackedScene" uid="uid://bvghflh4r4y4p" path="res://Assets/kenney_nature-kit/Models/GLTF format/crop_melon.glb" id="101_07lxr"]
+[ext_resource type="PackedScene" uid="uid://c62avdtxqi0jg" path="res://Assets/kenney_nature-kit/Models/GLTF format/crop_pumpkin.glb" id="102_vfj55"]
+[ext_resource type="PackedScene" uid="uid://bk3us1m5q2ibx" path="res://Assets/kenney_nature-kit/Models/GLTF format/crop_turnip.glb" id="103_tl4i7"]
+[ext_resource type="PackedScene" uid="uid://b8tlksv8w1mbw" path="res://Assets/kenney_nature-kit/Models/GLTF format/fence_bend.glb" id="104_eaoa5"]
+[ext_resource type="PackedScene" uid="uid://6edw2o3c72je" path="res://Assets/kenney_nature-kit/Models/GLTF format/fence_bendCenter.glb" id="105_4kyjs"]
+[ext_resource type="PackedScene" uid="uid://dwho62bfuypc1" path="res://Assets/kenney_nature-kit/Models/GLTF format/fence_corner.glb" id="106_n6jd5"]
+[ext_resource type="PackedScene" uid="uid://lpof75bw0yfk" path="res://Assets/kenney_nature-kit/Models/GLTF format/fence_gate.glb" id="107_qkcev"]
+[ext_resource type="PackedScene" uid="uid://bsa33svrspnkl" path="res://Assets/kenney_nature-kit/Models/GLTF format/fence_planks.glb" id="108_387qs"]
+[ext_resource type="PackedScene" uid="uid://dwsytkxry5u65" path="res://Assets/kenney_nature-kit/Models/GLTF format/fence_planksDouble.glb" id="109_uio7y"]
+[ext_resource type="PackedScene" uid="uid://eql0hjldanu1" path="res://Assets/kenney_nature-kit/Models/GLTF format/fence_simple.glb" id="110_me36c"]
+[ext_resource type="PackedScene" uid="uid://cfab728i42ctm" path="res://Assets/kenney_nature-kit/Models/GLTF format/fence_simpleCenter.glb" id="111_smp3d"]
+[ext_resource type="PackedScene" uid="uid://c2ev8r8hnhgde" path="res://Assets/kenney_nature-kit/Models/GLTF format/fence_simpleDiagonal.glb" id="112_eydpr"]
+[ext_resource type="PackedScene" uid="uid://wcdrjckxf6md" path="res://Assets/kenney_nature-kit/Models/GLTF format/fence_simpleDiagonalCenter.glb" id="113_rtc6n"]
+[ext_resource type="PackedScene" uid="uid://covmvmwsov6qe" path="res://Assets/kenney_nature-kit/Models/GLTF format/fence_simpleHigh.glb" id="114_p0f44"]
+[ext_resource type="PackedScene" uid="uid://m1j3iu8xujh2" path="res://Assets/kenney_nature-kit/Models/GLTF format/fence_simpleLow.glb" id="115_graah"]
+[ext_resource type="PackedScene" uid="uid://bv83efsib2gfx" path="res://Assets/kenney_nature-kit/Models/GLTF format/flower_purpleA.glb" id="116_7cryu"]
+[ext_resource type="PackedScene" uid="uid://beq0sv7g8q0e3" path="res://Assets/kenney_nature-kit/Models/GLTF format/flower_purpleB.glb" id="117_eftbh"]
+[ext_resource type="PackedScene" uid="uid://c0bxxd8l5uj8o" path="res://Assets/kenney_nature-kit/Models/GLTF format/flower_purpleC.glb" id="118_hs6qx"]
+[ext_resource type="PackedScene" uid="uid://bljdwnwc4oxs1" path="res://Assets/kenney_nature-kit/Models/GLTF format/flower_redA.glb" id="119_3m6ub"]
+[ext_resource type="PackedScene" uid="uid://c1etyy8b2qpxo" path="res://Assets/kenney_nature-kit/Models/GLTF format/flower_redB.glb" id="120_a2g4b"]
+[ext_resource type="PackedScene" uid="uid://dpevxmaoh0o72" path="res://Assets/kenney_nature-kit/Models/GLTF format/flower_redC.glb" id="121_1pljw"]
+[ext_resource type="PackedScene" uid="uid://be7cflqgmkt4g" path="res://Assets/kenney_nature-kit/Models/GLTF format/flower_yellowA.glb" id="122_wm3ri"]
+[ext_resource type="PackedScene" uid="uid://368i7m5ikicy" path="res://Assets/kenney_nature-kit/Models/GLTF format/flower_yellowB.glb" id="123_ujlt0"]
+[ext_resource type="PackedScene" uid="uid://dest0kfql8pvx" path="res://Assets/kenney_nature-kit/Models/GLTF format/flower_yellowC.glb" id="124_u58il"]
+[ext_resource type="PackedScene" uid="uid://cpjrve1v17rhr" path="res://Assets/kenney_nature-kit/Models/GLTF format/grass.glb" id="125_ansex"]
+[ext_resource type="PackedScene" uid="uid://x2be78ds2c70" path="res://Assets/kenney_nature-kit/Models/GLTF format/grass_large.glb" id="126_6xlnp"]
+[ext_resource type="PackedScene" uid="uid://bd3tc2m8a6ym" path="res://Assets/kenney_nature-kit/Models/GLTF format/grass_leafs.glb" id="127_f5qn4"]
+[ext_resource type="PackedScene" uid="uid://bmytoiogkdnjl" path="res://Assets/kenney_nature-kit/Models/GLTF format/grass_leafsLarge.glb" id="128_jmsal"]
+[ext_resource type="PackedScene" uid="uid://sqsaa6qv820p" path="res://Assets/kenney_nature-kit/Models/GLTF format/ground_grass.glb" id="129_pb8ak"]
+[ext_resource type="PackedScene" uid="uid://dek35xurs80ic" path="res://Assets/kenney_nature-kit/Models/GLTF format/ground_pathBend.glb" id="130_kj5sd"]
+[ext_resource type="PackedScene" uid="uid://y0hnf8f1ickn" path="res://Assets/kenney_nature-kit/Models/GLTF format/ground_pathBendBank.glb" id="131_iqas7"]
+[ext_resource type="PackedScene" uid="uid://c2jurtruf44g3" path="res://Assets/kenney_nature-kit/Models/GLTF format/ground_pathCorner.glb" id="132_nbk5t"]
+[ext_resource type="PackedScene" uid="uid://bndb1b5a0yd6n" path="res://Assets/kenney_nature-kit/Models/GLTF format/ground_pathCornerSmall.glb" id="133_iy345"]
+[ext_resource type="PackedScene" uid="uid://bn7o043021hpi" path="res://Assets/kenney_nature-kit/Models/GLTF format/ground_pathCross.glb" id="134_hgrxi"]
+[ext_resource type="PackedScene" uid="uid://b7ikwyorscwrw" path="res://Assets/kenney_nature-kit/Models/GLTF format/ground_pathEnd.glb" id="135_usqd3"]
+[ext_resource type="PackedScene" uid="uid://bejmh46qdnvr7" path="res://Assets/kenney_nature-kit/Models/GLTF format/ground_pathEndClosed.glb" id="136_hdlw3"]
+[ext_resource type="PackedScene" uid="uid://c1jomun0vdkka" path="res://Assets/kenney_nature-kit/Models/GLTF format/ground_pathOpen.glb" id="137_rn73q"]
+[ext_resource type="PackedScene" uid="uid://b3i3g2wx3ia4l" path="res://Assets/kenney_nature-kit/Models/GLTF format/ground_pathRocks.glb" id="138_7lpuh"]
+[ext_resource type="PackedScene" uid="uid://b6iv233ivo4ig" path="res://Assets/kenney_nature-kit/Models/GLTF format/ground_pathSide.glb" id="139_1w2mw"]
+[ext_resource type="PackedScene" uid="uid://j756qqkvl2ak" path="res://Assets/kenney_nature-kit/Models/GLTF format/ground_pathSideOpen.glb" id="140_elri8"]
+[ext_resource type="PackedScene" uid="uid://4gpt8t6l4shs" path="res://Assets/kenney_nature-kit/Models/GLTF format/ground_pathSplit.glb" id="141_u3hq5"]
+[ext_resource type="PackedScene" uid="uid://btdrsutxktmln" path="res://Assets/kenney_nature-kit/Models/GLTF format/ground_pathStraight.glb" id="142_klsiq"]
+[ext_resource type="PackedScene" uid="uid://11vukqg3vbt5" path="res://Assets/kenney_nature-kit/Models/GLTF format/ground_pathTile.glb" id="143_onpul"]
+[ext_resource type="PackedScene" uid="uid://npj2bua7i5f3" path="res://Assets/kenney_nature-kit/Models/GLTF format/ground_riverBend.glb" id="144_qcig1"]
+[ext_resource type="PackedScene" uid="uid://vwjunff5x26g" path="res://Assets/kenney_nature-kit/Models/GLTF format/ground_riverBendBank.glb" id="145_aki2i"]
+[ext_resource type="PackedScene" uid="uid://dfeevjrssbxlt" path="res://Assets/kenney_nature-kit/Models/GLTF format/ground_riverCorner.glb" id="146_dofe0"]
+[ext_resource type="PackedScene" uid="uid://rc0flwk5qy40" path="res://Assets/kenney_nature-kit/Models/GLTF format/ground_riverCornerSmall.glb" id="147_qepe6"]
+[ext_resource type="PackedScene" uid="uid://bqocwq43t4uh1" path="res://Assets/kenney_nature-kit/Models/GLTF format/ground_riverCross.glb" id="148_wkxxi"]
+[ext_resource type="PackedScene" uid="uid://cu0sck3t4dulb" path="res://Assets/kenney_nature-kit/Models/GLTF format/ground_riverEnd.glb" id="149_jcyfn"]
+[ext_resource type="PackedScene" uid="uid://clubyib1ga4e8" path="res://Assets/kenney_nature-kit/Models/GLTF format/ground_riverEndClosed.glb" id="150_vl1i8"]
+[ext_resource type="PackedScene" uid="uid://dnwf1o66jkb7u" path="res://Assets/kenney_nature-kit/Models/GLTF format/ground_riverOpen.glb" id="151_g585q"]
+[ext_resource type="PackedScene" uid="uid://b0fpixgxa7p3y" path="res://Assets/kenney_nature-kit/Models/GLTF format/ground_riverRocks.glb" id="152_vj1wh"]
+[ext_resource type="PackedScene" uid="uid://dvof64vjm2yns" path="res://Assets/kenney_nature-kit/Models/GLTF format/ground_riverSide.glb" id="153_31niv"]
+[ext_resource type="PackedScene" uid="uid://dx5m5ssxtvrxj" path="res://Assets/kenney_nature-kit/Models/GLTF format/ground_riverSideOpen.glb" id="154_p5tj4"]
+[ext_resource type="PackedScene" uid="uid://4othxyalj0b6" path="res://Assets/kenney_nature-kit/Models/GLTF format/ground_riverSplit.glb" id="155_1c8xw"]
+[ext_resource type="PackedScene" uid="uid://b36ti7gx3mykd" path="res://Assets/kenney_nature-kit/Models/GLTF format/ground_riverStraight.glb" id="156_mf673"]
+[ext_resource type="PackedScene" uid="uid://3i5uhgb2giu7" path="res://Assets/kenney_nature-kit/Models/GLTF format/ground_riverTile.glb" id="157_u6hwy"]
+[ext_resource type="PackedScene" uid="uid://cydf3auijhxno" path="res://Assets/kenney_nature-kit/Models/GLTF format/hanging_moss.glb" id="158_k8myb"]
+[ext_resource type="PackedScene" uid="uid://c5hcg2pmti4rw" path="res://Assets/kenney_nature-kit/Models/GLTF format/lily_large.glb" id="159_q1x77"]
+[ext_resource type="PackedScene" uid="uid://4qgsluxlsc56" path="res://Assets/kenney_nature-kit/Models/GLTF format/lily_small.glb" id="160_w8rur"]
+[ext_resource type="PackedScene" uid="uid://cs6dvw3gkgxg3" path="res://Assets/kenney_nature-kit/Models/GLTF format/log.glb" id="161_4kxpt"]
+[ext_resource type="PackedScene" uid="uid://dd6k653f41mgq" path="res://Assets/kenney_nature-kit/Models/GLTF format/log_large.glb" id="162_3gjtg"]
+[ext_resource type="PackedScene" uid="uid://c0gu07rk2me8l" path="res://Assets/kenney_nature-kit/Models/GLTF format/log_stack.glb" id="163_rwkh5"]
+[ext_resource type="PackedScene" uid="uid://nmla5ciiwr46" path="res://Assets/kenney_nature-kit/Models/GLTF format/log_stackLarge.glb" id="164_jk3w0"]
+[ext_resource type="PackedScene" uid="uid://cdxx6vjt7ertx" path="res://Assets/kenney_nature-kit/Models/GLTF format/mushroom_red.glb" id="165_i8ell"]
+[ext_resource type="PackedScene" uid="uid://balejm4r677jn" path="res://Assets/kenney_nature-kit/Models/GLTF format/mushroom_redGroup.glb" id="166_hecu7"]
+[ext_resource type="PackedScene" uid="uid://idcwh5tqv1cf" path="res://Assets/kenney_nature-kit/Models/GLTF format/mushroom_redTall.glb" id="167_w75qd"]
+[ext_resource type="PackedScene" uid="uid://clki16i3w1g30" path="res://Assets/kenney_nature-kit/Models/GLTF format/mushroom_tan.glb" id="168_xbmwj"]
+[ext_resource type="PackedScene" uid="uid://d07fre3uv5er1" path="res://Assets/kenney_nature-kit/Models/GLTF format/mushroom_tanGroup.glb" id="169_rx06i"]
+[ext_resource type="PackedScene" uid="uid://baihxrjw2m5cv" path="res://Assets/kenney_nature-kit/Models/GLTF format/mushroom_tanTall.glb" id="170_m7rlg"]
+[ext_resource type="PackedScene" uid="uid://blrxdrrbk52y3" path="res://Assets/kenney_nature-kit/Models/GLTF format/path_stone.glb" id="171_o2mlr"]
+[ext_resource type="PackedScene" uid="uid://desewr5e73rjv" path="res://Assets/kenney_nature-kit/Models/GLTF format/path_stoneCircle.glb" id="172_uhx0c"]
+[ext_resource type="PackedScene" uid="uid://nr2mk4q7gnw4" path="res://Assets/kenney_nature-kit/Models/GLTF format/path_stoneCorner.glb" id="173_g1coy"]
+[ext_resource type="PackedScene" uid="uid://cx6w8aoc0ngi8" path="res://Assets/kenney_nature-kit/Models/GLTF format/path_stoneEnd.glb" id="174_34ml4"]
+[ext_resource type="PackedScene" uid="uid://d236a3jvpuv4b" path="res://Assets/kenney_nature-kit/Models/GLTF format/path_wood.glb" id="175_rc1sf"]
+[ext_resource type="PackedScene" uid="uid://dpewy57amqxqp" path="res://Assets/kenney_nature-kit/Models/GLTF format/path_woodCorner.glb" id="176_o68t0"]
+[ext_resource type="PackedScene" uid="uid://can6h34s1ka4a" path="res://Assets/kenney_nature-kit/Models/GLTF format/path_woodEnd.glb" id="177_mscqs"]
+[ext_resource type="PackedScene" uid="uid://xu1r0o7br7ex" path="res://Assets/kenney_nature-kit/Models/GLTF format/plant_bush.glb" id="178_6uk78"]
+[ext_resource type="PackedScene" uid="uid://spk2u75d2f5v" path="res://Assets/kenney_nature-kit/Models/GLTF format/plant_bushDetailed.glb" id="179_0b430"]
+[ext_resource type="PackedScene" uid="uid://bini2u5kuq2rb" path="res://Assets/kenney_nature-kit/Models/GLTF format/plant_bushLarge.glb" id="180_o1l8v"]
+[ext_resource type="PackedScene" uid="uid://h05jmhk4chrl" path="res://Assets/kenney_nature-kit/Models/GLTF format/plant_bushLargeTriangle.glb" id="181_pn166"]
+[ext_resource type="PackedScene" uid="uid://csdh080g2mlmy" path="res://Assets/kenney_nature-kit/Models/GLTF format/plant_bushSmall.glb" id="182_der7a"]
+[ext_resource type="PackedScene" uid="uid://drymjv3jyrnc8" path="res://Assets/kenney_nature-kit/Models/GLTF format/plant_bushTriangle.glb" id="183_pn6pe"]
+[ext_resource type="PackedScene" uid="uid://ly8n6ictpmc7" path="res://Assets/kenney_nature-kit/Models/GLTF format/plant_flatShort.glb" id="184_uq4nb"]
+[ext_resource type="PackedScene" uid="uid://bhw8jiupsa80x" path="res://Assets/kenney_nature-kit/Models/GLTF format/plant_flatTall.glb" id="185_0n1s5"]
+[ext_resource type="PackedScene" uid="uid://c4gphkgbkou8k" path="res://Assets/kenney_nature-kit/Models/GLTF format/platform_beach.glb" id="186_f32sd"]
+[ext_resource type="PackedScene" uid="uid://2fv0hwr2kaa0" path="res://Assets/kenney_nature-kit/Models/GLTF format/platform_grass.glb" id="187_nqfa0"]
+[ext_resource type="PackedScene" uid="uid://dwjds0l8rmnre" path="res://Assets/kenney_nature-kit/Models/GLTF format/platform_stone.glb" id="188_4oxxy"]
+[ext_resource type="PackedScene" uid="uid://cg45jlr7r8gi1" path="res://Assets/kenney_nature-kit/Models/GLTF format/pot_large.glb" id="189_3dw4b"]
+[ext_resource type="PackedScene" uid="uid://cxt7ao0s4ji35" path="res://Assets/kenney_nature-kit/Models/GLTF format/pot_small.glb" id="190_5y3k3"]
+[ext_resource type="PackedScene" uid="uid://br50ksmfypebj" path="res://Assets/kenney_nature-kit/Models/GLTF format/rock_largeA.glb" id="191_5vomv"]
+[ext_resource type="PackedScene" uid="uid://cfktuync85jp" path="res://Assets/kenney_nature-kit/Models/GLTF format/rock_largeB.glb" id="192_dyrli"]
+[ext_resource type="PackedScene" uid="uid://d1ta7nyhx8k8w" path="res://Assets/kenney_nature-kit/Models/GLTF format/rock_largeC.glb" id="193_et4ye"]
+[ext_resource type="PackedScene" uid="uid://tho3rlixwf1a" path="res://Assets/kenney_nature-kit/Models/GLTF format/rock_largeD.glb" id="194_4qjr5"]
+[ext_resource type="PackedScene" uid="uid://bgyb5ho6mr30h" path="res://Assets/kenney_nature-kit/Models/GLTF format/rock_largeE.glb" id="195_s1bot"]
+[ext_resource type="PackedScene" uid="uid://bbuf3v5qk6hna" path="res://Assets/kenney_nature-kit/Models/GLTF format/rock_largeF.glb" id="196_kesw3"]
+[ext_resource type="PackedScene" uid="uid://b1nj0hw0r33ek" path="res://Assets/kenney_nature-kit/Models/GLTF format/rock_smallA.glb" id="197_x5nca"]
+[ext_resource type="PackedScene" uid="uid://d0f75fha6xqb7" path="res://Assets/kenney_nature-kit/Models/GLTF format/rock_smallB.glb" id="198_go1no"]
+[ext_resource type="PackedScene" uid="uid://et3h7wxchgg3" path="res://Assets/kenney_nature-kit/Models/GLTF format/rock_smallC.glb" id="199_1mqm2"]
+[ext_resource type="PackedScene" uid="uid://by51yjw1rpo8a" path="res://Assets/kenney_nature-kit/Models/GLTF format/rock_smallD.glb" id="200_qgxpc"]
+[ext_resource type="PackedScene" uid="uid://ti078x1f2p4j" path="res://Assets/kenney_nature-kit/Models/GLTF format/rock_smallE.glb" id="201_j8vyp"]
+[ext_resource type="PackedScene" uid="uid://mihxbkedn2pn" path="res://Assets/kenney_nature-kit/Models/GLTF format/rock_smallF.glb" id="202_3kpum"]
+[ext_resource type="PackedScene" uid="uid://civ2xm4ft2yx2" path="res://Assets/kenney_nature-kit/Models/GLTF format/rock_smallFlatA.glb" id="203_opcuk"]
+[ext_resource type="PackedScene" uid="uid://ckew1i14rmvra" path="res://Assets/kenney_nature-kit/Models/GLTF format/rock_smallFlatB.glb" id="204_isahr"]
+[ext_resource type="PackedScene" uid="uid://dits8pjllyl6h" path="res://Assets/kenney_nature-kit/Models/GLTF format/rock_smallFlatC.glb" id="205_k803r"]
+[ext_resource type="PackedScene" uid="uid://de073aqp77vmb" path="res://Assets/kenney_nature-kit/Models/GLTF format/rock_smallG.glb" id="206_a16se"]
+[ext_resource type="PackedScene" uid="uid://3sf5gecvbna0" path="res://Assets/kenney_nature-kit/Models/GLTF format/rock_smallH.glb" id="207_8xews"]
+[ext_resource type="PackedScene" uid="uid://b2bwugo5aceu8" path="res://Assets/kenney_nature-kit/Models/GLTF format/rock_smallI.glb" id="208_1vftt"]
+[ext_resource type="PackedScene" uid="uid://2i8w3f8e2jle" path="res://Assets/kenney_nature-kit/Models/GLTF format/rock_smallTopA.glb" id="209_b4rl7"]
+[ext_resource type="PackedScene" uid="uid://bo7ct80kusgf6" path="res://Assets/kenney_nature-kit/Models/GLTF format/rock_smallTopB.glb" id="210_p8834"]
+[ext_resource type="PackedScene" uid="uid://wp4s301ykwjy" path="res://Assets/kenney_nature-kit/Models/GLTF format/rock_tallA.glb" id="211_b4v6f"]
+[ext_resource type="PackedScene" uid="uid://bjrs8pme4ifo3" path="res://Assets/kenney_nature-kit/Models/GLTF format/rock_tallB.glb" id="212_1rax6"]
+[ext_resource type="PackedScene" uid="uid://bmn3bxpl1il37" path="res://Assets/kenney_nature-kit/Models/GLTF format/rock_tallC.glb" id="213_kfx5v"]
+[ext_resource type="PackedScene" uid="uid://d1hqgt34fom5t" path="res://Assets/kenney_nature-kit/Models/GLTF format/rock_tallD.glb" id="214_fahiu"]
+[ext_resource type="PackedScene" uid="uid://xhmdw8netmx7" path="res://Assets/kenney_nature-kit/Models/GLTF format/rock_tallE.glb" id="215_hhocs"]
+[ext_resource type="PackedScene" uid="uid://3255txlvrwak" path="res://Assets/kenney_nature-kit/Models/GLTF format/rock_tallF.glb" id="216_hrto3"]
+[ext_resource type="PackedScene" uid="uid://djfjq7tual123" path="res://Assets/kenney_nature-kit/Models/GLTF format/rock_tallG.glb" id="217_3kftl"]
+[ext_resource type="PackedScene" uid="uid://c5mxcaae31pvp" path="res://Assets/kenney_nature-kit/Models/GLTF format/rock_tallH.glb" id="218_k5usn"]
+[ext_resource type="PackedScene" uid="uid://d228ph5gvxxm" path="res://Assets/kenney_nature-kit/Models/GLTF format/rock_tallI.glb" id="219_4poeo"]
+[ext_resource type="PackedScene" uid="uid://r1a1f6cql8bq" path="res://Assets/kenney_nature-kit/Models/GLTF format/rock_tallJ.glb" id="220_myl0d"]
+[ext_resource type="PackedScene" uid="uid://b5l0fo61ohqxf" path="res://Assets/kenney_nature-kit/Models/GLTF format/sign.glb" id="221_dvvqm"]
+[ext_resource type="PackedScene" uid="uid://d3mfl5u853qb7" path="res://Assets/kenney_nature-kit/Models/GLTF format/statue_block.glb" id="222_h31xy"]
+[ext_resource type="PackedScene" uid="uid://rwoehpoloebb" path="res://Assets/kenney_nature-kit/Models/GLTF format/statue_column.glb" id="223_qwlpw"]
+[ext_resource type="PackedScene" uid="uid://dbxjv6d4xo0dj" path="res://Assets/kenney_nature-kit/Models/GLTF format/statue_columnDamaged.glb" id="224_2ikq1"]
+[ext_resource type="PackedScene" uid="uid://jlcx12w3hmnj" path="res://Assets/kenney_nature-kit/Models/GLTF format/statue_head.glb" id="225_rvpc3"]
+[ext_resource type="PackedScene" uid="uid://dwtydbq8ti1ic" path="res://Assets/kenney_nature-kit/Models/GLTF format/statue_obelisk.glb" id="226_be5nm"]
+[ext_resource type="PackedScene" uid="uid://qglknvmur302" path="res://Assets/kenney_nature-kit/Models/GLTF format/statue_ring.glb" id="227_5mfdu"]
+[ext_resource type="PackedScene" uid="uid://dcj47aa2x41bu" path="res://Assets/kenney_nature-kit/Models/GLTF format/stone_largeA.glb" id="228_frbs0"]
+[ext_resource type="PackedScene" uid="uid://dkylmbfbp7bi8" path="res://Assets/kenney_nature-kit/Models/GLTF format/stone_largeB.glb" id="229_0np3i"]
+[ext_resource type="PackedScene" uid="uid://b4ytiomp6d6lg" path="res://Assets/kenney_nature-kit/Models/GLTF format/stone_largeC.glb" id="230_hp7mn"]
+[ext_resource type="PackedScene" uid="uid://b8dks6o3aguk" path="res://Assets/kenney_nature-kit/Models/GLTF format/stone_largeD.glb" id="231_his3p"]
+[ext_resource type="PackedScene" uid="uid://b6mw6lkhup5n5" path="res://Assets/kenney_nature-kit/Models/GLTF format/stone_largeE.glb" id="232_c5w4e"]
+[ext_resource type="PackedScene" uid="uid://dhajpqgekgjbf" path="res://Assets/kenney_nature-kit/Models/GLTF format/stone_largeF.glb" id="233_gh0gi"]
+[ext_resource type="PackedScene" uid="uid://ghyljk2akrtp" path="res://Assets/kenney_nature-kit/Models/GLTF format/stone_smallA.glb" id="234_talmn"]
+[ext_resource type="PackedScene" uid="uid://cnnxtcjdg3d0b" path="res://Assets/kenney_nature-kit/Models/GLTF format/stone_smallB.glb" id="235_q4ue8"]
+[ext_resource type="PackedScene" uid="uid://c00t1a4dgptrm" path="res://Assets/kenney_nature-kit/Models/GLTF format/stone_smallC.glb" id="236_w15dy"]
+[ext_resource type="PackedScene" uid="uid://ddlrn82m8xqw2" path="res://Assets/kenney_nature-kit/Models/GLTF format/stone_smallD.glb" id="237_5bcx0"]
+[ext_resource type="PackedScene" uid="uid://buu5gd3hjeqh8" path="res://Assets/kenney_nature-kit/Models/GLTF format/stone_smallE.glb" id="238_j836k"]
+[ext_resource type="PackedScene" uid="uid://cqo88jsx63n5n" path="res://Assets/kenney_nature-kit/Models/GLTF format/stone_smallF.glb" id="239_foi0l"]
+[ext_resource type="PackedScene" uid="uid://chh7idird5lcv" path="res://Assets/kenney_nature-kit/Models/GLTF format/stone_smallFlatA.glb" id="240_vphrl"]
+[ext_resource type="PackedScene" uid="uid://d275jv45y6awh" path="res://Assets/kenney_nature-kit/Models/GLTF format/stone_smallFlatB.glb" id="241_bbkqe"]
+[ext_resource type="PackedScene" uid="uid://26g6q21kxwmr" path="res://Assets/kenney_nature-kit/Models/GLTF format/stone_smallFlatC.glb" id="242_ow8ly"]
+[ext_resource type="PackedScene" uid="uid://ccu2qgccm6d65" path="res://Assets/kenney_nature-kit/Models/GLTF format/stone_smallG.glb" id="243_ifggv"]
+[ext_resource type="PackedScene" uid="uid://wjtlimqb45gu" path="res://Assets/kenney_nature-kit/Models/GLTF format/stone_smallH.glb" id="244_c5bn3"]
+[ext_resource type="PackedScene" uid="uid://dhpqngyabkb3m" path="res://Assets/kenney_nature-kit/Models/GLTF format/stone_smallI.glb" id="245_t2hyv"]
+[ext_resource type="PackedScene" uid="uid://crhrohnxgbgtp" path="res://Assets/kenney_nature-kit/Models/GLTF format/stone_smallTopA.glb" id="246_mf7yc"]
+[ext_resource type="PackedScene" uid="uid://chg4yevdh1faq" path="res://Assets/kenney_nature-kit/Models/GLTF format/stone_smallTopB.glb" id="247_r5tfd"]
+[ext_resource type="PackedScene" uid="uid://bv86aogyiwv4i" path="res://Assets/kenney_nature-kit/Models/GLTF format/stone_tallA.glb" id="248_nv3uv"]
+[ext_resource type="PackedScene" uid="uid://dcxttdnnffjqm" path="res://Assets/kenney_nature-kit/Models/GLTF format/stone_tallB.glb" id="249_ixk7p"]
+[ext_resource type="PackedScene" uid="uid://c6oemssbhtsqw" path="res://Assets/kenney_nature-kit/Models/GLTF format/stone_tallC.glb" id="250_cviix"]
+[ext_resource type="PackedScene" uid="uid://dbh6osjlp4t85" path="res://Assets/kenney_nature-kit/Models/GLTF format/stone_tallD.glb" id="251_1rm67"]
+[ext_resource type="PackedScene" uid="uid://cweeecydkucqf" path="res://Assets/kenney_nature-kit/Models/GLTF format/stone_tallE.glb" id="252_dqutt"]
+[ext_resource type="PackedScene" uid="uid://bt7voq6gerimp" path="res://Assets/kenney_nature-kit/Models/GLTF format/stone_tallF.glb" id="253_unk5p"]
+[ext_resource type="PackedScene" uid="uid://bhawam44rlk5y" path="res://Assets/kenney_nature-kit/Models/GLTF format/stone_tallG.glb" id="254_umkn2"]
+[ext_resource type="PackedScene" uid="uid://b0ngoigfdgois" path="res://Assets/kenney_nature-kit/Models/GLTF format/stone_tallH.glb" id="255_oiesb"]
+[ext_resource type="PackedScene" uid="uid://u0ph7yfngagy" path="res://Assets/kenney_nature-kit/Models/GLTF format/stone_tallI.glb" id="256_fplpf"]
+[ext_resource type="PackedScene" uid="uid://ds74wc4j8mpv2" path="res://Assets/kenney_nature-kit/Models/GLTF format/stone_tallJ.glb" id="257_5gqx1"]
+[ext_resource type="PackedScene" uid="uid://cdyyym50q4mj4" path="res://Assets/kenney_nature-kit/Models/GLTF format/stump_old.glb" id="258_iu4xh"]
+[ext_resource type="PackedScene" uid="uid://c87tiku0042b7" path="res://Assets/kenney_nature-kit/Models/GLTF format/stump_oldTall.glb" id="259_gxgrc"]
+[ext_resource type="PackedScene" uid="uid://cn0d1piuwmtyj" path="res://Assets/kenney_nature-kit/Models/GLTF format/stump_round.glb" id="260_x5whm"]
+[ext_resource type="PackedScene" uid="uid://f2c6xdukyr7i" path="res://Assets/kenney_nature-kit/Models/GLTF format/stump_roundDetailed.glb" id="261_rl6xm"]
+[ext_resource type="PackedScene" uid="uid://bi7ylawvxfguf" path="res://Assets/kenney_nature-kit/Models/GLTF format/stump_square.glb" id="262_a7vvk"]
+[ext_resource type="PackedScene" uid="uid://b6xi6qi02i6ic" path="res://Assets/kenney_nature-kit/Models/GLTF format/stump_squareDetailed.glb" id="263_00aol"]
+[ext_resource type="PackedScene" uid="uid://dq8rrwlwlawy6" path="res://Assets/kenney_nature-kit/Models/GLTF format/stump_squareDetailedWide.glb" id="264_m11at"]
+[ext_resource type="PackedScene" uid="uid://crydxvw8am7q5" path="res://Assets/kenney_nature-kit/Models/GLTF format/tent_detailedClosed.glb" id="265_cix86"]
+[ext_resource type="PackedScene" uid="uid://cnk3f6oq414jw" path="res://Assets/kenney_nature-kit/Models/GLTF format/tent_detailedOpen.glb" id="266_m3h2b"]
+[ext_resource type="PackedScene" uid="uid://dc18la0kk1fdt" path="res://Assets/kenney_nature-kit/Models/GLTF format/tent_smallClosed.glb" id="267_pjmoa"]
+[ext_resource type="PackedScene" uid="uid://d0yitc8hn7c8k" path="res://Assets/kenney_nature-kit/Models/GLTF format/tent_smallOpen.glb" id="268_re4f8"]
+[ext_resource type="PackedScene" uid="uid://ce0q6j3is8gud" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_blocks.glb" id="269_gpei1"]
+[ext_resource type="PackedScene" uid="uid://b8v31cl154lde" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_blocks_dark.glb" id="270_tok3y"]
+[ext_resource type="PackedScene" uid="uid://cf103swkwolb7" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_blocks_fall.glb" id="271_2qyyt"]
+[ext_resource type="PackedScene" uid="uid://b2k6cjed8is83" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_cone.glb" id="272_ggxqg"]
+[ext_resource type="PackedScene" uid="uid://chcvsi0hpqilj" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_cone_dark.glb" id="273_8p8cy"]
+[ext_resource type="PackedScene" uid="uid://betxa6yo7jwoh" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_cone_fall.glb" id="274_p0ywe"]
+[ext_resource type="PackedScene" uid="uid://cjkrffrymtcvd" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_default.glb" id="275_2bu62"]
+[ext_resource type="PackedScene" uid="uid://h05h1pfm1fvk" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_default_dark.glb" id="276_xp6dk"]
+[ext_resource type="PackedScene" uid="uid://bxwtl22qc763f" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_default_fall.glb" id="277_y3mp1"]
+[ext_resource type="PackedScene" uid="uid://rjg66gdevef5" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_detailed.glb" id="278_xu4bd"]
+[ext_resource type="PackedScene" uid="uid://cjfnp1tnkfgd4" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_detailed_dark.glb" id="279_sne2q"]
+[ext_resource type="PackedScene" uid="uid://bvwg7dap371e0" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_detailed_fall.glb" id="280_tau1b"]
+[ext_resource type="PackedScene" uid="uid://cowgmac7ouiqw" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_fat.glb" id="281_oj6yr"]
+[ext_resource type="PackedScene" uid="uid://cbpmu0p5ww1au" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_fat_darkh.glb" id="282_m4mss"]
+[ext_resource type="PackedScene" uid="uid://n1gf4kh16hr1" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_fat_fall.glb" id="283_hlojy"]
+[ext_resource type="PackedScene" uid="uid://c6nlovsm8wpjv" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_oak.glb" id="284_354ld"]
+[ext_resource type="PackedScene" uid="uid://deiakqbpj571q" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_oak_dark.glb" id="285_1l7y0"]
+[ext_resource type="PackedScene" uid="uid://chhjy0g6imutt" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_oak_fall.glb" id="286_6ky0q"]
+[ext_resource type="PackedScene" uid="uid://c8ko8tney1m6i" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_palm.glb" id="287_xl75h"]
+[ext_resource type="PackedScene" uid="uid://baf88fkpq5r0i" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_palmBend.glb" id="288_dftgh"]
+[ext_resource type="PackedScene" uid="uid://dedkbevedslte" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_palmDetailedShort.glb" id="289_ukdsb"]
+[ext_resource type="PackedScene" uid="uid://cb3lb7bh47owd" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_palmDetailedTall.glb" id="290_ifiba"]
+[ext_resource type="PackedScene" uid="uid://dpukm84wx4f00" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_palmShort.glb" id="291_txwwi"]
+[ext_resource type="PackedScene" uid="uid://c0mm2ulssaqif" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_palmTall.glb" id="292_jka8h"]
+[ext_resource type="PackedScene" uid="uid://dnaxktoq5oxj1" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_pineDefaultA.glb" id="293_vwmw1"]
+[ext_resource type="PackedScene" uid="uid://bl3c8d2t2e48f" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_pineDefaultB.glb" id="294_bpka8"]
+[ext_resource type="PackedScene" uid="uid://butj4ep2ci1cc" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_pineGroundA.glb" id="295_7l7ca"]
+[ext_resource type="PackedScene" uid="uid://bs7t6uub35t2y" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_pineGroundB.glb" id="296_udgja"]
+[ext_resource type="PackedScene" uid="uid://bchj4m7d4tu3i" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_pineRoundA.glb" id="297_65akx"]
+[ext_resource type="PackedScene" uid="uid://jb05lkci7rtw" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_pineRoundB.glb" id="298_nl8yq"]
+[ext_resource type="PackedScene" uid="uid://bq0tmfp7qshn4" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_pineRoundC.glb" id="299_qp2jr"]
+[ext_resource type="PackedScene" uid="uid://dj2itsd30ftcb" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_pineRoundD.glb" id="300_u8stx"]
+[ext_resource type="PackedScene" uid="uid://cuwht0l8i85in" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_pineRoundE.glb" id="301_f2lib"]
+[ext_resource type="PackedScene" uid="uid://b6tshrijej2s" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_pineRoundF.glb" id="302_6sbnj"]
+[ext_resource type="PackedScene" uid="uid://61gg5h6qn6x5" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_pineSmallA.glb" id="303_t8u67"]
+[ext_resource type="PackedScene" uid="uid://e5selduc5lmm" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_pineSmallB.glb" id="304_omwrx"]
+[ext_resource type="PackedScene" uid="uid://cm0u0wacq64nu" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_pineSmallC.glb" id="305_ffv68"]
+[ext_resource type="PackedScene" uid="uid://dke7px1hr4ex6" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_pineSmallD.glb" id="306_ujigo"]
+[ext_resource type="PackedScene" uid="uid://bmjdwapwrvojg" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_pineTallA.glb" id="307_rxy3u"]
+[ext_resource type="PackedScene" uid="uid://dsarkn6f1ai30" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_pineTallA_detailed.glb" id="308_dvkvg"]
+[ext_resource type="PackedScene" uid="uid://cik3c4qtn8nuo" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_pineTallB.glb" id="309_xxeaj"]
+[ext_resource type="PackedScene" uid="uid://de4d3apdo0kcx" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_pineTallB_detailed.glb" id="310_myppl"]
+[ext_resource type="PackedScene" uid="uid://byollqv613u7a" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_pineTallC.glb" id="311_u317u"]
+[ext_resource type="PackedScene" uid="uid://bmcwio3ap8op5" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_pineTallC_detailed.glb" id="312_ytu62"]
+[ext_resource type="PackedScene" uid="uid://cny752fngd1n3" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_pineTallD.glb" id="313_5iftx"]
+[ext_resource type="PackedScene" uid="uid://ljbwkj28vfet" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_pineTallD_detailed.glb" id="314_5gl1d"]
+[ext_resource type="PackedScene" uid="uid://dsfnkt1hl3bh6" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_plateau.glb" id="315_pu3pv"]
+[ext_resource type="PackedScene" uid="uid://fiungxbasqh4" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_plateau_dark.glb" id="316_p6nun"]
+[ext_resource type="PackedScene" uid="uid://euwfdoc3invs" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_plateau_fall.glb" id="317_uuijx"]
+[ext_resource type="PackedScene" uid="uid://doca14v3pl1nx" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_simple.glb" id="318_m0w6w"]
+[ext_resource type="PackedScene" uid="uid://dwljy0gs2ugqi" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_simple_dark.glb" id="319_uo07x"]
+[ext_resource type="PackedScene" uid="uid://na0vlfvw70sr" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_simple_fall.glb" id="320_twskq"]
+[ext_resource type="PackedScene" uid="uid://cf1dvfphfqwkp" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_small.glb" id="321_keu35"]
+[ext_resource type="PackedScene" uid="uid://cg4svelld33x5" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_small_dark.glb" id="322_5j0up"]
+[ext_resource type="PackedScene" uid="uid://d3qmak24hxk2e" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_small_fall.glb" id="323_2s313"]
+[ext_resource type="PackedScene" uid="uid://l81xjyd1gaq3" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_tall.glb" id="324_kx13d"]
+[ext_resource type="PackedScene" uid="uid://dk8nfm1uifcts" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_tall_dark.glb" id="325_luy2c"]
+[ext_resource type="PackedScene" uid="uid://ccc5cm2pu06ca" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_tall_fall.glb" id="326_ew58i"]
+[ext_resource type="PackedScene" uid="uid://ybkfndjl5wcj" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_thin.glb" id="327_qv5iv"]
+[ext_resource type="PackedScene" uid="uid://bd0o5h8nx3hym" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_thin_dark.glb" id="328_po4jq"]
+[ext_resource type="PackedScene" uid="uid://v0mbe5lfn7bp" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_thin_fall.glb" id="329_0pyfj"]
+
+[node name="Tiles" type="Node3D" unique_id=2011893567]
+
+[node name="bed2" parent="." unique_id=945730909 instance=ExtResource("1_7yy4v")]
+
+[node name="bed_floor2" parent="." unique_id=2038788816 instance=ExtResource("2_okypp")]
+
+[node name="bridge_center_stone2" parent="." unique_id=1680496812 instance=ExtResource("3_phlo4")]
+
+[node name="bridge_center_stoneRound2" parent="." unique_id=1275517427 instance=ExtResource("4_2u4wc")]
+
+[node name="bridge_center_wood2" parent="." unique_id=1193021708 instance=ExtResource("5_tex6c")]
+
+[node name="bridge_center_woodRound2" parent="." unique_id=1467079684 instance=ExtResource("6_5ulix")]
+
+[node name="bridge_side_stone2" parent="." unique_id=1218036766 instance=ExtResource("7_wlgpb")]
+
+[node name="bridge_side_stoneRound2" parent="." unique_id=1497658512 instance=ExtResource("8_g7ugk")]
+
+[node name="bridge_side_wood2" parent="." unique_id=1565380407 instance=ExtResource("9_f7ndm")]
+
+[node name="bridge_side_woodRound2" parent="." unique_id=1977477268 instance=ExtResource("10_dvd60")]
+
+[node name="bridge_stone2" parent="." unique_id=509838125 instance=ExtResource("11_jf6to")]
+
+[node name="bridge_stoneNarrow2" parent="." unique_id=518687421 instance=ExtResource("12_jvcib")]
+
+[node name="bridge_stoneRound2" parent="." unique_id=119580202 instance=ExtResource("13_bq2in")]
+
+[node name="bridge_stoneRoundNarrow2" parent="." unique_id=1470204063 instance=ExtResource("14_xw57q")]
+
+[node name="bridge_wood2" parent="." unique_id=60622755 instance=ExtResource("15_c3usw")]
+
+[node name="bridge_woodNarrow2" parent="." unique_id=1046417425 instance=ExtResource("16_r37ik")]
+
+[node name="bridge_woodRound2" parent="." unique_id=1911278095 instance=ExtResource("17_fw56b")]
+
+[node name="bridge_woodRoundNarrow2" parent="." unique_id=94907914 instance=ExtResource("18_oyiqx")]
+
+[node name="cactus_short2" parent="." unique_id=374137474 instance=ExtResource("19_xh6lo")]
+
+[node name="cactus_tall2" parent="." unique_id=1297953707 instance=ExtResource("20_jbd2l")]
+
+[node name="campfire_bricks2" parent="." unique_id=1563990257 instance=ExtResource("21_lr1uy")]
+
+[node name="campfire_logs2" parent="." unique_id=980092819 instance=ExtResource("22_75jom")]
+
+[node name="campfire_planks2" parent="." unique_id=196702320 instance=ExtResource("23_vpyb1")]
+
+[node name="campfire_stones2" parent="." unique_id=1029355364 instance=ExtResource("24_pncsi")]
+
+[node name="canoe2" parent="." unique_id=1804366887 instance=ExtResource("25_kq3om")]
+
+[node name="canoe_paddle2" parent="." unique_id=405014920 instance=ExtResource("26_fts1b")]
+
+[node name="cliff_blockCave_rock2" parent="." unique_id=1296064845 instance=ExtResource("27_qfh0r")]
+
+[node name="cliff_blockCave_stone2" parent="." unique_id=319867210 instance=ExtResource("28_g2wv4")]
+
+[node name="cliff_blockDiagonal_rock2" parent="." unique_id=1620536634 instance=ExtResource("29_mprws")]
+
+[node name="cliff_blockDiagonal_stone2" parent="." unique_id=701331207 instance=ExtResource("30_b5sku")]
+
+[node name="cliff_blockHalf_rock2" parent="." unique_id=1826214158 instance=ExtResource("31_rhtm6")]
+
+[node name="cliff_blockHalf_stone2" parent="." unique_id=1501365872 instance=ExtResource("32_gs4qy")]
+
+[node name="cliff_blockQuarter_rock2" parent="." unique_id=1982841495 instance=ExtResource("33_fdemp")]
+
+[node name="cliff_blockQuarter_stone2" parent="." unique_id=1220880120 instance=ExtResource("34_u127b")]
+
+[node name="cliff_blockSlopeHalfWalls_rock2" parent="." unique_id=1536269565 instance=ExtResource("35_fl8lm")]
+
+[node name="cliff_blockSlopeHalfWalls_stone2" parent="." unique_id=1093719793 instance=ExtResource("36_urx8u")]
+
+[node name="cliff_blockSlopeWalls_rock2" parent="." unique_id=1447776276 instance=ExtResource("37_hwoes")]
+
+[node name="cliff_blockSlopeWalls_stone2" parent="." unique_id=1093224381 instance=ExtResource("38_cvtge")]
+
+[node name="cliff_blockSlope_rock2" parent="." unique_id=708704463 instance=ExtResource("39_m0xp8")]
+
+[node name="cliff_blockSlope_stone2" parent="." unique_id=1465191775 instance=ExtResource("40_sb6jb")]
+
+[node name="cliff_block_rock2" parent="." unique_id=1675444438 instance=ExtResource("41_kb2oj")]
+
+[node name="cliff_block_stone2" parent="." unique_id=895164697 instance=ExtResource("42_1brno")]
+
+[node name="cliff_cave_rock2" parent="." unique_id=381132023 instance=ExtResource("43_4i86e")]
+
+[node name="cliff_cave_stone2" parent="." unique_id=425800615 instance=ExtResource("44_k5tgn")]
+
+[node name="cliff_cornerInnerLarge_rock2" parent="." unique_id=664586784 instance=ExtResource("45_g60ad")]
+
+[node name="cliff_cornerInnerLarge_stone2" parent="." unique_id=571318859 instance=ExtResource("46_aln86")]
+
+[node name="cliff_cornerInnerTop_rock2" parent="." unique_id=1820693907 instance=ExtResource("47_v73ls")]
+
+[node name="cliff_cornerInnerTop_stone2" parent="." unique_id=2054109301 instance=ExtResource("48_2evkg")]
+
+[node name="cliff_cornerInner_rock2" parent="." unique_id=890043287 instance=ExtResource("49_clotj")]
+
+[node name="cliff_cornerInner_stone2" parent="." unique_id=444959966 instance=ExtResource("50_0oabk")]
+
+[node name="cliff_cornerLarge_rock2" parent="." unique_id=1439194934 instance=ExtResource("51_u5qwm")]
+
+[node name="cliff_cornerLarge_stone2" parent="." unique_id=176792694 instance=ExtResource("52_sfliy")]
+
+[node name="cliff_cornerTop_rock2" parent="." unique_id=1818098945 instance=ExtResource("53_np412")]
+
+[node name="cliff_cornerTop_stone2" parent="." unique_id=2045026992 instance=ExtResource("54_dxlao")]
+
+[node name="cliff_corner_rock2" parent="." unique_id=1992663298 instance=ExtResource("55_3idbh")]
+
+[node name="cliff_corner_stone2" parent="." unique_id=1997190926 instance=ExtResource("56_cmb02")]
+
+[node name="cliff_diagonal_rock2" parent="." unique_id=1205590573 instance=ExtResource("57_k81mc")]
+
+[node name="cliff_diagonal_stone2" parent="." unique_id=937829662 instance=ExtResource("58_ykxkr")]
+
+[node name="cliff_halfCornerInner_rock2" parent="." unique_id=1824720411 instance=ExtResource("59_3y80m")]
+
+[node name="cliff_halfCornerInner_stone2" parent="." unique_id=823307160 instance=ExtResource("60_mb1y7")]
+
+[node name="cliff_halfCorner_rock2" parent="." unique_id=1743675736 instance=ExtResource("61_6wvbi")]
+
+[node name="cliff_halfCorner_stone2" parent="." unique_id=1126889366 instance=ExtResource("62_ckqmn")]
+
+[node name="cliff_half_rock2" parent="." unique_id=1274712132 instance=ExtResource("63_uawdv")]
+
+[node name="cliff_half_stone2" parent="." unique_id=1888368722 instance=ExtResource("64_jn1ph")]
+
+[node name="cliff_large_rock2" parent="." unique_id=1236947875 instance=ExtResource("65_54d8g")]
+
+[node name="cliff_large_stone2" parent="." unique_id=1316695216 instance=ExtResource("66_4p0yk")]
+
+[node name="cliff_rock2" parent="." unique_id=1455789202 instance=ExtResource("67_dp4cv")]
+
+[node name="cliff_stepsCornerInner_rock2" parent="." unique_id=797042708 instance=ExtResource("68_8ujox")]
+
+[node name="cliff_stepsCornerInner_stone2" parent="." unique_id=1432497241 instance=ExtResource("69_t6wv1")]
+
+[node name="cliff_stepsCorner_rock2" parent="." unique_id=198219964 instance=ExtResource("70_iwxen")]
+
+[node name="cliff_stepsCorner_stone2" parent="." unique_id=785955301 instance=ExtResource("71_8q51x")]
+
+[node name="cliff_steps_rock2" parent="." unique_id=1532211516 instance=ExtResource("72_7y5yp")]
+
+[node name="cliff_steps_stone2" parent="." unique_id=1652587478 instance=ExtResource("73_p1pyk")]
+
+[node name="cliff_stone2" parent="." unique_id=115472806 instance=ExtResource("74_egor7")]
+
+[node name="cliff_topDiagonal_rock2" parent="." unique_id=753099408 instance=ExtResource("75_7hj0x")]
+
+[node name="cliff_topDiagonal_stone2" parent="." unique_id=2062501456 instance=ExtResource("76_thivj")]
+
+[node name="cliff_top_rock2" parent="." unique_id=649350534 instance=ExtResource("77_pgxyi")]
+
+[node name="cliff_top_stone2" parent="." unique_id=499921542 instance=ExtResource("78_pjiov")]
+
+[node name="cliff_waterfallTop_rock2" parent="." unique_id=1656735333 instance=ExtResource("79_n13jl")]
+
+[node name="cliff_waterfallTop_stone2" parent="." unique_id=767965487 instance=ExtResource("80_d48nd")]
+
+[node name="cliff_waterfall_rock2" parent="." unique_id=977156306 instance=ExtResource("81_xnbbg")]
+
+[node name="cliff_waterfall_stone2" parent="." unique_id=1391324401 instance=ExtResource("82_d16nt")]
+
+[node name="crops_bambooStageA2" parent="." unique_id=2209132 instance=ExtResource("83_11bnx")]
+
+[node name="crops_bambooStageB2" parent="." unique_id=1971034136 instance=ExtResource("84_vqjfu")]
+
+[node name="crops_cornStageA2" parent="." unique_id=189992026 instance=ExtResource("85_o5jg5")]
+
+[node name="crops_cornStageB2" parent="." unique_id=258933269 instance=ExtResource("86_50cyf")]
+
+[node name="crops_cornStageC2" parent="." unique_id=1105456736 instance=ExtResource("87_d86pg")]
+
+[node name="crops_cornStageD2" parent="." unique_id=1955897514 instance=ExtResource("88_2dwgc")]
+
+[node name="crops_dirtDoubleRow2" parent="." unique_id=2032054456 instance=ExtResource("89_mp7vv")]
+
+[node name="crops_dirtDoubleRowCorner2" parent="." unique_id=1265293096 instance=ExtResource("90_e1p0q")]
+
+[node name="crops_dirtDoubleRowEnd2" parent="." unique_id=1736896156 instance=ExtResource("91_bcofo")]
+
+[node name="crops_dirtRow2" parent="." unique_id=138459045 instance=ExtResource("92_t8ybe")]
+
+[node name="crops_dirtRowCorner2" parent="." unique_id=727930635 instance=ExtResource("93_425c6")]
+
+[node name="crops_dirtRowEnd2" parent="." unique_id=1634779006 instance=ExtResource("94_rs858")]
+
+[node name="crops_dirtSingle2" parent="." unique_id=2000220946 instance=ExtResource("95_hg4nh")]
+
+[node name="crops_leafsStageA2" parent="." unique_id=190839418 instance=ExtResource("96_5dsyn")]
+
+[node name="crops_leafsStageB2" parent="." unique_id=35109430 instance=ExtResource("97_0m21v")]
+
+[node name="crops_wheatStageA2" parent="." unique_id=2069858258 instance=ExtResource("98_u1hj2")]
+
+[node name="crops_wheatStageB2" parent="." unique_id=1144620610 instance=ExtResource("99_how18")]
+
+[node name="crop_carrot2" parent="." unique_id=1398470342 instance=ExtResource("100_mlh3t")]
+
+[node name="crop_melon2" parent="." unique_id=1445485999 instance=ExtResource("101_07lxr")]
+
+[node name="crop_pumpkin2" parent="." unique_id=1996501586 instance=ExtResource("102_vfj55")]
+
+[node name="crop_turnip2" parent="." unique_id=2122564051 instance=ExtResource("103_tl4i7")]
+
+[node name="fence_bend2" parent="." unique_id=788068918 instance=ExtResource("104_eaoa5")]
+
+[node name="fence_bendCenter2" parent="." unique_id=98664550 instance=ExtResource("105_4kyjs")]
+
+[node name="fence_corner2" parent="." unique_id=485770873 instance=ExtResource("106_n6jd5")]
+
+[node name="fence_gate2" parent="." unique_id=1738359946 instance=ExtResource("107_qkcev")]
+
+[node name="fence_planks2" parent="." unique_id=1752594118 instance=ExtResource("108_387qs")]
+
+[node name="fence_planksDouble2" parent="." unique_id=1812252179 instance=ExtResource("109_uio7y")]
+
+[node name="fence_simple2" parent="." unique_id=1147538655 instance=ExtResource("110_me36c")]
+
+[node name="fence_simpleCenter2" parent="." unique_id=2082765283 instance=ExtResource("111_smp3d")]
+
+[node name="fence_simpleDiagonal2" parent="." unique_id=1092011809 instance=ExtResource("112_eydpr")]
+
+[node name="fence_simpleDiagonalCenter2" parent="." unique_id=1422260387 instance=ExtResource("113_rtc6n")]
+
+[node name="fence_simpleHigh2" parent="." unique_id=488662670 instance=ExtResource("114_p0f44")]
+
+[node name="fence_simpleLow2" parent="." unique_id=810962302 instance=ExtResource("115_graah")]
+
+[node name="flower_purpleA2" parent="." unique_id=747414133 instance=ExtResource("116_7cryu")]
+
+[node name="flower_purpleB2" parent="." unique_id=1215359912 instance=ExtResource("117_eftbh")]
+
+[node name="flower_purpleC2" parent="." unique_id=205528555 instance=ExtResource("118_hs6qx")]
+
+[node name="flower_redA2" parent="." unique_id=1251955860 instance=ExtResource("119_3m6ub")]
+
+[node name="flower_redB2" parent="." unique_id=1965183310 instance=ExtResource("120_a2g4b")]
+
+[node name="flower_redC2" parent="." unique_id=239439720 instance=ExtResource("121_1pljw")]
+
+[node name="flower_yellowA2" parent="." unique_id=1057795007 instance=ExtResource("122_wm3ri")]
+
+[node name="flower_yellowB2" parent="." unique_id=2013176548 instance=ExtResource("123_ujlt0")]
+
+[node name="flower_yellowC2" parent="." unique_id=737256022 instance=ExtResource("124_u58il")]
+
+[node name="grass2" parent="." unique_id=1859603311 instance=ExtResource("125_ansex")]
+
+[node name="grass_large2" parent="." unique_id=135729255 instance=ExtResource("126_6xlnp")]
+
+[node name="grass_leafs2" parent="." unique_id=175156396 instance=ExtResource("127_f5qn4")]
+
+[node name="grass_leafsLarge2" parent="." unique_id=537140899 instance=ExtResource("128_jmsal")]
+
+[node name="ground_grass2" parent="." unique_id=535694171 instance=ExtResource("129_pb8ak")]
+
+[node name="ground_pathBend2" parent="." unique_id=1317777694 instance=ExtResource("130_kj5sd")]
+
+[node name="ground_pathBendBank2" parent="." unique_id=2145515466 instance=ExtResource("131_iqas7")]
+
+[node name="ground_pathCorner2" parent="." unique_id=503539118 instance=ExtResource("132_nbk5t")]
+
+[node name="ground_pathCornerSmall2" parent="." unique_id=374699487 instance=ExtResource("133_iy345")]
+
+[node name="ground_pathCross2" parent="." unique_id=541332828 instance=ExtResource("134_hgrxi")]
+
+[node name="ground_pathEnd2" parent="." unique_id=1214345747 instance=ExtResource("135_usqd3")]
+
+[node name="ground_pathEndClosed2" parent="." unique_id=312443629 instance=ExtResource("136_hdlw3")]
+
+[node name="ground_pathOpen2" parent="." unique_id=974984552 instance=ExtResource("137_rn73q")]
+
+[node name="ground_pathRocks2" parent="." unique_id=1289167306 instance=ExtResource("138_7lpuh")]
+
+[node name="ground_pathSide2" parent="." unique_id=730492357 instance=ExtResource("139_1w2mw")]
+
+[node name="ground_pathSideOpen2" parent="." unique_id=290817758 instance=ExtResource("140_elri8")]
+
+[node name="ground_pathSplit2" parent="." unique_id=641984931 instance=ExtResource("141_u3hq5")]
+
+[node name="ground_pathStraight2" parent="." unique_id=2012223096 instance=ExtResource("142_klsiq")]
+
+[node name="ground_pathTile2" parent="." unique_id=291594638 instance=ExtResource("143_onpul")]
+
+[node name="ground_riverBend2" parent="." unique_id=1033738686 instance=ExtResource("144_qcig1")]
+
+[node name="ground_riverBendBank2" parent="." unique_id=475828761 instance=ExtResource("145_aki2i")]
+
+[node name="ground_riverCorner2" parent="." unique_id=1040968803 instance=ExtResource("146_dofe0")]
+
+[node name="ground_riverCornerSmall2" parent="." unique_id=1331301152 instance=ExtResource("147_qepe6")]
+
+[node name="ground_riverCross2" parent="." unique_id=139208607 instance=ExtResource("148_wkxxi")]
+
+[node name="ground_riverEnd2" parent="." unique_id=1348172426 instance=ExtResource("149_jcyfn")]
+
+[node name="ground_riverEndClosed2" parent="." unique_id=1120578573 instance=ExtResource("150_vl1i8")]
+
+[node name="ground_riverOpen2" parent="." unique_id=1061002184 instance=ExtResource("151_g585q")]
+
+[node name="ground_riverRocks2" parent="." unique_id=1647535340 instance=ExtResource("152_vj1wh")]
+
+[node name="ground_riverSide2" parent="." unique_id=1241487874 instance=ExtResource("153_31niv")]
+
+[node name="ground_riverSideOpen2" parent="." unique_id=1665336464 instance=ExtResource("154_p5tj4")]
+
+[node name="ground_riverSplit2" parent="." unique_id=1517848234 instance=ExtResource("155_1c8xw")]
+
+[node name="ground_riverStraight2" parent="." unique_id=1723961983 instance=ExtResource("156_mf673")]
+
+[node name="ground_riverTile2" parent="." unique_id=2143820611 instance=ExtResource("157_u6hwy")]
+
+[node name="hanging_moss2" parent="." unique_id=732707174 instance=ExtResource("158_k8myb")]
+
+[node name="lily_large2" parent="." unique_id=702552773 instance=ExtResource("159_q1x77")]
+
+[node name="lily_small2" parent="." unique_id=822337040 instance=ExtResource("160_w8rur")]
+
+[node name="log2" parent="." unique_id=1826192824 instance=ExtResource("161_4kxpt")]
+
+[node name="log_large2" parent="." unique_id=1573281576 instance=ExtResource("162_3gjtg")]
+
+[node name="log_stack2" parent="." unique_id=287946456 instance=ExtResource("163_rwkh5")]
+
+[node name="log_stackLarge2" parent="." unique_id=924811340 instance=ExtResource("164_jk3w0")]
+
+[node name="mushroom_red2" parent="." unique_id=1774633465 instance=ExtResource("165_i8ell")]
+
+[node name="mushroom_redGroup2" parent="." unique_id=1979542211 instance=ExtResource("166_hecu7")]
+
+[node name="mushroom_redTall2" parent="." unique_id=850193492 instance=ExtResource("167_w75qd")]
+
+[node name="mushroom_tan2" parent="." unique_id=1227428228 instance=ExtResource("168_xbmwj")]
+
+[node name="mushroom_tanGroup2" parent="." unique_id=1906567649 instance=ExtResource("169_rx06i")]
+
+[node name="mushroom_tanTall2" parent="." unique_id=1527060585 instance=ExtResource("170_m7rlg")]
+
+[node name="path_stone2" parent="." unique_id=423465021 instance=ExtResource("171_o2mlr")]
+
+[node name="path_stoneCircle2" parent="." unique_id=700796500 instance=ExtResource("172_uhx0c")]
+
+[node name="path_stoneCorner2" parent="." unique_id=905774321 instance=ExtResource("173_g1coy")]
+
+[node name="path_stoneEnd2" parent="." unique_id=1189523165 instance=ExtResource("174_34ml4")]
+
+[node name="path_wood2" parent="." unique_id=307557312 instance=ExtResource("175_rc1sf")]
+
+[node name="path_woodCorner2" parent="." unique_id=944638590 instance=ExtResource("176_o68t0")]
+
+[node name="path_woodEnd2" parent="." unique_id=1418592703 instance=ExtResource("177_mscqs")]
+
+[node name="plant_bush2" parent="." unique_id=1628773979 instance=ExtResource("178_6uk78")]
+
+[node name="plant_bushDetailed2" parent="." unique_id=789742329 instance=ExtResource("179_0b430")]
+
+[node name="plant_bushLarge2" parent="." unique_id=689756245 instance=ExtResource("180_o1l8v")]
+
+[node name="plant_bushLargeTriangle2" parent="." unique_id=165117380 instance=ExtResource("181_pn166")]
+
+[node name="plant_bushSmall2" parent="." unique_id=1135207986 instance=ExtResource("182_der7a")]
+
+[node name="plant_bushTriangle2" parent="." unique_id=909558395 instance=ExtResource("183_pn6pe")]
+
+[node name="plant_flatShort2" parent="." unique_id=1138591326 instance=ExtResource("184_uq4nb")]
+
+[node name="plant_flatTall2" parent="." unique_id=4788324 instance=ExtResource("185_0n1s5")]
+
+[node name="platform_beach2" parent="." unique_id=717690311 instance=ExtResource("186_f32sd")]
+
+[node name="platform_grass2" parent="." unique_id=337245675 instance=ExtResource("187_nqfa0")]
+
+[node name="platform_stone2" parent="." unique_id=1235429686 instance=ExtResource("188_4oxxy")]
+
+[node name="pot_large2" parent="." unique_id=1236678815 instance=ExtResource("189_3dw4b")]
+
+[node name="pot_small2" parent="." unique_id=114194902 instance=ExtResource("190_5y3k3")]
+
+[node name="rock_largeA2" parent="." unique_id=47937700 instance=ExtResource("191_5vomv")]
+
+[node name="rock_largeB2" parent="." unique_id=1626860345 instance=ExtResource("192_dyrli")]
+
+[node name="rock_largeC2" parent="." unique_id=300644196 instance=ExtResource("193_et4ye")]
+
+[node name="rock_largeD2" parent="." unique_id=1661620233 instance=ExtResource("194_4qjr5")]
+
+[node name="rock_largeE2" parent="." unique_id=59059979 instance=ExtResource("195_s1bot")]
+
+[node name="rock_largeF2" parent="." unique_id=1971840177 instance=ExtResource("196_kesw3")]
+
+[node name="rock_smallA2" parent="." unique_id=366242955 instance=ExtResource("197_x5nca")]
+
+[node name="rock_smallB2" parent="." unique_id=112783507 instance=ExtResource("198_go1no")]
+
+[node name="rock_smallC2" parent="." unique_id=589537796 instance=ExtResource("199_1mqm2")]
+
+[node name="rock_smallD2" parent="." unique_id=1041155441 instance=ExtResource("200_qgxpc")]
+
+[node name="rock_smallE2" parent="." unique_id=968547068 instance=ExtResource("201_j8vyp")]
+
+[node name="rock_smallF2" parent="." unique_id=835783702 instance=ExtResource("202_3kpum")]
+
+[node name="rock_smallFlatA2" parent="." unique_id=709010290 instance=ExtResource("203_opcuk")]
+
+[node name="rock_smallFlatB2" parent="." unique_id=201042814 instance=ExtResource("204_isahr")]
+
+[node name="rock_smallFlatC2" parent="." unique_id=532734670 instance=ExtResource("205_k803r")]
+
+[node name="rock_smallG2" parent="." unique_id=1014865435 instance=ExtResource("206_a16se")]
+
+[node name="rock_smallH2" parent="." unique_id=1934446886 instance=ExtResource("207_8xews")]
+
+[node name="rock_smallI2" parent="." unique_id=1715125161 instance=ExtResource("208_1vftt")]
+
+[node name="rock_smallTopA2" parent="." unique_id=292414093 instance=ExtResource("209_b4rl7")]
+
+[node name="rock_smallTopB2" parent="." unique_id=1219371395 instance=ExtResource("210_p8834")]
+
+[node name="rock_tallA2" parent="." unique_id=1018684879 instance=ExtResource("211_b4v6f")]
+
+[node name="rock_tallB2" parent="." unique_id=1652521535 instance=ExtResource("212_1rax6")]
+
+[node name="rock_tallC2" parent="." unique_id=1436205758 instance=ExtResource("213_kfx5v")]
+
+[node name="rock_tallD2" parent="." unique_id=631296996 instance=ExtResource("214_fahiu")]
+
+[node name="rock_tallE2" parent="." unique_id=762647812 instance=ExtResource("215_hhocs")]
+
+[node name="rock_tallF2" parent="." unique_id=207647070 instance=ExtResource("216_hrto3")]
+
+[node name="rock_tallG2" parent="." unique_id=1855592997 instance=ExtResource("217_3kftl")]
+
+[node name="rock_tallH2" parent="." unique_id=297976715 instance=ExtResource("218_k5usn")]
+
+[node name="rock_tallI2" parent="." unique_id=1945451924 instance=ExtResource("219_4poeo")]
+
+[node name="rock_tallJ2" parent="." unique_id=2108582063 instance=ExtResource("220_myl0d")]
+
+[node name="sign2" parent="." unique_id=1558617312 instance=ExtResource("221_dvvqm")]
+
+[node name="statue_block2" parent="." unique_id=1543385422 instance=ExtResource("222_h31xy")]
+
+[node name="statue_column2" parent="." unique_id=395890380 instance=ExtResource("223_qwlpw")]
+
+[node name="statue_columnDamaged2" parent="." unique_id=1764576032 instance=ExtResource("224_2ikq1")]
+
+[node name="statue_head2" parent="." unique_id=709062539 instance=ExtResource("225_rvpc3")]
+
+[node name="statue_obelisk2" parent="." unique_id=1771779305 instance=ExtResource("226_be5nm")]
+
+[node name="statue_ring2" parent="." unique_id=1073789470 instance=ExtResource("227_5mfdu")]
+
+[node name="stone_largeA2" parent="." unique_id=1493886329 instance=ExtResource("228_frbs0")]
+
+[node name="stone_largeB2" parent="." unique_id=274066474 instance=ExtResource("229_0np3i")]
+
+[node name="stone_largeC2" parent="." unique_id=1343633037 instance=ExtResource("230_hp7mn")]
+
+[node name="stone_largeD2" parent="." unique_id=1679226306 instance=ExtResource("231_his3p")]
+
+[node name="stone_largeE2" parent="." unique_id=352384570 instance=ExtResource("232_c5w4e")]
+
+[node name="stone_largeF2" parent="." unique_id=1826312137 instance=ExtResource("233_gh0gi")]
+
+[node name="stone_smallA2" parent="." unique_id=726733794 instance=ExtResource("234_talmn")]
+
+[node name="stone_smallB2" parent="." unique_id=1982775540 instance=ExtResource("235_q4ue8")]
+
+[node name="stone_smallC2" parent="." unique_id=827927487 instance=ExtResource("236_w15dy")]
+
+[node name="stone_smallD2" parent="." unique_id=1580974913 instance=ExtResource("237_5bcx0")]
+
+[node name="stone_smallE2" parent="." unique_id=288816633 instance=ExtResource("238_j836k")]
+
+[node name="stone_smallF2" parent="." unique_id=904563191 instance=ExtResource("239_foi0l")]
+
+[node name="stone_smallFlatA2" parent="." unique_id=504520181 instance=ExtResource("240_vphrl")]
+
+[node name="stone_smallFlatB2" parent="." unique_id=1673013698 instance=ExtResource("241_bbkqe")]
+
+[node name="stone_smallFlatC2" parent="." unique_id=971597049 instance=ExtResource("242_ow8ly")]
+
+[node name="stone_smallG2" parent="." unique_id=1541605592 instance=ExtResource("243_ifggv")]
+
+[node name="stone_smallH2" parent="." unique_id=1721207541 instance=ExtResource("244_c5bn3")]
+
+[node name="stone_smallI2" parent="." unique_id=1017810732 instance=ExtResource("245_t2hyv")]
+
+[node name="stone_smallTopA2" parent="." unique_id=2105860217 instance=ExtResource("246_mf7yc")]
+
+[node name="stone_smallTopB2" parent="." unique_id=1998839712 instance=ExtResource("247_r5tfd")]
+
+[node name="stone_tallA2" parent="." unique_id=1048403232 instance=ExtResource("248_nv3uv")]
+
+[node name="stone_tallB2" parent="." unique_id=728592230 instance=ExtResource("249_ixk7p")]
+
+[node name="stone_tallC2" parent="." unique_id=1758116758 instance=ExtResource("250_cviix")]
+
+[node name="stone_tallD2" parent="." unique_id=650641008 instance=ExtResource("251_1rm67")]
+
+[node name="stone_tallE2" parent="." unique_id=90645306 instance=ExtResource("252_dqutt")]
+
+[node name="stone_tallF2" parent="." unique_id=1602742724 instance=ExtResource("253_unk5p")]
+
+[node name="stone_tallG2" parent="." unique_id=533624872 instance=ExtResource("254_umkn2")]
+
+[node name="stone_tallH2" parent="." unique_id=1514959571 instance=ExtResource("255_oiesb")]
+
+[node name="stone_tallI2" parent="." unique_id=994366100 instance=ExtResource("256_fplpf")]
+
+[node name="stone_tallJ2" parent="." unique_id=1260203902 instance=ExtResource("257_5gqx1")]
+
+[node name="stump_old2" parent="." unique_id=138242707 instance=ExtResource("258_iu4xh")]
+
+[node name="stump_oldTall2" parent="." unique_id=1173398649 instance=ExtResource("259_gxgrc")]
+
+[node name="stump_round2" parent="." unique_id=2881297 instance=ExtResource("260_x5whm")]
+
+[node name="stump_roundDetailed2" parent="." unique_id=1333625929 instance=ExtResource("261_rl6xm")]
+
+[node name="stump_square2" parent="." unique_id=1542305152 instance=ExtResource("262_a7vvk")]
+
+[node name="stump_squareDetailed2" parent="." unique_id=2112564227 instance=ExtResource("263_00aol")]
+
+[node name="stump_squareDetailedWide2" parent="." unique_id=318506863 instance=ExtResource("264_m11at")]
+
+[node name="tent_detailedClosed2" parent="." unique_id=443578781 instance=ExtResource("265_cix86")]
+
+[node name="tent_detailedOpen2" parent="." unique_id=1983728321 instance=ExtResource("266_m3h2b")]
+
+[node name="tent_smallClosed2" parent="." unique_id=1435530620 instance=ExtResource("267_pjmoa")]
+
+[node name="tent_smallOpen2" parent="." unique_id=333979686 instance=ExtResource("268_re4f8")]
+
+[node name="tree_blocks2" parent="." unique_id=1205275586 instance=ExtResource("269_gpei1")]
+
+[node name="tree_blocks_dark2" parent="." unique_id=672344195 instance=ExtResource("270_tok3y")]
+
+[node name="tree_blocks_fall2" parent="." unique_id=1410880483 instance=ExtResource("271_2qyyt")]
+
+[node name="tree_cone2" parent="." unique_id=544920686 instance=ExtResource("272_ggxqg")]
+
+[node name="tree_cone_dark2" parent="." unique_id=1540904411 instance=ExtResource("273_8p8cy")]
+
+[node name="tree_cone_fall2" parent="." unique_id=831151984 instance=ExtResource("274_p0ywe")]
+
+[node name="tree_default2" parent="." unique_id=903153724 instance=ExtResource("275_2bu62")]
+
+[node name="tree_default_dark2" parent="." unique_id=1616334131 instance=ExtResource("276_xp6dk")]
+
+[node name="tree_default_fall2" parent="." unique_id=692476171 instance=ExtResource("277_y3mp1")]
+
+[node name="tree_detailed2" parent="." unique_id=257993109 instance=ExtResource("278_xu4bd")]
+
+[node name="tree_detailed_dark2" parent="." unique_id=1078476802 instance=ExtResource("279_sne2q")]
+
+[node name="tree_detailed_fall2" parent="." unique_id=600167442 instance=ExtResource("280_tau1b")]
+
+[node name="tree_fat2" parent="." unique_id=130653139 instance=ExtResource("281_oj6yr")]
+
+[node name="tree_fat_darkh2" parent="." unique_id=1448047475 instance=ExtResource("282_m4mss")]
+
+[node name="tree_fat_fall2" parent="." unique_id=1535886344 instance=ExtResource("283_hlojy")]
+
+[node name="tree_oak2" parent="." unique_id=1139676660 instance=ExtResource("284_354ld")]
+
+[node name="tree_oak_dark2" parent="." unique_id=972959988 instance=ExtResource("285_1l7y0")]
+
+[node name="tree_oak_fall2" parent="." unique_id=1300842651 instance=ExtResource("286_6ky0q")]
+
+[node name="tree_palm2" parent="." unique_id=1775693441 instance=ExtResource("287_xl75h")]
+
+[node name="tree_palmBend2" parent="." unique_id=969016060 instance=ExtResource("288_dftgh")]
+
+[node name="tree_palmDetailedShort2" parent="." unique_id=1752807102 instance=ExtResource("289_ukdsb")]
+
+[node name="tree_palmDetailedTall2" parent="." unique_id=38395199 instance=ExtResource("290_ifiba")]
+
+[node name="tree_palmShort2" parent="." unique_id=226161702 instance=ExtResource("291_txwwi")]
+
+[node name="tree_palmTall2" parent="." unique_id=1647085176 instance=ExtResource("292_jka8h")]
+
+[node name="tree_pineDefaultA2" parent="." unique_id=1685012817 instance=ExtResource("293_vwmw1")]
+
+[node name="tree_pineDefaultB2" parent="." unique_id=1312051043 instance=ExtResource("294_bpka8")]
+
+[node name="tree_pineGroundA2" parent="." unique_id=1843092891 instance=ExtResource("295_7l7ca")]
+
+[node name="tree_pineGroundB2" parent="." unique_id=1596868733 instance=ExtResource("296_udgja")]
+
+[node name="tree_pineRoundA2" parent="." unique_id=2047679809 instance=ExtResource("297_65akx")]
+
+[node name="tree_pineRoundB2" parent="." unique_id=1916860230 instance=ExtResource("298_nl8yq")]
+
+[node name="tree_pineRoundC2" parent="." unique_id=151183323 instance=ExtResource("299_qp2jr")]
+
+[node name="tree_pineRoundD2" parent="." unique_id=948034265 instance=ExtResource("300_u8stx")]
+
+[node name="tree_pineRoundE2" parent="." unique_id=1128047894 instance=ExtResource("301_f2lib")]
+
+[node name="tree_pineRoundF2" parent="." unique_id=986718630 instance=ExtResource("302_6sbnj")]
+
+[node name="tree_pineSmallA2" parent="." unique_id=1614067198 instance=ExtResource("303_t8u67")]
+
+[node name="tree_pineSmallB2" parent="." unique_id=1047385906 instance=ExtResource("304_omwrx")]
+
+[node name="tree_pineSmallC2" parent="." unique_id=1990001687 instance=ExtResource("305_ffv68")]
+
+[node name="tree_pineSmallD2" parent="." unique_id=933447102 instance=ExtResource("306_ujigo")]
+
+[node name="tree_pineTallA2" parent="." unique_id=464168691 instance=ExtResource("307_rxy3u")]
+
+[node name="tree_pineTallA_detailed2" parent="." unique_id=1096626670 instance=ExtResource("308_dvkvg")]
+
+[node name="tree_pineTallB2" parent="." unique_id=1125443112 instance=ExtResource("309_xxeaj")]
+
+[node name="tree_pineTallB_detailed2" parent="." unique_id=1324732432 instance=ExtResource("310_myppl")]
+
+[node name="tree_pineTallC2" parent="." unique_id=690045540 instance=ExtResource("311_u317u")]
+
+[node name="tree_pineTallC_detailed2" parent="." unique_id=1556637606 instance=ExtResource("312_ytu62")]
+
+[node name="tree_pineTallD2" parent="." unique_id=1722449503 instance=ExtResource("313_5iftx")]
+
+[node name="tree_pineTallD_detailed2" parent="." unique_id=722043647 instance=ExtResource("314_5gl1d")]
+
+[node name="tree_plateau2" parent="." unique_id=755483207 instance=ExtResource("315_pu3pv")]
+
+[node name="tree_plateau_dark2" parent="." unique_id=253389449 instance=ExtResource("316_p6nun")]
+
+[node name="tree_plateau_fall2" parent="." unique_id=1581475659 instance=ExtResource("317_uuijx")]
+
+[node name="tree_simple2" parent="." unique_id=176213655 instance=ExtResource("318_m0w6w")]
+
+[node name="tree_simple_dark2" parent="." unique_id=504339622 instance=ExtResource("319_uo07x")]
+
+[node name="tree_simple_fall2" parent="." unique_id=1571566523 instance=ExtResource("320_twskq")]
+
+[node name="tree_small2" parent="." unique_id=571398482 instance=ExtResource("321_keu35")]
+
+[node name="tree_small_dark2" parent="." unique_id=1051260291 instance=ExtResource("322_5j0up")]
+
+[node name="tree_small_fall2" parent="." unique_id=293184427 instance=ExtResource("323_2s313")]
+
+[node name="tree_tall2" parent="." unique_id=1969656946 instance=ExtResource("324_kx13d")]
+
+[node name="tree_tall_dark2" parent="." unique_id=2129539884 instance=ExtResource("325_luy2c")]
+
+[node name="tree_tall_fall2" parent="." unique_id=937682166 instance=ExtResource("326_ew58i")]
+
+[node name="tree_thin2" parent="." unique_id=225191995 instance=ExtResource("327_qv5iv")]
+
+[node name="tree_thin_dark2" parent="." unique_id=1834988411 instance=ExtResource("328_po4jq")]
+
+[node name="tree_thin_fall2" parent="." unique_id=743951074 instance=ExtResource("329_0pyfj")]

@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://dfg6rwo4m3msj"]
+[gd_scene format=3 uid="uid://dfg6rwo4m3msj"]
 
-[ext_resource type="Script" path="res://Scripts/Environment/Barca.cs" id="1_barca"]
+[ext_resource type="Script" uid="uid://y0uss4pg6x0d" path="res://Scripts/Environment/Barca.cs" id="1_barca"]
 [ext_resource type="PackedScene" uid="uid://dmnk3opgp7ag4" path="res://Assets/kenney_pirate-kit/Models/GLB format/boat-row-large.glb" id="2_boat_mesh"]
 [ext_resource type="PackedScene" uid="uid://br3832iefjr7o" path="res://Assets/kenney_blocky-characters_20/Models/GLB format/character-a.glb" id="3_char_a"]
+[ext_resource type="PackedScene" uid="uid://cdpqlpxi6yhyj" path="res://Assets/kenney_nature-kit/Models/GLTF format/cliff_blockCave_rock.glb" id="4_45d1s"]
 [ext_resource type="PackedScene" uid="uid://n13v0ltvitwi" path="res://Assets/kenney_blocky-characters_20/Models/GLB format/character-b.glb" id="4_char_b"]
 [ext_resource type="PackedScene" uid="uid://cyshg8wtmrgn2" path="res://Assets/kenney_blocky-characters_20/Models/GLB format/character-c.glb" id="5_char_c"]
 
@@ -20,65 +21,72 @@ sky = SubResource("Sky_1")
 tonemap_mode = 2
 glow_enabled = true
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_water"]
+transparency = 1
+albedo_color = Color(0, 0.435294, 0.819608, 0.501961)
+roughness = 0.1
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_1"]
 size = Vector3(10, 2, 20)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_water"]
-albedo_color = Color(0, 0.435294, 0.819608, 0.501961)
-transparency = 1
-roughness = 0.1
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_boat"]
 size = Vector3(1.2, 0.6, 2.5)
 
-[node name="Lume" type="Node3D"]
+[node name="Lume" type="Node3D" unique_id=1196366767]
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=370118613]
 environment = SubResource("Environment_1")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=734471258]
 transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
 shadow_enabled = true
 
-[node name="MalStang" type="CSGBox3D" parent="."]
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1796414736]
+transform = Transform3D(0.9512512, -0.25488707, -0.17364824, 0.2588191, 0.9659258, 1.6918591e-08, -0.16773126, 0.044943504, -0.9848077, -9, 8, 19)
+fov = 179.0
+
+[node name="MalStang" type="CSGBox3D" parent="." unique_id=70964615]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, -0.5, 0)
 use_collision = true
 size = Vector3(10, 1, 20)
 
-[node name="MalDrept" type="CSGBox3D" parent="."]
+[node name="MalDrept" type="CSGBox3D" parent="." unique_id=1883228872]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -0.5, 0)
 use_collision = true
 size = Vector3(10, 1, 20)
 
-[node name="Apa_Vizuala" type="CSGBox3D" parent="."]
+[node name="Apa_Vizuala" type="CSGBox3D" parent="." unique_id=187391333]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.7, 0)
 size = Vector3(10, 0.5, 20)
 material = SubResource("StandardMaterial3D_water")
 
-[node name="ZonaApa" type="Area3D" parent="."]
+[node name="ZonaApa" type="Area3D" parent="." unique_id=2067376769]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="ZonaApa"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ZonaApa" unique_id=1113584892]
 shape = SubResource("BoxShape3D_1")
 
-[node name="Barca" type="RigidBody3D" parent="."]
+[node name="Barca" type="RigidBody3D" parent="." unique_id=279011526]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
 script = ExtResource("1_barca")
 
-[node name="Mesh" parent="Barca" instance=ExtResource("2_boat_mesh")]
+[node name="Mesh" parent="Barca" unique_id=7732075 instance=ExtResource("2_boat_mesh")]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Barca"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Barca" unique_id=331359886]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
 shape = SubResource("BoxShape3D_boat")
 
-[node name="Inspector" parent="." instance=ExtResource("3_char_a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
-
-[node name="Profesor" parent="Barca" instance=ExtResource("4_char_b")]
+[node name="Profesor" parent="Barca" unique_id=398206110 instance=ExtResource("4_char_b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0.5)
 
-[node name="Elev" parent="Barca" instance=ExtResource("5_char_c")]
+[node name="cliff_blockCave_rock2" parent="Barca/Profesor" unique_id=1296064845 instance=ExtResource("4_45d1s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Elev" parent="Barca" unique_id=2145530716 instance=ExtResource("5_char_c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, -0.5)
+
+[node name="Inspector" parent="." unique_id=1398742229 instance=ExtResource("3_char_a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
 
 [connection signal="body_entered" from="ZonaApa" to="Barca" method="OnZonaApaBodyEntered"]
 [connection signal="body_exited" from="ZonaApa" to="Barca" method="OnZonaApaBodyExited"]
