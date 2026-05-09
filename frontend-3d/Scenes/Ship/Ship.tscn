@@ -215,10 +215,28 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_cjavy")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_boat"]
-size = Vector3(1.2, 0.6, 2.5)
+size = Vector3(4, 1.5, 10)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cargo"]
+size = Vector3(3, 2, 8)
 
 [node name="Ship" type="RigidBody3D" unique_id=1383437067]
+mass = 100.0
+center_of_mass_mode = 1
+center_of_mass = Vector3(0, -0.2, 0)
 script = ExtResource("1_wtp3e")
+BuoyancyFactor = 1.2
+WaterLinearDamp = 1.5
+WaterAngularDamp = 3.0
+BoatHeight = 1.0
+ThrustForce = 800.0
+SteeringTorque = 500.0
+
+[node name="CargoArea" type="Area3D" parent="." unique_id=123456789]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CargoArea"]
+shape = SubResource("BoxShape3D_cargo")
 
 [node name="ShipMesh" type="Node3D" parent="." unique_id=1242566049]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 2, -0.2, 5)

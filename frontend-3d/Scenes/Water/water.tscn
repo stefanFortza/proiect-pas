@@ -24,7 +24,7 @@ subdivide_width = 100
 subdivide_depth = 100
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0gwo3"]
-size = Vector3(10, 2, 20)
+size = Vector3(1000, 2, 1000)
 
 [node name="Water" type="MeshInstance3D" unique_id=179628238]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
