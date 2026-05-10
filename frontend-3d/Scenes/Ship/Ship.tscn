@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://y0uss4pg6x0d" path="res://Scripts/Environment/Barca.cs" id="1_wtp3e"]
 [ext_resource type="Texture2D" uid="uid://be50vmlyd1jvn" path="res://Assets/kenney_pirate-kit/Models/GLB format/Textures/colormap.png" id="2_wtp3e"]
 [ext_resource type="PackedScene" uid="uid://cb6pevx6hf2ee" path="res://Scenes/Student/Student.tscn" id="4_1q6u4"]
-[ext_resource type="PackedScene" uid="uid://dxjfrwr0cetf8" path="res://Scenes/Teacher/teacher.tscn" id="4_wtp3e"]
+[ext_resource type="PackedScene" uid="uid://dxjfrwr0cetf8" path="res://Scenes/Teacher/Teacher.tscn" id="4_wtp3e"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_cargo"]
 size = Vector3(3, 2, 8)
