@@ -2,8 +2,11 @@
 
 [ext_resource type="Script" uid="uid://y0uss4pg6x0d" path="res://Scripts/Environment/Barca.cs" id="1_wtp3e"]
 [ext_resource type="Texture2D" uid="uid://be50vmlyd1jvn" path="res://Assets/kenney_pirate-kit/Models/GLB format/Textures/colormap.png" id="2_wtp3e"]
-[ext_resource type="PackedScene" uid="uid://n13v0ltvitwi" path="res://Assets/kenney_blocky-characters_20/Models/GLB format/character-b.glb" id="3_8i8wl"]
-[ext_resource type="PackedScene" uid="uid://cyshg8wtmrgn2" path="res://Assets/kenney_blocky-characters_20/Models/GLB format/character-c.glb" id="4_k5r1i"]
+[ext_resource type="PackedScene" uid="uid://cb6pevx6hf2ee" path="res://Scenes/Student/Student.tscn" id="4_1q6u4"]
+[ext_resource type="PackedScene" uid="uid://dxjfrwr0cetf8" path="res://Scenes/Teacher/teacher.tscn" id="4_wtp3e"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cargo"]
+size = Vector3(3, 2, 8)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_scyc6"]
 resource_name = "colormap"
@@ -217,25 +220,16 @@ shadow_mesh = SubResource("ArrayMesh_cjavy")
 [sub_resource type="BoxShape3D" id="BoxShape3D_boat"]
 size = Vector3(4, 1.5, 10)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_cargo"]
-size = Vector3(3, 2, 8)
-
 [node name="Ship" type="RigidBody3D" unique_id=1383437067]
 mass = 100.0
 center_of_mass_mode = 1
 center_of_mass = Vector3(0, -0.2, 0)
 script = ExtResource("1_wtp3e")
-BuoyancyFactor = 1.2
-WaterLinearDamp = 1.5
-WaterAngularDamp = 3.0
-BoatHeight = 1.0
-ThrustForce = 800.0
-SteeringTorque = 500.0
 
 [node name="CargoArea" type="Area3D" parent="." unique_id=123456789]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 1)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CargoArea"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CargoArea" unique_id=1400339686]
 shape = SubResource("BoxShape3D_cargo")
 
 [node name="ShipMesh" type="Node3D" parent="." unique_id=1242566049]
@@ -280,8 +274,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
 visible = false
 shape = SubResource("BoxShape3D_boat")
 
-[node name="Profesor" parent="." unique_id=1779731095 instance=ExtResource("3_8i8wl")]
+[node name="Teacher" parent="." unique_id=1282808663 instance=ExtResource("4_wtp3e")]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 2.4782243, 1.5207524, 2.2476387)
 
-[node name="Elev" parent="." unique_id=343076396 instance=ExtResource("4_k5r1i")]
+[node name="Student" parent="." unique_id=998448694 instance=ExtResource("4_1q6u4")]
 transform = Transform3D(-0.25, 0, -3.774895e-08, 0, 0.25, 0, 3.774895e-08, 0, -0.25, 1.7103631, 1.1812037, 6.1312046)

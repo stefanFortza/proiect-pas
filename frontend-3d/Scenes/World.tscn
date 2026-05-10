@@ -65,7 +65,7 @@ material_override = SubResource("ShaderMaterial_p70al")
 [node name="Inspector" parent="Environment" unique_id=1398742229 instance=ExtResource("3_char_a")]
 transform = Transform3D(-1.0927847e-08, 0, -0.25, 0, 0.25, 0, 0.25, 0, -1.0927847e-08, 6.404263, 1.9704139, 5.117571)
 
-[node name="structure-platform-dock2" parent="Environment" unique_id=2777440 instance=ExtResource("6_45d1s")]
+[node name="Dock" parent="Environment" unique_id=2777440 instance=ExtResource("6_45d1s")]
 transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 6.5248523, 1.2849811, 4.8778577)
 
 [node name="Ship" parent="." unique_id=1383437067 instance=ExtResource("4_gjpho")]

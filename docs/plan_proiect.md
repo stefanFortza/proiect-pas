@@ -57,48 +57,27 @@ Pentru prezentarea academică, demonstrația evoluției limbajului se va face î
 4. Generarea fișierelor JSON statice pentru Epoca 1, 20 și 50.
 
 
+### Membrul 2 (Sisteme Nucleu & Fizică)
 
-### Membrul 2: Systems Programmer (Godot C#)
+*Responsabilitate: Să se asigure că barca plutește, shaderul funcționează și cutiile au impact fizic.*
 
-* **Sarcini:**
-1. Implementarea fizicii hidrodinamice. Barca este un `RigidBody3D`. Crearea unui script `Buoyancy.cs` care aplică o forță `Vector3.Up` proporțională cu adâncimea sub nivelul mărcii de plutire.
-2. Implementarea logicii de instanțiere via HTTP Refit.
-3. **Controlul Masei:** La comanda `adauga_cutie`, scriptul instanțiază un Prefab (`Cutie.tscn`), îl plasează în barcă și crește `RigidBody3D.Mass`. La `elimina_cutie`, distruge cel mai vechi copil-cutie și scade masa.
-
-
-
-```csharp
-public void AplicaDecizieInspector(ActiuneFizica actiune)
-{
-    if (actiune.Tip == "adauga_cutie")
-    {
-        Node3D cutie = _prefabCutie.Instantiate<Node3D>();
-        _barca.AddChild(cutie);
-        _barca.Mass += actiune.MasaKg;
-    }
-    else if (actiune.Tip == "elimina_cutie" && _barca.GetChildCount() > 0)
-    {
-        Node3D cutieVeche = _barca.GetChild(0);
-        cutieVeche.QueueFree();
-        _barca.Mass -= actiune.MasaKg; // Scădem masa corespunzătoare
-    }
-}
-
-```
-
-### Membrul 3: Technical Artist & UI (Godot)
-
-* **Sarcini:**
-1. Designul scenei: Barca detaliată (modele `.glb`), un ponton pentru Inspector, setările globale de mediu.
-2. Implementarea sistemului de text UI: Bule de dialog 3D care se actualizează secvențial pentru a afișa textul Profesorului și răspunsul Elevului. O interfață 2D simplă pentru a schimba între Epoci.
-3. Crearea Shader-ului de apă. Acesta trebuie să ofere feedback vizual convingător când barca coboară pe axa Y. Adăugarea unui sistem de particule (`GPUParticles3D`) la momentul în care o cutie lovește barca.
+1. **Sistemul de Plutire (Buoyancy):** Scrii scriptul C# care aplică forțe pe barcă în funcție de adâncimea apei și masa curentă. Tu calibrezi masa bărcii astfel încât să nu "decoleze" din greșeală.
+2. **Integrare Shader:** Tu pui shaderul de apă pe care l-am discutat. Te asiguri că `MeshInstance3D` (Plane) are destule subdiviziuni ca să arate bine.
+3. **Mecanica de "Aruncare":** Faci logica prin care Inspectorul instanțiază cutia și îi aplică un `Impulse` către barcă. Ești responsabil de coliziunile dintre cutie și barcă.
+4. **Orchestratorul (The Game Loop):** Tu scrii mașina de stări principală:
+* Așteaptă semnal de la UI -> Apelează API-ul -> Trimite datele către Membrul 3 (pentru text) -> Declanșează animația Inspectorului (aruncarea).
 
 
 
----
+### Membrul 3 (Date, UI & Decor)
 
-## 4. Fluxul de Execuție (Sprint)
+*Responsabilitate: Să facă totul să arate a joc și să gestioneze textele.*
 
-* **Ziua 1 (Infrastructură):** Python expune JSON-urile. Godot randează barca pe apă și apelează API-ul.
-* **Ziua 2 (Mecanică):** Se integrează adăugarea/eliminarea cutiilor și se calibrează masele pentru ca barca să se scufunde realist, fără a fi proiectată în afara scenei din cauza coliziunilor eronate.
-* **Ziua 3 (Polish & UI):** Se afișează dialogurile din JSON în Godot și se testează trecerea prin cele 3 "Epoci" pentru validarea vizuală a evoluției M2.
+1. **Parsarea JSON:** În Godot, e super simplu. Îi poți arăta cum să folosească `Json.ParseString(jsonString)`. El trebuie să transforme textul de la Membrul 1 într-un dicționar sau un obiect C#.
+2. **Bulele de Dialog (Label3D):**
+* **Task:** Să pună un nod `Label3D` deasupra capului fiecărui personaj.
+* **De ce:** `Label3D` funcționează ca un text normal, dar în spațiu 3D. Nu trebuie să se complice cu Viewport-uri sau UI 2D complex.
+* **Logic:** Face o funcție simplă `AfiseazaText(string mesaj)` care schimbă proprietatea `Text` a nodului și îl face vizibil/invizibil.
+
+3. **Meniul de Epoci (CanvasLayer):** Face 3 butoane (Epoca 1, 20, 50). Când apeși un buton, trimite un semnal către tine (Expertul) să încarci setul respectiv de date.
+4. **Decorarea Scenei (Diorama):** 
