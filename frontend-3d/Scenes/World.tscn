@@ -28,6 +28,8 @@
 [ext_resource type="PackedScene" uid="uid://brlwya60kj6qf" path="res://ImportedScene/bridge.tscn" id="25_ofme6"]
 [ext_resource type="PackedScene" uid="uid://524x05lhcnpr" path="res://ImportedScene/water.tscn" id="26_jdyvg"]
 [ext_resource type="AudioStream" uid="uid://cvq05fj2rym4b" path="res://ImportedScene/audio/stream.mp3" id="27_26nav"]
+[ext_resource type="PackedScene" uid="uid://dxjfrwr0cetf8" path="res://Scenes/Teacher/Teacher.tscn" id="29_7dsfl"]
+[ext_resource type="PackedScene" uid="uid://cb6pevx6hf2ee" path="res://Scenes/Student/Student.tscn" id="30_mq4nq"]
 [ext_resource type="AudioStream" uid="uid://cm8ncbpf8wgf0" path="res://ImportedScene/audio/music.ogg" id="30_ne1it"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_hkej2"]
@@ -839,11 +841,16 @@ transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -73, -48, 228)
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -73, -48, 238)
 
 [node name="Ship" parent="Environment" unique_id=1383437067 instance=ExtResource("4_gjpho")]
-transform = Transform3D(0.10471431, 0, -5.999087, 0, 6, 0, 5.999087, 0, 0.10471431, -44, -48, 240)
+transform = Transform3D(0.10471431, 0, -5.999087, 0, 6, 0, 5.999087, 0, 0.10471431, -79, -48, 253)
 mass = 1000.0
-WaterLevelY = -47.9871
-BuoyancyFactor = 2.0
-WaterDrag = 0.9
+WaterLevelY = -45.987
+BuoyancyFactor = 0.5
+
+[node name="Teacher" parent="Environment" unique_id=1053754987 instance=ExtResource("29_7dsfl")]
+transform = Transform3D(-2, 0, -1.7484555e-07, 0, 2, 0, 1.7484555e-07, 0, -2, -62.7, -37.5, 250.09999)
+
+[node name="Student" parent="Environment" unique_id=1004093198 instance=ExtResource("30_mq4nq")]
+transform = Transform3D(-2, 0, -3.019916e-07, 0, 2, 0, 3.019916e-07, 0, -2, -87, -39.9, 253.3)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1882345036]
 stream = ExtResource("30_ne1it")
