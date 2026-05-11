@@ -70,6 +70,9 @@ dof_blur_far_distance = 150.0
 dof_blur_far_transition = 250.0
 dof_blur_amount = 0.06
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_mq4nq"]
+size = Vector3(12.419678, 5.061157, 22.952316)
+
 [node name="World" type="Node3D" unique_id=2069307863]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2008010773]
@@ -835,12 +838,6 @@ stream = ExtResource("27_26nav")
 autoplay = true
 max_distance = 53.06
 
-[node name="Dock" parent="Environment" unique_id=2777440 instance=ExtResource("6_45d1s")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -73, -48, 228)
-
-[node name="Dock2" parent="Environment" unique_id=666376648 instance=ExtResource("6_45d1s")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -73, -48, 238)
-
 [node name="Ship" parent="Environment" unique_id=1383437067 node_paths=PackedStringArray("ObjectContainer") instance=ExtResource("4_gjpho")]
 transform = Transform3D(0.10471431, 0, -5.999087, 0, 6, 0, 5.999087, 0, 0.10471431, -79, -48, 253)
 mass = 1000.0
@@ -857,6 +854,19 @@ transform = Transform3D(-2, 0, -3.019916e-07, 0, 2, 0, 3.019916e-07, 0, -2, -87,
 [node name="ObjectContainer" type="Node3D" parent="Environment" unique_id=1626281389]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
 script = ExtResource("31_mq4nq")
+
+[node name="DockDefault" type="StaticBody3D" parent="Environment" unique_id=1623938445]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -73, -48, 228)
+
+[node name="Dock" parent="Environment/DockDefault" unique_id=2777440 instance=ExtResource("6_45d1s")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+
+[node name="Dock2" parent="Environment/DockDefault" unique_id=666376648 instance=ExtResource("6_45d1s")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 10)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/DockDefault" unique_id=906446252]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.080444336, 2.0305786, 4.776886)
+shape = SubResource("BoxShape3D_mq4nq")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1882345036]
 stream = ExtResource("30_ne1it")

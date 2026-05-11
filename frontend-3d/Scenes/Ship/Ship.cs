@@ -1,15 +1,31 @@
 using Godot;
+using System;
 using System.Collections.Generic;
 
 public partial class Ship : RigidBody3D
 {
+    public enum ShipState
+    {
+        Sailing,
+        Sinking,
+        Sunk
+    }
+
+    [Signal] public delegate void ShipSinkingEventHandler();
+    [Signal] public delegate void ShipSunkEventHandler();
+
+    [ExportGroup("State Machine")]
+    [Export] public ShipState CurrentState = ShipState.Sailing;
+    [Export] public float SinkingThreshold = -2.0f; // Depth below water level to trigger sinking
+    [Export] public float SinkingDamping = 2.0f;
+
     [ExportGroup("Water Settings")]
     [Export] public float WaterLevelY = -47.9871f;
     [Export] public Vector3 WaterPosition = new Vector3(-35.2002f, -47.9871f, 230.115f);
     [Export] public float WaterPlaneSize = 500.0f;
 
     [ExportGroup("Buoyancy Physics")]
-    [Export] public float BuoyancyFactor = 1.0f; // Reajustat. Lasă la 1.0 sau maxim 1.5 pentru 1000kg.
+    [Export] public float BuoyancyFactor = 1.0f;
     [Export] public float WaterLinearDamp = 4.0f;
     [Export] public float WaterAngularDamp = 4.0f;
 
@@ -30,14 +46,14 @@ public partial class Ship : RigidBody3D
     public override void _EnterTree()
     {
         base._EnterTree();
-        ShipController.Container = ObjectContainer;
+        if (ShipController != null)
+            ShipController.Container = ObjectContainer;
     }
 
     public override void _Ready()
     {
         _gravity = (float)ProjectSettings.GetSetting("physics/3d/default_gravity");
 
-        // Configurare zgomot conform water.tres
         _noise = new FastNoiseLite();
         _noise.NoiseType = FastNoiseLite.NoiseTypeEnum.Cellular;
         _noise.Frequency = 0.0868f;
@@ -45,7 +61,6 @@ public partial class Ship : RigidBody3D
         _noise.CellularDistanceFunction = FastNoiseLite.CellularDistanceFunctionEnum.EuclideanSquared;
         _noise.CellularJitter = 1.015f;
 
-        // VALIDARE CRITICĂ: Previne căderea infinită dacă uiți să asignezi containerul
         if (ProbeContainer == null)
         {
             GD.PushError("CRITICAL (Ship.cs): ProbeContainer nu a fost asignat în Inspector!");
@@ -59,17 +74,11 @@ public partial class Ship : RigidBody3D
                 _buoyancyProbes.Add(marker);
             }
         }
-
-        if (_buoyancyProbes.Count == 0)
-        {
-            GD.PushWarning("Avertisment (Ship.cs): ProbeContainer este gol. Barca nu va avea flotabilitate.");
-        }
     }
 
     private float GetWaterHeight(Vector3 globalPos)
     {
         float time = (float)Time.GetTicksMsec() / 1000.0f;
-
         float relativeX = globalPos.X - WaterPosition.X;
         float relativeZ = globalPos.Z - WaterPosition.Z;
 
@@ -80,14 +89,28 @@ public partial class Ship : RigidBody3D
         float finalU = u + offset.X;
         float finalV = v + offset.Y;
 
-        // Returnează valori între -1.0 și 1.0
         float noiseVal = _noise.GetNoise2D(finalU * 512.0f, finalV * 512.0f);
-
-        // // Dacă shader-ul tău de apă mișcă vertecșii și sub WaterLevelY, folosește direct valoarea de noise:
         return WaterLevelY + (noiseVal * WaveHeight);
     }
 
     public override void _IntegrateForces(PhysicsDirectBodyState3D state)
+    {
+        switch (CurrentState)
+        {
+            case ShipState.Sailing:
+                HandleSailingPhysics(state);
+                CheckForSinking();
+                break;
+            case ShipState.Sinking:
+                HandleSinkingPhysics(state);
+                break;
+            case ShipState.Sunk:
+                // No forces applied
+                break;
+        }
+    }
+
+    private void HandleSailingPhysics(PhysicsDirectBodyState3D state)
     {
         if (_buoyancyProbes.Count == 0) return;
 
@@ -117,6 +140,34 @@ public partial class Ship : RigidBody3D
         {
             LinearDamp = 0.0f;
             AngularDamp = 0.0f;
+        }
+    }
+
+    private void CheckForSinking()
+    {
+        float currentWaterHeight = GetWaterHeight(GlobalPosition);
+        float depth = currentWaterHeight - GlobalPosition.Y;
+
+        if (depth > -SinkingThreshold)
+        {
+            GD.Print("Ship: Sinking state triggered!");
+            CurrentState = ShipState.Sinking;
+            EmitSignal(SignalName.ShipSinking);
+        }
+    }
+
+    private void HandleSinkingPhysics(PhysicsDirectBodyState3D state)
+    {
+        LinearDamp = SinkingDamping;
+        AngularDamp = SinkingDamping;
+
+        state.ApplyForce(Vector3.Down * Mass * 2.0f);
+
+        if (GlobalPosition.Y < WaterLevelY - 50.0f)
+        {
+            CurrentState = ShipState.Sunk;
+            GD.Print("Ship: Sunk.");
+            EmitSignal(SignalName.ShipSunk);
         }
     }
 }

@@ -6,6 +6,8 @@
 height = 3.0
 
 [node name="Teacher" type="RigidBody3D" unique_id=1053754987]
+axis_lock_angular_x = true
+axis_lock_angular_z = true
 
 [node name="TeacherMesh" parent="." unique_id=1822499020 instance=ExtResource("1_501po")]
 

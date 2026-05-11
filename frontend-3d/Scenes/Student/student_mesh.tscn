@@ -1043,6 +1043,7 @@ tracks/7/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
 [sub_resource type="Animation" id="Animation_v2h5f"]
 resource_name = "idle"
 length = 1.3333334
+loop_mode = 1
 tracks/0/type = "rotation_3d"
 tracks/0/imported = true
 tracks/0/enabled = true
@@ -1868,24 +1869,25 @@ mesh = SubResource("ArrayMesh_7p73w")
 skeleton = NodePath("")
 
 [node name="torso" type="MeshInstance3D" parent="character-c/root" unique_id=217953800]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
+transform = Transform3D(1, 0, 0, 0, 0.99679613, -0.07998411, 0, 0.07998411, 0.99679613, 0, 0.7, 0)
 mesh = SubResource("ArrayMesh_tjfug")
 skeleton = NodePath("")
 
 [node name="arm-left" type="MeshInstance3D" parent="character-c/root/torso" unique_id=2073588745]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 1.1, -0.099999994)
+transform = Transform3D(1, 0, 0, 0, 0.9712883, -0.23790552, 0, 0.23790552, 0.9712883, 0.4, 1.1, -0.099999994)
 mesh = SubResource("ArrayMesh_8qdyo")
 skeleton = NodePath("")
 
 [node name="arm-right" type="MeshInstance3D" parent="character-c/root/torso" unique_id=792790165]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 1.1, -0.099999994)
+transform = Transform3D(1, 0, 0, 0, 0.9712883, -0.23790552, 0, 0.23790552, 0.9712883, -0.4, 1.1, -0.099999994)
 mesh = SubResource("ArrayMesh_ri2gt")
 skeleton = NodePath("")
 
 [node name="head" type="MeshInstance3D" parent="character-c/root/torso" unique_id=1456439210]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 1.2, 0)
+transform = Transform3D(0.09712883, 0, -0.023790551, 0, 0.1, 0, 0.023790551, 0, 0.09712883, 0, 1.2, 0)
 mesh = SubResource("ArrayMesh_2ji0d")
 skeleton = NodePath("")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=549284423]
 libraries/ = SubResource("AnimationLibrary_nc7rl")
+autoplay = &"idle"

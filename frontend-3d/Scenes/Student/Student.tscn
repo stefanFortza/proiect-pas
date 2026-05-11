@@ -7,6 +7,8 @@ height = 3.0
 
 [node name="Student" type="RigidBody3D" unique_id=1004093198]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+axis_lock_angular_x = true
+axis_lock_angular_z = true
 
 [node name="StudentMesh" parent="." unique_id=1757058909 instance=ExtResource("1_3ncl4")]
 

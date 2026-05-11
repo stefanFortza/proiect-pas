@@ -42,10 +42,10 @@ size = Vector3(1.6, 1.3000001, 0.3)
 size = Vector3(1.8000001, 1.2, 0.3)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_c42f4"]
-size = Vector3(4.9010134, 0.51064456, 0.7564453)
+size = Vector3(5.3733582, 1.2078003, 0.30205077)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_cyt04"]
-size = Vector3(3.5217528, 0.7534912, 0.3)
+size = Vector3(4.0592713, 1.2291626, 0.3)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rnpd3"]
 size = Vector3(2.0381837, 0.51064456, 0.3)
@@ -83,6 +83,7 @@ size = Vector3(3.5, 0.6, 0.3)
 [node name="Ship" type="RigidBody3D" unique_id=1383437067 node_paths=PackedStringArray("ProbeContainer", "ShipController")]
 mass = 100.0
 script = ExtResource("1_wtp3e")
+SinkingThreshold = -5.5
 ProbeContainer = NodePath("ProbesContainer")
 ShipController = NodePath("ShipController")
 
@@ -155,11 +156,11 @@ transform = Transform3D(-2.1855694e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.1855694e-
 shape = SubResource("BoxShape3D_u178y")
 
 [node name="CollisionShape3D23" type="CollisionShape3D" parent="." unique_id=1440802332]
-transform = Transform3D(-2.1855694e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.1855694e-08, 0.88588864, 1.1776613, -0.30812883)
+transform = Transform3D(-2.1855694e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.1855694e-08, 0.9994873, 1.3519502, -0.42621505)
 shape = SubResource("BoxShape3D_c42f4")
 
 [node name="CollisionShape3D24" type="CollisionShape3D" parent="." unique_id=1149696484]
-transform = Transform3D(-2.1855694e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.1855694e-08, -0.9772723, 1.2383729, -0.54198205)
+transform = Transform3D(-2.1855694e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.1855694e-08, -0.9772723, 1.3572907, -0.60358024)
 shape = SubResource("BoxShape3D_cyt04")
 
 [node name="CollisionShape3D25" type="CollisionShape3D" parent="." unique_id=1307883553]
@@ -216,7 +217,8 @@ shape = SubResource("BoxShape3D_u4wnp")
 
 [node name="ObjectSpawner" parent="." unique_id=1869617386 instance=ExtResource("3_spawner")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, -1)
-SpawnAreaSize = Vector3(1, 0, 1.8)
+SpawnAreaSize = Vector3(0.8, 0, 1.8)
+SpawnHeight = 6.0
 
 [node name="ShipController" type="Node" parent="." unique_id=987654321 node_paths=PackedStringArray("Spawner")]
 script = ExtResource("5_controller")
