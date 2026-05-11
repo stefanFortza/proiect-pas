@@ -16,7 +16,7 @@ subdivide_width = 200
 subdivide_depth = 200
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ed6pp"]
-size = Vector3(500, 3.8, 499.999)
+size = Vector3(500, 0.2, 499.999)
 
 [node name="Water" type="MeshInstance3D" unique_id=358272634]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -48, 0)
@@ -25,7 +25,7 @@ mesh = SubResource("PlaneMesh_athm3")
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1042294002]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00016784668, 0, -0.00065612793)
 collision_layer = 2
-collision_mask = 7
+collision_mask = 3
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1718789512]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4000015, 0)

@@ -80,8 +80,13 @@ size = Vector3(3.5, 0.6, 0.3)
 [sub_resource type="BoxShape3D" id="BoxShape3D_u4wnp"]
 size = Vector3(3.5, 0.6, 0.3)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wtp3e"]
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.94170475, 1, 0.86614895, 1)
+
 [node name="Ship" type="RigidBody3D" unique_id=1383437067 node_paths=PackedStringArray("ProbeContainer", "ShipController")]
 collision_layer = 4
+collision_mask = 5
 mass = 100.0
 script = ExtResource("1_wtp3e")
 SinkingThreshold = -5.5
@@ -224,3 +229,8 @@ SpawnHeight = 6.0
 [node name="ShipController" type="Node" parent="." unique_id=987654321 node_paths=PackedStringArray("Spawner")]
 script = ExtResource("5_controller")
 Spawner = NodePath("../ObjectSpawner")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=482522733]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0017991066, 1.0898085, -1.0191399)
+size = Vector3(0.5839844, 0.14111328, 0.592041)
+material = SubResource("StandardMaterial3D_wtp3e")

@@ -6,6 +6,8 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_1"]
 
 [node name="FallingCrate" type="RigidBody3D" unique_id=907710895]
+collision_layer = 4
+collision_mask = 4
 mass = 200.0
 script = ExtResource("1_script")
 ExplodeOnTimer = false

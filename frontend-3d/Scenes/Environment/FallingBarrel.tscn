@@ -8,6 +8,8 @@ height = 0.6230469
 radius = 0.35
 
 [node name="FallingBarrel" type="RigidBody3D" unique_id=731459975]
+collision_layer = 4
+collision_mask = 4
 mass = 200.0
 script = ExtResource("1_script")
 ExplodeOnTimer = false

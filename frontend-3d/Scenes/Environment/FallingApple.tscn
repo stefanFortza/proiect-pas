@@ -7,6 +7,8 @@
 radius = 0.2
 
 [node name="FallingApple" type="RigidBody3D" unique_id=685174107]
+collision_layer = 4
+collision_mask = 4
 mass = 100.0
 script = ExtResource("1_script")
 ExplodeOnTimer = false

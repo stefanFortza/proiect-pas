@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://bfgyn3i1nqd6r"]
 
 [ext_resource type="Script" uid="uid://cggsfvgl3f7ni" path="res://Scripts/Environment/ProceduralGenerator.cs" id="1_371b6"]
+[ext_resource type="PackedScene" uid="uid://d4bs212tyfkob" path="res://Scenes/Camera/camera_3d.tscn" id="1_p70ga"]
 [ext_resource type="PackedScene" uid="uid://c7d1qhfqo7yhd" path="res://ImportedScene/overworld_skin.tscn" id="2_7dsfl"]
+[ext_resource type="Script" uid="uid://u7ltnfih6ir6" path="res://Scenes/Camera/Camera3d.cs" id="2_eq88g"]
 [ext_resource type="PackedScene" uid="uid://ce0q6j3is8gud" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_blocks.glb" id="2_pey7r"]
 [ext_resource type="PackedScene" uid="uid://b8v31cl154lde" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_blocks_dark.glb" id="3_8jik5"]
 [ext_resource type="PackedScene" uid="uid://w181ibhqmjgm" path="res://Scenes/Ship/Ship.tscn" id="4_gjpho"]
@@ -118,7 +120,7 @@ dof_blur_far_transition = 250.0
 dof_blur_amount = 0.06
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_mq4nq"]
-size = Vector3(12.419678, 5.061157, 22.952316)
+size = Vector3(12.419678, 0.8064575, 22.952316)
 
 [node name="World" type="Node3D" unique_id=2069307863]
 
@@ -133,8 +135,9 @@ shadow_enabled = true
 shadow_opacity = 0.9
 shadow_blur = 4.5
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=1938591375]
-transform = Transform3D(-0.66913015, 0.11945518, -0.73348165, 0, 0.98699635, 0.16074272, 0.7431452, 0.107557796, -0.660429, -106.098785, -24.04914, 214.62082)
+[node name="Camera3D" parent="." unique_id=296624780 instance=ExtResource("1_p70ga")]
+transform = Transform3D(-0.66913015, 0.11945519, -0.7334817, 0, 0.98699635, 0.16074272, 0.7431453, 0.107557796, -0.660429, -106.098785, -24.04914, 214.62082)
+script = ExtResource("2_eq88g")
 
 [node name="ForestGenerator" type="Node3D" parent="." unique_id=35686171]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.171005, -2.0771866, 233.59662)
@@ -287,17 +290,22 @@ autoplay = true
 max_distance = 53.06
 
 [node name="Ship" parent="Environment" unique_id=1383437067 node_paths=PackedStringArray("ObjectContainer") instance=ExtResource("4_gjpho")]
-transform = Transform3D(0.10471431, 0, -5.999087, 0, 6, 0, 5.999087, 0, 0.10471431, -79, -48, 253)
+transform = Transform3D(0.10471431, 0, -5.999087, 0, 6, 0, 5.999087, 0, 0.10471431, -79, -48, 256.01837)
 mass = 1000.0
-WaterLevelY = -45.987
+SinkingThreshold = -5.0
+WaterLevelY = -46.0
 BuoyancyFactor = 0.5
 ObjectContainer = NodePath("../ObjectContainer")
 
 [node name="Teacher" parent="Environment" unique_id=1053754987 instance=ExtResource("29_7dsfl")]
 transform = Transform3D(-2, 0, -1.7484555e-07, 0, 2, 0, 1.7484555e-07, 0, -2, -62.7, -37.5, 250.09999)
+collision_layer = 4
+collision_mask = 4
 
 [node name="Student" parent="Environment" unique_id=1004093198 instance=ExtResource("30_mq4nq")]
 transform = Transform3D(-2, 0, -3.019916e-07, 0, 2, 0, 3.019916e-07, 0, -2, -87, -39.9, 253.3)
+collision_layer = 4
+collision_mask = 4
 
 [node name="ObjectContainer" type="Node3D" parent="Environment" unique_id=1626281389]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
@@ -314,7 +322,7 @@ transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 10)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/DockDefault" unique_id=906446252]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.080444336, 2.0305786, 4.776886)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.080444336, 4.1579285, 4.776886)
 shape = SubResource("BoxShape3D_mq4nq")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1882345036]
