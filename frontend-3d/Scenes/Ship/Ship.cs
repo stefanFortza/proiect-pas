@@ -20,10 +20,18 @@ public partial class Ship : RigidBody3D
 
     [ExportGroup("Architecture")]
     [Export] public Node3D ProbeContainer;
+    [Export] public ShipController ShipController;
+    [Export] public ObjectContainer ObjectContainer;
 
     private List<Marker3D> _buoyancyProbes = new List<Marker3D>();
     private float _gravity;
     private FastNoiseLite _noise;
+
+    public override void _EnterTree()
+    {
+        base._EnterTree();
+        ShipController.Container = ObjectContainer;
+    }
 
     public override void _Ready()
     {
