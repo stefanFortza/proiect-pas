@@ -2,4 +2,22 @@
 
 [ext_resource type="PackedScene" uid="uid://daovb46045rrx" path="res://ImportedScene/graphics/environment/overworld_environment.blend" id="1_qcyeo"]
 
-[node name="overworld_environment" instance=ExtResource("1_qcyeo")]
+[node name="overworld_environment" unique_id=205604439 instance=ExtResource("1_qcyeo")]
+
+[node name="Rocks" parent="." index="0" unique_id=571755297]
+layers = 2
+
+[node name="StaticBody3D" parent="Rocks" index="0" unique_id=865058065]
+collision_layer = 4
+
+[node name="Rocks2" parent="." index="1" unique_id=366256152]
+layers = 2
+
+[node name="StaticBody3D" parent="Rocks2" index="0" unique_id=139774720]
+collision_layer = 4
+
+[node name="Tunnel" parent="." index="3" unique_id=1387488842]
+layers = 2
+
+[node name="StaticBody3D" parent="Tunnel" index="1" unique_id=901864464]
+collision_layer = 4

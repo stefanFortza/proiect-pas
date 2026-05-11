@@ -81,6 +81,7 @@ size = Vector3(3.5, 0.6, 0.3)
 size = Vector3(3.5, 0.6, 0.3)
 
 [node name="Ship" type="RigidBody3D" unique_id=1383437067 node_paths=PackedStringArray("ProbeContainer", "ShipController")]
+collision_layer = 4
 mass = 100.0
 script = ExtResource("1_wtp3e")
 SinkingThreshold = -5.5
