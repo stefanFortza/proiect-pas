@@ -1043,6 +1043,7 @@ tracks/7/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
 [sub_resource type="Animation" id="Animation_vsbv2"]
 resource_name = "idle"
 length = 1.3333334
+loop_mode = 1
 tracks/0/type = "rotation_3d"
 tracks/0/imported = true
 tracks/0/enabled = true
@@ -1463,6 +1464,7 @@ tracks/7/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1)
 [sub_resource type="Animation" id="Animation_je4jf"]
 resource_name = "walk"
 length = 0.6666667
+loop_mode = 1
 tracks/0/type = "position_3d"
 tracks/0/imported = true
 tracks/0/enabled = true
@@ -1851,7 +1853,10 @@ _data = {
 &"wheelchair-sit": SubResource("Animation_yt3mc")
 }
 
-[node name="Teacher" type="Node3D" unique_id=1282808663]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_501po"]
+height = 3.0
+
+[node name="Teacher" type="RigidBody3D" unique_id=1053754987]
 
 [node name="Model" type="Node3D" parent="." unique_id=1488300298]
 
@@ -1870,24 +1875,29 @@ mesh = SubResource("ArrayMesh_q7r4m")
 skeleton = NodePath("")
 
 [node name="torso" type="MeshInstance3D" parent="Model/character-i/root" unique_id=1134081479]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
+transform = Transform3D(1, 0, 0, 0, 1, -0.00021158058, 0, 0.00021158058, 1, 0, 0.7, 0)
 mesh = SubResource("ArrayMesh_3w8rw")
 skeleton = NodePath("")
 
 [node name="arm-left" type="MeshInstance3D" parent="Model/character-i/root/torso" unique_id=636494459]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.39999998, 1.1, -0.099999905)
+transform = Transform3D(1, 0, 0, 0, 0.9999998, -0.0006347411, 0, 0.0006347411, 0.9999998, 0.39999998, 1.1, -0.099999905)
 mesh = SubResource("ArrayMesh_ax5or")
 skeleton = NodePath("")
 
 [node name="arm-right" type="MeshInstance3D" parent="Model/character-i/root/torso" unique_id=203643497]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4000001, 1.1, -0.099999905)
+transform = Transform3D(1, 0, 0, 0, 0.9999998, -0.0006347411, 0, 0.0006347411, 0.9999998, -0.4000001, 1.1, -0.099999905)
 mesh = SubResource("ArrayMesh_gmyr5")
 skeleton = NodePath("")
 
 [node name="head" type="MeshInstance3D" parent="Model/character-i/root/torso" unique_id=1823221987]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 1.2, 0)
+transform = Transform3D(0.09999999, 0, -6.347411e-05, 0, 0.1, 0, 6.347411e-05, 0, 0.09999999, 0, 1.2, 0)
 mesh = SubResource("ArrayMesh_fvreb")
 skeleton = NodePath("")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Model" unique_id=1970751959]
 libraries/ = SubResource("AnimationLibrary_0ada8")
+autoplay = &"idle"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=135483905]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+shape = SubResource("CapsuleShape3D_501po")

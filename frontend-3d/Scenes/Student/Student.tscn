@@ -1851,7 +1851,10 @@ _data = {
 &"wheelchair-sit": SubResource("Animation_gcjvb")
 }
 
-[node name="Student" type="Node3D" unique_id=998448694]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3ncl4"]
+height = 3.0
+
+[node name="Student" type="RigidBody3D" unique_id=1004093198]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 
 [node name="Model" type="Node3D" parent="." unique_id=343076396]
@@ -1892,3 +1895,7 @@ skeleton = NodePath("")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Model" unique_id=1014921722]
 libraries/ = SubResource("AnimationLibrary_nc7rl")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1100553874]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+shape = SubResource("CapsuleShape3D_3ncl4")

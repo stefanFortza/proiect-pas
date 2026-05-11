@@ -840,12 +840,10 @@ transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -73, -48, 238)
 
 [node name="Ship" parent="Environment" unique_id=1383437067 instance=ExtResource("4_gjpho")]
 transform = Transform3D(0.10471431, 0, -5.999087, 0, 6, 0, 5.999087, 0, 0.10471431, -44, -48, 240)
-mass = 1.0
-center_of_mass_mode = 0
-center_of_mass = Vector3(0, 0, 0)
-BoatHeight = 0.5
-ThrustForce = 15.0
-SteeringTorque = 10.0
+mass = 1000.0
+WaterLevelY = -47.9871
+BuoyancyFactor = 2.0
+WaterDrag = 0.9
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1882345036]
 stream = ExtResource("30_ne1it")
