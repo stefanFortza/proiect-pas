@@ -1,21 +1,17 @@
-[gd_scene format=3 uid="uid://dg7y8v2n1j4j1"]
+[gd_scene format=3 uid="uid://clcsqmqsowl3q"]
 
-[ext_resource type="Script" uid="uid://bgl5wyllkn0rn" path="res://Scripts/Environment/FallingBox.cs" id="1_script"]
+[ext_resource type="PackedScene" path="res://Scenes/Environment/FallingObjectBase.tscn" id="1_base"]
 [ext_resource type="PackedScene" uid="uid://6h0poog54mjb" path="res://Assets/kenney_food-kit/Models/GLB format/apple.glb" id="2_mesh"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_1"]
 radius = 0.2
 
-[node name="FallingApple" type="RigidBody3D" unique_id=685174107]
-collision_layer = 4
-collision_mask = 4
+[node name="FallingApple" unique_id=1544205029 instance=ExtResource("1_base")]
 mass = 100.0
-script = ExtResource("1_script")
-ExplodeOnTimer = false
 
-[node name="apple" parent="." unique_id=2083764409 instance=ExtResource("2_mesh")]
+[node name="apple" parent="." index="0" unique_id=79892190 instance=ExtResource("2_mesh")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1264367897]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.20391846, 0)
+[node name="CollisionShape3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
 shape = SubResource("SphereShape3D_1")

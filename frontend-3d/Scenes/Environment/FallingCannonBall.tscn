@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bdogps1bvts68"]
+
+[ext_resource type="PackedScene" path="res://Scenes/Environment/FallingObjectBase.tscn" id="1_base"]
+[ext_resource type="PackedScene" uid="uid://cfq76jlvprqco" path="res://Assets/kenney_pirate-kit/Models/GLB format/cannon-ball.glb" id="2_mesh"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_1"]
+radius = 0.15
+
+[node name="FallingCannonBall" unique_id=30227535 instance=ExtResource("1_base")]
+mass = 200.0
+
+[node name="cannon-ball" parent="." index="0" unique_id=1560837850 instance=ExtResource("2_mesh")]
+
+[node name="CollisionShape3D" parent="." index="1"]
+shape = SubResource("SphereShape3D_1")

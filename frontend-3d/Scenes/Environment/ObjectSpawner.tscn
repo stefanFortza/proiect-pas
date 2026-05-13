@@ -1,12 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://b8y4v2n1j4j8"]
+[gd_scene load_steps=7 format=3]
 
 [ext_resource type="Script" path="res://Scripts/Environment/ObjectSpawner.cs" id="1_script"]
-[ext_resource type="PackedScene" uid="uid://cx6y8v2n1j4j8" path="res://Scenes/Environment/FallingCrate.tscn" id="2_scene"]
-[ext_resource type="PackedScene" uid="uid://dg7y8v2n1j4j1" path="res://Scenes/Environment/FallingApple.tscn" id="3_scene"]
-[ext_resource type="PackedScene" uid="uid://dg7y8v2n1j4j2" path="res://Scenes/Environment/FallingBarrel.tscn" id="4_scene"]
+[ext_resource type="PackedScene" path="res://Scenes/Environment/FallingCrate.tscn" id="2_scene"]
+[ext_resource type="PackedScene" path="res://Scenes/Environment/FallingApple.tscn" id="3_scene"]
+[ext_resource type="PackedScene" path="res://Scenes/Environment/FallingBarrel.tscn" id="4_scene"]
+[ext_resource type="PackedScene" path="res://Scenes/Environment/FallingCannonBall.tscn" id="5_scene"]
+[ext_resource type="PackedScene" path="res://Scenes/Environment/FallingChest.tscn" id="6_scene"]
 
 [node name="ObjectSpawner" type="Node3D"]
 script = ExtResource("1_script")
-ScenesToSpawn = Array[PackedScene]([ExtResource("2_scene"), ExtResource("3_scene"), ExtResource("4_scene")])
+ScenesToSpawn = Array[PackedScene]([ExtResource("2_scene"), ExtResource("3_scene"), ExtResource("4_scene"), ExtResource("5_scene"), ExtResource("6_scene")])
 SpawnAreaSize = Vector3(10, 0, 20)
 SpawnHeight = 10.0
