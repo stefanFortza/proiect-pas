@@ -223,7 +223,7 @@ shape = SubResource("BoxShape3D_u4wnp")
 
 [node name="ObjectSpawner" parent="." unique_id=1869617386 instance=ExtResource("3_spawner")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, -1)
-SpawnAreaSize = Vector3(0.8, 0, 1.8)
+SpawnAreaSize = Vector3(0.8, 0, 0.8)
 SpawnHeight = 6.0
 
 [node name="ShipController" type="Node" parent="." unique_id=987654321 node_paths=PackedStringArray("Spawner")]
