@@ -84,6 +84,7 @@
 [ext_resource type="PackedScene" uid="uid://byxklbncmjkcb" path="res://Scenes/rocks.tscn" id="60_h2nrh"]
 [ext_resource type="Shader" uid="uid://0vbgk0g3bqlj" path="res://Shaders/GrassWind.gdshader" id="61_oe68r"]
 [ext_resource type="PackedScene" uid="uid://b5l5j5l5j5l5j" path="res://Scenes/UI/GameOverUI.tscn" id="62_gjpho"]
+[ext_resource type="Script" uid="uid://b6m5l4k3j2i1" path="res://Scripts/UI/GameUI.cs" id="63_script"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_hkej2"]
 sky_top_color = Color(0.367554, 0.773052, 0.958684, 1)
@@ -432,3 +433,112 @@ skeleton = NodePath("")
 
 [node name="GameOverUI" parent="." unique_id=690563511 node_paths=PackedStringArray("PlayerShip") instance=ExtResource("62_gjpho")]
 PlayerShip = NodePath("../Environment/Ship")
+
+[node name="InteractionUI" type="CanvasLayer" parent="." unique_id=20240522]
+
+[node name="GameUI" type="Control" parent="InteractionUI" unique_id=20240523 node_paths=PackedStringArray("TextInput", "SendButton", "BotResponseLabel", "GrammarScoreLabel", "SyntaxScoreLabel", "MeaningScoreLabel", "RelevanceScoreLabel", "StatusLabel", "ResultsPanel", "Spawner")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("63_script")
+TextInput = NodePath("InputMargin/VBoxContainer/HBoxContainer/LineEdit")
+SendButton = NodePath("InputMargin/VBoxContainer/HBoxContainer/Button")
+BotResponseLabel = NodePath("ResultsPanel/MarginContainer/VBoxContainer/BotResponse")
+GrammarScoreLabel = NodePath("ResultsPanel/MarginContainer/VBoxContainer/ScoresGrid/Grammar")
+SyntaxScoreLabel = NodePath("ResultsPanel/MarginContainer/VBoxContainer/ScoresGrid/Syntax")
+MeaningScoreLabel = NodePath("ResultsPanel/MarginContainer/VBoxContainer/ScoresGrid/Meaning")
+RelevanceScoreLabel = NodePath("ResultsPanel/MarginContainer/VBoxContainer/ScoresGrid/Relevance")
+StatusLabel = NodePath("InputMargin/VBoxContainer/StatusLabel")
+ResultsPanel = NodePath("ResultsPanel")
+Spawner = NodePath("../../Environment/Ship/ObjectSpawner")
+
+[node name="ResultsPanel" type="PanelContainer" parent="InteractionUI/GameUI"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -300.0
+offset_top = 20.0
+offset_right = 300.0
+offset_bottom = 220.0
+grow_horizontal = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="InteractionUI/GameUI/ResultsPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="InteractionUI/GameUI/ResultsPanel/MarginContainer"]
+layout_mode = 2
+
+[node name="BotResponse" type="RichTextLabel" parent="InteractionUI/GameUI/ResultsPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "[b]Bot:[/b] Waiting for response..."
+
+[node name="HSeparator" type="HSeparator" parent="InteractionUI/GameUI/ResultsPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ScoresGrid" type="GridContainer" parent="InteractionUI/GameUI/ResultsPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+columns = 2
+
+[node name="Grammar" type="Label" parent="InteractionUI/GameUI/ResultsPanel/MarginContainer/VBoxContainer/ScoresGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Grammar: 0%"
+
+[node name="Syntax" type="Label" parent="InteractionUI/GameUI/ResultsPanel/MarginContainer/VBoxContainer/ScoresGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Syntax: 0%"
+
+[node name="Meaning" type="Label" parent="InteractionUI/GameUI/ResultsPanel/MarginContainer/VBoxContainer/ScoresGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Meaning: 0%"
+
+[node name="Relevance" type="Label" parent="InteractionUI/GameUI/ResultsPanel/MarginContainer/VBoxContainer/ScoresGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Relevance: 0%"
+
+[node name="InputMargin" type="MarginContainer" parent="InteractionUI/GameUI"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -120.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="InteractionUI/GameUI/InputMargin"]
+layout_mode = 2
+
+[node name="StatusLabel" type="Label" parent="InteractionUI/GameUI/InputMargin/VBoxContainer"]
+layout_mode = 2
+text = "Language Benchmark: Ask a question to test the model."
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="InteractionUI/GameUI/InputMargin/VBoxContainer"]
+layout_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="InteractionUI/GameUI/InputMargin/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Type your question here..."
+
+[node name="Button" type="Button" parent="InteractionUI/GameUI/InputMargin/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Send Request"

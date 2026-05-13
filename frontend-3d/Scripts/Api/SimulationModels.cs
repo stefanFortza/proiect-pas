@@ -1,66 +1,64 @@
+using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
 namespace ProiectSimulareLimbaj.Api;
 
-public class GroundTruth
+public class GenerateRequest
 {
-    [JsonPropertyName("obiect_corect")]
-    public string ObiectCorect { get; set; }
+    [JsonPropertyName("prompt")]
+    public string Prompt { get; set; }
 
-    [JsonPropertyName("locatie_corecta")]
-    public string LocatieCorecta { get; set; }
+    [JsonPropertyName("model_name")]
+    public string ModelName { get; set; }
+
+    [JsonPropertyName("epoch")]
+    public int Epoch { get; set; }
+
+    [JsonPropertyName("temperature")]
+    public float Temperature { get; set; } = 0.7f;
+
+    [JsonPropertyName("max_tokens")]
+    public int MaxTokens { get; set; } = 40;
 }
 
-public class TeacherData
+public class EvaluationScores
 {
-    [JsonPropertyName("text")]
-    public string Text { get; set; }
+    [JsonPropertyName("grammatical_structure")]
+    public int GrammaticalStructure { get; set; }
+
+    [JsonPropertyName("syntactical_structure")]
+    public int SyntacticalStructure { get; set; }
+
+    [JsonPropertyName("meaning")]
+    public int Meaning { get; set; }
+
+    [JsonPropertyName("relevance")]
+    public int Relevance { get; set; }
+
+    [JsonPropertyName("error")]
+    public string Error { get; set; }
 }
 
-public class StudentData
+public class GenerateResponse
 {
-    [JsonPropertyName("traducere_interna")]
-    public string TraducereInterna { get; set; }
+    [JsonPropertyName("model_used")]
+    public string ModelUsed { get; set; }
 
-    [JsonPropertyName("intentie_obiect")]
-    public string IntentieObiect { get; set; }
+    [JsonPropertyName("epoch_used")]
+    public int EpochUsed { get; set; }
 
-    [JsonPropertyName("intentie_locatie")]
-    public string IntentieLocatie { get; set; }
-}
+    [JsonPropertyName("prompt")]
+    public string Prompt { get; set; }
 
-public class InspectorData
-{
-    [JsonPropertyName("scor")]
-    public int Scor { get; set; }
+    [JsonPropertyName("response")]
+    public string Response { get; set; }
 
-    [JsonPropertyName("verdict")]
-    public string Verdict { get; set; }
-}
-
-public class SimulationResponse
-{
-    [JsonPropertyName("adevar_absolut")]
-    public GroundTruth AdevarAbsolut { get; set; }
-
-    [JsonPropertyName("profesor")]
-    public TeacherData Profesor { get; set; }
-
-    [JsonPropertyName("elev")]
-    public StudentData Elev { get; set; }
-
-    [JsonPropertyName("inspector")]
-    public InspectorData Inspector { get; set; }
+    [JsonPropertyName("evaluation_scores")]
+    public EvaluationScores EvaluationScores { get; set; }
 }
 
 public class HealthResponse
 {
     [JsonPropertyName("status")]
     public string Status { get; set; }
-
-    [JsonPropertyName("ollama_ready")]
-    public bool OllamaReady { get; set; }
-
-    [JsonPropertyName("models_loaded")]
-    public System.Collections.Generic.List<string> ModelsLoaded { get; set; }
 }

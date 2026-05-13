@@ -1,13 +1,13 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene format=3 uid="uid://4h5olr1olekb"]
 
-[ext_resource type="Script" path="res://Scripts/UI/GameOverUI.cs" id="1_script"]
+[ext_resource type="Script" uid="uid://cbj86hn0cuvr" path="res://Scripts/UI/GameOverUI.cs" id="1_script"]
 
-[node name="GameOverUI" type="CanvasLayer" node_paths=PackedStringArray("UIContainer", "RetryButton")]
+[node name="GameOverUI" type="CanvasLayer" unique_id=1036142551 node_paths=PackedStringArray("UIContainer", "RetryButton")]
 script = ExtResource("1_script")
 UIContainer = NodePath("Control/CenterContainer")
 RetryButton = NodePath("Control/CenterContainer/VBoxContainer/RetryButton")
 
-[node name="Control" type="Control" parent="."]
+[node name="Control" type="Control" parent="." unique_id=1397366454]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -15,7 +15,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="CenterContainer" type="CenterContainer" parent="Control"]
+[node name="CenterContainer" type="CenterContainer" parent="Control" unique_id=1604803864]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -23,17 +23,17 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/CenterContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/CenterContainer" unique_id=1017576429]
 layout_mode = 2
 theme_override_constants/separation = 20
 
-[node name="Label" type="Label" parent="Control/CenterContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="Control/CenterContainer/VBoxContainer" unique_id=1292261093]
 layout_mode = 2
 theme_override_font_sizes/font_size = 64
-text = "GAME OVER"
+text = "Ship Sunk"
 horizontal_alignment = 1
 
-[node name="RetryButton" type="Button" parent="Control/CenterContainer/VBoxContainer"]
+[node name="RetryButton" type="Button" parent="Control/CenterContainer/VBoxContainer" unique_id=351143090]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "RETRY"
