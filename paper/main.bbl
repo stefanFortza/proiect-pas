@@ -1,0 +1,64 @@
+\begin{thebibliography}{12}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[{Biderman et~al.(2023)Biderman, Schoelkopf, Anthony, Bradley, O'Brien, Hallahan, Khan, Purohit, Prashanth, Raff et~al.}]{biderman2023pythia}
+Stella Biderman, Hailey Schoelkopf, Quentin~Gregory Anthony, Herbie Bradley, Kyle O'Brien, Eric Hallahan, Mohammad~Aflah Khan, Shivanshu Purohit, USVSN~Sai Prashanth, Edward Raff, et~al. 2023.
+\newblock Pythia: A suite for analyzing large language models across training and scaling.
+\newblock In \emph{International Conference on Machine Learning}, pages 2397--2430. PMLR.
+
+\bibitem[{Conneau and Lample(2019)}]{conneau2019cross}
+Alexis Conneau and Guillaume Lample. 2019.
+\newblock Cross-lingual language model pretraining.
+\newblock In \emph{Advances in Neural Information Processing Systems}, volume~32.
+
+\bibitem[{Ellis(2002)}]{ellis2002frequency}
+Nick~C Ellis. 2002.
+\newblock Frequency effects in language processing: A review with implications for theories of implicit and explicit language acquisition.
+\newblock \emph{Studies in second language acquisition}, 24(2):143--188.
+
+\bibitem[{Godwin-Jones(2014)}]{godwin2014games}
+Robert Godwin-Jones. 2014.
+\newblock Games in language learning: Opportunities and challenges.
+\newblock \emph{Language Learning \& Technology}, 18(2):9--19.
+
+\bibitem[{Hu et~al.(2021)Hu, Shen, Wallis, Allen-Zhu, Li, Wang, Wang, and Chen}]{hu2021lora}
+Edward~J Hu, Yelong Shen, Phillip Wallis, Zeyuan Allen-Zhu, Yuanzhi Li, Shean Wang, Lu~Wang, and Weizhu Chen. 2021.
+\newblock Lora: Low-rank adaptation of large language models.
+\newblock \emph{arXiv preprint arXiv:2106.09685}.
+
+\bibitem[{Kapp(2012)}]{kapp2012gamification}
+Karl~M Kapp. 2012.
+\newblock \emph{The gamification of learning and instruction: game-based methods and strategies for training and education}.
+\newblock John Wiley \& Sons.
+
+\bibitem[{Kirkpatrick et~al.(2017)Kirkpatrick, Pascanu, Rabinowitz, Veness, Desjardins, Rusu, Milan, Quan, Ramalho, Grabska-Barwinska et~al.}]{kirkpatrick2017overcoming}
+James Kirkpatrick, Razvan Pascanu, Neil Rabinowitz, Joel Veness, Guillaume Desjardins, Andrei~A Rusu, Kieran Milan, John Quan, Tiago Ramalho, Agnieszka Grabska-Barwinska, et~al. 2017.
+\newblock Overcoming catastrophic forgetting in neural networks.
+\newblock \emph{Proceedings of the national academy of sciences}, 114(13):3521--3526.
+
+\bibitem[{Krashen(1985)}]{krashen1985input}
+Stephen~D Krashen. 1985.
+\newblock \emph{The Input Hypothesis: Issues and Implications}.
+\newblock Longman.
+
+\bibitem[{Linzen and Baroni(2021)}]{linzen2021syntactic}
+Tal Linzen and Marco Baroni. 2021.
+\newblock Syntactic structure from deep learning.
+\newblock \emph{Annual Review of Linguistics}, 7:195--212.
+
+\bibitem[{MacWhinney(2001)}]{macwhinney2001competition}
+Brian MacWhinney. 2001.
+\newblock The competition model: The input, the context, and the brain.
+\newblock \emph{Cognition and second language instruction}, 69:90.
+
+\bibitem[{Plass et~al.(2015)Plass, Homer, and Kinzer}]{plass2015foundations}
+Jan~L Plass, Bruce~D Homer, and Charles~K Kinzer. 2015.
+\newblock Foundations of game-based learning.
+\newblock \emph{Educational psychologist}, 50(4):258--283.
+
+\bibitem[{Radford et~al.(2019)Radford, Wu, Child, Luan, Amodei, Sutskever et~al.}]{radford2019language}
+Alec Radford, Jeffrey Wu, Rewon Child, David Luan, Dario Amodei, Ilya Sutskever, et~al. 2019.
+\newblock Language models are unsupervised multitask learners.
+\newblock \emph{OpenAI blog}, 1(8):9.
+
+\end{thebibliography}

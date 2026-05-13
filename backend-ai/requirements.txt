@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+pydantic
+transformers
+peft
+accelerate
+google-generativeai
+torch
+tqdm
+pandas

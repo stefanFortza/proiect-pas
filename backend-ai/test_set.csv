@@ -1,0 +1,51 @@
+text_es,text_en,category,difficulty,expected_answer
+¿Cuál es la capital de Francia?,What is the capital of France?,Fapte Generale,Ușor,París
+¿Quién escribió la novela 'Cien años de soledad'?,Who wrote the novel 'One Hundred Years of Solitude'?,Fapte Generale,Ușor,Gabriel García Márquez
+¿Cuál es el planeta más grande de nuestro sistema solar?,What is the largest planet in our solar system?,Fapte Generale,Ușor,Júpiter
+¿En qué año llegó el hombre a la Luna?,In what year did man land on the Moon?,Fapte Generale,Ușor,1969
+Menciona tres países que están en América del Sur.,Name three countries that are in South America.,Fapte Generale,Ușor,"Brasil, Argentina, Chile (sau altele corecte)"
+¿Cuál es el animal terrestre más rápido del mundo?,What is the fastest land animal in the world?,Fapte Generale,Ușor,Guepardo (Cheetah)
+¿Qué océano baña las costas de Brasil?,What ocean washes the coasts of Brazil?,Fapte Generale,Mediu,Océano Atlántico
+¿Quién pintó la Mona Lisa?,Who painted the Mona Lisa?,Fapte Generale,Ușor,Leonardo da Vinci
+¿Cuál es el río más largo del mundo?,What is the longest river in the world?,Fapte Generale,Mediu,Amazonas (sau Nil)
+¿Cuántos continentes hay en la Tierra?,How many continents are there on Earth?,Fapte Generale,Ușor,"7 (sau 6, depinde de modelul geografic usado)"
+¿De qué colores es la bandera de Japón?,What colors are the flag of Japan?,Fapte Generale,Ușor,Blanco y rojo
+¿Cuál es la montaña más alta del mundo?,What is the highest mountain in the world?,Fapte Generale,Ușor,Monte Everest
+¿Quién fue Albert Einstein?,Who was Albert Einstein?,Fapte Generale,Mediu,"Físico teórico, famoso por la teoría de la relatividad"
+¿Qué idioma se habla principalmente en Brasil?,What language is primarily spoken in Brazil?,Fapte Generale,Ușor,Portugués
+¿Cuál es el metal más caro del mundo?,What is the most expensive metal in the world?,Fapte Generale,Greu,Rodio / Oro / Platino
+¿En qué continente se encuentra Egipto?,On which continent is Egypt located?,Fapte Generale,Ușor,África
+¿Cuál es el instrumento musical de cuerdas más pequeño en una orquesta?,What is the smallest string instrument in an orchestra?,Fapte Generale,Mediu,Violín
+¿Qué gas respiramos los humanos para sobrevivir?,What gas do humans breathe to survive?,Fapte Generale,Ușor,Oxígeno
+¿Cuál es la capital de Australia?,What is the capital of Australia?,Fapte Generale,Mediu,Canberra
+¿Quién inventó la bombilla eléctrica?,Who invented the lightbulb?,Fapte Generale,Mediu,Thomas Edison / Joseph Swan
+"Si tengo 5 manzanas y me como 2, ¿cuántas manzanas me quedan?","If I have 5 apples and I eat 2, how many apples do I have left?",Logică,Ușor,3
+¿Qué pesa más: un kilo de plumas o un kilo de plomo?,What weighs more: a kilo of feathers or a kilo of lead?,Logică,Ușor,Pesan lo mismo
+"El padre de María tiene cinco hijas: Nana, Nene, Nini, Nono. ¿Cómo se llama la quinta hija?","Maria's father has five daughters: Nana, Nene, Nini, Nono. What is the name of the fifth daughter?",Logică,Mediu,María
+"Si un tren viaja hacia el norte y el viento sopla hacia el sur, ¿hacia dónde va el humo?","If a train travels north and the wind blows south, which way does the smoke go?",Logică,Mediu,No hay humo (es un tren eléctrico)
+¿Qué mes tiene 28 días?,Which month has 28 days?,Logică,Ușor,Todos los meses
+"Si corres en una carrera y adelantas a la persona en el segundo lugar, ¿en qué posición estás ahora?","If you are running in a race and you pass the person in second place, what position are you in now?",Logică,Mediu,En segundo lugar
+¿Cuántos meses tienen 31 días?,How many months have 31 days?,Logică,Mediu,7
+Un granjero tiene 17 ovejas y se mueren todas menos 9. ¿Cuántas le quedan?,A farmer has 17 sheep and all but 9 die. How many are left?,Logică,Greu,9
+"¿Cómo puedes lanzar una pelota de tenis para que avance un poco, se detenga y vuelva a ti sin tocar nada?","How can you throw a tennis ball so that it goes a short distance, stops, and comes back to you without touching anything?",Logică,Greu,Lanzándola hacia arriba
+"Si tres gatos atrapan tres ratones en tres minutos, ¿cuánto tardarán cien gatos en atrapar cien ratones?","If three cats catch three mice in three minutes, how long will it take one hundred cats to catch one hundred mice?",Logică,Greu,3 minutos
+¿Qué sube y nunca baja?,What goes up and never comes down?,Logică,Ușor,La edad
+"Tengo ciudades pero no casas, montañas pero no árboles, agua pero no peces. ¿Qué soy?","I have cities but no houses, mountains but no trees, water but no fish. What am I?",Logică,Mediu,Un mapa
+"¿Qué número sigue en la secuencia: 2, 4, 6, 8...?","What number comes next in the sequence: 2, 4, 6, 8...?",Logică,Ușor,10
+"Si el día de mañana es martes, ¿qué día fue ayer?","If tomorrow is Tuesday, what day was yesterday?",Logică,Mediu,Domingo
+¿Es posible que un hombre se case con la hermana de su viuda?,Is it possible for a man to marry his widow's sister?,Logică,Greu,"No, porque está muerto"
+¿Qué tiene llaves pero no puede abrir cerraduras?,What has keys but can't open locks?,Logică,Mediu,Un piano
+¿Qué tiene un ojo pero no puede ver?,What has an eye but cannot see?,Logică,Mediu,Una aguja (o un huracán)
+"Si divides 30 por la mitad y sumas 10, ¿cuál es el resultado?","If you divide 30 by half and add 10, what is the result?",Logică,Greu,"70 (30 / 0.5 + 10)"
+¿Cuántos lados tiene un hexágono?,How many sides does a hexagon have?,Logică,Ușor,6
+¿Qué es más grande: 1/2 o 1/4?,Which is larger: 1/2 or 1/4?,Logică,Ușor,1/2
+Escribe un poema corto sobre el otoño.,Write a short poem about autumn.,Creativitate,Greu,[Poem generativ despre toamnă/frunze/frig]
+Inventa un nombre para un perro que tiene manchas azules.,Invent a name for a dog that has blue spots.,Creativitate,Ușor,"[Nume creativ, ex: Manchitas, Cielo]"
+Escribe una historia corta de 3 líneas sobre un robot que aprende a amar.,Write a 3-line short story about a robot that learns to love.,Creativitate,Greu,[Narațiune scurtă cu structură completă]
+Imagina que eres un pirata. Escribe un saludo para tu tripulación.,Imagine you are a pirate. Write a greeting for your crew.,Creativitate,Mediu,"[Limbaj tematic: ¡Ahoy, marineros!, etc.]"
+Dame tres ideas para una novela de ciencia ficción.,Give me three ideas for a science fiction novel.,Creativitate,Greu,[Trei concepte SF distincte]
+Escribe un diálogo corto entre la Luna y el Sol.,Write a short dialog between the Moon and the Sun.,Creativitate,Greu,[Structură de dialog între două entități]
+Describe un bosque mágico usando los cinco sentidos.,Describe a magical forest using all five senses.,Creativitate,Greu,[Descriere senzorială multiplă]
+Redacta un mensaje de felicitación de cumpleaños para un amigo lejano.,Write a birthday greeting message for a distant friend.,Creativitate,Mediu,[Mesaj empatic și urări]
+Escribe una carta de disculpas a un cliente por un paquete retrasado.,Write an apology letter to a customer for a delayed package.,Creativitate,Mediu,"[Ton formal, scuze, soluție]"
+Crea un eslogan publicitario para una nueva marca de zapatos deportivos.,Create an advertising slogan for a new brand of sports shoes.,Creativitate,Mediu,"[Frază scurtă, memorabilă]"

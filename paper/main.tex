@@ -1,0 +1,67 @@
+% This must be in the first 5 lines to tell arXiv to use pdfLaTeX, which is strongly recommended.
+\pdfoutput=1
+% In particular, the hyperref package requires pdfLaTeX in order to break URLs across lines.
+\documentclass[11pt]{article}
+\usepackage{ACL2023}
+
+\usepackage{hyperref}
+
+% Standard package includes
+\usepackage{times}
+\usepackage{latexsym}
+
+% For proper rendering and hyphenation of words containing Latin characters (including in bib files)
+\usepackage[T1]{fontenc}
+
+% This assumes your files are encoded as UTF8
+\usepackage[utf8]{inputenc}
+
+% This is not strictly necessary, and may be commented out.
+% However, it will improve the layout of the manuscript,
+% and will typically save some space.
+\usepackage{microtype}
+
+% This is also not strictly necessary, and may be commented out.
+% However, it will improve the aesthetics of text in
+% the typewriter font.
+\usepackage{inconsolata}
+
+% If the title and author information does not fit in the area allocated, set <dim> to something 5cm or larger and uncomment the following:
+%\setlength\titlebox{<dim>}
+
+\title{Second Language Acquisition Educational Tool}
+
+% To add another author use \And
+% To start a seperate ``row'' of authors use \AND
+
+\author{Dincă Robert Gabriel \\ \texttt{robert-gabriel.dinca@s.unibuc.ro}
+  \And
+  Țacu Darius Ștefan \\ \texttt{email@domain} 
+  \And
+  Theodor \\ \texttt{email@domain}
+  \AND
+  Filote Toma Andrei \\ \texttt{email@domain}
+}
+
+\begin{document}
+\maketitle
+
+\input{sections/abstract}
+\input{sections/introduction}
+\input{sections/related_work}
+\input{sections/methodology}
+\input{sections/future_work}
+\input{sections/conclusion}
+\input{sections/limitations}
+
+\bibliography{references}
+\bibliographystyle{acl_natbib}
+
+\appendix
+
+\section{Example Appendix}
+\label{sec:appendix}
+
+This is where you would add additional tables, formulas or results -- things that help the reader get an in-depth understanding of your research, but are not essential for understanding the method.
+
+\end{document}
