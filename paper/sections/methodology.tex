@@ -1,0 +1,36 @@
+\section{Methodology}
+\label{sec:method}
+
+The general architecture of the application follows a monolithic structure, integrating both the interactive visualization and the computational linguistic processing within a unified environment. The frontend is developed using the Godot Engine, which renders the physics-based gamified simulation of the floating boat and handles user interaction. The backend is powered by FastAPI, which acts as the computational bridge. It manages the local loading and offloading of various Large Language Models into VRAM, processes inference requests, and communicates with the Gemini 1.5 Flash API for real-time response evaluation. All model weights and checkpoints are stored locally to ensure low-latency swapping during the simulation. The entire development lifecycle, encompassing both the game engine assets and the Python backend, was managed using Git for robust version control.
+
+\subsection{AI Model Architecture and Iterative Training}
+\label{subsec:ai_model}
+
+To simulate the process of Second Language Acquisition (SLA), an iterative training methodology was employed. We started with small, strictly English-native models and progressively escalated the complexity of the architecture, training scope, and dataset composition based on observed linguistic failures.
+
+\begin{itemize}
+    \item \textbf{GPT-2 Small (124M) \cite{radford2019language} - Partial Fine-Tuning (Last 4 Layers):} The experiment began by unfreezing only the last four layers of a standard GPT-2 Small model to teach it Spanish while minimizing computational cost. \textit{Reason for transition:} The model exhibited heavy "Spanglish," substituting Spanish vocabulary into rigid English syntax, indicating that shallow layers alone could not restructure grammar.
+    
+    \item \textbf{GPT-2 Small (124M) - Full Fine-Tuning:} To correct the syntactic failures, all layers of the model were unfrozen and trained purely on the Spanish dataset. \textit{Reason for transition:} This triggered severe catastrophic forgetting; the model completely lost its native English capabilities, failing the primary SLA criteria of maintaining the first language (L1).
+    
+    \item \textbf{GPT-2 Small (124M) - Full Fine-Tuning + Experience Replay:} To mitigate forgetting, we implemented an Experience Replay curriculum, mixing Spanish data with original English data. \textit{Reason for transition:} While basic bilingualism was achieved, the model's low parameter count restricted its ability to grasp complex semantics in either language.
+    
+    \item \textbf{Pythia (1.4B) \cite{biderman2023pythia} - LoRA \cite{hu2021lora}:} We scaled up to a 1.4 billion parameter model, utilizing Low-Rank Adaptation (LoRA) for efficient training to improve semantic capacity. \textit{Reason for transition:} Upon evaluation, it was discovered that Pythia's pre-training corpus already included Spanish. This invalidated the model as a "blank-slate" subject for SLA research, prompting a return to strictly monolingual base models.
+    
+    \item \textbf{GPT-2 Large (774M) \cite{radford2019language} - LoRA + Experience Replay:} We selected GPT-2 Large (a strict English model) to provide sufficient cognitive capacity, applying LoRA alongside the Experience Replay dataset. \textit{Reason for transition:} The model produced severe hallucinations. The vast semantic gap between the English latent space and the new Spanish tokens could not be bridged effectively by adaptation and replay alone.
+    
+    \item \textbf{GPT-2 Large (774M) - Stable Hybrid (Deep LoRA + Replay + Translation Pairs):} The final, successful architecture utilized a deeper LoRA configuration combined with Experience Replay, and augmented the dataset with explicit translation pairs (English-to-Spanish). \textit{Reasoning:} The explicit translation data acted as a "semantic bridge," allowing the deeper trainable parameters to directly map new Spanish concepts to the model's established English knowledge, resulting in stable, fluent bilingual generation.
+\end{itemize}
+
+\subsection{Animations}
+\label{subsec:animations}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquet mi enim, vitae gravida risus convallis eget. Nulla sed eleifend nisi. Aliquam viverra vestibulum facilisis.
+
+\subsection{Game immersion}
+\label{subsec:game_immersion}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquet mi enim, vitae gravida risus convallis eget. Nulla sed eleifend nisi. Aliquam viverra vestibulum facilisis.
+
+\subsection{Game mechanics}
+\label{subsec:game_mechanics}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquet mi enim, vitae gravida risus convallis eget. Nulla sed eleifend nisi. Aliquam viverra vestibulum facilisis.
