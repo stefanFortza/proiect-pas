@@ -6,8 +6,11 @@
 [ext_resource type="Script" uid="uid://u7ltnfih6ir6" path="res://Scenes/Camera/Camera3d.cs" id="2_eq88g"]
 [ext_resource type="PackedScene" uid="uid://ce0q6j3is8gud" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_blocks.glb" id="2_pey7r"]
 [ext_resource type="PackedScene" uid="uid://b8v31cl154lde" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_blocks_dark.glb" id="3_8jik5"]
+[ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="3_a0mrw"]
+[ext_resource type="Script" uid="uid://csjccrhj5wnx7" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="4_4hpww"]
 [ext_resource type="PackedScene" uid="uid://w181ibhqmjgm" path="res://Scenes/Ship/Ship.tscn" id="4_gjpho"]
 [ext_resource type="PackedScene" uid="uid://cf103swkwolb7" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_blocks_fall.glb" id="4_pp50e"]
+[ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="5_1q1st"]
 [ext_resource type="PackedScene" uid="uid://b2k6cjed8is83" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_cone.glb" id="5_oe68r"]
 [ext_resource type="PackedScene" uid="uid://b0n0ia24dkdsj" path="res://Assets/kenney_pirate-kit/Models/GLB format/structure-platform-dock.glb" id="6_45d1s"]
 [ext_resource type="PackedScene" uid="uid://chcvsi0hpqilj" path="res://Assets/kenney_nature-kit/Models/GLTF format/tree_cone_dark.glb" id="6_46wus"]
@@ -83,8 +86,10 @@
 [ext_resource type="Script" uid="uid://cq75xldn7xqyi" path="res://Scripts/Environment/GrassGenerator.cs" id="59_8jik5"]
 [ext_resource type="PackedScene" uid="uid://byxklbncmjkcb" path="res://Scenes/rocks.tscn" id="60_h2nrh"]
 [ext_resource type="Shader" uid="uid://0vbgk0g3bqlj" path="res://Shaders/GrassWind.gdshader" id="61_oe68r"]
-[ext_resource type="PackedScene" uid="uid://b5l5j5l5j5l5j" path="res://Scenes/UI/GameOverUI.tscn" id="62_gjpho"]
-[ext_resource type="Script" uid="uid://b6m5l4k3j2i1" path="res://Scripts/UI/GameUI.cs" id="63_script"]
+[ext_resource type="PackedScene" uid="uid://4h5olr1olekb" path="res://Scenes/UI/GameOverUI.tscn" id="62_gjpho"]
+[ext_resource type="Script" uid="uid://byb5ieldmnrrm" path="res://Scripts/UI/GameUI.cs" id="63_script"]
+[ext_resource type="PackedScene" uid="uid://cwomw41ldjxkr" path="res://Scenes/UI/MainMenu.tscn" id="64_menu"]
+[ext_resource type="Script" uid="uid://tvluy3a2jeus" path="res://Scripts/UI/GameUIManager.cs" id="67_uimanager"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_hkej2"]
 sky_top_color = Color(0.367554, 0.773052, 0.958684, 1)
@@ -122,6 +127,10 @@ dof_blur_far_enabled = true
 dof_blur_far_distance = 150.0
 dof_blur_far_transition = 250.0
 dof_blur_amount = 0.06
+
+[sub_resource type="Resource" id="Resource_xafdu"]
+script = ExtResource("5_1q1st")
+duration = 3.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fpljf"]
 resource_name = "grass"
@@ -222,8 +231,40 @@ shadow_opacity = 0.9
 shadow_blur = 4.5
 
 [node name="Camera3D" parent="." unique_id=296624780 instance=ExtResource("1_p70ga")]
-transform = Transform3D(-0.66913015, 0.11945519, -0.7334817, 0, 0.98699635, 0.16074272, 0.7431453, 0.107557796, -0.660429, -106.098785, -24.04914, 214.62082)
+transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, -79, 150, 450)
+top_level = true
 script = ExtResource("2_eq88g")
+
+[node name="PhantomCameraHost" type="Node" parent="Camera3D" unique_id=2102126673]
+process_priority = 300
+process_physics_priority = 300
+script = ExtResource("3_a0mrw")
+
+[node name="PCamMenu" type="Node3D" parent="." unique_id=554042048]
+transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, -79, 150, 450)
+script = ExtResource("4_4hpww")
+priority = 10
+tween_resource = SubResource("Resource_xafdu")
+metadata/_custom_type_script = "uid://csjccrhj5wnx7"
+
+[node name="PCamGame" type="Node3D" parent="." unique_id=291096910]
+transform = Transform3D(-0.66913015, 0.119455226, -0.73348165, 0, 0.9869963, 0.16074276, 0.7431453, 0.107557826, -0.66042894, -106.099, -24.0491, 214.621)
+script = ExtResource("4_4hpww")
+tween_resource = SubResource("Resource_xafdu")
+metadata/_custom_type_script = "uid://csjccrhj5wnx7"
+
+[node name="UIManager" type="Node" parent="." unique_id=20240524 node_paths=PackedStringArray("MainMenuUI", "GameUI", "GameOverUI")]
+script = ExtResource("67_uimanager")
+MainMenuUI = NodePath("../MainMenu")
+GameUI = NodePath("../InteractionUI")
+GameOverUI = NodePath("../GameOverUI")
+
+[node name="MainMenu" parent="." unique_id=7889913 node_paths=PackedStringArray("UIManager", "GameUIScript", "PCamMenu", "PCamGame", "MainCamera") instance=ExtResource("64_menu")]
+UIManager = NodePath("../UIManager")
+GameUIScript = NodePath("../InteractionUI/GameUI")
+PCamMenu = NodePath("../PCamMenu")
+PCamGame = NodePath("../PCamGame")
+MainCamera = NodePath("../Camera3D")
 
 [node name="ForestGenerator" type="Node3D" parent="." unique_id=35686171]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.171005, -2.0771866, 233.59662)
@@ -432,11 +473,13 @@ mesh = SubResource("ArrayMesh_dtg40")
 skeleton = NodePath("")
 
 [node name="GameOverUI" parent="." unique_id=690563511 node_paths=PackedStringArray("PlayerShip") instance=ExtResource("62_gjpho")]
+visible = false
 PlayerShip = NodePath("../Environment/Ship")
 
 [node name="InteractionUI" type="CanvasLayer" parent="." unique_id=20240522]
+visible = false
 
-[node name="GameUI" type="Control" parent="InteractionUI" unique_id=20240523 node_paths=PackedStringArray("TextInput", "SendButton", "BotResponseLabel", "GrammarScoreLabel", "SyntaxScoreLabel", "MeaningScoreLabel", "RelevanceScoreLabel", "StatusLabel", "ResultsPanel", "Spawner")]
+[node name="GameUI" type="Control" parent="InteractionUI" unique_id=20240523 node_paths=PackedStringArray("TextInput", "SendButton", "DebugSpawnButton", "BotResponseLabel", "GrammarScoreLabel", "SyntaxScoreLabel", "MeaningScoreLabel", "RelevanceScoreLabel", "StatusLabel", "ResultsPanel", "Spawner")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -446,6 +489,7 @@ grow_vertical = 2
 script = ExtResource("63_script")
 TextInput = NodePath("InputMargin/VBoxContainer/HBoxContainer/LineEdit")
 SendButton = NodePath("InputMargin/VBoxContainer/HBoxContainer/Button")
+DebugSpawnButton = NodePath("InputMargin/VBoxContainer/HBoxContainer/DebugButton")
 BotResponseLabel = NodePath("ResultsPanel/MarginContainer/VBoxContainer/BotResponse")
 GrammarScoreLabel = NodePath("ResultsPanel/MarginContainer/VBoxContainer/ScoresGrid/Grammar")
 SyntaxScoreLabel = NodePath("ResultsPanel/MarginContainer/VBoxContainer/ScoresGrid/Syntax")
@@ -455,7 +499,7 @@ StatusLabel = NodePath("InputMargin/VBoxContainer/StatusLabel")
 ResultsPanel = NodePath("ResultsPanel")
 Spawner = NodePath("../../Environment/Ship/ObjectSpawner")
 
-[node name="ResultsPanel" type="PanelContainer" parent="InteractionUI/GameUI"]
+[node name="ResultsPanel" type="PanelContainer" parent="InteractionUI/GameUI" unique_id=1781452192]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -466,50 +510,50 @@ offset_right = 300.0
 offset_bottom = 220.0
 grow_horizontal = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="InteractionUI/GameUI/ResultsPanel"]
+[node name="MarginContainer" type="MarginContainer" parent="InteractionUI/GameUI/ResultsPanel" unique_id=458855829]
 layout_mode = 2
 theme_override_constants/margin_left = 15
 theme_override_constants/margin_top = 15
 theme_override_constants/margin_right = 15
 theme_override_constants/margin_bottom = 15
 
-[node name="VBoxContainer" type="VBoxContainer" parent="InteractionUI/GameUI/ResultsPanel/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="InteractionUI/GameUI/ResultsPanel/MarginContainer" unique_id=1976746789]
 layout_mode = 2
 
-[node name="BotResponse" type="RichTextLabel" parent="InteractionUI/GameUI/ResultsPanel/MarginContainer/VBoxContainer"]
+[node name="BotResponse" type="RichTextLabel" parent="InteractionUI/GameUI/ResultsPanel/MarginContainer/VBoxContainer" unique_id=1800334454]
 layout_mode = 2
 size_flags_vertical = 3
 bbcode_enabled = true
 text = "[b]Bot:[/b] Waiting for response..."
 
-[node name="HSeparator" type="HSeparator" parent="InteractionUI/GameUI/ResultsPanel/MarginContainer/VBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="InteractionUI/GameUI/ResultsPanel/MarginContainer/VBoxContainer" unique_id=1897920090]
 layout_mode = 2
 
-[node name="ScoresGrid" type="GridContainer" parent="InteractionUI/GameUI/ResultsPanel/MarginContainer/VBoxContainer"]
+[node name="ScoresGrid" type="GridContainer" parent="InteractionUI/GameUI/ResultsPanel/MarginContainer/VBoxContainer" unique_id=767526300]
 layout_mode = 2
 columns = 2
 
-[node name="Grammar" type="Label" parent="InteractionUI/GameUI/ResultsPanel/MarginContainer/VBoxContainer/ScoresGrid"]
+[node name="Grammar" type="Label" parent="InteractionUI/GameUI/ResultsPanel/MarginContainer/VBoxContainer/ScoresGrid" unique_id=1795303072]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Grammar: 0%"
 
-[node name="Syntax" type="Label" parent="InteractionUI/GameUI/ResultsPanel/MarginContainer/VBoxContainer/ScoresGrid"]
+[node name="Syntax" type="Label" parent="InteractionUI/GameUI/ResultsPanel/MarginContainer/VBoxContainer/ScoresGrid" unique_id=1644211478]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Syntax: 0%"
 
-[node name="Meaning" type="Label" parent="InteractionUI/GameUI/ResultsPanel/MarginContainer/VBoxContainer/ScoresGrid"]
+[node name="Meaning" type="Label" parent="InteractionUI/GameUI/ResultsPanel/MarginContainer/VBoxContainer/ScoresGrid" unique_id=1140007921]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Meaning: 0%"
 
-[node name="Relevance" type="Label" parent="InteractionUI/GameUI/ResultsPanel/MarginContainer/VBoxContainer/ScoresGrid"]
+[node name="Relevance" type="Label" parent="InteractionUI/GameUI/ResultsPanel/MarginContainer/VBoxContainer/ScoresGrid" unique_id=1923263824]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Relevance: 0%"
 
-[node name="InputMargin" type="MarginContainer" parent="InteractionUI/GameUI"]
+[node name="InputMargin" type="MarginContainer" parent="InteractionUI/GameUI" unique_id=768764770]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -523,22 +567,26 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 50
 theme_override_constants/margin_bottom = 30
 
-[node name="VBoxContainer" type="VBoxContainer" parent="InteractionUI/GameUI/InputMargin"]
+[node name="VBoxContainer" type="VBoxContainer" parent="InteractionUI/GameUI/InputMargin" unique_id=351867578]
 layout_mode = 2
 
-[node name="StatusLabel" type="Label" parent="InteractionUI/GameUI/InputMargin/VBoxContainer"]
+[node name="StatusLabel" type="Label" parent="InteractionUI/GameUI/InputMargin/VBoxContainer" unique_id=1543086475]
 layout_mode = 2
 text = "Language Benchmark: Ask a question to test the model."
 horizontal_alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="InteractionUI/GameUI/InputMargin/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="InteractionUI/GameUI/InputMargin/VBoxContainer" unique_id=839629688]
 layout_mode = 2
 
-[node name="LineEdit" type="LineEdit" parent="InteractionUI/GameUI/InputMargin/VBoxContainer/HBoxContainer"]
+[node name="LineEdit" type="LineEdit" parent="InteractionUI/GameUI/InputMargin/VBoxContainer/HBoxContainer" unique_id=6098213]
 layout_mode = 2
 size_flags_horizontal = 3
 placeholder_text = "Type your question here..."
 
-[node name="Button" type="Button" parent="InteractionUI/GameUI/InputMargin/VBoxContainer/HBoxContainer"]
+[node name="Button" type="Button" parent="InteractionUI/GameUI/InputMargin/VBoxContainer/HBoxContainer" unique_id=1202227327]
 layout_mode = 2
 text = "Send Request"
+
+[node name="DebugButton" type="Button" parent="InteractionUI/GameUI/InputMargin/VBoxContainer/HBoxContainer" unique_id=987654321]
+layout_mode = 2
+text = "Debug Spawn"

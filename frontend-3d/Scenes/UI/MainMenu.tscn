@@ -1,8 +1,8 @@
-[gd_scene format=3 uid="uid://mainmenu123"]
+[gd_scene format=3 uid="uid://cwomw41ldjxkr"]
 
-[ext_resource type="Script" path="res://Scripts/UI/MainMenu.cs" id="1_script"]
+[ext_resource type="Script" uid="uid://byhaaxrntfchy" path="res://Scripts/UI/MainMenu.cs" id="1_script"]
 
-[node name="MainMenu" type="Control" node_paths=PackedStringArray("ModelDropdown", "EpochSpinner", "PlayButton", "BackendUrlInput")]
+[node name="MainMenu" type="Control" unique_id=1116523108 node_paths=PackedStringArray("ModelDropdown", "EpochSpinner", "PlayButton", "BackendUrlInput")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -15,16 +15,16 @@ EpochSpinner = NodePath("CenterContainer/VBoxContainer/EpochHBox/SpinBox")
 PlayButton = NodePath("CenterContainer/VBoxContainer/PlayButton")
 BackendUrlInput = NodePath("CenterContainer/VBoxContainer/UrlHBox/LineEdit")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=302821143]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.141176, 0.141176, 0.231373, 1)
+color = Color(0.14117648, 0.14117648, 0.23137255, 0.5764706)
 
-[node name="CenterContainer" type="CenterContainer" parent="."]
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=350283948]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -32,67 +32,67 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1993080758]
 layout_mode = 2
 theme_override_constants/separation = 20
 
-[node name="Title" type="Label" parent="CenterContainer/VBoxContainer"]
+[node name="Title" type="Label" parent="CenterContainer/VBoxContainer" unique_id=675228116]
 layout_mode = 2
 theme_override_font_sizes/font_size = 48
 text = "LLM Benchmark Game"
 horizontal_alignment = 1
 
-[node name="Subtitle" type="Label" parent="CenterContainer/VBoxContainer"]
+[node name="Subtitle" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1199722095]
 layout_mode = 2
 text = "Select model configuration to test"
 horizontal_alignment = 1
 
-[node name="HSeparator" type="HSeparator" parent="CenterContainer/VBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="CenterContainer/VBoxContainer" unique_id=218412876]
 layout_mode = 2
 
-[node name="ModelHBox" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+[node name="ModelHBox" type="HBoxContainer" parent="CenterContainer/VBoxContainer" unique_id=418003369]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/ModelHBox"]
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/ModelHBox" unique_id=1209402674]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 text = "Model Name:"
 
-[node name="OptionButton" type="OptionButton" parent="CenterContainer/VBoxContainer/ModelHBox"]
+[node name="OptionButton" type="OptionButton" parent="CenterContainer/VBoxContainer/ModelHBox" unique_id=292595840]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="EpochHBox" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+[node name="EpochHBox" type="HBoxContainer" parent="CenterContainer/VBoxContainer" unique_id=172796961]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/EpochHBox"]
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/EpochHBox" unique_id=1669195896]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 text = "Epoch:"
 
-[node name="SpinBox" type="SpinBox" parent="CenterContainer/VBoxContainer/EpochHBox"]
+[node name="SpinBox" type="SpinBox" parent="CenterContainer/VBoxContainer/EpochHBox" unique_id=1371766828]
 layout_mode = 2
 size_flags_horizontal = 3
 min_value = 1.0
 value = 1.0
 
-[node name="UrlHBox" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+[node name="UrlHBox" type="HBoxContainer" parent="CenterContainer/VBoxContainer" unique_id=1563442219]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/UrlHBox"]
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/UrlHBox" unique_id=332769558]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 text = "Backend URL:"
 
-[node name="LineEdit" type="LineEdit" parent="CenterContainer/VBoxContainer/UrlHBox"]
+[node name="LineEdit" type="LineEdit" parent="CenterContainer/VBoxContainer/UrlHBox" unique_id=1776708646]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "http://localhost:8000"
 
-[node name="HSeparator2" type="HSeparator" parent="CenterContainer/VBoxContainer"]
+[node name="HSeparator2" type="HSeparator" parent="CenterContainer/VBoxContainer" unique_id=865576236]
 layout_mode = 2
 
-[node name="PlayButton" type="Button" parent="CenterContainer/VBoxContainer"]
+[node name="PlayButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1334275670]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
 theme_override_font_sizes/font_size = 24

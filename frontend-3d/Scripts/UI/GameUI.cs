@@ -9,7 +9,8 @@ public partial class GameUI : Control
     [ExportGroup("Inputs")]
     [Export] public LineEdit TextInput;
     [Export] public Button SendButton;
-    
+    [Export] public Button DebugSpawnButton;
+
     [ExportGroup("Results Display")]
     [Export] public RichTextLabel BotResponseLabel;
     [Export] public Label GrammarScoreLabel;
@@ -29,6 +30,15 @@ public partial class GameUI : Control
 
     public override void _Ready()
     {
+        Initialize();
+
+        if (ResultsPanel != null) ResultsPanel.Visible = false;
+
+        GD.Print("GameUI: Ready.");
+    }
+
+    public void Initialize()
+    {
         // Use settings from the singleton (passed from Main Menu)
         if (GameSettings.Instance != null)
         {
@@ -39,19 +49,35 @@ public partial class GameUI : Control
 
         _api = RestService.For<ISimulationApi>(BackendUrl);
 
-        if (SendButton != null)
+        if (SendButton != null && !SendButton.IsConnected(Button.SignalName.Pressed, Callable.From(OnSendButtonPressed)))
         {
             SendButton.Pressed += OnSendButtonPressed;
         }
 
-        if (TextInput != null)
+        if (DebugSpawnButton != null && !DebugSpawnButton.IsConnected(Button.SignalName.Pressed, Callable.From(OnDebugSpawnPressed)))
+        {
+            DebugSpawnButton.Pressed += OnDebugSpawnPressed;
+        }
+
+        if (TextInput != null && !TextInput.IsConnected(LineEdit.SignalName.TextSubmitted, Callable.From<string>((text) => OnSendButtonPressed())))
         {
             TextInput.TextSubmitted += (text) => OnSendButtonPressed();
         }
-        
-        if (ResultsPanel != null) ResultsPanel.Visible = false;
-        
+
         GD.Print($"GameUI: Initialized for {ModelName} (Epoch {Epoch}) at {BackendUrl}");
+    }
+
+    private void OnDebugSpawnPressed()
+    {
+        if (Spawner != null)
+        {
+            GD.Print("GameUI: Debug spawn button pressed.");
+            Spawner.SpawnRandom();
+        }
+        else
+        {
+            GD.PushWarning("GameUI: Spawner not assigned!");
+        }
     }
 
     private async void OnSendButtonPressed()
@@ -62,21 +88,21 @@ public partial class GameUI : Control
         TextInput.Text = "";
         TextInput.Editable = false;
         SendButton.Disabled = true;
-        
+
         if (StatusLabel != null) StatusLabel.Text = "Waiting for LLM response...";
         if (ResultsPanel != null) ResultsPanel.Visible = true;
 
         try
         {
-            var request = new GenerateRequest 
-            { 
+            var request = new GenerateRequest
+            {
                 Prompt = prompt,
                 ModelName = ModelName,
                 Epoch = Epoch,
                 Temperature = 0.7f,
                 MaxTokens = 60
             };
-            
+
             var response = await _api.GenerateAsync(request);
 
             // Update UI with bot response
@@ -89,7 +115,7 @@ public partial class GameUI : Control
             if (response.EvaluationScores != null && string.IsNullOrEmpty(response.EvaluationScores.Error))
             {
                 var scores = response.EvaluationScores;
-                
+
                 // Update Score Labels
                 if (GrammarScoreLabel != null) GrammarScoreLabel.Text = $"Grammar: {scores.GrammaticalStructure}%";
                 if (SyntaxScoreLabel != null) SyntaxScoreLabel.Text = $"Syntax: {scores.SyntacticalStructure}%";
@@ -97,19 +123,19 @@ public partial class GameUI : Control
                 if (RelevanceScoreLabel != null) RelevanceScoreLabel.Text = $"Relevance: {scores.Relevance}%";
 
                 // Calculate average score for spawning weight
-                finalScore = (scores.GrammaticalStructure + 
-                              scores.SyntacticalStructure + 
-                              scores.Meaning + 
+                finalScore = (scores.GrammaticalStructure +
+                              scores.SyntacticalStructure +
+                              scores.Meaning +
                               scores.Relevance) / 4;
-                
+
                 if (StatusLabel != null) StatusLabel.Text = $"Evaluation complete. Average: {finalScore}%";
             }
             else
             {
                 GD.PushWarning("GameUI: Evaluation data missing.");
                 if (StatusLabel != null) StatusLabel.Text = "Evaluation failed (Gemini error).";
-                finalScore = 10; 
-                
+                finalScore = 10;
+
                 if (GrammarScoreLabel != null) GrammarScoreLabel.Text = "Grammar: N/A";
                 if (SyntaxScoreLabel != null) SyntaxScoreLabel.Text = "Syntax: N/A";
                 if (MeaningScoreLabel != null) MeaningScoreLabel.Text = "Meaning: N/A";

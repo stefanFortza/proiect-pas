@@ -45,12 +45,21 @@ public partial class GameOverUI : CanvasLayer
         }
     }
 
+    [Export] public GameUIManager UIManager;
+
     private void OnRetryPressed()
     {
-        GD.Print("GameOverUI: Retry pressed, transitioning to loading screen...");
-        if (!string.IsNullOrEmpty(LoadingScreenPath))
+        GD.Print("GameOverUI: Returning to menu...");
+        if (UIManager != null)
         {
-            GetTree().ChangeSceneToFile(LoadingScreenPath);
+            UIManager.SetState(GameUIManager.GameState.Menu);
+            
+            // Also reset MainMenu state
+            var mainMenu = GetTree().Root.FindChild("MainMenu", true, false) as MainMenu;
+            if (mainMenu != null)
+            {
+                mainMenu.ResetToMenu();
+            }
         }
         else
         {
