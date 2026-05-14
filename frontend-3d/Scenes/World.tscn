@@ -253,11 +253,12 @@ script = ExtResource("4_4hpww")
 tween_resource = SubResource("Resource_xafdu")
 metadata/_custom_type_script = "uid://csjccrhj5wnx7"
 
-[node name="UIManager" type="Node" parent="." unique_id=20240524 node_paths=PackedStringArray("MainMenuUI", "GameUI", "GameOverUI")]
+[node name="UIManager" type="Node" parent="." unique_id=20240524 node_paths=PackedStringArray("MainMenuUINode", "GameUINode", "GameOverUINode", "PlayerShip")]
 script = ExtResource("67_uimanager")
-MainMenuUI = NodePath("../MainMenu")
-GameUI = NodePath("../InteractionUI")
-GameOverUI = NodePath("../GameOverUI")
+MainMenuUINode = NodePath("../MainMenu")
+GameUINode = NodePath("../InteractionUI")
+GameOverUINode = NodePath("../GameOverUI")
+PlayerShip = NodePath("../Environment/Ship")
 
 [node name="MainMenu" parent="." unique_id=7889913 node_paths=PackedStringArray("UIManager", "GameUIScript", "PCamMenu", "PCamGame", "MainCamera") instance=ExtResource("64_menu")]
 UIManager = NodePath("../UIManager")
@@ -472,12 +473,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 0)
 mesh = SubResource("ArrayMesh_dtg40")
 skeleton = NodePath("")
 
-[node name="GameOverUI" parent="." unique_id=690563511 node_paths=PackedStringArray("PlayerShip") instance=ExtResource("62_gjpho")]
-visible = false
+[node name="GameOverUI" parent="." unique_id=690563511 node_paths=PackedStringArray("PlayerShip", "UIManager") instance=ExtResource("62_gjpho")]
 PlayerShip = NodePath("../Environment/Ship")
+UIManager = NodePath("../UIManager")
 
 [node name="InteractionUI" type="CanvasLayer" parent="." unique_id=20240522]
-visible = false
 
 [node name="GameUI" type="Control" parent="InteractionUI" unique_id=20240523 node_paths=PackedStringArray("TextInput", "SendButton", "DebugSpawnButton", "BotResponseLabel", "GrammarScoreLabel", "SyntaxScoreLabel", "MeaningScoreLabel", "RelevanceScoreLabel", "StatusLabel", "ResultsPanel", "Spawner")]
 layout_mode = 3

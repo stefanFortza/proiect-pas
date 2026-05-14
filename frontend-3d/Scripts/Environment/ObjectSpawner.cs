@@ -39,6 +39,24 @@ public partial class ObjectSpawner : Node3D
         }
     }
 
+    public void StartSpawner()
+    {
+        if (_spawnTimer != null)
+        {
+            _spawnTimer.Start();
+            GD.Print("ObjectSpawner: Timer started.");
+        }
+    }
+
+    public void StopSpawner()
+    {
+        if (_spawnTimer != null)
+        {
+            _spawnTimer.Stop();
+            GD.Print("ObjectSpawner: Timer stopped.");
+        }
+    }
+
     public void SpawnRandom()
     {
         GD.Print("ObjectSpawner: SpawnRandom triggered.");

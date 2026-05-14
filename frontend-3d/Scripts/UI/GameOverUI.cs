@@ -49,10 +49,11 @@ public partial class GameOverUI : CanvasLayer
 
     private void OnRetryPressed()
     {
-        GD.Print("GameOverUI: Returning to menu...");
+        GD.Print("GameOverUI: Retrying...");
+        
         if (UIManager != null)
         {
-            UIManager.SetState(GameUIManager.GameState.Menu);
+            UIManager.ResetGame();
             
             // Also reset MainMenu state
             var mainMenu = GetTree().Root.FindChild("MainMenu", true, false) as MainMenu;
@@ -65,5 +66,12 @@ public partial class GameOverUI : CanvasLayer
         {
             GetTree().ReloadCurrentScene();
         }
+    }
+
+    public void ResetUI()
+    {
+        _isGameOver = false;
+        if (UIContainer != null)
+            UIContainer.Visible = false;
     }
 }

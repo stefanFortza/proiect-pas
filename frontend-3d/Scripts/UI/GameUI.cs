@@ -3,6 +3,7 @@ using System;
 using Refit;
 using ProiectSimulareLimbaj.Api;
 using System.Threading.Tasks;
+using System.Net.Http;
 
 public partial class GameUI : Control
 {
@@ -47,7 +48,13 @@ public partial class GameUI : Control
             Epoch = GameSettings.Instance.SelectedEpoch;
         }
 
-        _api = RestService.For<ISimulationApi>(BackendUrl);
+        var httpClient = new System.Net.Http.HttpClient
+        {
+            BaseAddress = new Uri(BackendUrl),
+            Timeout = TimeSpan.FromMinutes(10)
+        };
+
+        _api = RestService.For<ISimulationApi>(httpClient);
 
         if (SendButton != null && !SendButton.IsConnected(Button.SignalName.Pressed, Callable.From(OnSendButtonPressed)))
         {
@@ -159,5 +166,18 @@ public partial class GameUI : Control
             SendButton.Disabled = false;
             TextInput.GrabFocus();
         }
+    }
+
+    public void ResetUI()
+    {
+        if (TextInput != null) TextInput.Text = "";
+        if (BotResponseLabel != null) BotResponseLabel.Text = "";
+        if (ResultsPanel != null) ResultsPanel.Visible = false;
+        if (StatusLabel != null) StatusLabel.Text = "Enter text to start...";
+        
+        if (GrammarScoreLabel != null) GrammarScoreLabel.Text = "Grammar: -";
+        if (SyntaxScoreLabel != null) SyntaxScoreLabel.Text = "Syntax: -";
+        if (MeaningScoreLabel != null) MeaningScoreLabel.Text = "Meaning: -";
+        if (RelevanceScoreLabel != null) RelevanceScoreLabel.Text = "Relevance: -";
     }
 }
