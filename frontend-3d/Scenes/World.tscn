@@ -90,6 +90,7 @@
 [ext_resource type="Script" uid="uid://byb5ieldmnrrm" path="res://Scripts/UI/GameUI.cs" id="63_script"]
 [ext_resource type="PackedScene" uid="uid://cwomw41ldjxkr" path="res://Scenes/UI/MainMenu.tscn" id="64_menu"]
 [ext_resource type="Script" uid="uid://tvluy3a2jeus" path="res://Scripts/UI/GameUIManager.cs" id="67_uimanager"]
+[ext_resource type="PackedScene" path="res://Scenes/CoolParticles.tscn" id="80_1q1st"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_hkej2"]
 sky_top_color = Color(0.367554, 0.773052, 0.958684, 1)
@@ -398,10 +399,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -108.077, -30.1791, 70.4255)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -112.187, -29.2528, 73.543)
 
 [node name="campfire" parent="Environment/Structures" unique_id=1857922414 instance=ExtResource("19_qtjmb")]
-transform = Transform3D(0.996786, 0.0792937, -0.0114207, -0.0801119, 0.986605, -0.142102, 0, 0.14256, 0.989786, -104.265, -30.2243, 78.5022)
+transform = Transform3D(0.996786, 0.0792937, -0.0114207, -0.0801119, 0.986605, -0.142102, 0, 0.14256, 0.989786, -104.265, -30.372276, 78.5022)
+
+[node name="CoolParticles2" parent="Environment/Structures/campfire" unique_id=1537234488 instance=ExtResource("80_1q1st")]
+transform = Transform3D(0.99678576, -0.08011194, -7.2380715e-08, 0.07929364, 0.98660475, 0.14256018, -0.011420754, -0.14210182, 0.98978627, -0.014099121, 0.1736412, -0.025016785)
 
 [node name="campfire2" parent="Environment/Structures" unique_id=1264183406 instance=ExtResource("19_qtjmb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42.5842, -33.6017, 147.226)
+
+[node name="CoolParticles" parent="Environment/Structures/campfire2" unique_id=1209117462 instance=ExtResource("80_1q1st")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.50712967, 0)
 
 [node name="box2" parent="Environment/Structures" unique_id=943869328 instance=ExtResource("20_wi82k")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45.1571, -33.883, 141.434)

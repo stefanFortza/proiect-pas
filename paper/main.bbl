@@ -1,4 +1,4 @@
-\begin{thebibliography}{12}
+\begin{thebibliography}{14}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{Biderman et~al.(2023)Biderman, Schoelkopf, Anthony, Bradley, O'Brien, Hallahan, Khan, Purohit, Prashanth, Raff et~al.}]{biderman2023pythia}
@@ -10,6 +10,11 @@ Stella Biderman, Hailey Schoelkopf, Quentin~Gregory Anthony, Herbie Bradley, Kyl
 Alexis Conneau and Guillaume Lample. 2019.
 \newblock Cross-lingual language model pretraining.
 \newblock In \emph{Advances in Neural Information Processing Systems}, volume~32.
+
+\bibitem[{Ebert et~al.(2003)Ebert, Musgrave, Peachey, Perlin, and Worley}]{ebert2003texturing}
+David~S Ebert, F~Kenton Musgrave, Darwyn Peachey, Ken Perlin, and Steven Worley. 2003.
+\newblock \emph{Texturing and Modeling: A Procedural Approach}.
+\newblock Morgan Kaufmann.
 
 \bibitem[{Ellis(2002)}]{ellis2002frequency}
 Nick~C Ellis. 2002.
@@ -50,6 +55,11 @@ Tal Linzen and Marco Baroni. 2021.
 Brian MacWhinney. 2001.
 \newblock The competition model: The input, the context, and the brain.
 \newblock \emph{Cognition and second language instruction}, 69:90.
+
+\bibitem[{Millington(2007)}]{millington2007game}
+Ian Millington. 2007.
+\newblock Game physics engine development.
+\newblock In \emph{Series in Interactive 3D Technology}, pages 222--227. Morgan Kaufmann.
 
 \bibitem[{Plass et~al.(2015)Plass, Homer, and Kinzer}]{plass2015foundations}
 Jan~L Plass, Bruce~D Homer, and Charles~K Kinzer. 2015.

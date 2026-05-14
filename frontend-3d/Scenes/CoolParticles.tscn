@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://dg7x8k1k7j5w"]
+
+[sub_resource type="Curve" id="Curve_1"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.2, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_1"]
+curve = SubResource("Curve_1")
+
+[sub_resource type="Gradient" id="Gradient_1"]
+offsets = PackedFloat32Array(0, 0.2, 0.6, 1)
+colors = PackedColorArray(1, 1, 1, 0, 1, 0.8, 0.2, 1, 1, 0.2, 0, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture_1"]
+gradient = SubResource("Gradient_1")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_1"]
+emission_shape = 1
+emission_sphere_radius = 0.5
+direction = Vector3(0, 1, 0)
+spread = 20.0
+gravity = Vector3(0, 0.5, 0)
+initial_velocity_min = 1.0
+initial_velocity_max = 2.0
+angular_velocity_min = -50.0
+angular_velocity_max = 50.0
+linear_accel_min = -0.5
+linear_accel_max = 0.5
+scale_min = 0.1
+scale_max = 0.3
+scale_curve = SubResource("CurveTexture_1")
+color_ramp = SubResource("GradientTexture_1")
+turbulence_enabled = true
+turbulence_noise_strength = 2.0
+turbulence_noise_scale = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1"]
+transparency = 1
+blend_mode = 1
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_color = Color(1, 1, 1, 1)
+billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="QuadMesh" id="QuadMesh_1"]
+material = SubResource("StandardMaterial3D_1")
+size = Vector2(0.2, 0.2)
+
+[node name="CoolParticles" type="GPUParticles3D"]
+amount = 50
+lifetime = 2.0
+preprocess = 1.0
+process_material = SubResource("ParticleProcessMaterial_1")
+draw_pass_1 = SubResource("QuadMesh_1")
