@@ -1,4 +1,4 @@
-# Barca Supraviețuirii - Simulare Multi-Agent
+# Second Language Acquisition Educational Tool
 
 Proiectul reprezintă o simulare 3D în care integritatea unei ambarcațiuni depinde de calitatea dialogului dintre agenți inteligenți. Sistemul utilizează un pipeline de tip closed-loop între un motor de fizică (Godot) și modele de limbaj natural (LLM).
 
