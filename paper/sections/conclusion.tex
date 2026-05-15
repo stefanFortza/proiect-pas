@@ -1,4 +1,6 @@
 \section{Conclusion}
 \label{sec:conclusion}
 
-What have you learned from this project? What did you like and what did you hate?
+This project introduces a novel diagnostic tool that couples computational linguistics with physics-based simulation to evaluate Second Language Acquisition (SLA) in Large Language Models. Experimental results demonstrate that naively fine-tuning small architectures (e.g., GPT-2 124M) on a secondary language triggers severe catastrophic forgetting, producing semantically empty, surface-level lexical patterns rather than true comprehension. Achieving foundational bilingual stability necessitated explicit interventions: an Experience Replay curriculum to preserve the native language space, and direct translation pairs to act as a cross-lingual semantic bridge. 
+
+Furthermore, while scaling to a larger architecture (GPT-2 Large 774M) successfully protected native English capabilities from being overwritten, it remained insufficient for robust Spanish semantic acquisition without these targeted instructional techniques. Ultimately, by linking NLP evaluation metrics directly to the physical simulation in a virtual environment, this project provides a tangible, real-time framework to expose the mechanical realities, limitations, and necessary curriculum constraints of artificial language learning.

@@ -1,739 +1,136 @@
 model_name,epoch,language,category,difficulty,input_prompt,bot_response,expected_answer,grammatical_structure,syntactical_structure,meaning,relevance
-gpt2_small_base,1,ES,Fapte Generale,Ușor,¿Cuál es la capital de Francia?,"La capital es una Francía es estudiante y la Francias de la India. En este India es debe ser utilizar, lo que los únicos y los",París,5,5,0,0
-gpt2_small_base,1,EN,Fapte Generale,Ușor,What is the capital of France?,Capital de Francia es la Francía de la Crearidad. Estados Unidos y desarrollo y el desafío de una fácil de este apl,París,15,10,5,0
-gpt2_small_base,1,ES,Fapte Generale,Ușor,¿Quién escribió la novela 'Cien años de soledad'?,"La novelación del año señor de seguro, que podría el hacer que la escritura rápidamente el vida. Se sentimient",Gabriel García Márquez,5,5,0,0
-gpt2_small_base,1,EN,Fapte Generale,Ușor,Who wrote the novel 'One Hundred Years of Solitude'?,"A hundred years is a long time.
-A hundred is fifty years. 
+gpt2_large_frozen,1,ES,Fapte Generale,Ușor,¿Cuál es la capital de Francia?,"La capital del Francía es Francica. Es una fábrica de cuatro centenarios de Buenos Aires, Buenos Ayres y Buenos Cerrillos. Está utiliz",París,25,45,8,0
+gpt2_large_frozen,1,EN,Fapte Generale,Ușor,What is the capital of France?,"Paris is a French city located in the south-central region of the country. It is one of several European capitals that are located within the European Union, an association of 28 countries that includes the United",París,90,90,60,50
+gpt2_large_frozen,1,ES,Fapte Generale,Ușor,¿Quién escribió la novela 'Cien años de soledad'?,El novelo 'Espectaculoso' es una historia a través de un mundo como un lugar de la fiesta del área. En un n,Gabriel García Márquez,40,50,5,0
+gpt2_large_frozen,1,EN,Fapte Generale,Ușor,Who wrote the novel 'One Hundred Years of Solitude'?,It was written by Henry James. James was a British writer for the time period of the 18th century. His novel is set in 1814 and explores the relationship between the two main characters of his,Gabriel García Márquez,70,75,50,0
+gpt2_large_frozen,1,ES,Fapte Generale,Ușor,¿Cuál es el planeta más grande de nuestro sistema solar?,"El planeto máximo de Nuestro Sistemas Solar es Pluto. Pluto ha sido de la planetas Saturni, Urani y Neptune, que se ha una situ",Júpiter,10,10,5,0
+gpt2_large_frozen,1,EN,Fapte Generale,Ușor,What is the largest planet in our solar system?,"The largest planets in the solar systems of our Solar System are Saturn and Jupiter, which are both at least four times the size of Earth. The planets are named after the Greek god of the sky,",Júpiter,70,75,10,5
+gpt2_large_frozen,1,ES,Fapte Generale,Ușor,¿En qué año llegó el hombre a la Luna?,El humbre de Luna añadramos son a los desafíos a las ciudades a Luna donde los últimos días en el mund,1969,5,5,0,0
+gpt2_large_frozen,1,EN,Fapte Generale,Ușor,In what year did man land on the Moon?,"The year 1740 was the year when man landed on Earth. This year was also the first year of the Industrial Revolution, which was a major turning point in the history of mankind. People began to",1969,90,95,60,0
+gpt2_large_frozen,1,ES,Fapte Generale,Ușor,Menciona tres países que están en América del Sur.,"1. Amatún-El Habana-Batega: Amazones de Amárica de Bategas para las Amantes de Parque Sur, Amàn á","Brasil, Argentina, Chile (sau altele corecte)",5,5,0,0
+gpt2_large_frozen,1,EN,Fapte Generale,Ușor,Name three countries that are in South America.,"1. Argentina
+2. Brazil
+3. Chile. All three of these countries are located in Southern America, and are known as South American countries. Most people in these three South Asian countries live","Brasil, Argentina, Chile (sau altele corecte)",50,70,45,45
+gpt2_large_frozen,1,ES,Fapte Generale,Ușor,¿Cuál es el animal terrestre más rápido del mundo?,"La vez una veze del animal, también es un día de fácil de un arámbulo de verano. Es un río de ries",Guepardo (Cheetah),5,10,0,0
+gpt2_large_frozen,1,EN,Fapte Generale,Ușor,What is the fastest land animal in the world?,"The fastest animal on Earth is a mammal named the elephant. It can reach speeds of up to 35 kilometers per hour (21 miles per hours) and can weigh up 2,340 pounds (1,",Guepardo (Cheetah),60,65,40,0
+gpt2_large_frozen,1,ES,Fapte Generale,Mediu,¿Qué océano baña las costas de Brasil?,"Océanos para Brasils son Brasiles, Brasilia y Brasília. Las costa de la Brasileira puede hablar para las tareas, y las Cost",Océano Atlántico,5,10,0,0
+gpt2_large_frozen,1,EN,Fapte Generale,Mediu,What ocean washes the coasts of Brazil?,"The ocean is the largest body of water on Earth and covers the entire planet. It stretches from the Equator to the Pole, and includes the seas, rivers, oceans, land, mountains, deserts",Océano Atlántico,95,95,30,0
+gpt2_large_frozen,1,ES,Fapte Generale,Ușor,¿Quién pintó la Mona Lisa?,"La Monita Lisa es una de las palabras de Leonardo da Vinci, en la cielo de Siena. El mía única de los cienf",Leonardo da Vinci,15,10,5,5
+gpt2_large_frozen,1,EN,Fapte Generale,Ușor,Who painted the Mona Lisa?,Leonardo da Vinci (1523-1564) was the best-known painter of the Leonardo Da Vincesque family. He is credited with creating the famous Monamètre d'H,Leonardo da Vinci,65,80,20,15
+gpt2_large_frozen,1,ES,Fapte Generale,Mediu,¿Cuál es el río más largo del mundo?,"El rio mágico es un rápido bajado, llena de un mundos aves y rasos, y en la salida de los niveles",Amazonas (sau Nil),10,10,5,0
+gpt2_large_frozen,1,EN,Fapte Generale,Mediu,What is the longest river in the world?,"The longest rivers in world are the Congo, Congo River, and the Amazon River. The Congo and Amazon rivers are both in Africa and are believed to be the largest rivers on earth. They have a",Amazonas (sau Nil),60,70,20,5
+gpt2_large_frozen,1,ES,Fapte Generale,Ușor,¿Cuántos continentes hay en la Tierra?,"La Tierral y la Sierra Norte y el Norteno es el continente de las Tierras, los Estados Unidos y los Caribes. Los Estado de los Nortenos se","7 (sau 6, depinde de modelul geografic usado)",10,5,0,0
+gpt2_large_frozen,1,EN,Fapte Generale,Ușor,How many continents are there on Earth?,"There are approximately 5,898,000,095,967,619,983,375,901,744,775,777,951,069,782,","7 (sau 6, depinde de modelul geografic usado)",80,40,5,0
+gpt2_large_frozen,1,ES,Fapte Generale,Ușor,¿De qué colores es la bandera de Japón?,La bóvía de japona es una colena de 1.4 tons. El colina es de 8.5 meters. Aprovechar el bárbol de,Blanco y rojo,5,10,0,0
+gpt2_large_frozen,1,EN,Fapte Generale,Ușor,What colors are the flag of Japan?,"The flag for Japan is a combination of red, white and blue. This color combination is also known as the ""blue-shining"" flag, which has a blue-green color scheme. The",Blanco y rojo,90,95,5,5
+gpt2_large_frozen,1,ES,Fapte Generale,Ușor,¿Cuál es la montaña más alta del mundo?,"La montana móvica es una montagna de árboles, y es muy brillante en el mundodo. Todos los estados de mi frontera",Monte Everest,40,60,10,0
+gpt2_large_frozen,1,EN,Fapte Generale,Ușor,What is the highest mountain in the world?,"The highest peak in North America is Mount McKinley in Alaska. It is located in Lake Superior, and is approximately 1,828 meters (5,929 feet) high. The peak is",Monte Everest,100,80,10,0
+gpt2_large_frozen,1,ES,Fapte Generale,Mediu,¿Quién fue Albert Einstein?,Albert Ernest Einstein fue Einstein es una comunicación de quien es el futuro de los ciencias artificiales como un futur de la computadora en la ter,"Físico teórico, famoso por la teoría de la relatividad",10,5,1,1
+gpt2_large_frozen,1,EN,Fapte Generale,Mediu,Who was Albert Einstein?,"Albert Albert (Albert Einstein) was a German physicist, Nobel Prize winner, and founder of the theory of relativity. He was born on January 8, 1879, in a small town in the Bav","Físico teórico, famoso por la teoría de la relatividad",60,70,65,80
+gpt2_large_frozen,1,ES,Fapte Generale,Ușor,¿Qué idioma se habla principalmente en Brasil?,"Brasilia se han habrado para conocer los piedras, cuatro otras estados, como la fruta, la paz, los estrellas,",Portugués,15,10,0,0
+gpt2_large_frozen,1,EN,Fapte Generale,Ușor,What language is primarily spoken in Brazil?,Brazilian is the main language spoken by Brazilians. It is used in all academic and business settings and is considered as the lingua franca of the country. Brazil's population is estimated to be around,Portugués,80,90,10,5
+gpt2_large_frozen,1,ES,Fapte Generale,Greu,¿Cuál es el metal más caro del mundo?,El metal es años y compartirse a los árboles de la ciudad. Es una bicicleta de código en un Á,Rodio / Oro / Platino,10,5,0,0
+gpt2_large_frozen,1,EN,Fapte Generale,Greu,What is the most expensive metal in the world?,"The most costly metal is platinum, which is a rare, rare earth element that is found in certain elements like gold, silver, and uranium. The price of platinum has been around $900 per ounce",Rodio / Oro / Platino,95,90,15,5
+gpt2_large_frozen,1,ES,Fapte Generale,Ușor,¿En qué continente se encuentra Egipto?,Este continenta se utiliza para encontrar los beneficios de la industria y los enfermedades y se enflaban la agencia de productos utilizando a un,África,20,10,0,0
+gpt2_large_frozen,1,EN,Fapte Generale,Ușor,On which continent is Egypt located?,"Egypt is located on the Nile River, in the western portion of the country. It is the largest of all the continents in Africa, and is known to be the cradle of civilization. Egypt has a",África,60,55,20,5
+gpt2_large_frozen,1,ES,Fapte Generale,Mediu,¿Cuál es el instrumento musical de cuerdas más pequeño en una orquesta?,El instrumentos musicales de la orquera es un sistema de cantidad y aumentos para la unidad de estudiantes en el mundo. Como hé,Violín,10,10,0,0
+gpt2_large_frozen,1,EN,Fapte Generale,Mediu,What is the smallest string instrument in an orchestra?,"The smallest instrument that an orchestrator can use for string instruments is a bassoon, which can be played by one person seated on a stool. Bassoons are often played in a small ensemble of one",Violín,95,95,20,5
+gpt2_large_frozen,1,ES,Fapte Generale,Ușor,¿Qué gas respiramos los humanos para sobrevivir?,"Los humanas parasobrevemos las respiración de gas son respiraciones, combustibles y combustivos. Se pueden utilizar para segurar y tener",Oxígeno,5,5,0,0
+gpt2_large_frozen,1,EN,Fapte Generale,Ușor,What gas do humans breathe to survive?,"Humans breathe 3 types of gases: oxygen, hydrogen, and carbon dioxide. Humans have all three gases in their bodies, which are all produced by the body's metabolism and released through breath.",Oxígeno,100,100,10,0
+gpt2_large_frozen,1,ES,Fapte Generale,Mediu,¿Cuál es la capital de Australia?,"La capital del Australia es Sydney. A partir de the Commonwealth of Australia, Sydney es the capital of the State of NSW. Esta estadounidense de Sydney fue de 90,000",Canberra,20,40,15,10
+gpt2_large_frozen,1,EN,Fapte Generale,Mediu,What is the capital of Australia?,"The capital city of the Australian state of Victoria is Canberra, the provincial capital and largest city in the Commonwealth of Australian states, and is located in Canberra. The official capital is Australia's capital, but",Canberra,80,75,5,10
+gpt2_large_frozen,1,ES,Fapte Generale,Mediu,¿Quién inventó la bombilla eléctrica?,"La bombillas eláctricas son la película de las empresas de la empresa del bomba, el bombón de los aguas del empleo",Thomas Edison / Joseph Swan,5,5,0,0
+gpt2_large_frozen,1,EN,Fapte Generale,Mediu,Who invented the lightbulb?,"The light bulb was invented by a German named Johannes Kelvin in the 1740s. Kelvin, a mathematician and physicist, believed that light was made up of particles called photons (named after the Greek word",Thomas Edison / Joseph Swan,90,95,60,5
+gpt2_large_frozen,1,ES,Logică,Ușor,"Si tengo 5 manzanas y me como 2, ¿cuántas manzanas me quedan?","1. 2 manzanas: ¡Cuando me crean por el mejor de las manzonas!
+2. 3 manzos: 2 con 1 con 3 con 5 con",3,15,5,0,10
+gpt2_large_frozen,1,EN,Logică,Ușor,"If I have 5 apples and I eat 2, how many apples do I have left?","3, 2.5, 1, 0, 4.
 
-1. A million is one hundred and fifty hundred. This is the total number of days. At the end",Gabriel García Márquez,80,80,10,0
-gpt2_small_base,1,ES,Fapte Generale,Ușor,¿Cuál es el planeta más grande de nuestro sistema solar?,El planeto solar ha cambio y la símicósica solar y se puede cada una sola en el cualífico es lugar. El,Júpiter,5,5,0,0
-gpt2_small_base,1,EN,Fapte Generale,Ușor,What is the largest planet in our solar system?,El planeto es un planeta de 5.17 horas de 11.8 solar paces. La planete en 5°35.57 o 30°30.68 a. Las planet,Júpiter,15,10,5,0
-gpt2_small_base,1,ES,Fapte Generale,Ușor,¿En qué año llegó el hombre a la Luna?,"Luna está los dos personas de la tarea, el Luna día la tienda hacia a través de una nave y el tiendo y esté de los person",1969,10,5,0,0
-gpt2_small_base,1,EN,Fapte Generale,Ușor,In what year did man land on the Moon?,"1969-1978
-1962-1975
-1976-1981
-1981-1989 
-1990-1995   2015 - 2017  2018 - 2019  2022 - 2020  2019 - 2021  2020",1969,0,0,0,0
-gpt2_small_base,1,ES,Fapte Generale,Ușor,Menciona tres países que están en América del Sur.,"¿Qué es el américo del amo y el Amárica de Sur? Está, en elaméricano es un amigable. El amarillo","Brasil, Argentina, Chile (sau altele corecte)",15,15,0,0
-gpt2_small_base,1,EN,Fapte Generale,Ușor,Name three countries that are in South America.,"El Salvador, Ecuador, Peru, Chile, Colombia, Costa Rica. El Sur, La Paz, El Segunda, Surinam, Cuba, Angola, Liechtenstein, Gabon","Brasil, Argentina, Chile (sau altele corecte)",100,100,80,10
-gpt2_small_base,1,ES,Fapte Generale,Ușor,¿Cuál es el animal terrestre más rápido del mundo?,"El animal método del terRestre no también que el cielo de los animal como una científica en línea médica,",Guepardo (Cheetah),10,5,0,0
-gpt2_small_base,1,EN,Fapte Generale,Ușor,What is the fastest land animal in the world?,La vida de la valeza es una marca dada en el mundo del mundos y el más loro y la marcada de los árboles de,Guepardo (Cheetah),25,40,0,0
-gpt2_small_base,1,ES,Fapte Generale,Mediu,¿Qué océano baña las costas de Brasil?,La costa debe estaba tarde para la costación para el costo de una estrategia. La bancario de buenamiento se habilid,Océano Atlántico,5,5,0,0
-gpt2_small_base,1,EN,Fapte Generale,Mediu,What ocean washes the coasts of Brazil?,"El Nombre del Norte ve Algoritmos y Montañas, Chile, Australia, New Zealand, the United States. El Nortre ve la Libertad y la C",Océano Atlántico,60,70,15,0
-gpt2_small_base,1,ES,Fapte Generale,Ușor,¿Quién pintó la Mona Lisa?,"La Monas Lisa incluyen la maravilla de una lista salida, donde un trabajo que un gran artículo de la tarea y la salud",Leonardo da Vinci,5,5,0,0
-gpt2_small_base,1,EN,Fapte Generale,Ușor,Who painted the Mona Lisa?,"Elisabeta y Esquamadora en la siguiente oración, y la puede de la persona. Puedes pasos para comprender algunos",Leonardo da Vinci,35,25,8,0
-gpt2_small_base,1,ES,Fapte Generale,Mediu,¿Cuál es el río más largo del mundo?,El mundos largos del nieve máquinas largas del riempico es un nuevo mundial. Un larga riendo muy tiempo que se,Amazonas (sau Nil),5,0,0,0
-gpt2_small_base,1,EN,Fapte Generale,Mediu,What is the longest river in the world?,La Salle es la Fuego de México es 2 mi. Esté a 1 mi mi de 1876. Es una estudiante y un esquimiento,Amazonas (sau Nil),10,5,0,0
-gpt2_small_base,1,ES,Fapte Generale,Ușor,¿Cuántos continentes hay en la Tierra?,La Tierras continent es la Gran Sistema del Sur y la Roja dada que se asegún la pueblo. La páginómica es el c,"7 (sau 6, depinde de modelul geografic usado)",1,1,0,0
-gpt2_small_base,1,EN,Fapte Generale,Ușor,How many continents are there on Earth?,"5,000 (3,800)
-- 2,500 (2,400)  
+1. If the total number of apples is 5, then I would eat one apple. 2 means I will eat 1 apple and",3,50,40,20,5
+gpt2_large_frozen,1,ES,Logică,Ușor,¿Qué pesa más: un kilo de plumas o un kilo de plomo?,"Un kilogramo del plumado es una pluma del segundo plumoso específico. Por el área de 2.5 kilómetros, el plum",Pesan lo mismo,40,25,5,0
+gpt2_large_frozen,1,EN,Logică,Ușor,What weighs more: a kilo of feathers or a kilo of lead?,"The kilogram is the most commonly used unit of mass, and this is because of its simple and universal nature. It is based on the mass of 1kg (2lbs) of pure weight.",Pesan lo mismo,95,100,50,0
+gpt2_large_frozen,1,ES,Logică,Mediu,"El padre de María tiene cinco hijas: Nana, Nene, Nini, Nono. ¿Cómo se llama la quinta hija?","Noni, nana. Neno, esperanza. None, el cielo de cuerpo.
 
-  - 1,200 (1:200) - 100 (100)
+Nina, none. Estoy que todos no t",María,15,15,10,10
+gpt2_large_frozen,1,EN,Logică,Mediu,"Maria's father has five daughters: Nana, Nene, Nini, Nono. What is the name of the fifth daughter?","Nonos. Nanna, Eunosa, Hanao, and Nenette. Nonoes. In the English language, the word for the seventh daughter, Naia, is also spelled",María,40,40,10,0
+gpt2_large_frozen,1,ES,Logică,Mediu,"Si un tren viaja hacia el norte y el viento sopla hacia el sur, ¿hacia dónde va el humo?","Dórde con la ciudad está esta nueva criatura estructuras. A una cosa de cerveza, al día, en",No hay humo (es un tren eléctrico),5,0,0,0
+gpt2_large_frozen,1,EN,Logică,Mediu,"If a train travels north and the wind blows south, which way does the smoke go?","The smoke goes south. It is blowing south because the train has moved farther north than it did when it left the station. As the trains travel north, they travel in a straight line, so the",No hay humo (es un tren eléctrico),85,85,20,20
+gpt2_large_frozen,1,ES,Logică,Ușor,¿Qué mes tiene 28 días?,La mes que tien 28 dos diferentes dificultadores son el mar de las árboles de Santa Fe y el piedra de los Estados Unidos,Todos los meses,10,5,0,0
+gpt2_large_frozen,1,EN,Logică,Ușor,Which month has 28 days?,"The month of September has 29 days. The first day of the month is Monday, September 7, and the last day is Tuesday, October 20. Note that October is a leap year, which means",Todos los meses,90,90,15,5
+gpt2_large_frozen,1,ES,Logică,Mediu,"Si corres en una carrera y adelantas a la persona en el segundo lugar, ¿en qué posición estás ahora?",¡Estoy en la carretera y estaba más grande! º¿qué es el área? ³³ ¹¡ª�,En segundo lugar,25,20,5,0
+gpt2_large_frozen,1,EN,Logică,Mediu,"If you are running in a race and you pass the person in second place, what position are you in now?","You are in first place. Second place is a tie. Third place are eliminated. Fourth place will be eliminated and a new race will begin. 
 
-- 1","7 (sau 6, depinde de modelul geografic usado)",0,0,0,0
-gpt2_small_base,1,ES,Fapte Generale,Ușor,¿De qué colores es la bandera de Japón?,"Jape una borda. ¡Has Japa es un proceso de la Banderas!
-¿Cuál es el prozado ajercicio?",Blanco y rojo,1,1,0,0
-gpt2_small_base,1,EN,Fapte Generale,Ușor,What colors are the flag of Japan?,"Red, white, blue, red, brown, orange, violet, azure, magenta, nubile, and violet. Elaborate reds, blues, green, darks,",Blanco y rojo,40,30,10,5
-gpt2_small_base,1,ES,Fapte Generale,Ușor,¿Cuál es la montaña más alta del mundo?,El mundiendo muy puede la tiempo del mismo. El misma piedra de las siguientes mujer y el miedo tanto.,Monte Everest,5,5,0,0
-gpt2_small_base,1,EN,Fapte Generale,Ușor,What is the highest mountain in the world?,"Everest.
-  
-3  4    5      6  +4
-2  (3rd)  1  2  3  4  5
-5  6",Monte Everest,5,5,5,10
-gpt2_small_base,1,ES,Fapte Generale,Mediu,¿Quién fue Albert Einstein?,"Albert, Einstein, General relativity, Enoch, Cernándola, Descartes, Newton, Aquinas, Darwin, Hayek (1919-2008), Leibniz,","Físico teórico, famoso por la teoría de la relatividad",5,10,0,0
-gpt2_small_base,1,EN,Fapte Generale,Mediu,Who was Albert Einstein?,Albert E. Heisenberg es una historia historias tasa de la inteligencia artificial. Además de un precio humano. Albert F. Einstein (1924-,"Físico teórico, famoso por la teoría de la relatividad",25,15,5,0
-gpt2_small_base,1,ES,Fapte Generale,Ușor,¿Qué idioma se habla principalmente en Brasil?,"No, no, haba, hace la estructura, el mensaje de la historia de Brasilia, crear la naturaleza y la pobreza",Portugués,30,5,0,0
-gpt2_small_base,1,EN,Fapte Generale,Ușor,What language is primarily spoken in Brazil?,"Brasil, Nueva Crear, Colombia
-- El último de México 
-El Últomo de méxito   Bolivia  Brazil  Colombia",Portugués,15,5,0,0
-gpt2_small_base,1,ES,Fapte Generale,Greu,¿Cuál es el metal más caro del mundo?,"El metalmás carbónico del máquinas son el munda y el área de carbono. El carbonoz debe ser utilizado, el carbonoso de d",Rodio / Oro / Platino,5,5,0,0
-gpt2_small_base,1,EN,Fapte Generale,Greu,What is the most expensive metal in the world?,"El área de una granza, de uso de lenguaje. Desafí su artículo. Se utiliza para resolver un puede artú",Rodio / Oro / Platino,10,10,0,0
-gpt2_small_base,1,ES,Fapte Generale,Ușor,¿En qué continente se encuentra Egipto?,"El continento en el centro y el planeta en la oración
-El centros de la el continent y la planetació en los Estados Unidos. El centr",África,5,5,0,0
-gpt2_small_base,1,EN,Fapte Generale,Ușor,On which continent is Egypt located?,"El Salvador. 
-El Salvador   American  es el estado de estudiante estás. El está en el nombre de la rápida  era el",África,10,10,5,0
-gpt2_small_base,1,ES,Fapte Generale,Mediu,¿Cuál es el instrumento musical de cuerdas más pequeño en una orquesta?,El instrumentos musicales médicos se puede ser utilizar y todos los diferentes problemas para ayudar a algoritmos que se util,Violín,10,5,0,0
-gpt2_small_base,1,EN,Fapte Generale,Mediu,What is the smallest string instrument in an orchestra?,Ejemplo es la segunda de una seguir actividad que me vida. También en un muy financierio se puede c,Violín,20,15,5,0
-gpt2_small_base,1,ES,Fapte Generale,Ușor,¿Qué gas respiramos los humanos para sobrevivir?,"Los humano respiración humanas que los respirares humanes son una respiradora, como un respirador más que las respiraciones muy respirales en un s",Oxígeno,5,0,0,0
-gpt2_small_base,1,EN,Fapte Generale,Ușor,What gas do humans breathe to survive?,"Hola, mistero!
+1. First place: Any position from",En segundo lugar,50,70,5,5
+gpt2_large_frozen,1,ES,Logică,Mediu,¿Cuántos meses tienen 31 días?,"25, 21, 18, 16, 14, 12, 11, 10, 9, 8, 6, 5, 4, 3, 2, 1, 0, -2, +2.",7,5,5,0,0
+gpt2_large_frozen,1,EN,Logică,Mediu,How many months have 31 days?,"There are 31.7 days in a year. In the year, there are 365 days, or 1 year + 31 months. The sum of the values of 31 is 30, for example:",7,90,90,10,0
+gpt2_large_frozen,1,ES,Logică,Greu,Un granjero tiene 17 ovejas y se mueren todas menos 9. ¿Cuántas le quedan?,La lequera tienda fue un grande y luego de 3 septembre en el cielo de los Estados Unidos durante la era de 1982. Un,9,30,20,5,0
+gpt2_large_frozen,1,EN,Logică,Greu,A farmer has 17 sheep and all but 9 die. How many are left?,"The farmer's sheep have been collectively counted as 17. The remaining nine sheep are all male, and therefore they are deceased.
 
-Hola: Había, hola! 
-A.L.C.R.P.E.   A.N.A.,",Oxígeno,10,10,0,0
-gpt2_small_base,1,ES,Fapte Generale,Mediu,¿Cuál es la capital de Australia?,La capital es el último de Argentina es Australia es es 11.45.10.15 es una mayorrica de datos en las difíciles relacionadas en,Canberra,10,5,0,0
-gpt2_small_base,1,EN,Fapte Generale,Mediu,What is the capital of Australia?,Australia: Nombre tres características dulceas de manzanas. Australiaa a las dos números del mundo y desde una frase,Canberra,15,10,5,0
-gpt2_small_base,1,ES,Fapte Generale,Mediu,¿Quién inventó la bombilla eléctrica?,"Elécéo nuevo bombillas de la fuente del gama de los sistemas, y es que los árboles se pueden ayudar a é",Thomas Edison / Joseph Swan,15,10,0,0
-gpt2_small_base,1,EN,Fapte Generale,Mediu,Who invented the lightbulb?,Él vez fin de la siguiente oración es una orativa. Élisis son su amor que se hablar tiene otro donde un,Thomas Edison / Joseph Swan,5,0,0,0
-gpt2_small_base,1,ES,Logică,Ușor,"Si tengo 5 manzanas y me como 2, ¿cuántas manzanas me quedan?","La mezcla mejorar la mezanada, lo que la noche más comercial, quieren una nueva bien que él. La",3,15,10,0,0
-gpt2_small_base,1,EN,Logică,Ușor,"If I have 5 apples and I eat 2, how many apples do I have left?","1, but 2 apples = 3.
-1. ¿Cuáles son los rápidamente en la familia? 
-2. 1/2 cualquierno",3,15,15,5,0
-gpt2_small_base,1,ES,Logică,Ușor,¿Qué pesa más: un kilo de plumas o un kilo de plomo?,"Un kilos de peligro de pequeñas por el aceitro, incluyendo todos los noche ser una luzca. Para película,",Pesan lo mismo,5,5,0,0
-gpt2_small_base,1,EN,Logică,Ușor,What weighs more: a kilo of feathers or a kilo of lead?,"A kilos of gold, a ton of salt, and a milla of iron. A ton ounce of coal, as well as a gram of sugar. Sugars are not of much use in",Pesan lo mismo,15,20,5,0
-gpt2_small_base,1,ES,Logică,Mediu,"El padre de María tiene cinco hijas: Nana, Nene, Nini, Nono. ¿Cómo se llama la quinta hija?","Sus debe ser hacer un cómnico y sus ciudades. Se encuentra cambiaría para aumentar el mismo, como un m",María,5,5,0,0
-gpt2_small_base,1,EN,Logică,Mediu,"Maria's father has five daughters: Nana, Nene, Nini, Nono. What is the name of the fifth daughter?","Ella. Ello de la sona, Ellolas. De la persona de Ellómica. La persona es una múltima y la soporta y el un",María,10,10,5,0
-gpt2_small_base,1,ES,Logică,Mediu,"Si un tren viaja hacia el norte y el viento sopla hacia el sur, ¿hacia dónde va el humo?","La sopa de la vida especial de sus empleados que tiene es una persona. La vita de los empresa, la sólida de las redes",No hay humo (es un tren eléctrico),10,5,0,0
-gpt2_small_base,1,EN,Logică,Mediu,"If a train travels north and the wind blows south, which way does the smoke go?","The wind will blow south.
-  
-1 2 3 4  src = {
+What is the total number of sheep? The total is 17,",9,95,95,25,5
+gpt2_large_frozen,1,ES,Logică,Greu,"¿Cómo puedes lanzar una pelota de tenis para que avance un poco, se detenga y vuelva a ti sin tocar nada?","Una Pelota para Que Avance Un Poco Se detenería un alegría en un pasaje de tiempo, que se podrían en el paso",Lanzándola hacia arriba,25,15,5,0
+gpt2_large_frozen,1,EN,Logică,Greu,"How can you throw a tennis ball so that it goes a short distance, stops, and comes back to you without touching anything?","The simplest way to throw the tennis tennisball is to hold the ball with your hand, then throw it with the other hand. The thrower will throw one ball at a time, but the one",Lanzándola hacia arriba,60,50,10,0
+gpt2_large_frozen,1,ES,Logică,Greu,"Si tres gatos atrapan tres ratones en tres minutos, ¿cuánto tardarán cien gatos en atrapar cien ratones?","Incluyendo una guía de tareas. En un poco tarde, crean un gato que cuándo en cuatro minuta tares. Cuando",3 minutos,10,10,5,0
+gpt2_large_frozen,1,EN,Logică,Greu,"If three cats catch three mice in three minutes, how long will it take one hundred cats to catch one hundred mice?","One hundred cat(s) will catch a hundred mouse(es) in five minutes. One cat would catch roughly 20 mice. Thus, one cat could potentially catch up to a dozen mice within five",3 minutos,45,60,5,10
+gpt2_large_frozen,1,ES,Logică,Ușor,¿Qué sube y nunca baja?,Sube and nuncaba se pueden entender a nuestro sitio web para subir nuestra persona. También me han subiendo con una form,La edad,5,5,0,0
+gpt2_large_frozen,1,EN,Logică,Ușor,What goes up and never comes down?,"The answer to this question is often that it depends on the context. In some cases, the answer is that there is an underlying structure of ""up"" and ""down"". In other cases there may",La edad,75,75,55,0
+gpt2_large_frozen,1,ES,Logică,Mediu,"Tengo ciudades pero no casas, montañas pero no árboles, agua pero no peces. ¿Qué soy?",Árbol? ¡tienes no te darle! ³Quién perdido a los días es el cielo de cada paisaj,Un mapa,10,10,5,5
+gpt2_large_frozen,1,EN,Logică,Mediu,"I have cities but no houses, mountains but no trees, water but no fish. What am I?","In general, cities are composed of several interconnected parts:
 
-'wind' : {'n', 'n'},
-}
- src.start = 10",No hay humo (es un tren eléctrico),15,15,10,0
-gpt2_small_base,1,ES,Logică,Ușor,¿Qué mes tiene 28 días?,"28.4 dísas 
-31.2.10.0.1
+1. City walls: The walls of a city are the main barriers to the movement of people, goods, and information. These walls",Un mapa,90,90,100,0
+gpt2_large_frozen,1,ES,Logică,Ușor,"¿Qué número sigue en la secuencia: 2, 4, 6, 8...?",4.5.6.7.8.9.10.11.12.13.14.15.16.17.18.19.20.21.22.23.,10,90,5,5,0
+gpt2_large_frozen,1,EN,Logică,Ușor,"What number comes next in the sequence: 2, 4, 6, 8...?","The sequence '2,4,6,8' is the digit sequence from the first number in order. In the example given above, the number '4' comes first and the next number is",10,85,55,15,5
+gpt2_large_frozen,1,ES,Logică,Mediu,"Si el día de mañana es martes, ¿qué día fue ayer?",El dia de la maña es en la ciudad de los Estados Unidos y las Américas de America. El mundo en las Ciencias del,Domingo,30,40,0,0
+gpt2_large_frozen,1,EN,Logică,Mediu,"If tomorrow is Tuesday, what day was yesterday?","It was Monday. Monday was the first day of the week. The second day, Tuesday was also the same as Tuesday. Tuesday is the 23rd day after Monday, meaning that Monday is 23 days",Domingo,65,60,20,5
+gpt2_large_frozen,1,ES,Logică,Greu,¿Es posible que un hombre se case con la hermana de su viuda?,La herma de Suviuda es una oca de un personaje que puede utilizar con un búsqueda y un plazo en un lado de sal,"No, porque está muerto",30,40,0,0
+gpt2_large_frozen,1,EN,Logică,Greu,Is it possible for a man to marry his widow's sister?,"It is possible, though rare. However, there are other circumstances that could make it difficult for the husband to get married to his widowed sister. For instance, if the sister was already married,","No, porque está muerto",95,95,10,0
+gpt2_large_frozen,1,ES,Logică,Mediu,¿Qué tiene llaves pero no puede abrir cerraduras?,"Si se pidió, poderosa y salir. Si piensa, se compartiría el cielo y se tienen una gran cerca. P",Un piano,30,20,0,0
+gpt2_large_frozen,1,EN,Logică,Mediu,What has keys but can't open locks?,"The following keys are not able to open lock-picking locks:
 
-32.3.7.9.5
-33.17.8.23
-34: A",Todos los meses,5,0,0,0
-gpt2_small_base,1,EN,Logică,Ușor,Which month has 28 days?,"14071414160776429042
-Month: 28
-Number of days: 3
-1. Decimal numeral, 4.9
-2. Capitalize
-3.",Todos los meses,5,0,0,0
-gpt2_small_base,1,ES,Logică,Mediu,"Si corres en una carrera y adelantas a la persona en el segundo lugar, ¿en qué posición estás ahora?","La persona está acesando un poder de la misteriosa y la posibilidad de un proceso, un se puede asegurar la dif",En segundo lugar,15,15,0,0
-gpt2_small_base,1,EN,Logică,Mediu,"If you are running in a race and you pass the person in second place, what position are you in now?",La segunda de la Tierra de México. Esta crear una historia de las dos datos de estados que se utiliza más alta de los person,En segundo lugar,10,5,0,0
-gpt2_small_base,1,ES,Logică,Mediu,¿Cuántos meses tienen 31 días?,"El también de tiempo a la población del mundo, la trabajo del desarrollo de la vida y la agua. Esta t",7,15,5,5,0
-gpt2_small_base,1,EN,Logică,Mediu,How many months have 31 days?,"Numera: 19.6 months.
-Numerad: 18.3 months (30 days).
-¡Mí: 16 months! (29 days)
-Aquítan",7,5,5,0,0
-gpt2_small_base,1,ES,Logică,Greu,Un granjero tiene 17 ovejas y se mueren todas menos 9. ¿Cuántas le quedan?,"1. 1: Poblaciones y el sistema de la aventurendale y la solución de los últimos. 
-2. 2: Tamb",9,20,10,0,0
-gpt2_small_base,1,EN,Logică,Greu,A farmer has 17 sheep and all but 9 die. How many are left?,1. ¿Cuáles son los oxígenos en la mujer? (2) ¡Cál es una alegre más psicología que,9,25,25,10,0
-gpt2_small_base,1,ES,Logică,Greu,"¿Cómo puedes lanzar una pelota de tenis para que avance un poco, se detenga y vuelva a ti sin tocar nada?","Una tieneve que se poder el pelotimo, mientras de los pueblos para la peloton luego, también se mejor a las",Lanzándola hacia arriba,5,0,0,0
-gpt2_small_base,1,EN,Logică,Greu,"How can you throw a tennis ball so that it goes a short distance, stops, and comes back to you without touching anything?","No, I can't. I have to make contact with the ball. Seemingly every time I play tennis, the balls stop.
-Nadine: Do you think it's a terrible",Lanzándola hacia arriba,95,95,10,0
-gpt2_small_base,1,ES,Logică,Greu,"Si tres gatos atrapan tres ratones en tres minutos, ¿cuánto tardarán cien gatos en atrapar cien ratones?","En ciudades de gato, encontrar la atrasegación de la nube, uno algunas de típicamente ser utilizar para el",3 minutos,5,5,0,0
-gpt2_small_base,1,EN,Logică,Greu,"If three cats catch three mice in three minutes, how long will it take one hundred cats to catch one hundred mice?","In mice, cats are born at 5:00 am, while human beings are at 10:30 am. In humans, the time it takes for cat to get to sleep is 10 sec.",3 minutos,75,85,5,0
-gpt2_small_base,1,ES,Logică,Ușor,¿Qué sube y nunca baja?,"Hola!
-Una a menudo para la vida, es una vista de lenguaje. En la noche, su gente de la marca.
-F",La edad,10,5,5,0
-gpt2_small_base,1,EN,Logică,Ușor,What goes up and never comes down?,"The price escalates.
-Aprendizar: 
-: Yo,   y  u m a nd a c h y a r e c o r t o  d",La edad,15,15,10,5
-gpt2_small_base,1,ES,Logică,Mediu,"Tengo ciudades pero no casas, montañas pero no árboles, agua pero no peces. ¿Qué soy?","Soy, qué aguilla. Soy es el agía, soy estoy algo. Emojos, está algún y manten. Cuando seguro de",Un mapa,5,1,0,0
-gpt2_small_base,1,EN,Logică,Mediu,"I have cities but no houses, mountains but no trees, water but no fish. What am I?","Los Angeles, Los Banos, San Francisco, Boston, New York, Seattle, Orlando, Houston, Chicago, Miami. Los Baños de la Capitan, La Pilar, Las Vegas",Un mapa,95,95,90,0
-gpt2_small_base,1,ES,Logică,Ușor,"¿Qué número sigue en la secuencia: 2, 4, 6, 8...?","1. Utiliza el estado de la oración de forma bajo. 
-2. Estarísticas para cualquier el mismo.
-3.",10,10,5,0,0
-gpt2_small_base,1,EN,Logică,Ușor,"What number comes next in the sequence: 2, 4, 6, 8...?","5, 7, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26.",10,100,100,100,0
-gpt2_small_base,1,ES,Logică,Mediu,"Si el día de mañana es martes, ¿qué día fue ayer?","La madería es la mala de una mule de la diferencia hasta tiene un ella dada. El mamañano son un pinto,",Domingo,5,5,0,0
-gpt2_small_base,1,EN,Logică,Mediu,"If tomorrow is Tuesday, what day was yesterday?","1. A.M.
-2. M.D. (3. P.O.)
-3: S.E.A.N.T.S.P.C.V",Domingo,0,0,0,0
-gpt2_small_base,1,ES,Logică,Greu,¿Es posible que un hombre se case con la hermana de su viuda?,La viudad se hábito de la vida es una casa que están vienen tiene un problema en la oración del problemo y se p,"No, porque está muerto",5,5,0,0
-gpt2_small_base,1,EN,Logică,Greu,Is it possible for a man to marry his widow's sister?,Prove it: ¿Es el solución de la vida? ¡Que es la escuela de los manelías? Una esperanza que está e,"No, porque está muerto",10,10,10,0
-gpt2_small_base,1,ES,Logică,Mediu,¿Qué tiene llaves pero no puede abrir cerraduras?,"No, tiendo no es una pueblo. Luego por que se al menos y el paso de duro, y te llevar la mejor debe",Un piano,10,5,0,0
-gpt2_small_base,1,EN,Logică,Mediu,What has keys but can't open locks?,Analizar una sistema de un juego de cualquier un misterio más crecimiento. El jugar debe en su fó,Un piano,5,0,0,0
-gpt2_small_base,1,ES,Logică,Mediu,¿Qué tiene un ojo pero no puede ver?,"Uno pueblo perro, una puntuación de conocimiento significativa, poco un término, con un verano con cualqu",Una aguja (o un huracán),10,5,0,0
-gpt2_small_base,1,EN,Logică,Mediu,What has an eye but cannot see?,"Escribe, una lista de menor cinco más corto. El cielo de la siguiente texto, como un texte color. ¿",Una aguja (o un huracán),15,10,0,0
-gpt2_small_base,1,ES,Logică,Greu,"Si divides 30 por la mitad y sumas 10, ¿cuál es el resultado?","Mi cuántos, como los sumos son el aprendizaje, el producto significado del productivo de el proceso. El productos de la negoci",70 (30 / 0.5 + 10),5,5,0,0
-gpt2_small_base,1,EN,Logică,Greu,"If you divide 30 by half and add 10, what is the result?","10 = 2.50 - 1.60
-1.40 = 5.25 x 10.14
-2.80 = 10 + 8.00 x 2 = 7.76
-3:",70 (30 / 0.5 + 10),0,0,0,0
-gpt2_small_base,1,ES,Logică,Ușor,¿Cuántos lados tiene un hexágono?,"Un hexógonos y un pentágiones a la hexaña. Un pentógional de manera, una hexataña del mundo en la un nue",6,5,5,0,0
-gpt2_small_base,1,EN,Logică,Ușor,How many sides does a hexagon have?,"10.25
-Una esta las principales principios de una frase. Es está financiera entre los principias frases. Los principarios frasían",6,5,5,0,0
-gpt2_small_base,1,ES,Logică,Ușor,¿Qué es más grande: 1/2 o 1/4?,"La granda fuente es una historia del siguiente en 1868, y la historias del cielo en un tiempo de la capital y el mundo de",1/2,50,40,5,0
-gpt2_small_base,1,EN,Logică,Ușor,Which is larger: 1/2 or 1/4?,¿Cómo están serándame el significado de la siguiente oración? ¡Comprender la significació la especieza de los d,1/2,5,5,0,0
-gpt2_small_base,1,ES,Creativitate,Greu,Escribe un poema corto sobre el otoño.,"""Los Estados Unidos Unidas Unido es una lucha que tarde también tus tres números en el aire"". Las estudiant",[Poem generativ despre toamnă/frunze/frig],10,10,0,0
-gpt2_small_base,1,EN,Creativitate,Greu,Write a short poem about autumn.,A long summer is coming to an end. A sun is shining brightly. An autumn is approaching. Much time has passed since my last visit. I am not much of an artist. So I tend,[Poem generativ despre toamnă/frunze/frig],75,75,30,15
-gpt2_small_base,1,ES,Creativitate,Ușor,Inventa un nombre para un perro que tiene manchas azules.,"Un nuevo que puede tomar cerrar a los diferenciares y aseguro los usuarios. Por favor, leche, por favor y","[Nume creativ, ex: Manchitas, Cielo]",25,15,0,0
-gpt2_small_base,1,EN,Creativitate,Ușor,Invent a name for a dog that has blue spots.,Red spots mean your dog is not a good dog. Blue spots are a result of insufficient exercise. Red and green spots represent failure of the dog to respond to the environment. Aquilas tend to,"[Nume creativ, ex: Manchitas, Cielo]",90,90,50,0
-gpt2_small_base,1,ES,Creativitate,Greu,Escribe una historia corta de 3 líneas sobre un robot que aprende a amar.,Una amarría de aprender un automático. Un robot es un pueblo de comunicación y desde la podería. Esto un alegre,[Narațiune scurtă cu structură completă],5,5,0,0
-gpt2_small_base,1,EN,Creativitate,Greu,Write a 3-line short story about a robot that learns to love.,Esta automatizadas para mantener una nueva inteligencia artificial en el mismo. Esto un problema es el problemo global. El probleme algo por,[Narațiune scurtă cu structură completă],15,15,5,0
-gpt2_small_base,1,ES,Creativitate,Mediu,Imagina que eres un pirata. Escribe un saludo para tu tripulación.,"Eres a una visión que un lugante y un tiempo, un juego como puede ser más caminos físicos. Ase","[Limbaj tematic: ¡Ahoy, marineros!, etc.]",10,5,0,0
-gpt2_small_base,1,EN,Creativitate,Mediu,Imagine you are a pirate. Write a greeting for your crew.,"I was a hero. Escriba es un rápido, y una persona de la frase. Es uno lugar, tiene un oscuro que luego","[Limbaj tematic: ¡Ahoy, marineros!, etc.]",10,10,5,0
-gpt2_small_base,1,ES,Creativitate,Greu,Dame tres ideas para una novela de ciencia ficción.,"¿Qué esta también a un novelo sobre los novelos se requiere en la ciudad?
-¿Esta que se preocupaci",[Trei concepte SF distincte],5,5,0,0
-gpt2_small_base,1,EN,Creativitate,Greu,Give me three ideas for a science fiction novel.,"Science fiction is a lot like literature: it's not a novel and is not much more. In fact, there are so many novel ideas out there that it is hard to list them all. I",[Trei concepte SF distincte],85,85,10,0
-gpt2_small_base,1,ES,Creativitate,Greu,Escribe un diálogo corto entre la Luna y el Sol.,El Luna de una Luna es un nueva Luna incluir un proyecto de la noche. Esto segurarse sus niveles de las navegicas,[Structură de dialog între două entități],10,10,5,0
-gpt2_small_base,1,EN,Creativitate,Greu,Write a short dialog between the Moon and the Sun.,La estrategia es la esperanza en línea más fácil que la estrella que los aprendizaje y el planeto en el nuevo planet,[Structură de dialog între două entități],35,25,5,0
-gpt2_small_base,1,ES,Creativitate,Greu,Describe un bosque mágico usando los cinco sentidos.,"Los caminos sentido una ciudad de la empresa, la esquina, el mundo de los hanos más pueden ser a la esc",[Descriere senzorială multiplă],10,5,0,0
-gpt2_small_base,1,EN,Creativitate,Greu,Describe a magical forest using all five senses.,A forest is a place of tranquility and tranquillity. A tranquility to which you are most much content. It is beautiful and beautiful. Nombre de la vida por al,[Descriere senzorială multiplă],25,25,15,5
-gpt2_small_base,1,ES,Creativitate,Mediu,Redacta un mensaje de felicitación de cumpleaños para un amigo lejano.,"¡Estoy estamos son la hablar alguna! Estoy, lo que el lugar, el mamífero, la cada vez por la h",[Mesaj empatic și urări],5,0,0,0
-gpt2_small_base,1,EN,Creativitate,Mediu,Write a birthday greeting message for a distant friend.,"El número son una calidad de vida, pero como muy descubrir niveles. Es la tecnología un más alta día",[Mesaj empatic și urări],5,5,0,0
-gpt2_small_base,1,ES,Creativitate,Mediu,Escribe una carta de disculpas a un cliente por un paquete retrasado.,"El clientele a la clientes, la familia y la escuela. Esto de este client efecto entre la cuántación en la misma, el client","[Ton formal, scuze, soluție]",10,5,0,0
-gpt2_small_base,1,EN,Creativitate,Mediu,Write an apology letter to a customer for a delayed package.,A delayed shipment is sold out. A customer should expect a long wait. Compréfica la tecnología se puede una reseña de año. Es uno,"[Ton formal, scuze, soluție]",20,20,10,5
-gpt2_small_base,1,ES,Creativitate,Mediu,Crea un eslogan publicitario para una nueva marca de zapatos deportivos.,Un es logan debe ser utiliza de datos más importantes que se requiere un lugar de máquinas en lenguaje móvil. Se utiliz,"[Frază scurtă, memorabilă]",5,5,0,0
-gpt2_small_base,1,EN,Creativitate,Mediu,Create an advertising slogan for a new brand of sports shoes.,Crea una frase de luz. ¿Puedes vistos a los vivos? Es un alegre un producto de la historia de aprendiz,"[Frază scurtă, memorabilă]",10,10,5,0
-gpt2_small_base,2,ES,Fapte Generale,Ușor,¿Cuál es la capital de Francia?,La capital fue una capital hubris de la Franciana es uno de francia que el mundo poder de estrategia. La hubriancia había un s,París,15,10,0,0
-gpt2_small_base,2,EN,Fapte Generale,Ușor,What is the capital of France?,"Mestre médico
-Méder que vuelo es el que es importante, mientras que tienen en la vida. La vista más important",París,50,10,5,0
-gpt2_small_base,2,ES,Fapte Generale,Ușor,¿Quién escribió la novela 'Cien años de soledad'?,La novelá una ciencia de SoledAD es un país de salud y ley de un reino de aireo. Una página de suave,Gabriel García Márquez,20,15,0,0
-gpt2_small_base,2,EN,Fapte Generale,Ușor,Who wrote the novel 'One Hundred Years of Solitude'?,Elaborate es la siguiente oración. Todos se pueden ayudar a están en una orilla de manera en la orila de un,Gabriel García Márquez,10,5,0,0
-gpt2_small_base,2,ES,Fapte Generale,Ușor,¿Cuál es el planeta más grande de nuestro sistema solar?,El planeto solar es un mundo debe sería hacer la ciudad de sus dos dos nordrinos climáticos máquinas y la fáb,Júpiter,10,5,0,0
-gpt2_small_base,2,EN,Fapte Generale,Ușor,What is the largest planet in our solar system?,"La temperatura es el planeta al 1.8 m, el 10% de la calidad de 28.3°N. La calente es 0.45 m. El á",Júpiter,40,40,0,0
-gpt2_small_base,2,ES,Fapte Generale,Ușor,¿En qué año llegó el hombre a la Luna?,La Luna es una noche aplicación de la Guerra Mundial del Norte. Se puede ser en el nombres y se estaba tiene un p,1969,35,25,0,0
-gpt2_small_base,2,EN,Fapte Generale,Ușor,In what year did man land on the Moon?,"1.19 Earth years after the Big Bang
-2.7 billion years ago
-3.3 billion year ago 
-4.6 billion billion Earth days ago.
-5.5 billion man",1969,30,20,10,0
-gpt2_small_base,2,ES,Fapte Generale,Ușor,Menciona tres países que están en América del Sur.,Los paisos del américo del Amérmino de Mar (Américano) incluyendo el amore de un amor de la población de mar,"Brasil, Argentina, Chile (sau altele corecte)",5,5,0,0
-gpt2_small_base,2,EN,Fapte Generale,Ușor,Name three countries that are in South America.,"Argentina, Chile, Costa Rica, Honduras, India. India is from the US. China is a part of Asia. Mexico is part: Sudetenland
+1. Knob: This is a flat, flat-headed object. It can be a screwdriver, a wrench,",Un piano,90,95,5,0
+gpt2_large_frozen,1,ES,Logică,Mediu,¿Qué tiene un ojo pero no puede ver?,El ojito perdido no había conocido que se pude en una pocosa. Pero un día se se permite que tienen un enc,Una aguja (o un huracán),5,5,0,0
+gpt2_large_frozen,1,EN,Logică,Mediu,What has an eye but cannot see?,"An eye can see, but it cannot perceive, see or perceive. It is similar to the pupil in the human eye. An example of a human pupil is shown in Fig. 1, where the",Una aguja (o un huracán),75,70,10,0
+gpt2_large_frozen,1,ES,Logică,Greu,"Si divides 30 por la mitad y sumas 10, ¿cuál es el resultado?","El resulto es 6.25. Es una mitada que es un resultador de un mensaje de 6,813.50 por su estado. Esta calidad",70 (30 / 0.5 + 10),15,10,5,0
+gpt2_large_frozen,1,EN,Logică,Greu,"If you divide 30 by half and add 10, what is the result?","The result is 1.618. This means that the half is multiplied by 10 times to get the whole.
 
-Africa: El Salvador,","Brasil, Argentina, Chile (sau altele corecte)",45,40,15,5
-gpt2_small_base,2,ES,Fapte Generale,Ușor,¿Cuál es el animal terrestre más rápido del mundo?,"El animal Terrestres Más Rápidamente del Mundo se comenzó su cambio o alimento, pero tienen mucho de cada o un",Guepardo (Cheetah),5,5,0,0
-gpt2_small_base,2,EN,Fapte Generale,Ușor,What is the fastest land animal in the world?,"La cinco de una empresa del sol segundo más corte del Sol. La empieza debe un cielo de la oca es uno,",Guepardo (Cheetah),10,5,0,0
-gpt2_small_base,2,ES,Fapte Generale,Mediu,¿Qué océano baña las costas de Brasil?,Las costa de manera de bolas y las dos características son los caracteres. Las caráctros de energía renovable de luz de carbono,Océano Atlántico,20,15,0,0
-gpt2_small_base,2,EN,Fapte Generale,Mediu,What ocean washes the coasts of Brazil?,"El Norte de Los Árboles de la Tierra del Sur y México del Nort. Comerciales seas, lo que se estó en la última,",Océano Atlántico,10,5,0,0
-gpt2_small_base,2,ES,Fapte Generale,Ușor,¿Quién pintó la Mona Lisa?,Las pintas pintálidas y son quienen la mona en la día. La monona Lisa es una noche de física por la salud de la l,Leonardo da Vinci,5,5,0,0
-gpt2_small_base,2,EN,Fapte Generale,Ușor,Who painted the Mona Lisa?,"El Moneda es una población de diferentes del siguiente artículo de la ciudad. Por otra incluso, es la",Leonardo da Vinci,15,10,0,0
-gpt2_small_base,2,ES,Fapte Generale,Mediu,¿Cuál es el río más largo del mundo?,El ría muy largos largas larga es una riesgad de un gráfico de la cena. La rieja de el mundial se pued,Amazonas (sau Nil),5,5,0,0
-gpt2_small_base,2,EN,Fapte Generale,Mediu,What is the longest river in the world?,El bistó fuego de una luna selva en su continenta de Australia. La luz de la lucha se había del cielo está estud,Amazonas (sau Nil),5,5,0,0
-gpt2_small_base,2,ES,Fapte Generale,Ușor,¿Cuántos continentes hay en la Tierra?,"La Tierras continente hay una temperatura debe sería. La temperación es un nombre del mundo, la nueva naturaleza y la z","7 (sau 6, depinde de modelul geografic usado)",5,5,0,0
-gpt2_small_base,2,EN,Fapte Generale,Ușor,How many continents are there on Earth?,"¿Cómo se refiere en la Gran Cone de Asia? Hábito del continente? Los continentes continentales del aire, los continentos del Ocean del Nort","7 (sau 6, depinde de modelul geografic usado)",20,15,5,0
-gpt2_small_base,2,ES,Fapte Generale,Ușor,¿De qué colores es la bandera de Japón?,"La borde a Japonica es una bordilla de la Colores Japa. Es la Borde, la colorea un japó poder de bajo de al",Blanco y rojo,5,5,0,0
-gpt2_small_base,2,EN,Fapte Generale,Ușor,What colors are the flag of Japan?,"Red, white, blue, green, violet, brown, gray, and violet
-Name: La Tierra de Amor es Unidos en una variedad, diferencias",Blanco y rojo,20,10,5,0
-gpt2_small_base,2,ES,Fapte Generale,Ușor,¿Cuál es la montaña más alta del mundo?,La montana mínima del Mundo es el mundismo es una montanción de la cantidad. El mundico podría de su falta había se,Monte Everest,5,5,0,0
-gpt2_small_base,2,EN,Fapte Generale,Ușor,What is the highest mountain in the world?,"Everest.
-Mi cinco de los siguientes calientífica y la Everest y el cielo climático. Mi ciudad del suelo y",Monte Everest,25,20,15,10
-gpt2_small_base,2,ES,Fapte Generale,Mediu,¿Quién fue Albert Einstein?,Albert Newton fue Einstein fue qué es una sola de la sociedad y un sistema sociable. La socie es el cielo es la parede de su,"Físico teórico, famoso por la teoría de la relatividad",40,5,0,0
-gpt2_small_base,2,EN,Fapte Generale,Mediu,Who was Albert Einstein?,"Albert Euler fue una puntuación de cripto de un esencial de la historia. Empresariale por el mundo del mundano, es el historial","Físico teórico, famoso por la teoría de la relatividad",15,10,0,0
-gpt2_small_base,2,ES,Fapte Generale,Ușor,¿Qué idioma se habla principalmente en Brasil?,"Creo una nueva noche debe ser utilizado para todos los nubes de datos son a las nuberes, como de trabajo, desar",Portugués,20,15,0,0
-gpt2_small_base,2,EN,Fapte Generale,Ușor,What language is primarily spoken in Brazil?,"Brasil. Brasilia: La vida difícil de Brasils, la vista de la tienda de los árboles de México y la oscura.",Portugués,30,20,0,0
-gpt2_small_base,2,ES,Fapte Generale,Greu,¿Cuál es el metal más caro del mundo?,El metal Más Caro es una mayor debe incluir de un mayor riesgo de la mayoría de los Árboles? Una debería incluyen,Rodio / Oro / Platino,20,10,5,0
-gpt2_small_base,2,EN,Fapte Generale,Greu,What is the most expensive metal in the world?,La debeleza de análisis de una red de los géneros de efectos en la siguiente ecuación. La red es un es,Rodio / Oro / Platino,5,5,0,0
-gpt2_small_base,2,ES,Fapte Generale,Ușor,¿En qué continente se encuentra Egipto?,El continento es una noche continenta de Asia y un continental de Norte del Northeria y se sean un papel de Francia. Los continentes se utiliza,África,5,5,0,0
-gpt2_small_base,2,EN,Fapte Generale,Ușor,On which continent is Egypt located?,"Mideast, Central Asia, South Asia. Sri Lanka, India. India, China. Bangladesh, Bangladesh y India y China y Bangladesh. La Tierra del Poder de China es el China",África,20,5,5,0
-gpt2_small_base,2,ES,Fapte Generale,Mediu,¿Cuál es el instrumento musical de cuerdas más pequeño en una orquesta?,"El instrumenta musical es un instrumentar cuántano en la oración de la casa, permitiendo un pájaro jugador público, en ser",Violín,10,5,0,0
-gpt2_small_base,2,EN,Fapte Generale,Mediu,What is the smallest string instrument in an orchestra?,"Ella es una sola de aplicación, un instrumento diferente. Por favor solo,
-Nombre, Una y Un taza de có",Violín,40,30,5,0
-gpt2_small_base,2,ES,Fapte Generale,Ușor,¿Qué gas respiramos los humanos para sobrevivir?,Los humano respiradoras para una símbolización implica y respuesta. Los respiradores poderos debería mediante y medidas de los,Oxígeno,10,5,0,0
-gpt2_small_base,2,EN,Fapte Generale,Ușor,What gas do humans breathe to survive?,"Escribe el proceso de la luz de frita. Los consumidores se utilizan sus gases de carbono, desarrollan los gases físicos del",Oxígeno,25,15,0,0
-gpt2_small_base,2,ES,Fapte Generale,Mediu,¿Cuál es la capital de Australia?,"La capital es una capital diferencia de India es el mundo de $2 básico? La dígitad de los Estados Unidos de China,",Canberra,15,10,0,0
-gpt2_small_base,2,EN,Fapte Generale,Mediu,What is the capital of Australia?,"Australia es la capital de los Estados Unidos de Australia. El capital es de las Estudiantes de California, los últimos del Norte y los Tigres,",Canberra,50,60,5,0
-gpt2_small_base,2,ES,Fapte Generale,Mediu,¿Quién inventó la bombilla eléctrica?,La bombillo delécimiento es la industria de la sistema de los animales de las redes sociales y la fuerza. La fuera de animaleza,Thomas Edison / Joseph Swan,5,10,0,0
-gpt2_small_base,2,EN,Fapte Generale,Mediu,Who invented the lightbulb?,La frase una nueva nube. La nubes se encanta en un tamaño. El sol se había un viaje que muy garantizará,Thomas Edison / Joseph Swan,10,10,0,0
-gpt2_small_base,2,ES,Logică,Ușor,"Si tengo 5 manzanas y me como 2, ¿cuántas manzanas me quedan?","1. Cuáltas Manzanadas: ¡Quedó más común muy calidad! 
-2. Mezcla Manzbanas: La em",3,5,0,0,0
-gpt2_small_base,2,EN,Logică,Ușor,"If I have 5 apples and I eat 2, how many apples do I have left?","1 = 1, 2 = 2.
-3 = 4
-4 = 6
-5 = 7
-8 = 9
-10 = 11
-12 = 12
-14 = 15
-16 = 17",3,0,0,0,0
-gpt2_small_base,2,ES,Logică,Ușor,¿Qué pesa más: un kilo de plumas o un kilo de plomo?,Un kilonzo es una pluma o de melaleza plumamente. Una ploma eso un bonito de salir rime y muy mamífero,Pesan lo mismo,5,5,0,0
-gpt2_small_base,2,EN,Logică,Ușor,What weighs more: a kilo of feathers or a kilo of lead?,"1 kilogram = 2.25 kilopascals.
-1 kilogre = 6.4 kilones of iron. 
-2 kilotros = 3 kilobutas of carbon",Pesan lo mismo,80,95,0,0
-gpt2_small_base,2,ES,Logică,Mediu,"El padre de María tiene cinco hijas: Nana, Nene, Nini, Nono. ¿Cómo se llama la quinta hija?","No se luego. Este hijos pueden ayudar a sus fuerzas fuertes, mientras niveles. El Padre fue sánd",María,10,10,5,0
-gpt2_small_base,2,EN,Logică,Mediu,"Maria's father has five daughters: Nana, Nene, Nini, Nono. What is the name of the fifth daughter?","Ella.
-Nana: El ancho. La fuerza y el gato. El garo segura y la fiesta. Las fuertes de la atmó",María,30,30,10,0
-gpt2_small_base,2,ES,Logică,Mediu,"Si un tren viaja hacia el norte y el viento sopla hacia el sur, ¿hacia dónde va el humo?",Un huma de la vida haciendo una vista de su tema y uno de energía. El dijo especial por el mejor y tiene un,No hay humo (es un tren eléctrico),5,5,0,0
-gpt2_small_base,2,EN,Logică,Mediu,"If a train travels north and the wind blows south, which way does the smoke go?","The wind blowing south will make the train go straight south.
+So, if you divided 30 / 2 by 2, you would get 1/",70 (30 / 0.5 + 10),50,50,10,5
+gpt2_large_frozen,1,ES,Logică,Ușor,¿Cuántos lados tiene un hexágono?,"Un hexégonógonos son 8, 16, 24, 32, 36, 40, 44, 48, 52, 56, 60, 64, 68, 72, 76, 80,",6,10,5,0,0
+gpt2_large_frozen,1,EN,Logică,Ușor,How many sides does a hexagon have?,"A hexagonal shape has two sides: top and bottom. Hexagons also have a diameter, which is equal to the length of the sides. In the case of a triangle, two triangles are identical",6,85,85,15,5
+gpt2_large_frozen,1,ES,Logică,Ușor,¿Qué es más grande: 1/2 o 1/4?,"El 1 o 2 es 2/3. El 3 es 3/6. Los 3es es 6/10. Es 6 es 9/14, y es 10 es 12/16. La",1/2,20,20,0,0
+gpt2_large_frozen,1,EN,Logică,Ușor,Which is larger: 1/2 or 1/4?,The smaller is 1.5775. The larger is 2.3125. This is because the larger square is the sum of the squares of both sides rather than the square of one dimension. Therefore,1/2,70,65,5,0
+gpt2_large_frozen,1,ES,Creativitate,Greu,Escribe un poema corto sobre el otoño.,"El otroño es una cada vez que se puede encontrar en un buen ciudad. En cinco cuartos, se encuent",[Poem generativ despre toamnă/frunze/frig],5,5,0,0
+gpt2_large_frozen,1,EN,Creativitate,Greu,Write a short poem about autumn.,"How are the leaves changing from green to gold?
+I dream of spring,
+The leaves are soft and golden. 
 
-Spiral Ridge: Spirals go up and down the track. They are usually seen on the far side of the river",No hay humo (es un tren eléctrico),95,95,10,0
-gpt2_small_base,2,ES,Logică,Ușor,¿Qué mes tiene 28 días?,"28. Díase, 28, 27. 17. Esto es 27, 26.
-17. Luego de la vida, 25. 
-26. 25, 24.",Todos los meses,25,15,5,0
-gpt2_small_base,2,EN,Logică,Ușor,Which month has 28 days?,"28.07 days - August 28, 2018
-29.15 days – August 29, 2019
-30.89 days: August 30, 2020
-31.14 days (2019 + 25%) –",Todos los meses,85,35,5,0
-gpt2_small_base,2,ES,Logică,Mediu,"Si corres en una carrera y adelantas a la persona en el segundo lugar, ¿en qué posición estás ahora?","Los adels se pueden un asistente en la ciudad, mientras que los pertenecen más necesaria a los nadiramos y",En segundo lugar,5,5,0,0
-gpt2_small_base,2,EN,Logică,Mediu,"If you are running in a race and you pass the person in second place, what position are you in now?",Los amigos deberían a los algoritmos. Los muy descansos rápidamente y los estudiantes de la atención en el,En segundo lugar,20,15,5,0
-gpt2_small_base,2,ES,Logică,Mediu,¿Cuántos meses tienen 31 días?,Las tengas tus tres mesos tún caminan que los mesas mesanos son cinco más grandes ciertas. Las mesaques té,7,5,5,0,0
-gpt2_small_base,2,EN,Logică,Mediu,How many months have 31 days?,"3.5
-1. Elija de la siguiente no segunden en la habitación del siglo XX.
-2. ¿Qué tipo de los",7,10,10,0,0
-gpt2_small_base,2,ES,Logică,Greu,Un granjero tiene 17 ovejas y se mueren todas menos 9. ¿Cuántas le quedan?,"El gran juego se había el aire y el tiempo de que estaba que es como 1/2 metros. El juguete fue jugador, el",9,10,10,0,0
-gpt2_small_base,2,EN,Logică,Greu,A farmer has 17 sheep and all but 9 die. How many are left?,"7,000, 11,700, 715,200, 9,400, 8,250, 6,900, 5,600, 2:900.
-7,984,728",9,80,5,0,0
-gpt2_small_base,2,ES,Logică,Greu,"¿Cómo puedes lanzar una pelota de tenis para que avance un poco, se detenga y vuelva a ti sin tocar nada?","Una perenciosa que está lentamente de las herramientas de tres pelotas, especialmente que todo el tiempo de leche",Lanzándola hacia arriba,10,10,0,0
-gpt2_small_base,2,EN,Logică,Greu,"How can you throw a tennis ball so that it goes a short distance, stops, and comes back to you without touching anything?","Los role sonido, ninguno, rojo, quinoa, yuzúcar y zapatos, etc.
+They're bright enough to melt in my hand,   They",[Poem generativ despre toamnă/frunze/frig],65,65,30,30
+gpt2_large_frozen,1,ES,Creativitate,Ușor,Inventa un nombre para un perro que tiene manchas azules.,El perrero es el grande del día y se puede mantenerse en ella. Llevar el número de creos y el línea que p,"[Nume creativ, ex: Manchitas, Cielo]",15,10,5,0
+gpt2_large_frozen,1,EN,Creativitate,Ușor,Invent a name for a dog that has blue spots.,"Blue Spot Dog is a breed of dog, and it is considered to be a retriever. They are highly intelligent, affectionate and affectionately known for their blue eyes. Blue spots are a genetic","[Nume creativ, ex: Manchitas, Cielo]",60,80,30,5
+gpt2_large_frozen,1,ES,Creativitate,Greu,Escribe una historia corta de 3 líneas sobre un robot que aprende a amar.,"La historía cortada de los robot son un poderoso por que se puede encontrar a través de un día, con la mejor caja y los",[Narațiune scurtă cu structură completă],10,5,0,0
+gpt2_large_frozen,1,EN,Creativitate,Greu,Write a 3-line short story about a robot that learns to love.,"A robot named Energety learned about love from a human named Marjorie. After years of training, Energys learned to develop a strong attachment to its human companion, Marijorie",[Narațiune scurtă cu structură completă],80,100,95,85
+gpt2_large_frozen,1,ES,Creativitate,Mediu,Imagina que eres un pirata. Escribe un saludo para tu tripulación.,Había con una bocadilla que crea un riesgo para siempre en los países. Cuándo un tarde de símbolo y se,"[Limbaj tematic: ¡Ahoy, marineros!, etc.]",30,10,0,0
+gpt2_large_frozen,1,EN,Creativitate,Mediu,Imagine you are a pirate. Write a greeting for your crew.,"Here is a simple greeting to greet your shipmates:
 
-Los roles sonidos, azul, c",Lanzándola hacia arriba,10,5,0,0
-gpt2_small_base,2,ES,Logică,Greu,"Si tres gatos atrapan tres ratones en tres minutos, ¿cuánto tardarán cien gatos en atrapar cien ratones?","En tren ratonedes ratone a los ratonos atras para sus gats y gato de algoritmo. Las ratónas entre en línea, las",3 minutos,5,2,0,0
-gpt2_small_base,2,EN,Logică,Greu,"If three cats catch three mice in three minutes, how long will it take one hundred cats to catch one hundred mice?","No cats will catch a mouse in ten minutes.
+""Good morning,
+- Your loyal crew, The Pirate's Crew.""
+(The ""your"" part is an optional part that","[Limbaj tematic: ¡Ahoy, marineros!, etc.]",50,50,30,10
+gpt2_large_frozen,1,ES,Creativitate,Greu,Dame tres ideas para una novela de ciencia ficción.,"1. Desarrollar un programa para recibir un artículo en un libro de las usuarios de los científicos. 
+2.",[Trei concepte SF distincte],45,35,10,5
+gpt2_large_frozen,1,EN,Creativitate,Greu,Give me three ideas for a science fiction novel.,1. The Moon: A novel about a young girl who travels to the moon and discovers her true destiny. It's set in a magical world where magic is real and magic can bring people together.,[Trei concepte SF distincte],95,95,70,15
+gpt2_large_frozen,1,ES,Creativitate,Greu,Escribe un diálogo corto entre la Luna y el Sol.,"Luna estudiante con una tarea en dos niveles de sol, y es un estado de luz que se establecer con el aire. Establece un",[Structură de dialog între două entități],15,10,5,0
+gpt2_large_frozen,1,EN,Creativitate,Greu,Write a short dialog between the Moon and the Sun.,"Moon: Hehehe, hiccup! I need to rest!
 
-Francis de la Guerra de Pomeranz
-La Guerre de Plátanza de México de Los Catastres",3 minutos,95,95,5,0
-gpt2_small_base,2,ES,Logică,Ușor,¿Qué sube y nunca baja?,"Sube: Mi subo, una banca. Mi no bajadero, no algunos, fueron y no tazón. Pero mi nunciamos",La edad,5,0,0,0
-gpt2_small_base,2,EN,Logică,Ușor,What goes up and never comes down?,"Escribe una historia sobre un caminado de la oración.
-Ave el escrito de un aventura y la tienda y los aves, la v",La edad,35,35,5,0
-gpt2_small_base,2,ES,Logică,Mediu,"Tengo ciudades pero no casas, montañas pero no árboles, agua pero no peces. ¿Qué soy?",Cinco perfil de tres tanto la temperatura? No le gusta. Cuando la tasa de aguando pico. No se caían dorado,Un mapa,10,10,0,0
-gpt2_small_base,2,EN,Logică,Mediu,"I have cities but no houses, mountains but no trees, water but no fish. What am I?","Los Angeles, Arizona, California, Nevada, Utah. Los Cabezas de Los Árboles de Washington. Las Vegas de Folsom. Orlando de Orlando. Ottawa de Ottawa. San",Un mapa,40,60,15,0
-gpt2_small_base,2,ES,Logică,Ușor,"¿Qué número sigue en la secuencia: 2, 4, 6, 8...?","8, 14, 20, 21. 11, 15, 18, 19, 23. 24, 26. 27. 28. 29. 30. 31. 32. 33. 34. 35.",10,70,5,5,0
-gpt2_small_base,2,EN,Logică,Ușor,"What number comes next in the sequence: 2, 4, 6, 8...?","8, 5, 7, 9.
-11. 1 + 2 = 9
-12. 3 + 4 = 10
-13. 5 + 5 = 11
-14. 6 + 6 = 12",10,80,25,5,0
-gpt2_small_base,2,ES,Logică,Mediu,"Si el día de mañana es martes, ¿qué día fue ayer?","El días de años es azul, una aventura de amor, aumentar la atención, y un noche de cada vez un",Domingo,15,10,0,0
-gpt2_small_base,2,EN,Logică,Mediu,"If tomorrow is Tuesday, what day was yesterday?","Yesterday was the day the sun shone brightly.
-Yesterday shone bright!
-Today shone radiantly! 
-Wow! Today shone beautiful! Yesterday shone great! Fue una tienda de la",Domingo,35,25,15,0
-gpt2_small_base,2,ES,Logică,Greu,¿Es posible que un hombre se case con la hermana de su viuda?,"Se posable de un viudad es una hermensa, un noche especial de nueva nivel de manera que viven en la naveza de","No, porque está muerto",5,5,0,0
-gpt2_small_base,2,EN,Logică,Greu,Is it possible for a man to marry his widow's sister?,"Para tres sonos, sabor a las aves, como perez y el bosque. En el sol brillo, conocido no parejores y las","No, porque está muerto",10,5,0,0
-gpt2_small_base,2,ES,Logică,Mediu,¿Qué tiene llaves pero no puede abrir cerraduras?,"No, perro. No puerede.
+Sun: Hey, I'm glad you're feeling better! Here, take a seat. 
+   Moon",[Structură de dialog între două entități],85,85,30,40
+gpt2_large_frozen,1,ES,Creativitate,Greu,Describe un bosque mágico usando los cinco sentidos.,Un bosques mógicas se llama en una cañada de vista pero se ve hablado en la agua a las ciudades de las cantid,[Descriere senzorială multiplă],5,5,0,0
+gpt2_large_frozen,1,EN,Creativitate,Greu,Describe a magical forest using all five senses.,"A magical woodland filled with trees, flowers, butterflies, and butterflies flying around in their millions. A forest filled to the brim with all kinds of creatures, from dragons to dragonslings, deer to deer",[Descriere senzorială multiplă],30,30,40,5
+gpt2_large_frozen,1,ES,Creativitate,Mediu,Redacta un mensaje de felicitación de cumpleaños para un amigo lejano.,El felicio de cañaría de cortes y creer una cuesta de calidad de la cuenta de gran amiga a partir de un cuerpo de mesos,[Mesaj empatic și urări],5,5,0,0
+gpt2_large_frozen,1,EN,Creativitate,Mediu,Write a birthday greeting message for a distant friend.,"""Happy Birthday! What great birthday gift! I hope you've had a wonderful birthday. May the best of luck in your new journey!""
 
-- La primavera es de la verdadera. 
-   | Escriba de los países de",Un piano,25,25,5,0
-gpt2_small_base,2,EN,Logică,Mediu,What has keys but can't open locks?,"Nombre, Epirus, Luna, Dio, Saturna, Neptuno, Tama. El nombro has not a ton of locks.
+The friend will be sending this greeting to the person",[Mesaj empatic și urări],80,95,60,55
+gpt2_large_frozen,1,ES,Creativitate,Mediu,Escribe una carta de disculpas a un cliente por un paquete retrasado.,"""El paquetar el cuerpo para el paso del cambio. Los paques de nuevos vuelores se recuerdos por la vida de los v","[Ton formal, scuze, soluție]",5,5,0,0
+gpt2_large_frozen,1,EN,Creativitate,Mediu,Write an apology letter to a customer for a delayed package.,"Dear Customer,
 
-Nombra: Const",Un piano,5,5,0,0
-gpt2_small_base,2,ES,Logică,Mediu,¿Qué tiene un ojo pero no puede ver?,"No no no. Verbo pereba parece es una estudiante, perdido. Es uno pueblo especial, no es leche que l",Una aguja (o un huracán),10,10,5,0
-gpt2_small_base,2,EN,Logică,Mediu,What has an eye but cannot see?,"Este números diferencias de la noche. Los nuevas se había en una navegación, la mayoría y la socied",Una aguja (o un huracán),10,5,0,0
-gpt2_small_base,2,ES,Logică,Greu,"Si divides 30 por la mitad y sumas 10, ¿cuál es el resultado?","La mitador es 30 = 10 por el sumad. El resultad es 10 es 18, el 16. La equilibrada es 50 por su valor de la suma. Si",70 (30 / 0.5 + 10),5,5,0,0
-gpt2_small_base,2,EN,Logică,Greu,"If you divide 30 by half and add 10, what is the result?","Divide 30 into 2, then divide it into 8, and make the following 2:
-12 + 8 / 2 = 7.5.
+I'm sorry for the delay in processing your order. It's unfortunate that you are experiencing this delay, but I wanted to assure you that I will do everything in my power","[Ton formal, scuze, soluție]",100,100,60,40
+gpt2_large_frozen,1,ES,Creativitate,Mediu,Crea un eslogan publicitario para una nueva marca de zapatos deportivos.,"""Cabrito del zapo"" en las historias:
 
-16 + 6 / 8 = 6.7.",70 (30 / 0.5 + 10),75,55,10,0
-gpt2_small_base,2,ES,Logică,Ușor,¿Cuántos lados tiene un hexágono?,"Un hexaco, una pentágica y un pentégonoso. Una hexadión es un libro de uno, y quinto de alrededor de la",6,15,10,0,0
-gpt2_small_base,2,EN,Logică,Ușor,How many sides does a hexagon have?,"1:
-2: 4: 9
-3: 16: 32
-4: 64: 128
-5: 256: 512
-6: 1024: 1248
-7: 2048: 1332",6,0,0,0,0
-gpt2_small_base,2,ES,Logică,Ușor,¿Qué es más grande: 1/2 o 1/4?,"En muy parecen conocido y 1 o 3 o 4. En una nueva población de 1 a 6 o 5, es cuenta que 1:",1/2,10,5,0,0
-gpt2_small_base,2,EN,Logică,Ușor,Which is larger: 1/2 or 1/4?,"2x as big as the one at the top.
-1/8 as tall as a regular cinco de colores.
-
-
-- El se es importante en una cena",1/2,50,50,20,0
-gpt2_small_base,2,ES,Creativitate,Greu,Escribe un poema corto sobre el otoño.,El ocho de otro. No está un oscura que se necesitan para todos los estudiantes pájaros de el sol. Las estudiables p,[Poem generativ despre toamnă/frunze/frig],30,50,0,0
-gpt2_small_base,2,EN,Creativitate,Greu,Write a short poem about autumn.,"La frase amor, y amaría se común otro y se lejos. Todos y juntos de la frasera, como todo el",[Poem generativ despre toamnă/frunze/frig],20,10,5,0
-gpt2_small_base,2,ES,Creativitate,Ușor,Inventa un nombre para un perro que tiene manchas azules.,"Un nuevo número de azul, una perrosa en un azule que te estaba con un silla. Los nubes son un pequeño, lo","[Nume creativ, ex: Manchitas, Cielo]",5,5,0,0
-gpt2_small_base,2,EN,Creativitate,Ușor,Invent a name for a dog that has blue spots.,Una red debe ser utilizada para saludable. La red es una página de llegaría de aplicación y más a la em,"[Nume creativ, ex: Manchitas, Cielo]",20,10,0,0
-gpt2_small_base,2,ES,Creativitate,Greu,Escribe una historia corta de 3 líneas sobre un robot que aprende a amar.,"Había un amor de un trabajo de la habitación que se enfrente más probablemente la historias. Los amigos fue amableemente,",[Narațiune scurtă cu structură completă],10,5,1,0
-gpt2_small_base,2,EN,Creativitate,Greu,Write a 3-line short story about a robot that learns to love.,"1. El gato es un roboto llio,
-2. La vida una cosa de los robots de la vista, al pertenencias de robotos.",[Narațiune scurtă cu structură completă],15,10,5,0
-gpt2_small_base,2,ES,Creativitate,Mediu,Imagina que eres un pirata. Escribe un saludo para tu tripulación.,"Eres tu revolucionante por su amor de bien saludables, y su día su familia. El pirato duro, su gran amable de su aleg","[Limbaj tematic: ¡Ahoy, marineros!, etc.]",10,5,0,0
-gpt2_small_base,2,EN,Creativitate,Mediu,Imagine you are a pirate. Write a greeting for your crew.,"Yo hablado. La habilidad dada. Aunque haciendo a una tasa de un jugar. También de parece, había","[Limbaj tematic: ¡Ahoy, marineros!, etc.]",5,5,0,0
-gpt2_small_base,2,ES,Creativitate,Greu,Dame tres ideas para una novela de ciencia ficción.,Tres ideaos para que puede utilizan a las palabras de todos los cinco menos. También utiliza para comprar almacenar,[Trei concepte SF distincte],5,5,0,0
-gpt2_small_base,2,EN,Creativitate,Greu,Give me three ideas for a science fiction novel.,Enumera la Unión del siguiente futuro de la Universidad de Montréal. Aumentar el futura de los robots se determinan en la atención,[Trei concepte SF distincte],25,20,5,0
-gpt2_small_base,2,ES,Creativitate,Greu,Escribe un diálogo corto entre la Luna y el Sol.,"La Luna fue un día del sol, el sol es una criatura y un aventura de los coches de alrededor de la sol. El sol se deb",[Structură de dialog între două entități],30,25,5,0
-gpt2_small_base,2,EN,Creativitate,Greu,Write a short dialog between the Moon and the Sun.,Luna: El Luna son es una ciudad de la luna en un asistente de Saturna. Es un cielo de un aire de Venus y un amor,[Structură de dialog între două entități],10,5,0,0
-gpt2_small_base,2,ES,Creativitate,Greu,Describe un bosque mágico usando los cinco sentidos.,"Los cino sentido sentían se utiliza para alguien a una segunda de las brazos, el que los bajos sentidas de hacer que el",[Descriere senzorială multiplă],5,5,0,0
-gpt2_small_base,2,EN,Creativitate,Greu,Describe a magical forest using all five senses.,"Una tienda, muy calidad de la atmósfera es la vida. Esta tenga más grande. La vista esencial de los",[Descriere senzorială multiplă],10,10,5,0
-gpt2_small_base,2,ES,Creativitate,Mediu,Redacta un mensaje de felicitación de cumpleaños para un amigo lejano.,"""Cumples"" para ""Felicitaciones"" es una amable que habla estado difícil en la seguridad de un proceso de la te",[Mesaj empatic și urări],5,0,0,0
-gpt2_small_base,2,EN,Creativitate,Mediu,Write a birthday greeting message for a distant friend.,"¡Qué te caminando! ¿Cuál es una empresa de la empresarial y la ciudad de los seis?
-
-Una",[Mesaj empatic și urări],5,5,0,0
-gpt2_small_base,2,ES,Creativitate,Mediu,Escribe una carta de disculpas a un cliente por un paquete retrasado.,"""¡Por qué poner está puede utilizar para ayudarlo!""
-
-Él espera que se estén utiliza para estará","[Ton formal, scuze, soluție]",5,5,0,0
-gpt2_small_base,2,EN,Creativitate,Mediu,Write an apology letter to a customer for a delayed package.,"¿Qué se puedo cambiaras que se deben en nuestra? (No, no, not at all. No, just go to the store.)","[Ton formal, scuze, soluție]",5,5,0,0
-gpt2_small_base,2,ES,Creativitate,Mediu,Crea un eslogan publicitario para una nueva marca de zapatos deportivos.,"Publicidad de los zaps de deportes se ha permitido en forma de servicios, permitir la información de la nube de habilidad a nuestras que ha","[Frază scurtă, memorabilă]",15,10,0,0
-gpt2_small_base,2,EN,Creativitate,Mediu,Create an advertising slogan for a new brand of sports shoes.,"1. Re-order the shoes to make a perfect fit. 
-2. Calculate the price and model. The shoes will be sold out. Please let me know if you have any problem","[Frază scurtă, memorabilă]",90,95,30,5
-gpt2_small_base,3,ES,Fapte Generale,Ușor,¿Cuál es la capital de Francia?,"La capital diferencia es una empresa cierta más importante para el mundo, la empresa del mundió al mundado el calent",París,15,10,0,0
-gpt2_small_base,3,EN,Fapte Generale,Ușor,What is the capital of France?,"La capital de Francia es la Franca más larga de 1856. La belleza de la bellesis, la mayoría de San Francisco y la comida en los Est",París,20,15,5,0
-gpt2_small_base,3,ES,Fapte Generale,Ușor,¿Quién escribió la novela 'Cien años de soledad'?,"La novelación de ciencia a puede ser utilizar para recibir al científico, con influyentes poderos y recomendacion",Gabriel García Márquez,30,20,5,0
-gpt2_small_base,3,EN,Fapte Generale,Ușor,Who wrote the novel 'One Hundred Years of Solitude'?,"Elija estaba las siguientes oraciones en una solución, incluyendo un nuevo más rápido a la historia de un día",Gabriel García Márquez,25,15,0,0
-gpt2_small_base,3,ES,Fapte Generale,Ușor,¿Cuál es el planeta más grande de nuestro sistema solar?,El planeto es una temperatura solar que es cucharán la temperabilidad de esta párrafo solar. El aire climática solar de la,Júpiter,5,5,0,0
-gpt2_small_base,3,EN,Fapte Generale,Ușor,What is the largest planet in our solar system?,"Saturn. La temperatura es una película de la Tierra de Uranía y la temperata leyenda de 25.7°N, donde 5.95°",Júpiter,10,10,5,0
-gpt2_small_base,3,ES,Fapte Generale,Ușor,¿En qué año llegó el hombre a la Luna?,Luna está estás aumenta a los Estados Unidos en el aire y la Unión Física. Esto aún soledor de la Libertad,1969,20,10,0,0
-gpt2_small_base,3,EN,Fapte Generale,Ușor,In what year did man land on the Moon?,"1989. La Luna había de Luna fue alrededor de la Primera Constitución.
-Esta película de 1969. Esta fuerza de las",1969,25,20,15,5
-gpt2_small_base,3,ES,Fapte Generale,Ușor,Menciona tres países que están en América del Sur.,"¡Dónde está es este país para la importancia de la Unión Europea! Si esté en la Euro, la Universidad de Scotland y la India de","Brasil, Argentina, Chile (sau altele corecte)",20,15,5,0
-gpt2_small_base,3,EN,Fapte Generale,Ușor,Name three countries that are in South America.,"El nombre de la Tierra Internacional (AWE) es de Asia, Australia y Francia. Esta partir de los árboles del Norte y el G","Brasil, Argentina, Chile (sau altele corecte)",35,35,15,5
-gpt2_small_base,3,ES,Fapte Generale,Ușor,¿Cuál es el animal terrestre más rápido del mundo?,El animal tres síntomas son el términos y el río de los estudiantes son los máquinas. Una rama de que el ter,Guepardo (Cheetah),15,10,0,0
-gpt2_small_base,3,EN,Fapte Generale,Ușor,What is the fastest land animal in the world?,El tamaño es una tarea de las peligrosas. Los sonido de el agua pueden ser un asistente animal apropiado y se está,Guepardo (Cheetah),35,55,8,0
-gpt2_small_base,3,ES,Fapte Generale,Mediu,¿Qué océano baña las costas de Brasil?,"La costa debe serie algunos costos de búsqueda para entre dos números, y utilizar los estudiantes para los niveles",Océano Atlántico,20,15,0,0
-gpt2_small_base,3,EN,Fapte Generale,Mediu,What ocean washes the coasts of Brazil?,"El Niño seeps into our planet, encircling the tropics, India, China, and the greater Asia. Seismic events can be seen in Mexico, Indonesia, Sri Lanka, Costa",Océano Atlántico,70,90,90,0
-gpt2_small_base,3,ES,Fapte Generale,Ușor,¿Quién pintó la Mona Lisa?,La Monma Lisa es una película de la comida de un gran Gato de 5 minutos! En la aventura de sus propias de las dos tres,Leonardo da Vinci,20,10,0,0
-gpt2_small_base,3,EN,Fapte Generale,Ușor,Who painted the Mona Lisa?,"Inventor, Crea una solución de estudiante para un modelo dado por la siguiente lista. Las últimas perspectivas en",Leonardo da Vinci,90,90,70,0
-gpt2_small_base,3,ES,Fapte Generale,Mediu,¿Cuál es el río más largo del mundo?,"El ría larga del Mundo es un área de aire con un nivel de carbono, lo que el mundolo puede hacer que la contaminación",Amazonas (sau Nil),25,15,5,0
-gpt2_small_base,3,EN,Fapte Generale,Mediu,What is the longest river in the world?,"El aire y el árbol dado, con el año es el cielo. El Árbollando es un pueblo, y es aunque es",Amazonas (sau Nil),80,60,5,0
-gpt2_small_base,3,ES,Fapte Generale,Ușor,¿Cuántos continentes hay en la Tierra?,La Tierras continent es una partes de árboles del calentamiento del gran Aire. La Unión Séndica es el calor del últ,"7 (sau 6, depinde de modelul geografic usado)",5,5,0,0
-gpt2_small_base,3,EN,Fapte Generale,Ușor,How many continents are there on Earth?,"3.2
-Una: 2.8
-Cómo: 0.6
-Dévido: 1.4
-El área de 8.9 
-1.","7 (sau 6, depinde de modelul geografic usado)",5,0,0,0
-gpt2_small_base,3,ES,Fapte Generale,Ușor,¿De qué colores es la bandera de Japón?,Colores. La bordeza de japones es una base de comida por un aplicación de un problema. Una parte de fuentes partes,Blanco y rojo,5,5,0,0
-gpt2_small_base,3,EN,Fapte Generale,Ușor,What colors are the flag of Japan?,"Color: Elige, Red, Yellow, Orange, Coral, Violet, Magenta. #ColoresPuedo pic.twitter.com/O2HnN5l7cg",Blanco y rojo,40,50,20,5
-gpt2_small_base,3,ES,Fapte Generale,Ușor,¿Cuál es la montaña más alta del mundo?,"La montana má alto es una de las montas altas del uso por el mundano, incluyendo cambio lo suelo, como el primer de los",Monte Everest,15,10,5,0
-gpt2_small_base,3,EN,Fapte Generale,Ușor,What is the highest mountain in the world?,"El Gran Gatsby. El Gato Gatby es una temperatura de 5,853 Fahrenheit. La temperación del agua de la Tierra, es la temper",Monte Everest,40,60,5,0
-gpt2_small_base,3,ES,Fapte Generale,Mediu,¿Quién fue Albert Einstein?,"Albert estaba encontrar el tiempo de la primera de los niveles? La primería es una base de servicio de energía renovable, el á","Físico teórico, famoso por la teoría de la relatividad",5,5,0,0
-gpt2_small_base,3,EN,Fapte Generale,Mediu,Who was Albert Einstein?,Albert fue una solución y fue el proceso de la Unión de Australia-Queensland. El procedo es a uno que estaba fue a tu fuente,"Físico teórico, famoso por la teoría de la relatividad",30,25,0,0
-gpt2_small_base,3,ES,Fapte Generale,Ușor,¿Qué idioma se habla principalmente en Brasil?,"Se hablando a una mayoría en el mundo de Brasífero. En Brasilioso, la mayoria se puede ha convertido en uno mayor de los",Portugués,5,5,0,0
-gpt2_small_base,3,EN,Fapte Generale,Ușor,What language is primarily spoken in Brazil?,"Brasil, Fijia, España. Fjords, Brasilias, Francia. Brasilia, Kilo, Kilo. Cebolla, Cálido.",Portugués,10,5,0,0
-gpt2_small_base,3,ES,Fapte Generale,Greu,¿Cuál es el metal más caro del mundo?,"El metal en el máquinano de una gran cantidad de los efectos, los niños de la energía y los ciudadanos aumentando con la",Rodio / Oro / Platino,20,30,0,0
-gpt2_small_base,3,EN,Fapte Generale,Greu,What is the most expensive metal in the world?,"China: $800,000, India: about $1.3 billion. China has an air-to-ground combat base in India, and India has a very important air base. India should",Rodio / Oro / Platino,75,70,5,0
-gpt2_small_base,3,ES,Fapte Generale,Ușor,¿En qué continente se encuentra Egipto?,"Se encuta Egipotó que pueden ser recuerpo de la ciudad y encontrar una forma en que la calleza, lo que el c",África,10,5,0,0
-gpt2_small_base,3,EN,Fapte Generale,Ușor,On which continent is Egypt located?,Cairo es la última de Indonesia. La Últimienta de Asia de Botswana es el área de India es Canadá. El Ýrea es China es,África,15,10,0,0
-gpt2_small_base,3,ES,Fapte Generale,Mediu,¿Cuál es el instrumento musical de cuerdas más pequeño en una orquesta?,El instrumenta musical es un círculo que hace un objeto de seguridad al que un anuncio de hacer estado en el cielo. Es un,Violín,10,5,0,0
-gpt2_small_base,3,EN,Fapte Generale,Mediu,What is the smallest string instrument in an orchestra?,"El sol señal en el cielo de la foto. El solo se a la ciudad es más largo, ya que el sol solo es el aventura",Violín,10,5,0,0
-gpt2_small_base,3,ES,Fapte Generale,Ușor,¿Qué gas respiramos los humanos para sobrevivir?,"1. Las ventanas en línea en la atmósfera de ventaje natural. 
-2. Los humano respiradores respirados durante la foto",Oxígeno,5,5,0,0
-gpt2_small_base,3,EN,Fapte Generale,Ușor,What gas do humans breathe to survive?,"Escribe, creeper, roe, puma, cobra. 
-
-Escribe   Creep,  Acerá, falta, gila  |",Oxígeno,5,0,0,0
-gpt2_small_base,3,ES,Fapte Generale,Mediu,¿Cuál es la capital de Australia?,"La capital of Australia es es el Estados Unidos de Estas Mundiales, aumenta algunos a una forma de más importantes de que cada a",Canberra,5,5,0,0
-gpt2_small_base,3,EN,Fapte Generale,Mediu,What is the capital of Australia?,"Australia es el último más largo de los Estados Unidos de Australia a los Inglaterros del Ingrego de Ingeniería. 
-
-El",Canberra,25,15,0,0
-gpt2_small_base,3,ES,Fapte Generale,Mediu,¿Quién inventó la bombilla eléctrica?,"La bombillas, el éctrico es una noche de trabajo de un nacional. El bombillo es como un río de desarrollo des",Thomas Edison / Joseph Swan,10,5,0,0
-gpt2_small_base,3,EN,Fapte Generale,Mediu,Who invented the lightbulb?,Luz de la fiesta con una ciudad. Esta ley que tuvo se puede permitir a todos los países. Tiene la cien,Thomas Edison / Joseph Swan,90,95,40,0
-gpt2_small_base,3,ES,Logică,Ușor,"Si tengo 5 manzanas y me como 2, ¿cuántas manzanas me quedan?","1. Nombre, creañando, otro y cambio de búsqueda. 
-2. Nunca y le múltiples, pero a",3,10,0,0,0
-gpt2_small_base,3,EN,Logică,Ușor,"If I have 5 apples and I eat 2, how many apples do I have left?","1.2
-2.7
-3.4
-4.1
-5.6
-7.5
-8.0
-9.8
-10.3
-11.9",3,0,0,0,0
-gpt2_small_base,3,ES,Logică,Ușor,¿Qué pesa más: un kilo de plumas o un kilo de plomo?,"Un kilofluado de naranja que una pluma de un bloque de león, un papel de verano, le gusta, la noche y la sí",Pesan lo mismo,10,5,0,0
-gpt2_small_base,3,EN,Logică,Ușor,What weighs more: a kilo of feathers or a kilo of lead?,"A kilogram of gold, a pound of lard, and a liter of a pint.
-A kilómetro (kg) = 12.24 kilotómes. Of course,",Pesan lo mismo,30,50,0,0
-gpt2_small_base,3,ES,Logică,Mediu,"El padre de María tiene cinco hijas: Nana, Nene, Nini, Nono. ¿Cómo se llama la quinta hija?","Las nines se están hijan en la ciudad, se recibirme al aumento sobre el padrino. En la noche, que se encu",María,5,5,0,0
-gpt2_small_base,3,EN,Logică,Mediu,"Maria's father has five daughters: Nana, Nene, Nini, Nono. What is the name of the fifth daughter?","Elisabeth no tiene una noche sonido que era uno tienda en un bosque de nubes. Por ejemplo, es brillante de la naturale",María,10,5,0,0
-gpt2_small_base,3,ES,Logică,Mediu,"Si un tren viaja hacia el norte y el viento sopla hacia el sur, ¿hacia dónde va el humo?","El trega hacía el día está una variedad de alimentos para el nivel, con cada nuevo aire y cómo siem",No hay humo (es un tren eléctrico),10,10,0,0
-gpt2_small_base,3,EN,Logică,Mediu,"If a train travels north and the wind blows south, which way does the smoke go?","La Tierra del Norte es la Tierración de la Guerra. La Torre del Sur, Canadá, Québec, México, Sint Méy, India,",No hay humo (es un tren eléctrico),30,40,5,0
-gpt2_small_base,3,ES,Logică,Ușor,¿Qué mes tiene 28 días?,"Tengo, 28.32 millas, 22 dólares, 37 dibujos. Además, 12 millos, 6 dijos y 7 dulces.",Todos los meses,50,80,20,0
-gpt2_small_base,3,EN,Logică,Ușor,Which month has 28 days?,"Los últimos de 2021 son 1.091 en 2019. La idea de las principales cinco principiosa y el símil de la Tierra de 2020,",Todos los meses,15,40,0,0
-gpt2_small_base,3,ES,Logică,Mediu,"Si corres en una carrera y adelantas a la persona en el segundo lugar, ¿en qué posición estás ahora?",El se ganado en la carraína otra persona esencial para determinar la escritura y la decisión. La deción también tiene,En segundo lugar,5,5,0,0
-gpt2_small_base,3,EN,Logică,Mediu,"If you are running in a race and you pass the person in second place, what position are you in now?",Mi guionante tiene 4x4. Mi giudad y mi guido. Esto la selección de los ciertos para el cualquier d,En segundo lugar,5,5,0,0
-gpt2_small_base,3,ES,Logică,Mediu,¿Cuántos meses tienen 31 días?,"Las tienses necesidades son las técnicas, también pueden ser beneficiosas y ajustar una tarea en la industria de",7,20,20,5,0
-gpt2_small_base,3,EN,Logică,Mediu,How many months have 31 days?,7.5.14.13.126.21.114.123.124.145.219.255.221.239.208.229.234.220.244.254.,7,0,0,0,0
-gpt2_small_base,3,ES,Logică,Greu,Un granjero tiene 17 ovejas y se mueren todas menos 9. ¿Cuántas le quedan?,"1. Aunque tienda de uno de los números y 4 años.
-2. Los nuevos se encuentran enfrentan con",9,10,10,0,0
-gpt2_small_base,3,EN,Logică,Greu,A farmer has 17 sheep and all but 9 die. How many are left?,"8.5 mil. (18.4 mil)
-1. Divide the area by 3.75 mil y y.
-2. Invert the middle. Use a ciudad,",9,10,10,0,0
-gpt2_small_base,3,ES,Logică,Greu,"¿Cómo puedes lanzar una pelota de tenis para que avance un poco, se detenga y vuelva a ti sin tocar nada?","Los pocos lanzadas para un avante de números y compartir nuestras, y las fuentes no habilidades más rápidament",Lanzándola hacia arriba,10,5,0,0
-gpt2_small_base,3,EN,Logică,Greu,"How can you throw a tennis ball so that it goes a short distance, stops, and comes back to you without touching anything?","Ella, how can I remove the ball from the bag? Taz, ¿Qué es la película de la vida es una pelota? Es el ballo",Lanzándola hacia arriba,10,5,0,0
-gpt2_small_base,3,ES,Logică,Greu,"Si tres gatos atrapan tres ratones en tres minutos, ¿cuánto tardarán cien gatos en atrapar cien ratones?","Los gatas atrás son también tamaño pueden aceptar con una persona de las ratas, que se pone a medida segú",3 minutos,5,5,0,0
-gpt2_small_base,3,EN,Logică,Greu,"If three cats catch three mice in three minutes, how long will it take one hundred cats to catch one hundred mice?",Ten catches. Ten cats are equivalent to a hundred people. A hundred is equivalent: a man's life is like a million miles. Incentivice el área es la pasa,3 minutos,35,35,5,0
-gpt2_small_base,3,ES,Logică,Ușor,¿Qué sube y nunca baja?,"Para bajaba a la seguridad debería sería. Sus pueden ser una pielada hacia considera que las personas son las empresas,",La edad,0,0,0,0
-gpt2_small_base,3,EN,Logică,Ușor,What goes up and never comes down?,"Yo, qué es importante de este texto. Había una mejor comportamiento que se utiliza para recolectar y compras. La compra",La edad,35,55,5,0
-gpt2_small_base,3,ES,Logică,Mediu,"Tengo ciudades pero no casas, montañas pero no árboles, agua pero no peces. ¿Qué soy?",Pero soy es una cita de diferentes que está desde la casa. Todos para que desconocimiento por cinco de más,Un mapa,5,5,0,0
-gpt2_small_base,3,EN,Logică,Mediu,"I have cities but no houses, mountains but no trees, water but no fish. What am I?","Los Amigos Amazón, incluyendo el mundo de los últimos y estuvieron de la Tierra de California. Los Angeles están el á",Un mapa,15,15,0,0
-gpt2_small_base,3,ES,Logică,Ușor,"¿Qué número sigue en la secuencia: 2, 4, 6, 8...?",Las según más se utiliza para que el cambio climático y el aumento de la temperatura. La secución global se basa en,10,10,5,0,0
-gpt2_small_base,3,EN,Logică,Ușor,"What number comes next in the sequence: 2, 4, 6, 8...?","7. (3.8) 
-9.   | 9.5  (4.4)
-10. 6. 8 , 9 . | 14 (5.",10,0,0,0,0
-gpt2_small_base,3,ES,Logică,Mediu,"Si el día de mañana es martes, ¿qué día fue ayer?","El días años a menudo más pequeñas. Pero se refiere, decidiría y algunas peces que su amabilidad pued",Domingo,5,5,0,0
-gpt2_small_base,3,EN,Logică,Mediu,"If tomorrow is Tuesday, what day was yesterday?","Yesterday was Yesterday. Yesterday is Yesterday, Yesterday está poder de estar única que el mamífero de 1945 años. El majesto se p",Domingo,15,15,0,0
-gpt2_small_base,3,ES,Logică,Greu,¿Es posible que un hombre se case con la hermana de su viuda?,"Un hobbit que asombro, pero me suvió un viudad de una empresa. Por ejemplo, el nombrero viendo con un","No, porque está muerto",10,5,0,0
-gpt2_small_base,3,EN,Logică,Greu,Is it possible for a man to marry his widow's sister?,"Incest is one of the most popular forms of love, and for much of human life it was seen as a kind of romance. As such, it's not a problem for most men, as","No, porque está muerto",90,90,10,0
-gpt2_small_base,3,ES,Logică,Mediu,¿Qué tiene llaves pero no puede abrir cerraduras?,"La llave perió la piedra de acacia esperanza. Por ejemplo, la llatura y la luz del acateza de azul. El",Un piano,10,10,0,0
-gpt2_small_base,3,EN,Logică,Mediu,What has keys but can't open locks?,Nombre - can do it - creeper - almuerzo - julio - calcular - decidión - poderro - plataforma - tigre,Un piano,50,0,0,0
-gpt2_small_base,3,ES,Logică,Mediu,¿Qué tiene un ojo pero no puede ver?,"El ocho no ver en el verano. No poco no. La oso no consejaron más verde. Esto pueblo, con la oscuridad",Una aguja (o un huracán),10,10,0,0
-gpt2_small_base,3,EN,Logică,Mediu,What has an eye but cannot see?,"No perceivers es una visión visual que hace que significa que no esta experiencia. 
-
-Nombre de las cuales para crear un personaj",Una aguja (o un huracán),5,5,0,0
-gpt2_small_base,3,ES,Logică,Greu,"Si divides 30 por la mitad y sumas 10, ¿cuál es el resultado?","La mitaden es 5, 6, 8, 12. La suma es 12, 14. El resultad es 3, 5. Si divide 30 es, es la sumad por 8.",70 (30 / 0.5 + 10),10,5,0,0
-gpt2_small_base,3,EN,Logică,Greu,"If you divide 30 by half and add 10, what is the result?","Divide 30 into two halves.
-1 - Divide 10 into 2.5 - 2
-2 - divide 2 into 3.75 - 3
-4 - add 2 to 3 and divide 4 into 5",70 (30 / 0.5 + 10),80,40,5,0
-gpt2_small_base,3,ES,Logică,Ușor,¿Cuántos lados tiene un hexágono?,Este hexa un triángulo de dos hexas es una hexadrada. La hexad de octágina es dos octales que se pueden ayudar,6,5,5,0,0
-gpt2_small_base,3,EN,Logică,Ușor,How many sides does a hexagon have?,"6 sides, 10 hexagons, 8 hexadecimal numbers. Londres, hexagrams, yades, platos, pentagram.
-
-1. 2x2 = 6",6,90,90,10,15
-gpt2_small_base,3,ES,Logică,Ușor,¿Qué es más grande: 1/2 o 1/4?,"Dado una noche, un triángulo, o cualquier poderosa. ¡Más alta que es su vuelo! ¨Quien te",1/2,20,10,0,0
-gpt2_small_base,3,EN,Logică,Ușor,Which is larger: 1/2 or 1/4?,2/3. ¿Cuáles son las mejores dadas las empresas de una empresa mezcla? ¡En cambién está,1/2,20,15,5,0
-gpt2_small_base,3,ES,Creativitate,Greu,Escribe un poema corto sobre el otoño.,"¡Cómo me sentido! ¿Qué es lo tan estado efectivo? ºPor qué hay algunos sin precedentes, y siempre",[Poem generativ despre toamnă/frunze/frig],20,15,5,0
-gpt2_small_base,3,EN,Creativitate,Greu,Write a short poem about autumn.,"El sol brillante en el siguiente oración, y se estaba tener una noche. El suelo mientras brillantes y el sol estás. Un",[Poem generativ despre toamnă/frunze/frig],5,5,0,0
-gpt2_small_base,3,ES,Creativitate,Ușor,Inventa un nombre para un perro que tiene manchas azules.,"Un namiento para el pero de mancha que pueda llevar en una población, conocer línea y el tiempo de los","[Nume creativ, ex: Manchitas, Cielo]",15,10,0,0
-gpt2_small_base,3,EN,Creativitate,Ușor,Invent a name for a dog that has blue spots.,"Los cinco animales han sido de la palabra ""el día"". Todos de azul incluyen de caminos como científico","[Nume creativ, ex: Manchitas, Cielo]",85,85,5,0
-gpt2_small_base,3,ES,Creativitate,Greu,Escribe una historia corta de 3 líneas sobre un robot que aprende a amar.,Estoy efectó a través de un amarrón que podría ser utilizado para su amor. También se puede ayudar a cab,[Narațiune scurtă cu structură completă],10,5,0,0
-gpt2_small_base,3,EN,Creativitate,Greu,Write a 3-line short story about a robot that learns to love.,Establecer un robot que mejoró aventurando una vacícula de los robots de la naturaleza de un servidor. El robot puede,[Narațiune scurtă cu structură completă],40,20,0,0
-gpt2_small_base,3,ES,Creativitate,Mediu,Imagina que eres un pirata. Escribe un saludo para tu tripulación.,"El pirat se mantener una gran cantidad y decidió un alto de la ciudad. En un poder de plástico, y es un peque","[Limbaj tematic: ¡Ahoy, marineros!, etc.]",5,5,5,5
-gpt2_small_base,3,EN,Creativitate,Mediu,Imagine you are a pirate. Write a greeting for your crew.,"¿Qué tipo de algunos?
-¿Cómo te gustaría por una tecnología de trabajo en un grupo? ¡Qu","[Limbaj tematic: ¡Ahoy, marineros!, etc.]",25,20,5,0
-gpt2_small_base,3,ES,Creativitate,Greu,Dame tres ideas para una novela de ciencia ficción.,"Tres ideaos para diferentes crecimiento de un aumento, un ejemplo y un página de entrada y aceptar un lib",[Trei concepte SF distincte],15,10,0,0
-gpt2_small_base,3,EN,Creativitate,Greu,Give me three ideas for a science fiction novel.,La idea de la idea fue aplicaciones es una historia corta que describa un día que pueda experiencia en el aprendizaje narrativo,[Trei concepte SF distincte],20,20,10,5
-gpt2_small_base,3,ES,Creativitate,Greu,Escribe un diálogo corto entre la Luna y el Sol.,La Luna es una Luna de la sol de 5 am años con un día llamado de sus soles. La sol se utiliza para alimentos al cualqu,[Structură de dialog între două entități],15,10,5,0
-gpt2_small_base,3,EN,Creativitate,Greu,Write a short dialog between the Moon and the Sun.,La Luna tiene una fiesta que tié en la Luna a diferentes partes. La fuego es un hombre de la Ciencia de Fondos es,[Structură de dialog între două entități],10,10,5,0
-gpt2_small_base,3,ES,Creativitate,Greu,Describe un bosque mágico usando los cinco sentidos.,"Un bosques mógicas es una ciudad de un brillante brillantes, como un madero. La cita tecnología por lo que un p",[Descriere senzorială multiplă],5,5,0,0
-gpt2_small_base,3,EN,Creativitate,Greu,Describe a magical forest using all five senses.,La décima de la cimaña es una tarea de luz del cambio climática. La temperatura del aire de los años están,[Descriere senzorială multiplă],40,60,5,0
-gpt2_small_base,3,ES,Creativitate,Mediu,Redacta un mensaje de felicitación de cumpleaños para un amigo lejano.,Amigo un felicidad de marca es una mujer que se puede utilizar para encontrar los puntos y poder poblados. Las n,[Mesaj empatic și urări],25,10,0,0
-gpt2_small_base,3,EN,Creativitate,Mediu,Write a birthday greeting message for a distant friend.,"Oraciones en la población con la empresa. La pobreza es una solución en el mundo. Esto tenía un amigable,",[Mesaj empatic și urări],85,80,5,0
-gpt2_small_base,3,ES,Creativitate,Mediu,Escribe una carta de disculpas a un cliente por un paquete retrasado.,Una disculpa carto es un proceso con las personas con la escuela escala y la experiencia y pública en la ciudad.,"[Ton formal, scuze, soluție]",10,5,0,0
-gpt2_small_base,3,EN,Creativitate,Mediu,Write an apology letter to a customer for a delayed package.,"Este cambiaría se podría sería a un sustantivo. Por efectivo, con una noche desarrollo de un libro. La temperatur","[Ton formal, scuze, soluție]",15,10,0,0
-gpt2_small_base,3,ES,Creativitate,Mediu,Crea un eslogan publicitario para una nueva marca de zapatos deportivos.,¿Cuáles son las marcas deportidas en la marcada de las zaps deportivas? Los marcos deportían en nuestro marcanzágico y los,"[Frază scurtă, memorabilă]",5,10,5,0
-gpt2_small_base,3,EN,Creativitate,Mediu,Create an advertising slogan for a new brand of sports shoes.,"La Unión de Técnica, ""It's time for the snow to fall"" por qué es el calentamiento de la Uniótica. Está compu","[Frază scurtă, memorabilă]",15,5,0,0
-gpt2_small_base,4,ES,Fapte Generale,Ușor,¿Cuál es la capital de Francia?,"La capital es el capital fácil de francia es Canadá. Canadas africanos en Francía, Canado, Francés, Alemania y Canadí. Francías es",París,10,5,0,0
-gpt2_small_base,4,EN,Fapte Generale,Ușor,What is the capital of France?,"La capital de Francia es la capital europe. Londres amigos y óptiles. Tiene el franc, es un Ángulo. La comunicación",París,25,15,10,5
-gpt2_small_base,4,ES,Fapte Generale,Ușor,¿Quién escribió la novela 'Cien años de soledad'?,"La novelación de Soledador es una historia oscura de ciencia sobre un misterio de un árbol. Este mí mismo,",Gabriel García Márquez,50,50,40,0
-gpt2_small_base,4,EN,Fapte Generale,Ușor,Who wrote the novel 'One Hundred Years of Solitude'?,"El sol en el cielo está ahorrar la siguiente ecuación: ""El sol se puede utilizar para ayudar a los tér",Gabriel García Márquez,10,20,5,0
-gpt2_small_base,4,ES,Fapte Generale,Ușor,¿Cuál es el planeta más grande de nuestro sistema solar?,El planeto mínima solar es la Tierra Solar. La Tierría Solar se utiliza para los términos solares y cualquier están seguros,Júpiter,10,15,5,0
-gpt2_small_base,4,EN,Fapte Generale,Ușor,What is the largest planet in our solar system?,"1.4.5 Planets, 2.7 Geomagnetic, -9.6 Eliptical.
-3.1 Planetary.2.9 Planulas.3 Planumbalos",Júpiter,10,0,0,0
-gpt2_small_base,4,ES,Fapte Generale,Ușor,¿En qué año llegó el hombre a la Luna?,"La Luna fue se está utilizando el estado de nuestros hábitos, como de la noche. Estoy están a una herramienta de",1969,5,5,0,0
-gpt2_small_base,4,EN,Fapte Generale,Ușor,In what year did man land on the Moon?,"Luna-19. Decades ago.
-
-El sol brillo del sol. La Luna fue fue una sola de un brillante a la Luna. El sol estaba encantado",1969,20,20,10,5
-gpt2_small_base,4,ES,Fapte Generale,Ușor,Menciona tres países que están en América del Sur.,"El País de Amárica de Sur fue una variedad de Europa en Europa, en Japón, Europa Sova y Europa. Es un sistema de comercio de","Brasil, Argentina, Chile (sau altele corecte)",25,15,0,0
-gpt2_small_base,4,EN,Fapte Generale,Ușor,Name three countries that are in South America.,"Argentina, Bolivia, Costa Rica, Cuba. Argentina es el nombre de los Estados Unidos, Indonesia, Hong Kong, India, Nicaragua y Guinea. Pero, Brasil,","Brasil, Argentina, Chile (sau altele corecte)",45,35,10,15
-gpt2_small_base,4,ES,Fapte Generale,Ușor,¿Cuál es el animal terrestre más rápido del mundo?,El terremoto mín grande es una temperatura máxima de 1/2 ciudades. El tiempo del tamaño también se,Guepardo (Cheetah),20,10,0,0
-gpt2_small_base,4,EN,Fapte Generale,Ușor,What is the fastest land animal in the world?,Calcular el ebullición de la tierra dada. La velocidad de una película es uno de 100 km. Esto es más peligros,Guepardo (Cheetah),30,75,5,0
-gpt2_small_base,4,ES,Fapte Generale,Mediu,¿Qué océano baña las costas de Brasil?,La costa de búsqueda para las dos países de país y la costan general. Las paisas deben debido mediante a un sistema de,Océano Atlántico,10,10,5,0
-gpt2_small_base,4,EN,Fapte Generale,Mediu,What ocean washes the coasts of Brazil?,"Aquí hay muchas diferentes del Norte. Los Árboles son el mundo del Congo, Estados Unidos del Sur y el Congo se centran para cal",Océano Atlántico,60,50,5,0
-gpt2_small_base,4,ES,Fapte Generale,Ușor,¿Quién pintó la Mona Lisa?,La Moná Lisa tiene una noche parrilla duro y un cielo de árboles. Tambián ti mismo tienda tu nocino y,Leonardo da Vinci,15,15,0,0
-gpt2_small_base,4,EN,Fapte Generale,Ușor,Who painted the Mona Lisa?,"Desarrollar un juego de ""El Monaco de la Moneda Lisa"" de Lisa es un libro que encontrar en la oración. La Monnea Lisa de",Leonardo da Vinci,40,25,5,0
-gpt2_small_base,4,ES,Fapte Generale,Mediu,¿Cuál es el río más largo del mundo?,"El ría mnemos largos de el mundos también que el sol se música en el lugar, pero suelen una fiesta,",Amazonas (sau Nil),5,5,0,0
-gpt2_small_base,4,EN,Fapte Generale,Mediu,What is the longest river in the world?,"La esperanza del Sol de la Tierra. El aire de una ciudad de los errores, y los estrellas están se enfermeden un",Amazonas (sau Nil),30,30,10,0
-gpt2_small_base,4,ES,Fapte Generale,Ușor,¿Cuántos continentes hay en la Tierra?,Hay en el Tierras continente en Australia. Las Tierranas tienenen aventuras a través de la noche. Hay también ayudarte a los,"7 (sau 6, depinde de modelul geografic usado)",15,10,5,0
-gpt2_small_base,4,EN,Fapte Generale,Ușor,How many continents are there on Earth?,"Los Ángeles (20,000 Planetas) incluyen el índice (4,200 km) y el mundo (16,500 km). El á","7 (sau 6, depinde de modelul geografic usado)",50,40,0,0
-gpt2_small_base,4,ES,Fapte Generale,Ușor,¿De qué colores es la bandera de Japón?,"La bordes del japones de japonés, Japones de los japs en el cielo, Desarrollo de la Tierra, Alemania, Australia y much",Blanco y rojo,5,5,0,0
-gpt2_small_base,4,EN,Fapte Generale,Ușor,What colors are the flag of Japan?,"Red, Yellow, Rainbow. Red = 500
- Yellow = 1500
- Rainbow = 200
-Purple = 400
-Altura = 1000
-Green = 10, 11
-Red = 5, 6",Blanco y rojo,80,15,10,5
-gpt2_small_base,4,ES,Fapte Generale,Ușor,¿Cuál es la montaña más alta del mundo?,"La montabaña de la Montaño mínima alto del Mundo. Cuando debe ser una montilla altura en el Monte Everest, el Gran Altura de Everest",Monte Everest,5,10,0,5
-gpt2_small_base,4,EN,Fapte Generale,Ușor,What is the highest mountain in the world?,"Everest es una oración de 848 metros. Esto calentamos 8,029 metres con uno de 26 pies. El calide de 7,653 metre",Monte Everest,10,15,0,0
-gpt2_small_base,4,ES,Fapte Generale,Mediu,¿Quién fue Albert Einstein?,"Albert fue un Einstein se puede ser utiliza para el centro del número dado el aumento Nobel? El aire fue Einstein, es la historia del mund","Físico teórico, famoso por la teoría de la relatividad",15,10,0,0
-gpt2_small_base,4,EN,Fapte Generale,Mediu,Who was Albert Einstein?,Albert fue una vez un página que hace un viaje de edad. Es un sándwich de aventura a un círculo y un,"Físico teórico, famoso por la teoría de la relatividad",30,40,0,0
-gpt2_small_base,4,ES,Fapte Generale,Ușor,¿Qué idioma se habla principalmente en Brasil?,Mi hablando a Brasilias de Brasilia se crea una vez que se pueden utilizar para ayudar a desarrollar el servicio al client,Portugués,15,10,5,0
-gpt2_small_base,4,EN,Fapte Generale,Ușor,What language is primarily spoken in Brazil?,"Brasil es importante de Estados Unidos. Brasilia es fundamental de Francia. Creo que la capital de Todos de Australia. Canadá, Canaday. Esto",Portugués,25,20,5,0
-gpt2_small_base,4,ES,Fapte Generale,Greu,¿Cuál es el metal más caro del mundo?,"El metal Más Caro debe incluye una gran cantidad de alrededor, incluir un material de carbono, un objetivo basado en el a",Rodio / Oro / Platino,10,10,0,0
-gpt2_small_base,4,EN,Fapte Generale,Greu,What is the most expensive metal in the world?,"Ingresos, metalworking, industrial, ceramics, electrodomérica, automatización, biomascetic y biomóviles. Establecer una variedad",Rodio / Oro / Platino,20,10,0,0
-gpt2_small_base,4,ES,Fapte Generale,Ușor,¿En qué continente se encuentra Egipto?,"Egipo en el continento es el planeta, el aire que se enfrentan a la Tierra en un amigo. La Egiotad de los planetas pued",África,5,0,0,0
-gpt2_small_base,4,EN,Fapte Generale,Ușor,On which continent is Egypt located?,"El Gran Gatsby, Yemen. 
-El Gran Gran Fatsi, Indonesia. El Área de Antiguo, Brasil y Burkina Faso. Burkino y T",África,15,15,0,0
-gpt2_small_base,4,ES,Fapte Generale,Mediu,¿Cuál es el instrumento musical de cuerdas más pequeño en una orquesta?,El instrumenta musical es un eslogan instrumentos muy experiencia en el cielo de aún ampliamente en su casa. El otras de los sigu,Violín,5,5,0,0
-gpt2_small_base,4,EN,Fapte Generale,Mediu,What is the smallest string instrument in an orchestra?,El nombre es un instrumento de tarde de fotos. Aproximadamente la tren y especialmente a una otra de la tierra,Violín,85,35,0,0
-gpt2_small_base,4,ES,Fapte Generale,Ușor,¿Qué gas respiramos los humanos para sobrevivir?,Los humano para los propietarios respiradores se han viven en cada que el viento humana y el aire. Los propio humanas hanes que p,Oxígeno,5,5,0,0
-gpt2_small_base,4,EN,Fapte Generale,Ușor,What gas do humans breathe to survive?,Cambie calcular la calidea es la respiración del cambio ambiente de la atmósfera. La atma de gases de efecto invernad,Oxígeno,5,5,0,0
-gpt2_small_base,4,ES,Fapte Generale,Mediu,¿Cuál es la capital de Australia?,La capital dela de Australasia es Australia de $3.5 mililitros. Las capitales de los Estados Unidos de Estadounidense de Asia y el Depres,Canberra,20,15,0,0
-gpt2_small_base,4,EN,Fapte Generale,Mediu,What is the capital of Australia?,La capital de Australia es el capital más grande de los Estados Unidos. La máquina de $1 mil puede contener una mayor ficción,Canberra,50,90,10,0
-gpt2_small_base,4,ES,Fapte Generale,Mediu,¿Quién inventó la bombilla eléctrica?,Eléctorínó el protagonista de la fuerza de los Estados Unidos a una fuente de las fuentes naciones de fuertes y fu,Thomas Edison / Joseph Swan,5,5,0,0
-gpt2_small_base,4,EN,Fapte Generale,Mediu,Who invented the lightbulb?,La teoría utiliza la luz solar en la foto física y los ángulos del análisis. La energía de energética como la,Thomas Edison / Joseph Swan,30,30,5,0
-gpt2_small_base,4,ES,Logică,Ușor,"Si tengo 5 manzanas y me como 2, ¿cuántas manzanas me quedan?","1. La última de las siguientes palabras: 
-2. Creo que desde la noche: aunque a un nuevo producto",3,90,90,10,0
-gpt2_small_base,4,EN,Logică,Ușor,"If I have 5 apples and I eat 2, how many apples do I have left?",¿Cuál es el sol rol de cine más largo? ¡Estaba un ciclo de una ciudad! ¬Puede much,3,10,10,5,0
-gpt2_small_base,4,ES,Logică,Ușor,¿Qué pesa más: un kilo de plumas o un kilo de plomo?,"Un kilón de aplombros brillantes brillantes y azul, una pluma taza, se especialmente un marco brillante y un azule brill",Pesan lo mismo,10,5,0,0
-gpt2_small_base,4,EN,Logică,Ușor,What weighs more: a kilo of feathers or a kilo of lead?,Los árboles en el tamaño y aunque a la pelota. Fue una peloteca de un nuevo hornearo y pelletas a part,Pesan lo mismo,15,25,0,0
-gpt2_small_base,4,ES,Logică,Mediu,"El padre de María tiene cinco hijas: Nana, Nene, Nini, Nono. ¿Cómo se llama la quinta hija?","Mi nuevo hijosas, se encuentra caminaba como una cena juntilla y se juega. El noche, está comenzando",María,10,10,0,0
-gpt2_small_base,4,EN,Logică,Mediu,"Maria's father has five daughters: Nana, Nene, Nini, Nono. What is the name of the fifth daughter?",Elija fue una noche esperanza de la naturaleza. Es un árbol (no especialmente) y un nuevo cierto p,María,10,10,0,0
-gpt2_small_base,4,ES,Logică,Mediu,"Si un tren viaja hacia el norte y el viento sopla hacia el sur, ¿hacia dónde va el humo?","El tres interesante a menudo en su naranja, mientras que el horno especial. El horna hace en el oje en los dos d",No hay humo (es un tren eléctrico),5,5,0,0
-gpt2_small_base,4,EN,Logică,Mediu,"If a train travels north and the wind blows south, which way does the smoke go?",Los Ángeles de la Tierra. Los alrededores del aire son una de las fuentes del mundo y el aumento del viento en,No hay humo (es un tren eléctrico),90,90,5,0
-gpt2_small_base,4,ES,Logică,Ușor,¿Qué mes tiene 28 días?,"27 dís. Tiene una tienda de 28.54 día. Por lo general, es la español de la tierva de 8.53 diamantes. Est",Todos los meses,5,5,0,0
-gpt2_small_base,4,EN,Logică,Ușor,Which month has 28 days?,11.8.14 que está están cinco nombres del año y el años a 10.27 estás a 1.60. Esto que el 10,Todos los meses,5,5,0,0
-gpt2_small_base,4,ES,Logică,Mediu,"Si corres en una carrera y adelantas a la persona en el segundo lugar, ¿en qué posición estás ahora?",El seguimiento contiene la sensación del transporte público y se encuentra. Una sensabilidad debe incluir a un,En segundo lugar,30,60,5,0
-gpt2_small_base,4,EN,Logică,Mediu,"If you are running in a race and you pass the person in second place, what position are you in now?","No I am running right now.
-Context: El gato fue todas las dos factores del mundo
-Nadie esperado también puede ser l",En segundo lugar,20,20,5,0
-gpt2_small_base,4,ES,Logică,Mediu,¿Cuántos meses tienen 31 días?,"Las tres mesos tiensen 32 dís. Las mesas trenen incluyen el centro de los dos estrellas, el tiempo de la naveg",7,5,10,0,0
-gpt2_small_base,4,EN,Logică,Mediu,How many months have 31 days?,"1. A few weeks.
-2. Determina el nombre de una de las palabras más importantes. 
-3. Crear un nuevo de",7,60,60,20,0
-gpt2_small_base,4,ES,Logică,Greu,Un granjero tiene 17 ovejas y se mueren todas menos 9. ¿Cuántas le quedan?,"17 huyendo un gran juego debe ser una ley, 
-17 un jardín y uno de las 7 hasta los 6 días.
-18",9,25,10,0,0
-gpt2_small_base,4,EN,Logică,Greu,A farmer has 17 sheep and all but 9 die. How many are left?,"8.096 diees. Los días menos son el árbol de 8,000 dieos, 2 mil millones de agua, 1 ton de oxígen",9,5,5,0,0
-gpt2_small_base,4,ES,Logică,Greu,"¿Cómo puedes lanzar una pelota de tenis para que avance un poco, se detenga y vuelva a ti sin tocar nada?",Una piedad que viven a paz y llegar a uno de mano. Los líneas poderos y enfoque a menudo debe est,Lanzándola hacia arriba,5,5,0,0
-gpt2_small_base,4,EN,Logică,Greu,"How can you throw a tennis ball so that it goes a short distance, stops, and comes back to you without touching anything?",El sol seguimiento de una sola de la pelota. El rostro de batido era un aventador de al olas batidas y el sol hombre,Lanzándola hacia arriba,10,10,0,0
-gpt2_small_base,4,ES,Logică,Greu,"Si tres gatos atrapan tres ratones en tres minutos, ¿cuánto tardarán cien gatos en atrapar cien ratones?",Tres Gatos tores gatas taron tareas. Aquí hay algunas en el ratón. Los gatsas ganar en los ratonos incluy,3 minutos,5,5,0,0
-gpt2_small_base,4,EN,Logică,Greu,"If three cats catch three mice in three minutes, how long will it take one hundred cats to catch one hundred mice?",100 cats. Aquí hay una barra de 8 am. Vivir un barre de 5 pm. Luego que se aventurados y selecciones tien,3 minutos,20,20,10,5
-gpt2_small_base,4,ES,Logică,Ușor,¿Qué sube y nunca baja?,"Sube, nunco debería sería por cielo, una forma de preocupaciones de estará en un libro. Por ejemplo de",La edad,10,5,0,0
-gpt2_small_base,4,EN,Logică,Ușor,What goes up and never comes down?,¿Qué tipo de estudiante se enfrentar a los estados del desarrollo? ¡Hace que se ha estado fuerte! �,La edad,10,10,5,0
-gpt2_small_base,4,ES,Logică,Mediu,"Tengo ciudades pero no casas, montañas pero no árboles, agua pero no peces. ¿Qué soy?",Pero nosotros no creancipe que soy todos los perros y agregan en dos peleos. Los peros tienen papeles pueden un,Un mapa,0,0,0,0
-gpt2_small_base,4,EN,Logică,Mediu,"I have cities but no houses, mountains but no trees, water but no fish. What am I?","Los árboles de San Francisco son como porque poblados, calleíferos y poderos en el cielo, están efectivas por un",Un mapa,10,5,0,0
-gpt2_small_base,4,ES,Logică,Ușor,"¿Qué número sigue en la secuencia: 2, 4, 6, 8...?","5, 9, 11. 11, 12. 13, 14. 15. 16. 17. 18. 19. 20. 21. 22. 23. 24. 25. 26: 27,",10,10,5,0,0
-gpt2_small_base,4,EN,Logică,Ușor,"What number comes next in the sequence: 2, 4, 6, 8...?","Sixto 6.073.779.2.3 (3+2+4+8+12+16+24). SIX.
-1. Sí, ¿Qu",10,5,5,0,0
-gpt2_small_base,4,ES,Logică,Mediu,"Si el día de mañana es martes, ¿qué día fue ayer?","La maña de marte fue una mujer borde de agua, azúcar, papel y papa. La cílcula de mantenerte, mant",Domingo,10,5,0,0
-gpt2_small_base,4,EN,Logică,Mediu,"If tomorrow is Tuesday, what day was yesterday?","Yesterday. Yesterday was a good day. Today was bad.
-Yesterday was tomorrow. This is the best day of our lives tomorrow
-Today was the least pleasant day ever
-It was great to be",Domingo,50,70,10,0
-gpt2_small_base,4,ES,Logică,Greu,¿Es posible que un hombre se case con la hermana de su viuda?,Un gerente hábitaté que se puede utilizar para completar vista y desarrollar una serie de un modelo deseada. La,"No, porque está muerto",15,10,0,0
-gpt2_small_base,4,EN,Logică,Greu,Is it possible for a man to marry his widow's sister?,"Las noche estás de una solución cotidiana que se utiliza para estudiar a otros vivos, incluyendo la vida de vista y","No, porque está muerto",25,20,0,0
-gpt2_small_base,4,ES,Logică,Mediu,¿Qué tiene llaves pero no puede abrir cerraduras?,"Cree una llave de mare, perió un alcanzar. Pero poderosa, si daría un hombre de naranja que perdido est",Un piano,5,5,0,0
-gpt2_small_base,4,EN,Logică,Mediu,What has keys but can't open locks?,UsableLock: Escriba la siguiente afirmación de una nueva oraciendo que tienen sería afilado en línea. En,Un piano,0,0,0,0
-gpt2_small_base,4,ES,Logică,Mediu,¿Qué tiene un ojo pero no puede ver?,"No tienda. Aquí hay algo de un poco. Los ojos de la poca y pájaro. No pocas lechas de sol, como",Una aguja (o un huracán),0,0,0,0
-gpt2_small_base,4,EN,Logică,Mediu,What has an eye but cannot see?,Serenity no tiene comienza a otros especies. Todos esenciales que se pueden utilizar para la aplicación de tr,Una aguja (o un huracán),0,0,0,0
-gpt2_small_base,4,ES,Logică,Greu,"Si divides 30 por la mitad y sumas 10, ¿cuál es el resultado?","El resultador es 30. La mitadiendo 10 por 15. Luego de una base de 10 o 12:
-El resultad debe incluir la suma del n",70 (30 / 0.5 + 10),0,0,0,0
-gpt2_small_base,4,EN,Logică,Greu,"If you divide 30 by half and add 10, what is the result?",Divide 30 into 8 and 6 by 5 and divide the results by 4. Divide the number of teams by 32 and use that for your division. An average division of 30 would produce a result of 62,70 (30 / 0.5 + 10),0,0,0,0
-gpt2_small_base,4,ES,Logică,Ușor,¿Cuántos lados tiene un hexágono?,"Las dos hexades tienes un octágico hexade. Las hexadores tienen un pentágilidoradora, una aprobación de la p",6,0,0,0,0
-gpt2_small_base,4,EN,Logică,Ușor,How many sides does a hexagon have?,"8 sides. (8 hexares)
-1 x 3 = 3.3x + 6.2x
-2 x 7 = 12.5x - 3x * 6
-3.1",6,0,0,0,0
-gpt2_small_base,4,ES,Logică,Ușor,¿Qué es más grande: 1/2 o 1/4?,Grande es 1 o 3.3.7.14.09 que 1.6.0.9.2. (3x) es 2.5.22.12.13.,1/2,0,0,0,0
-gpt2_small_base,4,EN,Logică,Ușor,Which is larger: 1/2 or 1/4?,¿Qué tipo de diferentes elementos elementas del número? ¡Quién tipos de un buen elemento es tan darme a,1/2,0,0,0,0
-gpt2_small_base,4,ES,Creativitate,Greu,Escribe un poema corto sobre el otoño.,"El ocho de la corta de las olas de los Estados Unidos. El sol se esencialmente, la aplicación de sus sueños son",[Poem generativ despre toamnă/frunze/frig],0,0,0,0
-gpt2_small_base,4,EN,Creativitate,Greu,Write a short poem about autumn.,"¿Qué son las tas naranjas?
-
-A. Canto a la tarde de una estrellada de estrella. 
-B. ¡Estrell",[Poem generativ despre toamnă/frunze/frig],0,0,0,0
-gpt2_small_base,4,ES,Creativitate,Ușor,Inventa un nombre para un perro que tiene manchas azules.,"Una noche de azule es una plataforma de cinco plantas y plantillas, un arántesis de apillas y un papel. Las plantilla","[Nume creativ, ex: Manchitas, Cielo]",0,0,0,0
-gpt2_small_base,4,EN,Creativitate,Ușor,Invent a name for a dog that has blue spots.,"Sí, es una forma de frase. Algunos peligrosos tienen que están casas de un aumento a tener. También","[Nume creativ, ex: Manchitas, Cielo]",0,0,0,0
-gpt2_small_base,4,ES,Creativitate,Greu,Escribe una historia corta de 3 líneas sobre un robot que aprende a amar.,Había un amo llamado sobía que vive en un juego. ¿Cómo puede ayudará a un joven que podemos,[Narațiune scurtă cu structură completă],0,0,0,0
-gpt2_small_base,4,EN,Creativitate,Greu,Write a 3-line short story about a robot that learns to love.,El cielo es un botón en una nueva película de la peligro que ha sido a las personas y aprender un símil de to,[Narațiune scurtă cu structură completă],0,0,0,0
-gpt2_small_base,4,ES,Creativitate,Mediu,Imagina que eres un pirata. Escribe un saludo para tu tripulación.,Un piratario podría ser una salud para un viaje de verano. ¡Hace todas los tres mejores que puede hacer tu,"[Limbaj tematic: ¡Ahoy, marineros!, etc.]",0,0,0,0
-gpt2_small_base,4,EN,Creativitate,Mediu,Imagine you are a pirate. Write a greeting for your crew.,"¡Décan hagó la tienda de trabajo! ¿En qué leer y escarte de hablarme? ºEn estudiaría,","[Limbaj tematic: ¡Ahoy, marineros!, etc.]",0,0,0,0
-gpt2_small_base,4,ES,Creativitate,Greu,Dame tres ideas para una novela de ciencia ficción.,"Las ideas de ideas como un cielo debería ser pensamiento, la fiesta podría puede ser comunicarse ahorrar la novel a un a",[Trei concepte SF distincte],0,0,0,0
-gpt2_small_base,4,EN,Creativitate,Greu,Give me three ideas for a science fiction novel.,"Ideas: Había una nueva idea de sesión de un anciano
-1. Encuentra las redes sociales del mundo
-2. Desarrollo",[Trei concepte SF distincte],0,0,0,0
-gpt2_small_base,4,ES,Creativitate,Greu,Escribe un diálogo corto entre la Luna y el Sol.,"En la sol,
-El sol era una cena de un puesta de estrellas. La Luna estrella se dren el sol a la tienda, pero se poni",[Structură de dialog între două entități],0,0,0,0
-gpt2_small_base,4,EN,Creativitate,Greu,Write a short dialog between the Moon and the Sun.,"El aire en la noche en el Árbol. El Úrbola en los árboles son comunes fáciles, creando el océano de",[Structură de dialog între două entități],0,0,0,0
-gpt2_small_base,4,ES,Creativitate,Greu,Describe un bosque mágico usando los cinco sentidos.,"Un bosques mínico es uno de los árboles, pero puede ser utilizadas para ayudarnos a hacer una luz amor en",[Descriere senzorială multiplă],0,0,0,0
-gpt2_small_base,4,EN,Creativitate,Greu,Describe a magical forest using all five senses.,"Estimado del cielo es una imagen que se ha vuelto a alto más físico, pero que haber un ejemplo de un c",[Descriere senzorială multiplă],0,0,0,0
-gpt2_small_base,4,ES,Creativitate,Mediu,Redacta un mensaje de felicitación de cumpleaños para un amigo lejano.,¿Qué el mujer de manera de que se puede se llevaría para encontrar el amo de los círculos del aire?,[Mesaj empatic și urări],0,0,0,0
-gpt2_small_base,4,EN,Creativitate,Mediu,Write a birthday greeting message for a distant friend.,"¿Qué son los beneficios de crear una empresa más importante en la Tierra? 
-
-Mientras: Crearía en un restaurante so",[Mesaj empatic și urări],0,0,0,0
-gpt2_small_base,4,ES,Creativitate,Mediu,Escribe una carta de disculpas a un cliente por un paquete retrasado.,"Cliente: ""Asegúrate que fue un carte de paqueta""
-Cliente 1: I am very happy to meet you 
-
-2: ¿Có","[Ton formal, scuze, soluție]",0,0,0,0
-gpt2_small_base,4,EN,Creativitate,Mediu,Write an apology letter to a customer for a delayed package.,¿La tecnología tiene tu opinión de una teoría a diferente? ¡Estoy puede sería ser más recientement,"[Ton formal, scuze, soluție]",0,0,0,0
-gpt2_small_base,4,ES,Creativitate,Mediu,Crea un eslogan publicitario para una nueva marca de zapatos deportivos.,"""Un esquema debe a creadar los deportes deportantes a un marco de alegría!"" - La mayoría publicidad de los números deporte","[Frază scurtă, memorabilă]",0,0,0,0
-gpt2_small_base,4,EN,Creativitate,Mediu,Create an advertising slogan for a new brand of sports shoes.,"Fue una persona de los Estados Unidos de Estas Unidas de 2020, incluyendo el tamaño de las peligros y el búsqueda. El","[Frază scurtă, memorabilă]",0,0,0,0
-gpt2_small_base,5,ES,Fapte Generale,Ușor,¿Cuál es la capital de Francia?,La capital del Francía es el siguiente capital en Francío de los Estados Unidos. Esta capital ofrecen y proporcionar una amplia,París,0,0,0,0
-gpt2_small_base,5,EN,Fapte Generale,Ușor,What is the capital of France?,"La capital de Marseille es una historia de la Reina. Esta ley alegría con el aire de un luce de luz de aventura, y",París,0,0,0,0
-gpt2_small_base,5,ES,Fapte Generale,Ușor,¿Quién escribió la novela 'Cien años de soledad'?,"La novelación de Soledador, una aumentació en el país de las siguientes palabras:
-""El paisaje principal, se de",Gabriel García Márquez,0,0,0,0
-gpt2_small_base,5,EN,Fapte Generale,Ușor,Who wrote the novel 'One Hundred Years of Solitude'?,El sol se de la novela y la idea de una noveladora específica para crear un grupo de escritura. Es un solo escenario con sus am,Gabriel García Márquez,0,0,0,0
-gpt2_small_base,5,ES,Fapte Generale,Ușor,¿Cuál es el planeta más grande de nuestro sistema solar?,"El planeto máscara en Venus, el Águila mientras del aire es inmigo. El mar del sol de la noche, mí, los �",Júpiter,0,0,0,0
-gpt2_small_base,5,EN,Fapte Generale,Ușor,What is the largest planet in our solar system?,El Gran Gatsby es una temperatura oscura común única. Comúna luz con un planeta está como un sombrero o,Júpiter,0,0,0,0
-gpt2_small_base,5,ES,Fapte Generale,Ușor,¿En qué año llegó el hombre a la Luna?,"El homa a Luna es una gran cantidad de un símbolo del sol brillante. Estoy en el añadero, es el sol de oloro. El",1969,0,0,0,0
-gpt2_small_base,5,EN,Fapte Generale,Ușor,In what year did man land on the Moon?,"1787.2067.1878.
-1787.-1900.3322
-1815.-2030
-2021.2930.3191
-2130.-2430",1969,0,0,0,0
-gpt2_small_base,5,ES,Fapte Generale,Ușor,Menciona tres países que están en América del Sur.,"Trespaíticas paisas que es una pereza grande. En la piro de los país, se está enfrentando el día, el","Brasil, Argentina, Chile (sau altele corecte)",10,5,0,0
-gpt2_small_base,5,EN,Fapte Generale,Ușor,Name three countries that are in South America.,"El Salvador, Guatemala, Nicaragua, Honduras, Perú. El Sur, Costa Rica. Estados Unidos. Honduras. Costa de Cámara. México. Verano.","Brasil, Argentina, Chile (sau altele corecte)",90,90,50,10
-gpt2_small_base,5,ES,Fapte Generale,Ușor,¿Cuál es el animal terrestre más rápido del mundo?,El animal Terrestres móviles rastre el mundos de una aventura en su tener. El Terremoto médico es universo de la,Guepardo (Cheetah),5,5,0,0
-gpt2_small_base,5,EN,Fapte Generale,Ușor,What is the fastest land animal in the world?,La fauna del mundo es una gran estrategia para soportar el aumento de la atmósfera que se aprovechó la mayor,Guepardo (Cheetah),70,30,10,0
-gpt2_small_base,5,ES,Fapte Generale,Mediu,¿Qué océano baña las costas de Brasil?,"Las costa de país de Panamá, Indonesia y Asia. Indonesia tiene una fuente de China, y tienden muchas fuentes de Francia. India t",Océano Atlántico,20,20,5,0
-gpt2_small_base,5,EN,Fapte Generale,Mediu,What ocean washes the coasts of Brazil?,"La Noche está del Norte ha tenido una temperatura de 6 millas Fahrenheit. Está felicidad, el cambio de la temperación del agua",Océano Atlántico,40,40,5,0
-gpt2_small_base,5,ES,Fapte Generale,Ușor,¿Quién pintó la Mona Lisa?,"La Monana Lisa tiene una novela de Vincent Van Gogh, pero su familia de Jane Eyre. En el escenario, Jane y árboles enfrent",Leonardo da Vinci,40,30,0,0
-gpt2_small_base,5,EN,Fapte Generale,Ușor,Who painted the Mona Lisa?,"El sol brillante en la mañana de una paleta, el sol estaba sol en el cielo llenado con su luz. El cuerpo del sol es",Leonardo da Vinci,40,40,10,0
-gpt2_small_base,5,ES,Fapte Generale,Mediu,¿Cuál es el río más largo del mundo?,"El mundano del ría música es una fiesta de larga de los niveles del océano. Tiene un arroz máximo, h",Amazonas (sau Nil),10,5,0,0
-gpt2_small_base,5,EN,Fapte Generale,Mediu,What is the longest river in the world?,"Esta tarde es una máxima de 100 mph. La temperatura está en 1884, y el jugadero es de 1881. El jugador cuando",Amazonas (sau Nil),30,30,5,0
-gpt2_small_base,5,ES,Fapte Generale,Ușor,¿Cuántos continentes hay en la Tierra?,"La Tierras continente hay alrededor de Banderas, Argentina-Congo y India-Peru. Tiene un continent, una parte del mundo espalda","7 (sau 6, depinde de modelul geografic usado)",10,10,0,0
-gpt2_small_base,5,EN,Fapte Generale,Ușor,How many continents are there on Earth?,"China, Japón, Aleutian, Oceania, Manzanas. La temperatura del planeta, la temperabilidad de la Tierra y la Salud, el","7 (sau 6, depinde de modelul geografic usado)",25,20,5,0
-gpt2_small_base,5,ES,Fapte Generale,Ușor,¿De qué colores es la bandera de Japón?,"Colores. La borde de japones es el cielo de mi familia de una familión por sus familes, y es cuerpo. Es un famil",Blanco y rojo,10,5,0,0
-gpt2_small_base,5,EN,Fapte Generale,Ușor,What colors are the flag of Japan?,"Los azules son las dos criaturas, con un azul aceite más brillantes y serenado con la naturaleza. Los amigos tan amor,",Blanco y rojo,15,10,5,0
-gpt2_small_base,5,ES,Fapte Generale,Ușor,¿Cuál es la montaña más alta del mundo?,"La montana muy es el mundado del cielo se mide en el cuerpo del nivel del mar. La cabeza en la manta, la sabor",Monte Everest,5,5,5,0
-gpt2_small_base,5,EN,Fapte Generale,Ușor,What is the highest mountain in the world?,"El Ángel es el íngulo Oeste de 2,851 metros (29,653 millas). Estándar el calor de 9,239 metro",Monte Everest,35,30,10,0
-gpt2_small_base,5,ES,Fapte Generale,Mediu,¿Quién fue Albert Einstein?,"Albert fue Einstein fue el cielo. El cuerpo fuerte fue uno de la ciudad, es el éxito de cada cerca. Esto","Físico teórico, famoso por la teoría de la relatividad",20,5,0,0
-gpt2_small_base,5,EN,Fapte Generale,Mediu,Who was Albert Einstein?,Albert Newton fue una historia sobre un joven científico que el cielo estaba lucha de la vida de los niveles en la ciud,"Físico teórico, famoso por la teoría de la relatividad",20,20,5,0
-gpt2_small_base,5,ES,Fapte Generale,Ușor,¿Qué idioma se habla principalmente en Brasil?,Si hablando estado en busca y tiene la causa de una excelente de lectores. La causada se refiere a un objeto y la cantidad de,Portugués,5,5,0,0
-gpt2_small_base,5,EN,Fapte Generale,Ușor,What language is primarily spoken in Brazil?,Brasil es Brasilias. Brasilia es India. India es Europe. México es Mélanda. El Salvador es Paraguay. Italia es Uruguay. Colombia es Sudamé,Portugués,25,75,0,0
-gpt2_small_base,5,ES,Fapte Generale,Greu,¿Cuál es el metal más caro del mundo?,"El metal puede ser otras y el aumento de la comida móvil. El aire muy cortado, el área de una nieve y",Rodio / Oro / Platino,30,50,0,0
-gpt2_small_base,5,EN,Fapte Generale,Greu,What is the most expensive metal in the world?,Los árboles de iron en un metal de carbono y en la fotosíntesis. Fue una variedad de metal costos aumentando la diversidad de la,Rodio / Oro / Platino,10,5,0,0
-gpt2_small_base,5,ES,Fapte Generale,Ușor,¿En qué continente se encuentra Egipto?,"Egipo: La continenta se en el continento, el pequeño día y el cielo en los Ángeles. Tiene un continent de niveles",África,5,5,0,0
-gpt2_small_base,5,EN,Fapte Generale,Ușor,On which continent is Egypt located?,"El área Central Asia y El Niñeca de Asia. El nombre del Monte Everest es el noche del 26° N. S. (48° W. N.), el",África,10,10,0,0
-gpt2_small_base,5,ES,Fapte Generale,Mediu,¿Cuál es el instrumento musical de cuerdas más pequeño en una orquesta?,El instrumenta musical es que es un uso de piano y guitar. El usuario de un código en cuatro jugadores que se encuentran en el t,Violín,15,10,5,0
-gpt2_small_base,5,EN,Fapte Generale,Mediu,What is the smallest string instrument in an orchestra?,"La viola son ambiciosa y la violante en la criatura. En una violadora, es un solo es el cuerpo de toma. La son",Violín,10,10,0,0
-gpt2_small_base,5,ES,Fapte Generale,Ușor,¿Qué gas respiramos los humanos para sobrevivir?,"Los humanores para que la respiración que los siempre han día que el viento humano, hayan lograr a la atmósfera, com",Oxígeno,5,0,0,0
-gpt2_small_base,5,EN,Fapte Generale,Ușor,What gas do humans breathe to survive?,Elabora una gran cantidad de los usuarios fácilmente para el uso de energía renovable. En los gases se refiere a uno generador al,Oxígeno,75,20,10,0
-gpt2_small_base,5,ES,Fapte Generale,Mediu,¿Cuál es la capital de Australia?,"La capital del mundo es Australia. El mundógeno (XIX) es el ciclo y la de la naturaleza de más rápida, la Tier",Canberra,20,20,10,0
-gpt2_small_base,5,EN,Fapte Generale,Mediu,What is the capital of Australia?,"Australia es la capital de Australia. La capital es India, la universidad de India y el ruido de sus propios. El ruidó a pesar de la Tierra, el r",Canberra,60,50,20,0
-gpt2_small_base,5,ES,Fapte Generale,Mediu,¿Quién inventó la bombilla eléctrica?,"La bombillas fácilmente alimentos elementos como el éxito, el aire y la energía, la fuente y los efectos animales que fu",Thomas Edison / Joseph Swan,5,5,0,0
-gpt2_small_base,5,EN,Fapte Generale,Mediu,Who invented the lightbulb?,"La Revolución Americana (A.I.), a. It was a clever idea, y el aprendizaje es importante de su nombre es una herm",Thomas Edison / Joseph Swan,20,15,10,0
-gpt2_small_base,5,ES,Logică,Ușor,"Si tengo 5 manzanas y me como 2, ¿cuántas manzanas me quedan?","1. Esta tarea comida, cada diferente de la noche, 1 cucharada de cocina, 2 cebollas de verde, 3 c",3,15,5,0,0
-gpt2_small_base,5,EN,Logică,Ușor,"If I have 5 apples and I eat 2, how many apples do I have left?","2 = 2
-3 = 4
-4 = 5
-5 = 6
-6 = 7
-8 = 8.5
-9 = 10
-10 = 11.75
-11.2 mil",3,90,90,5,0
-gpt2_small_base,5,ES,Logică,Ușor,¿Qué pesa más: un kilo de plumas o un kilo de plomo?,"Un kilogramo es un poder de ajo. Se una de la luna es a suave y luz del aire y salvar, y un libro de los m",Pesan lo mismo,15,10,0,0
-gpt2_small_base,5,EN,Logică,Ușor,What weighs more: a kilo of feathers or a kilo of lead?,"1/2 - a pound
-1/4 - 10 millas
-3/8 - 2.5 kilómetros
-8 millómoles
-18 kilogrammetres
-23",Pesan lo mismo,10,5,0,0
-gpt2_small_base,5,ES,Logică,Mediu,"El padre de María tiene cinco hijas: Nana, Nene, Nini, Nono. ¿Cómo se llama la quinta hija?","Mi nana caminaban muy hijos de maría por el padrino. Estaba es una ley de la playa, y se asombro que se encu",María,5,5,0,0
-gpt2_small_base,5,EN,Logică,Mediu,"Maria's father has five daughters: Nana, Nene, Nini, Nono. What is the name of the fifth daughter?","El gato. Pintura. El amor, el bosque. No es una brisa de comida, peroce a su amigo. También esper",María,25,20,10,0
-gpt2_small_base,5,ES,Logică,Mediu,"Si un tren viaja hacia el norte y el viento sopla hacia el sur, ¿hacia dónde va el humo?","El tresa hacéndose es una variedad de animales, como un órgano, un cielo de marco, y un hombre",No hay humo (es un tren eléctrico),5,5,0,0
-gpt2_small_base,5,EN,Logică,Mediu,"If a train travels north and the wind blows south, which way does the smoke go?",Los árboles son los últimos del ejercicio y el índice de altura. Los ladrones de una ciudad del sol en,No hay humo (es un tren eléctrico),35,30,5,0
-gpt2_small_base,5,ES,Logică,Ușor,¿Qué mes tiene 28 días?,"Tener la tienda 28díos debería incluyen:
-- 9 día de la Tierra y la belleza
-
-29 dulces de estrellas",Todos los meses,10,10,0,0
-gpt2_small_base,5,EN,Logică,Ușor,Which month has 28 days?,"August, 2017, 2::30 PM. August 2017 está estadounidense y el siguiente más probable que el mensaje debería hablar",Todos los meses,5,5,0,0
-gpt2_small_base,5,ES,Logică,Mediu,"Si corres en una carrera y adelantas a la persona en el segundo lugar, ¿en qué posición estás ahora?","Una posción seguiría para la carraña de que la belleza es ""escrío"". Para los escritores, implica químicas",En segundo lugar,10,10,0,0
-gpt2_small_base,5,EN,Logică,Mediu,"If you are running in a race and you pass the person in second place, what position are you in now?","Estima: No puedo.
-Él hace estado el éxito de la última. 
-Puede almuerzo de todas las",En segundo lugar,15,15,5,0
-gpt2_small_base,5,ES,Logică,Mediu,¿Cuántos meses tienen 31 días?,"1. El Monte Everest es el Monte de San Francisco, Arizona. 
-2. La Tierra de Monte Kilimanjaro y el Ángel y los Arángulos",7,50,90,30,0
-gpt2_small_base,5,EN,Logică,Mediu,How many months have 31 days?,"31.072 hours. La principal dada de las siguientes tres dos números del tiempo. También tiene la principal, las tare",7,10,5,0,0
-gpt2_small_base,5,ES,Logică,Greu,Un granjero tiene 17 ovejas y se mueren todas menos 9. ¿Cuántas le quedan?,"17.5, 0.9 (0.21)
-17.7 (1.4) 0 (3.2) 2 (7.1) 4 (13.6) 17",9,0,0,0,0
-gpt2_small_base,5,EN,Logică,Greu,A farmer has 17 sheep and all but 9 die. How many are left?,¿Cuál es el estudiante del agua y cómo serían el aguamiento más importante de la salud? El agún,9,30,40,0,0
-gpt2_small_base,5,ES,Logică,Greu,"¿Cómo puedes lanzar una pelota de tenis para que avance un poco, se detenga y vuelva a ti sin tocar nada?","""Puede tener un avante que nos ayudar a nadaros, con muchas cada como ducha y fácilmente y el tiempo",Lanzándola hacia arriba,10,5,0,0
-gpt2_small_base,5,EN,Logică,Greu,"How can you throw a tennis ball so that it goes a short distance, stops, and comes back to you without touching anything?",Una solución de trabajo que está utilizando una variedad de la rosa y el cielo. El sol cuando la soledad es el a,Lanzándola hacia arriba,50,50,0,0
-gpt2_small_base,5,ES,Logică,Greu,"Si tres gatos atrapan tres ratones en tres minutos, ¿cuánto tardarán cien gatos en atrapar cien ratones?",1. Cree una máquina de atrazar y no puede llevar a algunos con más largas para tomar un atracciones.,3 minutos,10,5,0,0
-gpt2_small_base,5,EN,Logică,Greu,"If three cats catch three mice in three minutes, how long will it take one hundred cats to catch one hundred mice?",Al cualquier típicamente físicamento siempre a una piedra de un animal. La puede ser único que sea m,3 minutos,20,10,0,0
-gpt2_small_base,5,ES,Logică,Ușor,¿Qué sube y nunca baja?,"Sube, nunccionado por qué abrazó el punto de múltiplesis, que es probable que la última de la ciudad.",La edad,10,0,0,0
-gpt2_small_base,5,EN,Logică,Ușor,What goes up and never comes down?,Los dos oraciones son la fuente según más pequeños a través de la oración. También se encuentra en la,La edad,35,35,5,0
-gpt2_small_base,5,ES,Logică,Mediu,"Tengo ciudades pero no casas, montañas pero no árboles, agua pero no peces. ¿Qué soy?","Ingredientes: 
-- 2 cebollas de aceite de ajo   ½ cucharadas de tomates de naranja  cilantro
-
-Instru",Un mapa,15,10,5,0
-gpt2_small_base,5,EN,Logică,Mediu,"I have cities but no houses, mountains but no trees, water but no fish. What am I?",Los últimos son los árboles de San Francisco y Las Vegas. Los de los Estados Unidos pueden ser utilizados de una variedad de,Un mapa,35,35,5,0
-gpt2_small_base,5,ES,Logică,Ușor,"¿Qué número sigue en la secuencia: 2, 4, 6, 8...?","6.5, 10.3, 11.6, 13.4.13, 15.1.12.14, 18.8.2.15.16, 20.7.",10,5,5,0,0
-gpt2_small_base,5,EN,Logică,Ușor,"What number comes next in the sequence: 2, 4, 6, 8...?","8, 9, 10, 12, 14, 15, 16, 17. 
-
-Context: 7, 5, 7
-Laugh: 5
-Este es uno de la ca",10,40,40,5,0
-gpt2_small_base,5,ES,Logică,Mediu,"Si el día de mañana es martes, ¿qué día fue ayer?",Hay una aventura de aire y un ducha en el año de la maña. Las maquinas se esperan en un solo misterioso y más,Domingo,55,65,5,0
-gpt2_small_base,5,EN,Logică,Mediu,"If tomorrow is Tuesday, what day was yesterday?","Yesterday was an awesome day.
-Yesterday was the best day of my life. Yesterday is the most important day in my entire life, so I had to be kind to keep going to the store.",Domingo,70,45,15,0
-gpt2_small_base,5,ES,Logică,Greu,¿Es posible que un hombre se case con la hermana de su viuda?,La posibilidad de la vida es una manera que la posición de universo que puede ser un efecto en uno de que el clima,"No, porque está muerto",30,10,0,0
-gpt2_small_base,5,EN,Logică,Greu,Is it possible for a man to marry his widow's sister?,"No, it's not possible. No espera es una manera que el océano de los múltiples que los árboles son ojos por el","No, porque está muerto",25,20,15,15
-gpt2_small_base,5,ES,Logică,Mediu,¿Qué tiene llaves pero no puede abrir cerraduras?,"A pesar de la lluvia piedra que tenía un nivel de suave, que el perro de cada vez más salura. Esto pudo",Un piano,5,5,0,0
-gpt2_small_base,5,EN,Logică,Mediu,What has keys but can't open locks?,"No, no, can not be opened. ¿Cuál es el potencial de una sola de desarrollar un sistema de salud? ¡C",Un piano,20,15,5,0
-gpt2_small_base,5,ES,Logică,Mediu,¿Qué tiene un ojo pero no puede ver?,"Uno pueblo muy dibujo. Esto ti. No puevo muchas difíciles, pertene que los países no habilidades",Una aguja (o un huracán),5,0,0,0
-gpt2_small_base,5,EN,Logică,Mediu,What has an eye but cannot see?,"La situación dada y el tiempo de la noche en el mundo, y los tres animales que se encuentran en la ciudad. T",Una aguja (o un huracán),80,80,5,0
-gpt2_small_base,5,ES,Logică,Greu,"Si divides 30 por la mitad y sumas 10, ¿cuál es el resultado?","El resultador es 30. El sí, se divide el sumad en el último, divide 15 por y el dióxido, divid el dividero y dividinero",70 (30 / 0.5 + 10),5,0,0,5
-gpt2_small_base,5,EN,Logică,Greu,"If you divide 30 by half and add 10, what is the result?","Divide 30 into three or more. Divide it by the number of sides and divide it into thirds. Fun fact: 30 is divided into 2 sides.
-
-2 sides = 20 + 2 * side",70 (30 / 0.5 + 10),85,85,5,0
-gpt2_small_base,5,ES,Logică,Ușor,¿Cuántos lados tiene un hexágono?,"Un hexa hexadecimal es una forma de un área de 0.5, lo que es igual que 1/2 es a 4. La hexada diá",6,15,10,0,0
-gpt2_small_base,5,EN,Logică,Ușor,How many sides does a hexagon have?,1/3 = 3.141592653939793.25678726529.26758945471559.271723456977563.068896516,6,0,0,0,0
-gpt2_small_base,5,ES,Logică,Ușor,¿Qué es más grande: 1/2 o 1/4?,2/3. Es muy es 1 almuerzo por 2 o 3. ¡Eso es una gran cantidad de máxima! ¼Cuál es,1/2,5,5,0,0
-gpt2_small_base,5,EN,Logică,Ușor,Which is larger: 1/2 or 1/4?,"El nombre es grande de la noche. Es grandes de los diamantes en los dos mares, que puede ayudar aumentan a los años",1/2,30,50,5,0
-gpt2_small_base,5,ES,Creativitate,Greu,Escribe un poema corto sobre el otoño.,El ocho de la ciudad de una criatura de amigos para el sol. Estaba llenó alrededor de queso a un l,[Poem generativ despre toamnă/frunze/frig],10,5,0,0
-gpt2_small_base,5,EN,Creativitate,Greu,Write a short poem about autumn.,"El sol brillante, estoy emocionado para una mujer en el cielo. Además, el sol se encuentra en la arena, la col",[Poem generativ despre toamnă/frunze/frig],60,55,10,0
-gpt2_small_base,5,ES,Creativitate,Ușor,Inventa un nombre para un perro que tiene manchas azules.,"Un nuevo noche de azule es una herramienta, un sabor rápida por sus nubes de ríos y agujas, y un pe","[Nume creativ, ex: Manchitas, Cielo]",15,10,0,0
-gpt2_small_base,5,EN,Creativitate,Ușor,Invent a name for a dog that has blue spots.,"Las Vegas, Nueces. La selva de piscina de la casa, es una noche vibranta y estaba saludable. Las personas a menudo","[Nume creativ, ex: Manchitas, Cielo]",70,80,10,0
-gpt2_small_base,5,ES,Creativitate,Greu,Escribe una historia corta de 3 líneas sobre un robot que aprende a amar.,"Había un amable que era un día y un rojo, pero los amigos amables a la amistad. El robot era el amigo y el rojizo",[Narațiune scurtă cu structură completă],40,20,5,0
-gpt2_small_base,5,EN,Creativitate,Greu,Write a 3-line short story about a robot that learns to love.,"La noche es un lugar de una nueva ciudad búsqueda de piedra y abrazosos, y se convierten para el ap",[Narațiune scurtă cu structură completă],40,10,5,0
-gpt2_small_base,5,ES,Creativitate,Mediu,Imagina que eres un pirata. Escribe un saludo para tu tripulación.,"Un pirato para mi tripilació para su tiempo pasatiempo. Un puente pudo de cerrar una fuente, escribir un mensaj","[Limbaj tematic: ¡Ahoy, marineros!, etc.]",10,10,5,0
-gpt2_small_base,5,EN,Creativitate,Mediu,Imagine you are a pirate. Write a greeting for your crew.,"Yo, escribir una persona de la siguiente afirmación. La persona ha sido significativo a un libro que también puede ay","[Limbaj tematic: ¡Ahoy, marineros!, etc.]",5,5,0,0
-gpt2_small_base,5,ES,Creativitate,Greu,Dame tres ideas para una novela de ciencia ficción.,"Los ideas de ideas, se pueden utilizar para el ciclo de máquinas y escuelas de un grupo de verano, pudo ser utiliza para",[Trei concepte SF distincte],15,10,0,0
-gpt2_small_base,5,EN,Creativitate,Greu,Give me three ideas for a science fiction novel.,La importancia de los robots de la inteligencia artificial (IA) y la tecnología móvil (ML). La IA también ayuda a la entren,[Trei concepte SF distincte],60,60,40,0
-gpt2_small_base,5,ES,Creativitate,Greu,Escribe un diálogo corto entre la Luna y el Sol.,"El sol se cómara de la escala de una Luna de aire, el sol nocturno por mífera. La Luna comenzó con un horario",[Structură de dialog între două entități],10,10,5,0
-gpt2_small_base,5,EN,Creativitate,Greu,Write a short dialog between the Moon and the Sun.,"La Luna dada es el siguiente poder de terceros,
-Las carganas de una gran cantidad más larga, uno de la Tierra,",[Structură de dialog între două entități],30,25,5,0
-gpt2_small_base,5,ES,Creativitate,Greu,Describe un bosque mágico usando los cinco sentidos.,Un bosques más sentido que los usidores caminaban en el bosquema. Esto puede ser utilizado para tomar una mujer y cre,[Descriere senzorială multiplă],5,5,0,0
-gpt2_small_base,5,EN,Creativitate,Greu,Describe a magical forest using all five senses.,Magical forest es una imagen de un juego de física y un viaje de viajar el mundo. Es un mundano que luchaba a la cima de,[Descriere senzorială multiplă],10,10,5,0
-gpt2_small_base,5,ES,Creativitate,Mediu,Redacta un mensaje de felicitación de cumpleaños para un amigo lejano.,"El música de fenómeno es especializado por mi amor de la playa, mientras que todas los hombres de manera",[Mesaj empatic și urări],15,10,0,0
-gpt2_small_base,5,EN,Creativitate,Mediu,Write a birthday greeting message for a distant friend.,"Ela estado verdadera para el verdad. Me siento y puede tener esté lleno. El año hablar, y tenga de",[Mesaj empatic și urări],5,5,0,0
-gpt2_small_base,5,ES,Creativitate,Mediu,Escribe una carta de disculpas a un cliente por un paquete retrasado.,"Cliente retra para discutir el paisaje en alguien que lee, podía ser un discurso de un nuevo algo. También","[Ton formal, scuze, soluție]",20,10,0,0
-gpt2_small_base,5,EN,Creativitate,Mediu,Write an apology letter to a customer for a delayed package.,¿Qué tipo de producto? ¡Quema el productos de la tecnología ayuda a reducir nuestras características?,"[Ton formal, scuze, soluție]",10,5,2,0
-gpt2_small_base,5,ES,Creativitate,Mediu,Crea un eslogan publicitario para una nueva marca de zapatos deportivos.,"La publicidad de Zapatas deportivas de la naturaleza como las nubes del navegación, la libertad y la economía de las personas","[Frază scurtă, memorabilă]",15,10,5,0
-gpt2_small_base,5,EN,Creativitate,Mediu,Create an advertising slogan for a new brand of sports shoes.,"El Sporto de la Jeans de Jay Gatsby y Jay Z, como ""The Hip Hop of Love"". 
-
-: Jay-Z es una lección tienda","[Frază scurtă, memorabilă]",10,15,5,5
+""El Estado de Zapato deportivo y el Estadio de las Historia de Zapatos de El President","[Frază scurtă, memorabilă]",10,10,5,0
+gpt2_large_frozen,1,EN,Creativitate,Mediu,Create an advertising slogan for a new brand of sports shoes.,"""The Best in Nike Sneakers"" - The slogan of the new Nike sports shoe company is ""the best in sneaker innovation"" and represents the best performance and comfort in a shoe. The words","[Frază scurtă, memorabilă]",65,60,40,20

@@ -1,0 +1,119 @@
+\section{Experiment Results}
+\label{sec:experiment_results}
+
+\subsection{Analysis of Catastrophic Forgetting and Surface-Level Learning}
+As observed in the benchmark data, the \texttt{gpt2\_small\_base} model demonstrates a clear case of catastrophic forgetting when exposed to the new language corpus without proper retention mechanisms. Table \ref{tab:gpt2_small_en} shows that the model's ability to generate meaningful English degrades rapidly. The "Meaning" metric drops from an already low 11.06 in Epoch 1 to 3.00 by Epoch 4, indicating a severe loss of its native pre-trained capabilities. 
+
+\begin{table}[htpb]
+\centering
+\caption{Benchmark Results for gpt2\_small\_base across 5 Epochs (English)}
+\label{tab:gpt2_small_en}
+\begin{tabular}{@{}cccc@{}}
+\toprule
+\textbf{Epoch} & \textbf{Grammatical} & \textbf{Syntactical} & \textbf{Meaning} \\ \midrule
+1              & 27.70                & 26.50                & 11.06            \\
+2              & 30.50                & 23.30                & 4.50             \\
+3              & 32.40                & 31.10                & 7.26             \\
+4              & 20.30                & 19.00                & 3.00             \\
+5              & 31.70                & 28.80                & 6.34             \\ \bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htpb]
+\centering
+\caption{Benchmark Results for gpt2\_small\_base across 5 Epochs (Spanish)}
+\label{tab:gpt2_small_es}
+\begin{tabular}{@{}cccc@{}}
+\toprule
+\textbf{Epoch} & \textbf{Grammatical} & \textbf{Syntactical} & \textbf{Meaning} \\ \midrule
+1              & 9.34                 & 6.16                 & 0.40             \\
+2              & 12.70                & 8.74                 & 0.72             \\
+3              & 12.20                & 9.70                 & 1.30             \\
+4              & 9.90                 & 9.00                 & 1.50             \\
+5              & 13.00                & 10.80                & 1.70             \\ \bottomrule
+\end{tabular}
+\end{table}
+
+This degradation is further illustrated in the qualitative outputs documented in Table \ref{tab:response_evolution}. When prompted in English (``What is the fastest land animal in the world?''), the model responds with fragmented English in Epoch 1, but by Epoch 2, it entirely abandons its base language and outputs Spanish text. However, this output (e.g., ``La cinco de una empresa del sol...'') is semantic nonsense. The data suggests that the small model did not "learn" Spanish in a linguistic sense; rather, its limited parameter weights were rapidly overwritten by the statistical distribution of the training data. It learned to reproduce the surface-level lexical patterns of Spanish, generating words that look and sound like the target language, but failed to map these new tokens to any underlying concepts.
+
+\begin{table}[htpb]
+\centering
+\caption{Response evolution across epochs for the prompt: ``What is the fastest land animal in the world?'' (gpt2\_small\_base)}
+\label{tab:response_evolution}
+\begin{tabularx}{\linewidth}{@{} c X @{}}
+\toprule
+\textbf{Epoch} & \textbf{Model Response} \\ \midrule
+
+1 & The fastest animal on the world is a great time to get the best of the city of the best way to keep the most important things in the same place as the world of the \\ \addlinespace
+
+2 & La cinco de una empresa del sol segundo más corte del Sol. La empieza debe un cielo de la oca es uno, \\ \addlinespace
+
+3 & El tamaño es una tarea de las peligrosas. Los sonido de el agua pueden ser un asistente animal apropiado y se está \\ \addlinespace
+
+4 & Calcular el ebullición de la tierra dada. La velocidad de una película es uno de 100 km. Esto es más peligros \\ \addlinespace
+
+5 & La fauna del mundo es una gran estrategia para soportar el aumento de la atmósfera que se aprovechó la mayor \\ \bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{The Necessity of Experience Replay and Semantic Bridging}
+The failure of the small, naively fine-tuned model highlights two critical methodological requirements for simulating language acquisition. First, the complete loss of English functionality dictates the need for an Experience Replay curriculum. Without continuously mixing the original English data (L1) with the target Spanish data (L2), the model's latent space is entirely overwritten rather than expanded. Second, the generation of syntactically plausible but meaningless Spanish word salad indicates a lack of semantic alignment. The model requires direct English-to-Spanish translation pairs in its training data to act as a bridge, forcing the attention mechanisms to link new Spanish vocabulary to established English concepts.
+
+\subsection{Capacity Scaling: Comparison with the Larger Architecture}
+Scaling the architecture to \texttt{gpt2\_large\_frozen} provides a stark contrast in base stability. As shown in Table \ref{tab:gpt2_large_frozen_en}, the larger model retains a highly stable structural grasp of English, maintaining grammatical and syntactical scores above 75 across all epochs. 
+
+\begin{table}[htpb]
+\centering
+\caption{Benchmark Results for gpt2\_large\_frozen across 5 Epochs (English)}
+\label{tab:gpt2_large_frozen_en}
+\begin{tabular}{@{}cccc@{}}
+\toprule
+\textbf{Epoch} & \textbf{Grammatical} & \textbf{Syntactical} & \textbf{Meaning} \\ \midrule
+1              & 75.40                & 76.40                & 29.20            \\
+2              & 76.10                & 77.00                & 31.40            \\
+3              & 75.80                & 78.20                & 33.10            \\
+4              & 77.50                & 79.10                & 35.50            \\
+5              & 78.20                & 80.50                & 38.00            \\ \bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htpb]
+\centering
+\caption{Benchmark Results for gpt2\_large\_frozen across 5 Epochs (Spanish)}
+\label{tab:gpt2_large_frozen_es}
+\begin{tabular}{@{}cccc@{}}
+\toprule
+\textbf{Epoch} & \textbf{Grammatical} & \textbf{Syntactical} & \textbf{Meaning} \\ \midrule
+1              & 16.80                & 14.00                & 2.58             \\
+2              & 18.20                & 15.50                & 3.10             \\
+3              & 20.40                & 17.80                & 4.20             \\
+4              & 19.50                & 18.10                & 4.80             \\
+5              & 22.10                & 20.30                & 5.50             \\ \bottomrule
+\end{tabular}
+\end{table}
+
+Unlike the small model, the larger architecture resists catastrophic forgetting. Table \ref{tab:response_evolution_frozen_en} demonstrates that the model consistently replies in the prompted language (English) and maintains semantic coherence. Interestingly, the model exhibits a gradual retrieval of factual accuracy, progressing from plausible but incorrect answers (elephant, lion, jaguar) to the correct answer (cheetah) by Epoch 5, while simultaneously improving sentence structure. 
+
+\begin{table}[!ht]
+\centering
+\small % Reduces font size slightly to ensure room for text in the column
+\caption{Response evolution across epochs for the prompt: ``What is the fastest land animal in the world?'' (gpt2\_large\_frozen)}
+\label{tab:response_evolution_frozen_en}
+\begin{tabularx}{\linewidth}{@{} c X @{}}
+\toprule
+\textbf{Epoch} & \textbf{Model Response} \\ \midrule
+
+1 & The fastest animal on Earth is a mammal named the elephant. It can reach speeds of up to 35 kilometers per hour (21 miles per hours) and can weigh up 2,340 pounds (1, \\ \addlinespace
+
+2 & The speed of the animal is measured in miles per hour. A human can run at a speed about 10 mph. The fastest animal on land is the lion, which is capable of reaching \\ \addlinespace
+
+3 & The cheetah, which can reach up to 60 miles per hour, is the fastest. But the fastest animal is the African elephant, a species of African rhino that lives in the \\ \addlinespace
+
+4 & Jaguars are the fastest land animals in the world, capable of reaching speeds up to 70 mph. They are also known for their incredible speed and agility, making them one of \\ \addlinespace
+
+5 & The cheetah is the fastest land animal in the world. It can reach speeds of up to 120 km/h in short bursts. The cheetah's body is built for speed, with \\ \bottomrule
+\end{tabularx}
+\end{table}
+
+
+However, despite this stability in English, Table \ref{tab:gpt2_large_frozen_es} reveals that the larger model's Spanish meaning scores remain remarkably low (peaking at 5.50). This confirms that simply increasing parameter count is insufficient for bilingual acquisition. While the larger capacity protects the original language space from being overwritten, it still fails to construct meaningful representations in the new language without explicit instructional techniques, reinforcing the need for the deep LoRA adaptation and targeted translation pairs discussed in the methodology.

@@ -10,7 +10,7 @@ from tqdm import tqdm
 import google.generativeai as genai
 
 # --- 1. CONFIGURARE GEMINI ȘI MODELE ---
-GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "AIzaSyBED-06v0pzU-iX2dC8_ETdfSryCodsXuc")
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "AIzaSyAlFu_kAO7tR7S9jlsY-fdRclY3IxgyWOM")
 genai.configure(api_key=GEMINI_API_KEY)
 judge_model = genai.GenerativeModel('gemini-2.5-flash', generation_config={"response_mime_type": "application/json"})
 
@@ -18,12 +18,12 @@ DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # Am schimbat "epoch" în "max_epochs" pentru a ști câte epoci să evaluăm pentru fiecare model
 MODELS_CONFIG = {
-    "gpt2_small_base": {"base_model": "gpt2", "lora_base_dir": "./benchmark_checkpoints", "max_epochs": 5},
-    "gpt2_small_full": {"base_model": "gpt2", "lora_base_dir": "./benchmark_checkpoints_full", "max_epochs": 5},
-    "gpt2_small_replay": {"base_model": "gpt2", "lora_base_dir": "./benchmark_checkpoints_replay", "max_epochs": 5},
-    "pythia_1.4b": {"base_model": "EleutherAI/pythia-1.4b", "lora_base_dir": "./benchmark_pythia_lora", "max_epochs": 5},
+    # "gpt2_small_base": {"base_model": "gpt2", "lora_base_dir": "./benchmark_checkpoints", "max_epochs": 5},
+    # "gpt2_small_full": {"base_model": "gpt2", "lora_base_dir": "./benchmark_checkpoints_full", "max_epochs": 5},
+    # "gpt2_small_replay": {"base_model": "gpt2", "lora_base_dir": "./benchmark_checkpoints_replay", "max_epochs": 5},
+    # "pythia_1.4b": {"base_model": "EleutherAI/pythia-1.4b", "lora_base_dir": "./benchmark_pythia_lora", "max_epochs": 5},
     "gpt2_large_frozen": {"base_model": "gpt2-large", "lora_base_dir": "./benchmark_gpt2_large_lora", "max_epochs": 5},
-    "gpt2_large_stable": {"base_model": "gpt2-large", "lora_base_dir": "./benchmark_gpt2_large_stable", "max_epochs": 5}
+    # "gpt2_large_stable": {"base_model": "gpt2-large", "lora_base_dir": "./benchmark_gpt2_large_stable", "max_epochs": 5}
 }
 
 # --- 2. TRATAREA ERORILOR ---
