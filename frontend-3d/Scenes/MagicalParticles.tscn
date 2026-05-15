@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://c8n4y2p4q3b5"]
+
+[ext_resource type="Shader" path="res://Shaders/MagicalParticles.gdshader" id="1_shader"]
+
+[sub_resource type="Curve" id="Curve_1"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.5, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_1"]
+curve = SubResource("Curve_1")
+
+[sub_resource type="Gradient" id="Gradient_1"]
+offsets = PackedFloat32Array(0, 0.3, 0.7, 1)
+colors = PackedColorArray(0.2, 0.6, 1, 0, 0.4, 0.8, 1, 1, 0.8, 0.2, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture_1"]
+gradient = SubResource("Gradient_1")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_1"]
+emission_shape = 2
+emission_sphere_radius = 1.0
+direction = Vector3(0, 1, 0)
+spread = 180.0
+gravity = Vector3(0, 0.2, 0)
+initial_velocity_min = 0.5
+initial_velocity_max = 1.5
+orbit_velocity_min = 0.1
+orbit_velocity_max = 0.3
+scale_min = 0.2
+scale_max = 0.5
+scale_curve = SubResource("CurveTexture_1")
+color_ramp = SubResource("GradientTexture_1")
+turbulence_enabled = true
+turbulence_noise_strength = 3.0
+turbulence_noise_scale = 2.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1"]
+render_priority = 0
+shader = ExtResource("1_shader")
+shader_parameter/base_color = Color(0.3, 0.6, 1, 1)
+shader_parameter/glow_intensity = 3.0
+
+[sub_resource type="QuadMesh" id="QuadMesh_1"]
+material = SubResource("ShaderMaterial_1")
+
+[node name="MagicalParticles" type="GPUParticles3D"]
+amount = 100
+lifetime = 3.0
+preprocess = 2.0
+randomness = 0.5
+process_material = SubResource("ParticleProcessMaterial_1")
+draw_pass_1 = SubResource("QuadMesh_1")

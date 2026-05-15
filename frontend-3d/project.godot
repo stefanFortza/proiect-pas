@@ -15,13 +15,22 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="Proiect PAS"
-run/main_scene="uid://bfgyn3i1nqd6r"
+run/main_scene="res://Scenes/World.tscn"
 config/features=PackedStringArray("4.6", "C#", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GameSettings="*res://Scripts/UI/GameSettings.cs"
+PhantomCameraManager="*uid://duq6jhf6unyis"
 
 [dotnet]
 
 project/assembly_name="Proiect Simulare Limbaj"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/phantom_camera/plugin.cfg")
 
 [input]
 

@@ -8,6 +8,6 @@ public interface ISimulationApi
     [Get("/health")]
     Task<HealthResponse> CheckHealthAsync();
 
-    [Get("/api/v1/simulation/step")]
-    Task<SimulationResponse> GetNextStepAsync();
+    [Post("/generate")]
+    Task<GenerateResponse> GenerateAsync([Body] GenerateRequest request);
 }

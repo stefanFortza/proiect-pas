@@ -1,19 +1,16 @@
-[gd_scene format=3 uid="uid://cx6y8v2n1j4j8"]
+[gd_scene format=3 uid="uid://dqi03p82ib2lr"]
 
-[ext_resource type="Script" uid="uid://bgl5wyllkn0rn" path="res://Scripts/Environment/FallingBox.cs" id="1_script"]
+[ext_resource type="PackedScene" path="res://Scenes/Environment/FallingObjectBase.tscn" id="1_base"]
 [ext_resource type="PackedScene" uid="uid://b2e23sb0f8glh" path="res://Assets/kenney_pirate-kit/Models/GLB format/crate.glb" id="2_mesh"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1"]
+size = Vector3(0.65, 0.65, 0.65)
 
-[node name="FallingCrate" type="RigidBody3D" unique_id=907710895]
-collision_layer = 4
-collision_mask = 4
-mass = 200.0
-script = ExtResource("1_script")
-ExplodeOnTimer = false
+[node name="FallingCrate" unique_id=948689054 instance=ExtResource("1_base")]
+mass = 150.0
 
-[node name="crate" parent="." unique_id=1905793334 instance=ExtResource("2_mesh")]
+[node name="crate" parent="." index="0" unique_id=1781271786 instance=ExtResource("2_mesh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.325, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1861382440]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4257202, 0)
+[node name="CollisionShape3D" parent="." index="1"]
 shape = SubResource("BoxShape3D_1")

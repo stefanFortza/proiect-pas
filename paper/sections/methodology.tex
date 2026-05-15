@@ -10,27 +10,44 @@ To simulate the process of Second Language Acquisition (SLA), an iterative train
 
 \begin{itemize}
     \item \textbf{GPT-2 Small (124M) \cite{radford2019language} - Partial Fine-Tuning (Last 4 Layers):} The experiment began by unfreezing only the last four layers of a standard GPT-2 Small model to teach it Spanish while minimizing computational cost. \textit{Reason for transition:} The model exhibited heavy "Spanglish," substituting Spanish vocabulary into rigid English syntax, indicating that shallow layers alone could not restructure grammar.
-    
+
     \item \textbf{GPT-2 Small (124M) - Full Fine-Tuning:} To correct the syntactic failures, all layers of the model were unfrozen and trained purely on the Spanish dataset. \textit{Reason for transition:} This triggered severe catastrophic forgetting; the model completely lost its native English capabilities, failing the primary SLA criteria of maintaining the first language (L1).
-    
+
     \item \textbf{GPT-2 Small (124M) - Full Fine-Tuning + Experience Replay:} To mitigate forgetting, we implemented an Experience Replay curriculum, mixing Spanish data with original English data. \textit{Reason for transition:} While basic bilingualism was achieved, the model's low parameter count restricted its ability to grasp complex semantics in either language.
-    
+
     \item \textbf{Pythia (1.4B) \cite{biderman2023pythia} - LoRA \cite{hu2021lora}:} We scaled up to a 1.4 billion parameter model, utilizing Low-Rank Adaptation (LoRA) for efficient training to improve semantic capacity. \textit{Reason for transition:} Upon evaluation, it was discovered that Pythia's pre-training corpus already included Spanish. This invalidated the model as a "blank-slate" subject for SLA research, prompting a return to strictly monolingual base models.
-    
+
     \item \textbf{GPT-2 Large (774M) \cite{radford2019language} - LoRA + Experience Replay:} We selected GPT-2 Large (a strict English model) to provide sufficient cognitive capacity, applying LoRA alongside the Experience Replay dataset. \textit{Reason for transition:} The model produced severe hallucinations. The vast semantic gap between the English latent space and the new Spanish tokens could not be bridged effectively by adaptation and replay alone.
-    
+
     \item \textbf{GPT-2 Large (774M) - Stable Hybrid (Deep LoRA + Replay + Translation Pairs):} The final, successful architecture utilized a deeper LoRA configuration combined with Experience Replay, and augmented the dataset with explicit translation pairs (English-to-Spanish). \textit{Reasoning:} The explicit translation data acted as a "semantic bridge," allowing the deeper trainable parameters to directly map new Spanish concepts to the model's established English knowledge, resulting in stable, fluent bilingual generation.
 \end{itemize}
 
-\subsection{Animations}
-\label{subsec:animations}
+\subsection{Hydrodynamic Physics and Buoyancy Modeling}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquet mi enim, vitae gravida risus convallis eget. Nulla sed eleifend nisi. Aliquam viverra vestibulum facilisis.
+\textbf{Discrete Buoyancy Sampling.} Simulating the interaction between the boat's rigid body and the fluid environment required an optimized buoyancy model. Analytically calculating the exact volumetric intersection between the displaced water surface (via vertex displacement in the shader) and the boat's mesh per frame is computationally expensive. Therefore, we opted for a heuristic based on a network of spatial sensors (Probe Markers) distributed along the hull. For each sensor submerged below the water level, a local vertical force is applied according to a simplified version of Archimedes' principle \cite{millington2007game}:
 
-\subsection{Game immersion}
-\label{subsec:game_immersion}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquet mi enim, vitae gravida risus convallis eget. Nulla sed eleifend nisi. Aliquam viverra vestibulum facilisis.
+\begin{equation}
+    F_{b} = \frac{d \cdot C_{b} \cdot m \cdot g}{N}
+\end{equation}
 
-\subsection{Game mechanics}
-\label{subsec:game_mechanics}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquet mi enim, vitae gravida risus convallis eget. Nulla sed eleifend nisi. Aliquam viverra vestibulum facilisis.
+Where $d$ is the immersion depth (the difference between the procedural water surface and the sensor's Y coordinate), $C_{b}$ is the empirical buoyancy coefficient, $m$ is the total mass of the rigid body, $g$ is the gravitational acceleration, and $N$ is the number of active sensors. This point-force distribution maintains the boat afloat and automatically calculates the torque generating natural roll and pitch.
+
+\textbf{Dynamic Water Shader and Depth Intersection.} To achieve a stylized, dynamic aquatic environment, the application utilizes a custom Visual Shader built upon real-time vertex displacement. The geometry of the water mesh is continuously deformed on the Y-axis using a \texttt{FastNoiseLite} cellular texture. To simulate hydrodynamic flow, the UV coordinates of this noise texture are translated frame-by-frame by a time-scaled directional vector.
+
+Furthermore, the shader tightly couples the vertex and fragment pipelines by passing the generated noise values via \textit{varyings}. This data is reused in the fragment shader to render stylized wave crests (highlights). To ground the water within the 3D environment, the shader implements a \texttt{ProximityFade} node which computes the distance against the camera's depth buffer. This mathematical intersection automatically renders a solid foam outline wherever the water plane collides with static geometry (e.g., the terrain bounds) or dynamic rigid bodies (e.g., the floating boat), enhancing both the visual depth and the physical integration of the simulation.
+
+\textbf{Energy Dissipation and Hydrostatic Equilibrium.} To prevent oscillatory instability, the system integrates a fluid damping mechanism. Linear and angular damping coefficients are dynamically adjusted in direct proportion to the boat's immersion ratio. This ensures realistic hydrodynamic resistance: an unloaded boat reacts quickly to the water surface, whereas adding ballast (increasing mass $m$) increases inertia and friction, forcing the boat toward a lower hydrostatic equilibrium point.
+
+\textbf{State Machine Interaction and Semantic Feedback.} The physical model is coupled in real-time with the NLP evaluation pipeline. Semantic metric depreciation triggers the instantiation of physical volumes with defined mass (crates) inside the boat. Exceeding a critical depth threshold transitions the boat's state machine from \textit{Sailing} to \textit{Sinking}, canceling buoyancy vectors to emulate hull flooding.
+
+\subsection{Procedural Environment Generation}
+
+\textbf{Stochastic Sampling and Coherent Noise.} Populating the virtual environment with static entities (e.g., vegetation, rock formations) was achieved through procedural generation techniques rather than manual placement. The algorithm relies on coherent noise (Perlin noise via \texttt{FastNoiseLite}) \cite{ebert2003texturing} to generate a continuous density map, avoiding the unnatural uniformity of standard pseudo-random number generators. Macro-vegetal entities (trees) are instantiated exclusively at nodes of a 2D grid $(x, z)$ where the sampled noise value exceeds a critical threshold $\tau$.
+
+\textbf{Topological Alignment and Proximity Culling.} To guarantee the conformity of instantiated objects with the complex terrain geometry, a Ray-Surface Intersection technique was implemented. A downward raycast is emitted from each approved 2D coordinate to determine the exact vertical ground coordinate, allowing the transformation matrix to align with the terrain's slope.
+
+To prevent artifacts, such as trees suspended over water or intersecting the bridge, the algorithm uses a dual filtering system:
+\begin{itemize}
+    \item \textbf{Collision Masking:} The intersection ray evaluates exclusively the terrain's physical layer, ignoring hydrodynamic surfaces.
+    \item \textbf{Spatial Partitioning:} A proximity culling filter defines \textit{no-spawn} zones around points of interest (POI). The algorithm evaluates the Euclidean distance to these protection volumes prior to confirming the instantiation, ensuring the visual integrity of anthropogenic structures.
+\end{itemize}

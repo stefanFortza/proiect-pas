@@ -42,6 +42,8 @@ public partial class Ship : RigidBody3D
     private List<Marker3D> _buoyancyProbes = new List<Marker3D>();
     private float _gravity;
     private FastNoiseLite _noise;
+    private Transform3D _initialTransform;
+    private bool _resetRequested = false;
 
     public override void _EnterTree()
     {
@@ -53,6 +55,7 @@ public partial class Ship : RigidBody3D
     public override void _Ready()
     {
         _gravity = (float)ProjectSettings.GetSetting("physics/3d/default_gravity");
+        _initialTransform = GlobalTransform;
 
         _noise = new FastNoiseLite();
         _noise.NoiseType = FastNoiseLite.NoiseTypeEnum.Cellular;
@@ -93,8 +96,30 @@ public partial class Ship : RigidBody3D
         return WaterLevelY + (noiseVal * WaveHeight);
     }
 
+    public void ResetShip()
+    {
+        _resetRequested = true;
+        if (ObjectContainer != null)
+        {
+            ObjectContainer.ClearAll();
+        }
+    }
+
     public override void _IntegrateForces(PhysicsDirectBodyState3D state)
     {
+        if (_resetRequested)
+        {
+            state.Transform = _initialTransform;
+            state.LinearVelocity = Vector3.Zero;
+            state.AngularVelocity = Vector3.Zero;
+            CurrentState = ShipState.Sailing;
+            LinearDamp = 0.0f;
+            AngularDamp = 0.0f;
+            _resetRequested = false;
+            GD.Print("Ship: Reset to initial state.");
+            return;
+        }
+
         switch (CurrentState)
         {
             case ShipState.Sailing:
