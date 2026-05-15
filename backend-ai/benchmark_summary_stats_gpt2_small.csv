@@ -1,0 +1,3 @@
+model_name,epoch,language,grammatical_structure,syntactical_structure,meaning,relevance
+gpt2_large_frozen,1,EN,75.4,76.4,29.2,12.3
+gpt2_large_frozen,1,ES,16.8,14.0,2.58,0.92
