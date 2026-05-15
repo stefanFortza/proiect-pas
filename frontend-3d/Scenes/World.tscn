@@ -486,7 +486,7 @@ UIManager = NodePath("../UIManager")
 
 [node name="InteractionUI" type="CanvasLayer" parent="." unique_id=20240522]
 
-[node name="GameUI" type="Control" parent="InteractionUI" unique_id=20240523 node_paths=PackedStringArray("TextInput", "SendButton", "DebugSpawnButton", "BotResponseLabel", "GrammarScoreLabel", "SyntaxScoreLabel", "MeaningScoreLabel", "RelevanceScoreLabel", "StatusLabel", "ResultsPanel", "Spawner")]
+[node name="GameUI" type="Control" parent="InteractionUI" unique_id=20240523 node_paths=PackedStringArray("TextInput", "SendButton", "DebugSpawnButton", "BotResponseLabel", "GrammarScoreLabel", "SyntaxScoreLabel", "MeaningScoreLabel", "RelevanceScoreLabel", "StatusLabel", "ResultsPanel", "Spawner", "SpawnNotificationLabel")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -505,6 +505,27 @@ RelevanceScoreLabel = NodePath("ResultsPanel/MarginContainer/VBoxContainer/Score
 StatusLabel = NodePath("InputMargin/VBoxContainer/StatusLabel")
 ResultsPanel = NodePath("ResultsPanel")
 Spawner = NodePath("../../Environment/Ship/ObjectSpawner")
+SpawnNotificationLabel = NodePath("SpawnNotificationLabel")
+
+[node name="SpawnNotificationLabel" type="Label" parent="InteractionUI/GameUI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -20.0
+offset_right = 200.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 32
+text = "Scor mic! Obiect spawnat!"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="ResultsPanel" type="PanelContainer" parent="InteractionUI/GameUI" unique_id=1781452192]
 layout_mode = 1

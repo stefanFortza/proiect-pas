@@ -20,20 +20,28 @@ public partial class GameUI : Control
     [Export] public Label RelevanceScoreLabel;
     [Export] public Label StatusLabel;
     [Export] public Control ResultsPanel;
+    [Export] public Label SpawnNotificationLabel;
 
     [ExportGroup("Game Logic")]
     [Export] public ObjectSpawner Spawner;
-    [Export] public string BackendUrl = "http://localhost:8000";
+    [Export] public string BackendUrl = "https://tvnue234s9plaq-8000.proxy.runpod.net/";
     [Export] public string ModelName = "gpt2_small_base";
     [Export] public int Epoch = 1;
+    [Export] public int LowScoreThreshold = 50;
 
     private ISimulationApi _api;
+    private Tween _notificationTween;
 
     public override void _Ready()
     {
         Initialize();
 
         if (ResultsPanel != null) ResultsPanel.Visible = false;
+        if (SpawnNotificationLabel != null) 
+        {
+            SpawnNotificationLabel.Modulate = new Color(1, 1, 1, 0); // Start invisible
+            SpawnNotificationLabel.Text = "";
+        }
 
         GD.Print("GameUI: Ready.");
     }
@@ -80,11 +88,30 @@ public partial class GameUI : Control
         {
             GD.Print("GameUI: Debug spawn button pressed.");
             Spawner.SpawnRandom();
+            ShowSpawnNotification("Debug: Obiect spawnat!", new Color(1, 1, 0)); // Yellow for debug
         }
         else
         {
             GD.PushWarning("GameUI: Spawner not assigned!");
         }
+    }
+
+    private void ShowSpawnNotification(string message, Color color)
+    {
+        if (SpawnNotificationLabel == null) return;
+
+        if (_notificationTween != null && _notificationTween.IsRunning())
+        {
+            _notificationTween.Kill();
+        }
+
+        SpawnNotificationLabel.Text = message;
+        SpawnNotificationLabel.Modulate = color;
+        SpawnNotificationLabel.SelfModulate = new Color(color.R, color.G, color.B, 1);
+        
+        _notificationTween = CreateTween();
+        _notificationTween.TweenProperty(SpawnNotificationLabel, "modulate:a", 1.0f, 0.5f);
+        _notificationTween.Chain().TweenProperty(SpawnNotificationLabel, "modulate:a", 0.0f, 2.0f).SetDelay(1.5f);
     }
 
     private async void OnSendButtonPressed()
@@ -96,7 +123,11 @@ public partial class GameUI : Control
         TextInput.Editable = false;
         SendButton.Disabled = true;
 
-        if (StatusLabel != null) StatusLabel.Text = "Waiting for LLM response...";
+        if (StatusLabel != null) 
+        {
+            StatusLabel.Text = "Waiting for LLM response...";
+            StatusLabel.SelfModulate = new Color(1, 1, 1); // Reset color
+        }
         if (ResultsPanel != null) ResultsPanel.Visible = true;
 
         try
@@ -135,7 +166,11 @@ public partial class GameUI : Control
                               scores.Meaning +
                               scores.Relevance) / 4;
 
-                if (StatusLabel != null) StatusLabel.Text = $"Evaluation complete. Average: {finalScore}%";
+                if (StatusLabel != null) 
+                {
+                    StatusLabel.Text = $"Evaluation complete. Average: {finalScore}%";
+                    StatusLabel.SelfModulate = finalScore < LowScoreThreshold ? new Color(1, 0.3f, 0.3f) : new Color(0.3f, 1, 0.3f);
+                }
             }
             else
             {
@@ -149,10 +184,21 @@ public partial class GameUI : Control
                 if (RelevanceScoreLabel != null) RelevanceScoreLabel.Text = "Relevance: N/A";
             }
 
-            // Spawn object based on score (Higher score = heavier object = faster sinking)
+            // Spawn object based on score (Lower score = heavier object = faster sinking)
             if (Spawner != null)
             {
-                Spawner.SpawnByScore(finalScore);
+                // Invert score for spawning: Low score -> Heavier object
+                int spawnScore = 100 - finalScore;
+                Spawner.SpawnByScore(spawnScore);
+
+                if (finalScore < LowScoreThreshold)
+                {
+                    ShowSpawnNotification("Scor mic! Obiect greu spawnat!", new Color(1, 0.2f, 0.2f));
+                }
+                else
+                {
+                    ShowSpawnNotification("Scor bun! Obiect ușor spawnat.", new Color(0.2f, 1, 0.2f));
+                }
             }
         }
         catch (Exception e)
@@ -174,7 +220,7 @@ public partial class GameUI : Control
         if (BotResponseLabel != null) BotResponseLabel.Text = "";
         if (ResultsPanel != null) ResultsPanel.Visible = false;
         if (StatusLabel != null) StatusLabel.Text = "Enter text to start...";
-        
+
         if (GrammarScoreLabel != null) GrammarScoreLabel.Text = "Grammar: -";
         if (SyntaxScoreLabel != null) SyntaxScoreLabel.Text = "Syntax: -";
         if (MeaningScoreLabel != null) MeaningScoreLabel.Text = "Meaning: -";
