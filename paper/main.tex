@@ -9,6 +9,8 @@
 % Standard package includes
 \usepackage{times}
 \usepackage{latexsym}
+\usepackage{graphicx}
+\usepackage{float}
 
 % For proper rendering and hyphenation of words containing Latin characters (including in bib files)
 \usepackage[T1]{fontenc}
@@ -59,9 +61,29 @@
 
 \appendix
 
-\section{Example Appendix}
-\label{sec:appendix}
+\section{System Visualizations}
+\label{sec:appendix_images}
 
-This is where you would add additional tables, formulas or results -- things that help the reader get an in-depth understanding of your research, but are not essential for understanding the method.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{images/ship.png}
+  \caption{Implementation of buoyancy probes on the boat hull.}
+  \label{fig:ship}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{images/water.png}
+  \caption{Visual representation of the custom water shader and noise-based deformation.}
+  \label{fig:water}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{images/procedural_gen.png}
+  \caption{Procedural vegetation placement: top-down map and perspective view from within the environment.}
+  \label{fig:proc_gen}
+\end{figure}
 
 \end{document}
+
